@@ -52,9 +52,9 @@ public class IR_using_linear_combination {
         System.out.println("*\n*\tLoading datasets\n*");
         dataset1 = new HashedDataSet<>();
         new CarXMLReader().loadFromXML(new File(
-                "src/main/resources/data/offer_target_1.xml"),"/Cars/Car", dataset1);
+                "src/main/resources/data/offer_target_1.xml"),"/target/car", dataset1);
         dataset2 = new HashedDataSet<>();
-        new CarXMLReader().loadFromXML(new File("src/main/resources/data/car_emissions_target.xml"), "/Cars/Car", dataset2);
+        new CarXMLReader().loadFromXML(new File("src/main/resources/data/car_emissions_target.xml"), "/target/car", dataset2);
     }
 
     private void loadTrainingSet() throws Exception {
