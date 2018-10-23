@@ -6,6 +6,8 @@ import de.uni_mannheim.informatik.dws.winter.matching.rules.ComparatorLogger;
 import de.uni_mannheim.informatik.dws.winter.model.Correspondence;
 import de.uni_mannheim.informatik.dws.winter.model.Matchable;
 import de.uni_mannheim.informatik.dws.winter.model.defaultmodel.Attribute;
+//Where to find similarity measures
+import de.uni_mannheim.informatik.dws.winter.similarity.*;
 
 public class CarModelComparator_LowerCase implements Comparator<Car, Attribute> {
     private static final long serialVersionUID = 1L;

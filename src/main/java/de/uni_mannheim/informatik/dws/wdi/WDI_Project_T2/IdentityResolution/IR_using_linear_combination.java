@@ -55,15 +55,15 @@ public class IR_using_linear_combination {
 
     private void loadTrainingSet() throws Exception {
         gsTraining = new MatchingGoldStandard();
-        gsTraining.loadFromCSVFile(new File("goldStandard/gold.csv"));
+        gsTraining.loadFromCSVFile(new File("goldStandard/train.csv"));
     }
 
     private void createMatchingRule(){
         
-         matchingRule = new LinearCombinationMatchingRule<>(0.7);
+        matchingRule = new LinearCombinationMatchingRule<>(0.7);
         matchingRule.activateDebugReport("data/output/debugResultsMatchingRule.csv", -1, gsTraining);
     }
-    private void addComparatorstoMR() throws Exception {
+    private void addComparators() throws Exception {
         matchingRule.addComparator(new CarModelComparator_LowerCase(), 1);
 
     }
@@ -89,14 +89,14 @@ public class IR_using_linear_combination {
 
     private void writeCorrespondences() throws Exception {
         // write the correspondences to the output file
-        new CSVCorrespondenceFormatter().writeCSV(new File("data/output/academy_awards_2_actors_correspondences.csv"), correspondences);
+        new CSVCorrespondenceFormatter().writeCSV(new File("data/output/offers_emissions_correspondences.csv"), correspondences);
     }
 
     private void loadGoldStandard() throws Exception {
         // load the gold standard (test set)
         System.out.println("*\n*\tLoading gold standard\n*");
         gsTest = new MatchingGoldStandard();
-        gsTest.loadFromCSVFile(new File("goldStandard/gold.csv"));
+        gsTest.loadFromCSVFile(new File("goldStandard/test.csv"));
     }
     private void GlobalMatching(){
         // Create a top-1 global matching
@@ -124,7 +124,7 @@ public class IR_using_linear_combination {
                 "F1: %.4f",perfTest.getF1()));
     }
 	
-    private static void main( String[] args ) throws Exception {
+    public static void main( String[] args ) throws Exception {
 	    IR_using_linear_combination IR = new IR_using_linear_combination();
 
 	    // loading data
@@ -137,10 +137,10 @@ public class IR_using_linear_combination {
 		IR.createMatchingRule();
 		
 		// add comparators
-		IR.addComparatorstoMR();
+		IR.addComparators();
 
 		// create a blocker (blocking strategy)
-        IR.createBlocker();
+        //IR.createBlocker();
 
 		// Initialize Matching Engine
 		IR.initMachineEngine();
