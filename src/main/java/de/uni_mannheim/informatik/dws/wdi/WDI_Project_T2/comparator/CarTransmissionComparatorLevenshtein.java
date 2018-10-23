@@ -1,6 +1,7 @@
 package de.uni_mannheim.informatik.dws.wdi.WDI_Project_T2.comparator;
 
 import de.uni_mannheim.informatik.dws.wdi.WDI_Project_T2.model.Car;
+import de.uni_mannheim.informatik.dws.wdi.WDI_Project_T2.util.Utils;
 import de.uni_mannheim.informatik.dws.winter.matching.rules.Comparator;
 import de.uni_mannheim.informatik.dws.winter.matching.rules.ComparatorLogger;
 import de.uni_mannheim.informatik.dws.winter.model.Correspondence;
@@ -30,8 +31,8 @@ public class CarTransmissionComparatorLevenshtein implements Comparator<Car, Att
         }
 
         // preprocessing
-        m1 = (m1 != null) ? m1.toLowerCase() : "";
-        m2 = (m2 != null) ? m2.toLowerCase() : "";
+        m1 = (m1 != null) ? Utils.preprocessTransmission(m1) : "";
+        m2 = (m2 != null) ? Utils.preprocessTransmission(m2) : "";
 
         // calculate similarity
         double similarity = sim.calculate(m1, m2);
