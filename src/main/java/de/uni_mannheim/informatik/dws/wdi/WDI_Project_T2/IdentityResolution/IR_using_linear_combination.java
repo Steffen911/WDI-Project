@@ -1,10 +1,11 @@
 package de.uni_mannheim.informatik.dws.wdi.WDI_Project_T2.IdentityResolution;
 
-import de.uni_mannheim.informatik.dws.wdi.WDI_Project_T2.Comparators.CarModelComparator_LowerCase;
+import de.uni_mannheim.informatik.dws.wdi.WDI_Project_T2.Comparators.CarManufacturerComparator_LowerCase;
 import de.uni_mannheim.informatik.dws.wdi.WDI_Project_T2.model.Car;
 import de.uni_mannheim.informatik.dws.wdi.WDI_Project_T2.model.CarXMLReader;
 import de.uni_mannheim.informatik.dws.winter.matching.MatchingEngine;
 import de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator;
+import de.uni_mannheim.informatik.dws.winter.matching.blockers.NoBlocker;
 import de.uni_mannheim.informatik.dws.winter.matching.rules.LinearCombinationMatchingRule;
 import de.uni_mannheim.informatik.dws.winter.model.Correspondence;
 import de.uni_mannheim.informatik.dws.winter.model.HashedDataSet;
@@ -38,39 +39,42 @@ public class IR_using_linear_combination {
     private MatchingGoldStandard gsTraining;
     private LinearCombinationMatchingRule<Car, Attribute> matchingRule;
     private MatchingEngine<Car, Attribute> engine;
-    //private CarBlocking_XY<Car, Attribute> blocker;
+    private NoBlocker<Car, Attribute> blocker;
     private Processable<Correspondence<Car, Attribute>> correspondences;
     private MatchingGoldStandard gsTest;
     private Performance perfTest;
 
 
     private void loadData() throws Exception {
+        System.out.println("Working Directory = " +
+                System.getProperty("user.dir"));
         // loading data
         System.out.println("*\n*\tLoading datasets\n*");
         dataset1 = new HashedDataSet<>();
-        new CarXMLReader().loadFromXML(new File("data/offer_target_1.xml"),"/Cars/Car", dataset1);
+        new CarXMLReader().loadFromXML(new File(
+                "src/main/resources/data/offer_target_1.xml"),"/Cars/Car", dataset1);
         dataset2 = new HashedDataSet<>();
-        new CarXMLReader().loadFromXML(new File("data/car_emissions_target.xml"), "/Cars/Car", dataset2);
+        new CarXMLReader().loadFromXML(new File("src/main/resources/data/car_emissions_target.xml"), "/Cars/Car", dataset2);
     }
 
     private void loadTrainingSet() throws Exception {
         gsTraining = new MatchingGoldStandard();
-        gsTraining.loadFromCSVFile(new File("goldStandard/train.csv"));
+        gsTraining.loadFromCSVFile(new File("src/main/resources/goldStandard/train.csv"));
     }
 
     private void createMatchingRule(){
         
         matchingRule = new LinearCombinationMatchingRule<>(0.7);
-        matchingRule.activateDebugReport("data/output/debugResultsMatchingRule.csv", -1, gsTraining);
+        matchingRule.activateDebugReport("src/main/resources/output/debugResultsMatchingRule.csv", -1, gsTraining);
     }
     private void addComparators() throws Exception {
-        matchingRule.addComparator(new CarModelComparator_LowerCase(), 1);
+        matchingRule.addComparator(new CarManufacturerComparator_LowerCase(), 0.01);
 
     }
 
     private void createBlocker(){
        // CarBlocking_XY<Car, Attribute> blocker = new CarBlocking_XY();
-
+        blocker =  new NoBlocker<>();
         //Write debug results to file:
         //blocker.collectBlockSizeData("data/output/debugResultsBlocking.csv", 100);
 
@@ -83,20 +87,21 @@ public class IR_using_linear_combination {
     private void executeMatching(){
         // Execute the matching
         System.out.println("*\n*\tRunning identity resolution\n*");
+
         correspondences = engine.runIdentityResolution(
-                dataset1, dataset2, null, matchingRule, null);
+                dataset1, dataset2, null, matchingRule, blocker);
     }
 
     private void writeCorrespondences() throws Exception {
         // write the correspondences to the output file
-        new CSVCorrespondenceFormatter().writeCSV(new File("data/output/offers_emissions_correspondences.csv"), correspondences);
+        new CSVCorrespondenceFormatter().writeCSV(new File("src/main/resources/output/offers_emissions_correspondences.csv"), correspondences);
     }
 
     private void loadGoldStandard() throws Exception {
         // load the gold standard (test set)
         System.out.println("*\n*\tLoading gold standard\n*");
         gsTest = new MatchingGoldStandard();
-        gsTest.loadFromCSVFile(new File("goldStandard/test.csv"));
+        gsTest.loadFromCSVFile(new File("src/main/resources/goldStandard/test.csv"));
     }
     private void GlobalMatching(){
         // Create a top-1 global matching
@@ -115,7 +120,7 @@ public class IR_using_linear_combination {
     }
     private void printEVA() {
         // print the evaluation result
-        System.out.println("Academy Awards <-> Actors");
+        System.out.println("Offers <-> Emissions");
         System.out.println(String.format(
                 "Precision: %.4f",perfTest.getPrecision()));
         System.out.println(String.format(
@@ -140,7 +145,7 @@ public class IR_using_linear_combination {
 		IR.addComparators();
 
 		// create a blocker (blocking strategy)
-        //IR.createBlocker();
+        IR.createBlocker();
 
 		// Initialize Matching Engine
 		IR.initMachineEngine();
