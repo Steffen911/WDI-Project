@@ -1,4 +1,4 @@
-package de.uni_mannheim.informatik.dws.wdi.WDI_Project_T2.Comparators;
+package de.uni_mannheim.informatik.dws.wdi.WDI_Project_T2.Comparators.offers_emissions;
 import de.uni_mannheim.informatik.dws.winter.matching.rules.Comparator;
 import de.uni_mannheim.informatik.dws.wdi.WDI_Project_T2.model.Car;
 import de.uni_mannheim.informatik.dws.winter.matching.rules.ComparatorLogger;
@@ -16,8 +16,8 @@ public class Car_Model_Comparator_V1 implements Comparator<Car, Attribute> {
 
     private static final long serialVersionUID = 1L;
     //TODO Test
-    private TokenizingJaccardSimilarity sim;
-    private MaximumOfTokenContainment sim2;
+    private TokenizingJaccardSimilarity sim =  new TokenizingJaccardSimilarity();
+    private MaximumOfTokenContainment sim2 = new MaximumOfTokenContainment();
 
 
 

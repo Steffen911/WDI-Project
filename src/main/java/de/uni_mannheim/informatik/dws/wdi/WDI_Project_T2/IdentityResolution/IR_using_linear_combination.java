@@ -1,8 +1,7 @@
 package de.uni_mannheim.informatik.dws.wdi.WDI_Project_T2.IdentityResolution;
 
 import de.uni_mannheim.informatik.dws.wdi.WDI_Project_T2.blocking.CarBlockingKeyByManufacturerGenerator;
-import de.uni_mannheim.informatik.dws.wdi.WDI_Project_T2.blocking.CarBlocking_Manufacturer;
-import de.uni_mannheim.informatik.dws.wdi.WDI_Project_T2.Comparators.CarManufacturerComparator_LowerCase;
+import de.uni_mannheim.informatik.dws.wdi.WDI_Project_T2.Comparators.offers_emissions.CarManufacturerComparator_LowerCase;
 import de.uni_mannheim.informatik.dws.wdi.WDI_Project_T2.model.Car;
 import de.uni_mannheim.informatik.dws.wdi.WDI_Project_T2.model.CarXMLReader;
 import de.uni_mannheim.informatik.dws.winter.matching.MatchingEngine;

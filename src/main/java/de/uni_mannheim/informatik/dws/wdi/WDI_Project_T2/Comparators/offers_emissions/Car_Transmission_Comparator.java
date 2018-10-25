@@ -1,4 +1,4 @@
-package de.uni_mannheim.informatik.dws.wdi.WDI_Project_T2.Comparators;
+package de.uni_mannheim.informatik.dws.wdi.WDI_Project_T2.Comparators.offers_emissions;
 
 import de.uni_mannheim.informatik.dws.wdi.WDI_Project_T2.model.Car;
 import de.uni_mannheim.informatik.dws.winter.matching.rules.Comparator;
