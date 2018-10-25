@@ -1,11 +1,13 @@
 package de.uni_mannheim.informatik.dws.wdi.WDI_Project_T2.IdentityResolution;
 
+import de.uni_mannheim.informatik.dws.wdi.WDI_Project_T2.blocking.CarBlockingKeyByManufacturerGenerator;
+import de.uni_mannheim.informatik.dws.wdi.WDI_Project_T2.blocking.CarBlocking_Manufacturer;
 import de.uni_mannheim.informatik.dws.wdi.WDI_Project_T2.Comparators.CarManufacturerComparator_LowerCase;
 import de.uni_mannheim.informatik.dws.wdi.WDI_Project_T2.model.Car;
 import de.uni_mannheim.informatik.dws.wdi.WDI_Project_T2.model.CarXMLReader;
 import de.uni_mannheim.informatik.dws.winter.matching.MatchingEngine;
 import de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator;
-import de.uni_mannheim.informatik.dws.winter.matching.blockers.NoBlocker;
+import de.uni_mannheim.informatik.dws.winter.matching.blockers.*;
 import de.uni_mannheim.informatik.dws.winter.matching.rules.LinearCombinationMatchingRule;
 import de.uni_mannheim.informatik.dws.winter.model.Correspondence;
 import de.uni_mannheim.informatik.dws.winter.model.HashedDataSet;
@@ -39,10 +41,20 @@ public class IR_using_linear_combination {
     private MatchingGoldStandard gsTraining;
     private LinearCombinationMatchingRule<Car, Attribute> matchingRule;
     private MatchingEngine<Car, Attribute> engine;
-    private NoBlocker<Car, Attribute> blocker;
     private Processable<Correspondence<Car, Attribute>> correspondences;
     private MatchingGoldStandard gsTest;
     private Performance perfTest;
+
+    /**
+     * Blockers to choose from:
+     *
+     */
+    private NoBlocker<Car, Attribute> blocker;
+    private StandardRecordBlocker<Car, Attribute> blockerSTD;
+    private SortedNeighbourhoodBlocker blockerSN;
+    private ValueBasedBlocker<Car, Attribute, Car> blockerValue;
+
+
 
 
     private void loadData() throws Exception {
@@ -53,8 +65,18 @@ public class IR_using_linear_combination {
         dataset1 = new HashedDataSet<>();
         new CarXMLReader().loadFromXML(new File(
                 "src/main/resources/data/offer_target_1.xml"),"/target/car", dataset1);
+
+        // Take the first x samples from the offers dataset
+        HashedDataSet<Car, Attribute> offers = new HashedDataSet<>();
+        Car[] carOffers =dataset1.get().toArray(new Car[]{});
+        for (int i = 0; i < 2500; i++) {
+            offers.add(carOffers[i]);
+        }
+
+
         dataset2 = new HashedDataSet<>();
         new CarXMLReader().loadFromXML(new File("src/main/resources/data/car_emissions_target.xml"), "/target/car", dataset2);
+
     }
 
     private void loadTrainingSet() throws Exception {
@@ -72,11 +94,12 @@ public class IR_using_linear_combination {
 
     }
 
-    private void createBlocker(){
-       // CarBlocking_XY<Car, Attribute> blocker = new CarBlocking_XY();
-        blocker =  new NoBlocker<>();
+    private void createBlocker()   {
+        //~~~~~USE SAME BLOCKER IN HERE AND ADD THE CORRECT ONE TO THE ME!!
+        blockerSTD = new StandardRecordBlocker<>(new CarBlockingKeyByManufacturerGenerator());
+        blockerSTD.setMeasureBlockSizes(true);
         //Write debug results to file:
-        //blocker.collectBlockSizeData("data/output/debugResultsBlocking.csv", 100);
+        blockerSTD.collectBlockSizeData("src/main/resources/output/debugResultsBlocking.csv", 100);
 
     }
 
@@ -89,7 +112,7 @@ public class IR_using_linear_combination {
         System.out.println("*\n*\tRunning identity resolution\n*");
 
         correspondences = engine.runIdentityResolution(
-                dataset1, dataset2, null, matchingRule, blocker);
+                dataset1, dataset2, null, matchingRule,blockerSTD);
     }
 
     private void writeCorrespondences() throws Exception {
