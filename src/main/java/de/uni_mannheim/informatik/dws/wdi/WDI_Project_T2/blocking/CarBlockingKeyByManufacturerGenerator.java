@@ -14,11 +14,24 @@ public class CarBlockingKeyByManufacturerGenerator extends RecordBlockingKeyGene
 
     private TokenizingJaccardSimilarity sim = new TokenizingJaccardSimilarity();
     private String[] manufacturers = {
-            "volkswagen",
-            "bmw",
-            "opel",
             "audi",
-            "skoda"
+            "bmw",
+            "fiat",
+            "ford",
+            "honda",
+            "hyundai",
+            "jeep",
+            "mazda",
+            "mercedes_benz",
+            "mini",
+            "nissan",
+            "opel",
+            "peugeot",
+            "renault",
+            "seat",
+            "skoda",
+            "smart",
+            "volkswagen"
     };
 
     @Override
@@ -46,4 +59,8 @@ public class CarBlockingKeyByManufacturerGenerator extends RecordBlockingKeyGene
         return -1;
     }
 
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 9224b663b82b7b0ef298ef7de5e951aeb1daf436

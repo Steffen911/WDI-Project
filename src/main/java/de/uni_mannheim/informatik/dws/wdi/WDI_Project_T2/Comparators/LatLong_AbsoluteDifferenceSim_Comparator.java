@@ -8,7 +8,7 @@ import de.uni_mannheim.informatik.dws.winter.model.Matchable;
 import de.uni_mannheim.informatik.dws.winter.model.defaultmodel.Attribute;
 import de.uni_mannheim.informatik.dws.winter.similarity.numeric.AbsoluteDifferenceSimilarity;
 
-public class LatLong_Comparator implements Comparator<Car, Attribute> {
+public class LatLong_AbsoluteDifferenceSim_Comparator implements Comparator<Car, Attribute> {
 
         private static final long serialVersionUID = 1L;
 

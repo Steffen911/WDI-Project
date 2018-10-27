@@ -8,7 +8,7 @@ import de.uni_mannheim.informatik.dws.winter.model.Matchable;
 import de.uni_mannheim.informatik.dws.winter.model.defaultmodel.Attribute;
 import de.uni_mannheim.informatik.dws.winter.similarity.string.LevenshteinSimilarity;
 
-public class Car_Transmission_Comparator implements Comparator<Car, Attribute> {
+public class Car_Transmission_Levenshtein_Comparator implements Comparator<Car, Attribute> {
     private static final long serialVersionUID = 1L;
 
     private LevenshteinSimilarity sim = new LevenshteinSimilarity();
@@ -46,9 +46,6 @@ public class Car_Transmission_Comparator implements Comparator<Car, Attribute> {
         } else if (cleaned.equals("automatik")){
             cleaned = "automatic";
         }
-
-
         return cleaned;
     }
-
 }
