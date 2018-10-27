@@ -1,4 +1,4 @@
-package de.uni_mannheim.informatik.dws.wdi.WDI_Project_T2.Comparators.offers_stations;
+package de.uni_mannheim.informatik.dws.wdi.WDI_Project_T2.Comparators;
 
 import de.uni_mannheim.informatik.dws.wdi.WDI_Project_T2.model.Car;
 import de.uni_mannheim.informatik.dws.winter.matching.rules.Comparator;
@@ -8,7 +8,7 @@ import de.uni_mannheim.informatik.dws.winter.model.Matchable;
 import de.uni_mannheim.informatik.dws.winter.model.defaultmodel.Attribute;
 import de.uni_mannheim.informatik.dws.winter.similarity.numeric.AbsoluteDifferenceSimilarity;
 
-public class ZIPCodeComparator implements Comparator<Car, Attribute> {
+public class ZIPCode_AbsoluteDifferenceSim_Comparator implements Comparator<Car, Attribute> {
         private static final long serialVersionUID = 1L;
 
         // The numbers have to be the same

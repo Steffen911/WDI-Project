@@ -1,4 +1,4 @@
-package de.uni_mannheim.informatik.dws.wdi.WDI_Project_T2.Comparators.offers_emissions;
+package de.uni_mannheim.informatik.dws.wdi.WDI_Project_T2.Comparators;
 
 import de.uni_mannheim.informatik.dws.wdi.WDI_Project_T2.model.Car;
 import de.uni_mannheim.informatik.dws.winter.matching.rules.Comparator;
@@ -11,7 +11,7 @@ import de.uni_mannheim.informatik.dws.winter.similarity.string.LevenshteinSimila
 public class Car_Transmission_Comparator implements Comparator<Car, Attribute> {
     private static final long serialVersionUID = 1L;
 
-    private LevenshteinSimilarity sim;
+    private LevenshteinSimilarity sim = new LevenshteinSimilarity();
 
     private ComparatorLogger comparisonLog;
 
