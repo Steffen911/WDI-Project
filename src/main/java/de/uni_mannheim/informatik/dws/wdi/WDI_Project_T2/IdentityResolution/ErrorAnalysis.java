@@ -1,5 +1,7 @@
 package de.uni_mannheim.informatik.dws.wdi.WDI_Project_T2.IdentityResolution;
 
+import com.sun.prism.shader.AlphaOne_ImagePattern_AlphaTest_Loader;
+import de.uni_mannheim.informatik.dws.wdi.WDI_Project_T2.IR_App;
 import de.uni_mannheim.informatik.dws.wdi.WDI_Project_T2.model.Car;
 import de.uni_mannheim.informatik.dws.winter.model.Correspondence;
 import de.uni_mannheim.informatik.dws.winter.model.DataSet;
@@ -14,8 +16,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class ErrorAnalysis {
-	
-	private static final Logger logger = WinterLogManager.getLogger();
+
 
 	public void printFalsePositives(Processable<Correspondence<Car, Attribute>> correspondences, MatchingGoldStandard gs) {
 		
@@ -30,9 +31,9 @@ public class ErrorAnalysis {
 				Car m2 = c.getSecondRecord();
 				
 				// print both records to the console
-				logger.info("[Incorrect Correspondence]");
-				logger.info(String.format("\t%s", m1));	
-				logger.info(String.format("\t%s", m2));	
+				IR_App.logger.info("Incorrect Correspondence: \n\t" + m2 + "\n\t" + m2);
+				IR_App.logger.info(String.format("\t%s", m1));	
+				IR_App.logger.info(String.format("\t%s", m2));	
 			}
 		}		
 	}
@@ -79,9 +80,9 @@ public class ErrorAnalysis {
 			}
 			
 			// print both records to the console
-			logger.info("[Missing Correspondence]");
-			logger.info(String.format("\t%s", m1));	
-			logger.info(String.format("\t%s", m2));	
+			IR_App.logger.info("[Missing Correspondence]");
+			IR_App.logger.info(String.format("\t%s", m1));	
+			IR_App.logger.info(String.format("\t%s", m2));	
 		}
 	}
 }

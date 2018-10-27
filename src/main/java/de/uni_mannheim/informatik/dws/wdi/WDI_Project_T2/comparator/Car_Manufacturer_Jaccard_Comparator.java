@@ -10,7 +10,7 @@ import de.uni_mannheim.informatik.dws.winter.model.defaultmodel.Attribute;
 //import de.uni_mannheim.informatik.dws.winter.similarity.;
 import de.uni_mannheim.informatik.dws.winter.similarity.string.GeneralisedStringJaccard;
 
-public class CarManufacturerComparator_LowerCase implements Comparator<Car, Attribute> {
+public class Car_Manufacturer_Jaccard_Comparator implements Comparator<Car, Attribute> {
     private static final long serialVersionUID = 1L;
 
     private GeneralisedStringJaccard sim;
@@ -21,20 +21,22 @@ public class CarManufacturerComparator_LowerCase implements Comparator<Car, Attr
                           Car record2,
                           Correspondence<Attribute, Matchable> schemaCorrespondence) {
 
-        if (!record1.getManufacturer().toLowerCase().equals("sonstige_autos")
-                && !record2.getManufacturer().toLowerCase().equals("sonstige_autos")){
+        if (record1.getManufacturer() != null
+                && record2.getManufacturer() != null
+                && !record1.getManufacturer().toLowerCase().equals("sonstige_autos")
+                && !record2.getManufacturer().toLowerCase().equals("sonstige_autos")) {
             double similarity = sim.calculate(record1.getManufacturer().toLowerCase(),
-                     record2.getManufacturer().toLowerCase());
+                    record2.getManufacturer().toLowerCase());
 
-        if(this.comparisonLog != null){
-            this.comparisonLog.setComparatorName(getClass().getName());
+            if (this.comparisonLog != null) {
+                this.comparisonLog.setComparatorName(getClass().getName());
 
-            this.comparisonLog.setRecord1Value(record1.getManufacturer());
-            this.comparisonLog.setRecord2Value(record2.getManufacturer());
+                this.comparisonLog.setRecord1Value(record1.getManufacturer());
+                this.comparisonLog.setRecord2Value(record2.getManufacturer());
 
-            this.comparisonLog.setSimilarity(Double.toString(similarity));
-        }
-        return similarity;
+                this.comparisonLog.setSimilarity(Double.toString(similarity));
+            }
+            return similarity;
         }
         return 0;
     }

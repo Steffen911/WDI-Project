@@ -30,8 +30,9 @@ public class CarTransmissionComparatorLevenshtein implements Comparator<Car, Att
         }
 
         // preprocessing
-        m1 = (m1 != null) ? m1.toLowerCase() : "";
-        m2 = (m2 != null) ? m2.toLowerCase() : "";
+        m1 = (m1 != null) ? preprocessTransmissionString(m1.toLowerCase()) : "";
+        m2 = (m2 != null) ? preprocessTransmissionString(m2.toLowerCase()) : "";
+
 
         // calculate similarity
         double similarity = sim.calculate(m1, m2);
@@ -44,6 +45,17 @@ public class CarTransmissionComparatorLevenshtein implements Comparator<Car, Att
 
         return similarity;
 
+    }
+
+
+    private String preprocessTransmissionString(String transmission) {
+        String cleaned = transmission;
+        if(cleaned.equals("manuell")){
+            cleaned = "manual";
+        } else if (cleaned.equals("automatik")){
+            cleaned = "automatic";
+        }
+        return cleaned;
     }
 
     @Override

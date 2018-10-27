@@ -23,23 +23,24 @@ public class LatLong_AbsoluteDifferenceSim_Comparator implements Comparator<Car,
             Double long1 = record1.getRegion().getLongitude();
             Double long2 = record2.getRegion().getLongitude();
 
+            if( lat1 != null && lat2 != null && long1 != null && long2 != null) {
+                //get very harsh Similarity measure
+                double similarity = sim.calculate(lat1, lat2);
+                similarity = (similarity + sim.calculate(long1, long2)) / 2; // TODO how to deal with this
 
-            //get very harsh Similarity measure
-            double similarity = sim.calculate(lat1, lat2);
-            similarity = (similarity + sim.calculate(long1, long2))/2; // TODO how to deal with this
 
+                if (this.comparisonLog != null) {
+                    this.comparisonLog.setComparatorName(getClass().getName());
 
+                    this.comparisonLog.setRecord1Value(String.valueOf(lat1 + " ~ " + long1));
+                    this.comparisonLog.setRecord2Value(String.valueOf(lat2 + " ~ " + long2));
 
-            if(this.comparisonLog != null){
-                this.comparisonLog.setComparatorName(getClass().getName());
+                    this.comparisonLog.setSimilarity(Double.toString(similarity));
+                }
 
-                this.comparisonLog.setRecord1Value(String.valueOf( lat1 + " ~ " + long1));
-                this.comparisonLog.setRecord2Value(String.valueOf( lat2 + " ~ " + long2));
-
-                this.comparisonLog.setSimilarity(Double.toString(similarity));
+                return similarity;
             }
-
-            return similarity;
+            return 0;
         }
         @Override
         public ComparatorLogger getComparisonLog() {

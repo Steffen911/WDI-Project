@@ -18,32 +18,35 @@ public class Car_Model_MaximumOfTokenContainment_Comparator  implements Comparat
     public double compare(Car record1,
                           Car record2,
                           Correspondence<Attribute, Matchable> schemaCorrespondence) {
-        String model1 = record1.getModel().toLowerCase();
-        String model2 = record2.getModel().toLowerCase();
+        if (record1.getModel() != null && record2.getModel() != null) {
+            String model1 = record1.getModel().toLowerCase();
+            String model2 = record2.getModel().toLowerCase();
 
-        preprocessModelString(model1);
-        preprocessModelString(model2);
-        double similarity = sim.calculate(model1, model2);
+            model1= preprocessModelString(model1);
+            model2= preprocessModelString(model2);
+            double similarity = sim.calculate(model1, model2);
 
 
+            if (this.comparisonLog != null) {
+                this.comparisonLog.setComparatorName(getClass().getName());
 
-        if(this.comparisonLog != null){
-            this.comparisonLog.setComparatorName(getClass().getName());
+                this.comparisonLog.setRecord1Value(model1);
+                this.comparisonLog.setRecord2Value(model2);
 
-            // this.comparisonLog.setRecord1Value(null);
-            //this.comparisonLog.setRecord2Value(null);
-
-            this.comparisonLog.setSimilarity(Double.toString(similarity));
+                this.comparisonLog.setSimilarity(Double.toString(similarity));
+            }
+            return similarity;
         }
-        return similarity;
+        return 0;
     }
 
-    private void preprocessModelString(String modelDescription) {
+    private String preprocessModelString(String modelDescription) {
         String cleaned = Utils.removeUnderscores(modelDescription);
         cleaned = Utils.replaceUmlaute(cleaned);
         cleaned = Utils.removeNonDescriptionWords(cleaned);
         //remove all duplicate words and more than one space
         cleaned = Utils.removeDuplicateWords(cleaned);
+        return cleaned;
     }
 
     @Override

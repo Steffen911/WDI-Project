@@ -31,7 +31,25 @@ public class CarBlockingKeyByManufacturerGenerator extends RecordBlockingKeyGene
             "seat",
             "skoda",
             "smart",
-            "volkswagen"
+            "volkswagen",
+            "citroen",
+            "alfa_romeo",
+            "volvo",
+            "mitsubishi",
+            "kia",
+            "suzuki",
+            "lancia",
+            "porsche",
+            "toyota",
+            "chevrolet",
+            "dacia",
+            "daihatsu",
+            "chrysler",
+            "jaguar",
+            "daewoo",
+            "rover",
+            "land_rover"
+
     };
 
     @Override

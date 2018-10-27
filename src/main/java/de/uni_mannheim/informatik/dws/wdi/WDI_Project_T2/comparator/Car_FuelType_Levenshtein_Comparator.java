@@ -18,31 +18,33 @@ public class Car_FuelType_Levenshtein_Comparator implements Comparator<Car, Attr
     @Override
     public double compare(Car record1, Car record2, Correspondence<Attribute, Matchable> schemaCorrespondence) {
 
-        // Translate, Diesel remains the same, Benzin needs translation, Other ignored since there
-        // are not that many in our offer dataset? //TODO-team
-        String fuelType1 = record1.getFuelType().trim().toLowerCase();
-        if (fuelType1.equals("benzin")){
-            fuelType1= "petrol";
+        if (record1.getFuelType() != null && record2.getFuelType() != null) {
+            // Translate, Diesel remains the same, Benzin needs translation, Other ignored since there
+            // are not that many in our offer dataset? //TODO-team
+            String fuelType1 = record1.getFuelType().trim().toLowerCase();
+            if (fuelType1.equals("benzin")) {
+                fuelType1 = "petrol";
+            }
+            String fuelType2 = record2.getFuelType().trim().toLowerCase();
+            if (fuelType2.equals("benzin")) {
+                fuelType2 = "petrol";
+            }
+
+            //get very harsh Similarity measure  - exact match
+            double similarity = sim.calculate(fuelType1, fuelType2);
+
+            if (this.comparisonLog != null) {
+                this.comparisonLog.setComparatorName(getClass().getName());
+
+                this.comparisonLog.setRecord1Value(fuelType1);
+                this.comparisonLog.setRecord2Value(fuelType2);
+
+                this.comparisonLog.setSimilarity(Double.toString(similarity));
+            }
+
+            return similarity;
         }
-        String fuelType2 = record2.getFuelType().trim().toLowerCase();
-        if (fuelType2.equals("benzin")){
-            fuelType2= "petrol";
-        }
-
-        //get very harsh Similarity measure  - exact match
-        double similarity = sim.calculate(fuelType1, fuelType2);
-
-
-        if(this.comparisonLog != null){
-            this.comparisonLog.setComparatorName(getClass().getName());
-
-            this.comparisonLog.setRecord1Value(fuelType1);
-            this.comparisonLog.setRecord2Value(fuelType2);
-
-            this.comparisonLog.setSimilarity(Double.toString(similarity));
-        }
-
-        return similarity;
+        return 0;
     }
     @Override
     public ComparatorLogger getComparisonLog() {
