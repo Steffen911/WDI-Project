@@ -1,51 +1,43 @@
-package de.uni_mannheim.informatik.dws.wdi.WDI_Project_T2.Comparators;
+package de.uni_mannheim.informatik.dws.wdi.WDI_Project_T2.comparator;
 
 import de.uni_mannheim.informatik.dws.wdi.WDI_Project_T2.model.Car;
-import de.uni_mannheim.informatik.dws.wdi.WDI_Project_T2.Utils;
 import de.uni_mannheim.informatik.dws.winter.matching.rules.Comparator;
 import de.uni_mannheim.informatik.dws.winter.matching.rules.ComparatorLogger;
 import de.uni_mannheim.informatik.dws.winter.model.Correspondence;
 import de.uni_mannheim.informatik.dws.winter.model.Matchable;
 import de.uni_mannheim.informatik.dws.winter.model.defaultmodel.Attribute;
-import de.uni_mannheim.informatik.dws.winter.similarity.string.MaximumOfTokenContainment;
+//Where to find similarity measures
+//import de.uni_mannheim.informatik.dws.winter.similarity.;
+import de.uni_mannheim.informatik.dws.winter.similarity.string.GeneralisedStringJaccard;
 
-public class Car_Model_MaximumOfTokenContainment_Comparator  implements Comparator<Car, Attribute> {
+public class CarManufacturerComparator_LowerCase implements Comparator<Car, Attribute> {
     private static final long serialVersionUID = 1L;
-    private MaximumOfTokenContainment sim = new MaximumOfTokenContainment();
+
+    private GeneralisedStringJaccard sim;
     private ComparatorLogger comparisonLog;
 
     @Override
     public double compare(Car record1,
                           Car record2,
                           Correspondence<Attribute, Matchable> schemaCorrespondence) {
-        String model1 = record1.getModel().toLowerCase();
-        String model2 = record2.getModel().toLowerCase();
 
-        preprocessModelString(model1);
-        preprocessModelString(model2);
-        double similarity = sim.calculate(model1, model2);
-
-
+        if (!record1.getManufacturer().toLowerCase().equals("sonstige_autos")
+                && !record2.getManufacturer().toLowerCase().equals("sonstige_autos")){
+            double similarity = sim.calculate(record1.getManufacturer().toLowerCase(),
+                     record2.getManufacturer().toLowerCase());
 
         if(this.comparisonLog != null){
             this.comparisonLog.setComparatorName(getClass().getName());
 
-            // this.comparisonLog.setRecord1Value(null);
-            //this.comparisonLog.setRecord2Value(null);
+            this.comparisonLog.setRecord1Value(record1.getManufacturer());
+            this.comparisonLog.setRecord2Value(record2.getManufacturer());
 
             this.comparisonLog.setSimilarity(Double.toString(similarity));
         }
         return similarity;
+        }
+        return 0;
     }
-
-    private void preprocessModelString(String modelDescription) {
-        String cleaned = Utils.removeUnderscores(modelDescription);
-        cleaned = Utils.replaceUmlaute(cleaned);
-        cleaned = Utils.removeNonDescriptionWords(cleaned);
-        //remove all duplicate words and more than one space
-        cleaned = Utils.removeDuplicateWords(cleaned);
-    }
-
     @Override
     public ComparatorLogger getComparisonLog() {
         return this.comparisonLog;
@@ -55,5 +47,4 @@ public class Car_Model_MaximumOfTokenContainment_Comparator  implements Comparat
     public void setComparisonLog(ComparatorLogger comparatorLog) {
         this.comparisonLog = comparatorLog;
     }
-
 }
