@@ -7,11 +7,11 @@ import de.uni_mannheim.informatik.dws.winter.matching.rules.ComparatorLogger;
 import de.uni_mannheim.informatik.dws.winter.model.Correspondence;
 import de.uni_mannheim.informatik.dws.winter.model.Matchable;
 import de.uni_mannheim.informatik.dws.winter.model.defaultmodel.Attribute;
-import de.uni_mannheim.informatik.dws.winter.similarity.string.LevenshteinSimilarity;
+import de.uni_mannheim.informatik.dws.winter.similarity.string.TokenizingJaccardSimilarity;
 
-public class CarModelComparatorLevenshtein implements Comparator<Car, Attribute> {
+public class CarModelComparatorTokenizingJaccard implements Comparator<Car, Attribute> {
 
-    private LevenshteinSimilarity sim = new LevenshteinSimilarity();
+    private TokenizingJaccardSimilarity sim = new TokenizingJaccardSimilarity();
     private ComparatorLogger compLogger;
 
     @Override
@@ -28,5 +28,4 @@ public class CarModelComparatorLevenshtein implements Comparator<Car, Attribute>
     public void setComparisonLog(ComparatorLogger comparatorLog) {
         this.compLogger = comparatorLog;
     }
-
 }

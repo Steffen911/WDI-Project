@@ -7,11 +7,11 @@ import de.uni_mannheim.informatik.dws.winter.matching.rules.ComparatorLogger;
 import de.uni_mannheim.informatik.dws.winter.model.Correspondence;
 import de.uni_mannheim.informatik.dws.winter.model.Matchable;
 import de.uni_mannheim.informatik.dws.winter.model.defaultmodel.Attribute;
-import de.uni_mannheim.informatik.dws.winter.similarity.string.LevenshteinSimilarity;
+import de.uni_mannheim.informatik.dws.winter.similarity.string.MaximumOfTokenContainment;
 
-public class CarModelComparatorLevenshtein implements Comparator<Car, Attribute> {
+public class CarModelComparatorMaximumTokenContainment implements Comparator<Car, Attribute> {
 
-    private LevenshteinSimilarity sim = new LevenshteinSimilarity();
+    private MaximumOfTokenContainment sim = new MaximumOfTokenContainment();
     private ComparatorLogger compLogger;
 
     @Override
@@ -30,3 +30,4 @@ public class CarModelComparatorLevenshtein implements Comparator<Car, Attribute>
     }
 
 }
+
