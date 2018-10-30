@@ -7,16 +7,17 @@ public class Utils {
 
     private static String[][] UMLAUT_REPLACEMENTS = {
             { new String("ä"), "ae" }, { new String("ü"), "ue" }, { new String("ö"), "oe" },
-            { new String("ß"), "ss" }
+            { new String("ß"), "ss" },
+            { new String("Ã©"), "e" }
     };
 
 
     private static String[] nonDescriptionWords = {
             "januar", "februar", "maerz", "april", "mai", "juni", "juli", "august", "september", "oktober",
             "november", "dezember",
-            "tuev", "noch", "monate", "gebraucht", "tausch",
+            "tuev", "noch", "monate", "gebraucht", "tausch", "year",
             "andere", "whatsapp", "sucht",
-            "+",  "\"", "!", "/"
+            "+",  "\"", "!", "/", "Â¾", "pre", "post", "model"
     };
     //TODO extend manually
 
@@ -49,6 +50,14 @@ public class Utils {
         }
 
         return result;
+    }
+
+    public static String removeYearDates(String text){
+        //19 XX
+         // 2XXX
+        // 19[0-9]{2}
+
+        return text.replaceAll("(19[0-9]{2})|(2[0-9]{3})", " ");
     }
 }
 

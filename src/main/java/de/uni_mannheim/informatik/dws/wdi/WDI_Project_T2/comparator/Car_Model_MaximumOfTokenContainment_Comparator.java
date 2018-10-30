@@ -44,6 +44,8 @@ public class Car_Model_MaximumOfTokenContainment_Comparator  implements Comparat
         String cleaned = Utils.removeUnderscores(modelDescription);
         cleaned = Utils.replaceUmlaute(cleaned);
         cleaned = Utils.removeNonDescriptionWords(cleaned);
+        cleaned = Utils.removeYearDates(cleaned);
+
         //remove all duplicate words and more than one space
         cleaned = Utils.removeDuplicateWords(cleaned);
         return cleaned;

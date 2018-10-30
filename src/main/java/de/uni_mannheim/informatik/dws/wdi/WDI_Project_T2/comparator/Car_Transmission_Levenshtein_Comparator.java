@@ -41,4 +41,14 @@ public class Car_Transmission_Levenshtein_Comparator implements Comparator<Car, 
         return 0;
     }
 
+    private String preprocessTransmissionString(String transmission) {
+        String cleaned = transmission;
+        if(cleaned.equals("manuell")){
+            cleaned = "manual";
+        } else if (cleaned.equals("automatik")){
+            cleaned = "automatic";
+        }
+        return cleaned;
+    }
+
 }
