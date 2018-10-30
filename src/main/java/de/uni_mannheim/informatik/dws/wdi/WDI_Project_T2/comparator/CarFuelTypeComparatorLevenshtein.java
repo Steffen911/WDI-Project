@@ -30,8 +30,12 @@ public class CarFuelTypeComparatorLevenshtein implements Comparator<Car, Attribu
         }
 
         // preprocessing
-        m1 = (m1 != null) ? m1.toLowerCase() : "";
-        m2 = (m2 != null) ? m2.toLowerCase() : "";
+        m1 = (m1 != null) ? m1.trim().toLowerCase() : "";
+        m2 = (m2 != null) ? m2.trim().toLowerCase() : "";
+
+        // diesel remains the same, benzin needs translation
+        m1 = (m1.equals("benzin")) ? "petrol" : m1;
+        m2 = (m2.equals("benzin")) ? "petrol" : m2;
 
         // calculate similarity
         double similarity = sim.calculate(m1, m2);
