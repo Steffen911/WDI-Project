@@ -41,13 +41,13 @@ public class IR_App {
         new CarXMLReader().loadFromXML(new File(classloader.getResource("data/offer_target_1.xml").getFile()), "/target/car", offerInt);
         new CarXMLReader().loadFromXML(new File(classloader.getResource("data/offer_target_2.xml").getFile()), "/target/car", offerInt);
 
-//        HashedDataSet<Car, Attribute> stations = new HashedDataSet<>();
-//        logger.info("Loading station_target...");
-//        new CarXMLReader().loadFromXML(new File(classloader.getResource("data/station_target.xml").getFile()), "/target/car", stations);
-//
-//        HashedDataSet<Car, Attribute> vehicles = new HashedDataSet<>();
-//        logger.info("Loading vehicles_target...");
-//        new CarXMLReader().loadFromXML(new File(classloader.getResource("data/vehicles_target.xml").getFile()), "/target/car", vehicles);
+        HashedDataSet<Car, Attribute> stations = new HashedDataSet<>();
+        logger.info("Loading station_target...");
+        new CarXMLReader().loadFromXML(new File(classloader.getResource("data/station_target.xml").getFile()), "/target/car", stations);
+
+        HashedDataSet<Car, Attribute> vehicles = new HashedDataSet<>();
+        logger.info("Loading vehicles_target...");
+        new CarXMLReader().loadFromXML(new File(classloader.getResource("data/vehicles_target.xml").getFile()), "/target/car", vehicles);
 
         logger.info("Successfully loaded data sets");
 
@@ -117,7 +117,7 @@ public class IR_App {
         logger.info("Results for offers <-> car_emissions");
         logger.info(String.format("Precision: %.4f", performance.getPrecision()));
         logger.info(String.format("Recall: %.4f", performance.getRecall()));
-        logger.info(String.format("F!: %.4f", performance.getF1()));
+        logger.info(String.format("F1: %.4f", performance.getF1()));
     }
 
     private static Car getRandom(Car[] array) {
