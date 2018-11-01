@@ -1,5 +1,5 @@
 package de.uni_mannheim.informatik.dws.wdi.WDI_Project_T2.comparator;
-import de.uni_mannheim.informatik.dws.wdi.WDI_Project_T2.Utils;
+import de.uni_mannheim.informatik.dws.wdi.WDI_Project_T2.util.Utils;
 import de.uni_mannheim.informatik.dws.winter.matching.rules.Comparator;
 import de.uni_mannheim.informatik.dws.wdi.WDI_Project_T2.model.Car;
 import de.uni_mannheim.informatik.dws.winter.matching.rules.ComparatorLogger;
@@ -43,11 +43,7 @@ public class Car_Model_TokenizingJaccard_Comparator implements Comparator<Car, A
 
     private String preprocessModelString(String modelDescription) {
 
-        String cleaned = Utils.removeUnderscores(modelDescription);
-        cleaned = Utils.replaceUmlaute(cleaned);
-        cleaned = Utils.removeNonDescriptionWords(cleaned);
-        //remove all duplicate words and more than one space
-        cleaned = Utils.removeDuplicateWords(cleaned);
+        String cleaned = Utils.preprocessModel(modelDescription);
         return cleaned;
 
     }
@@ -62,11 +58,7 @@ public class Car_Model_TokenizingJaccard_Comparator implements Comparator<Car, A
         String t8 = "Fast_Jang_Timer_sucht_Übernehmer_!! andere";
 
         String cleaned = t8.toLowerCase();
-        cleaned = Utils.removeUnderscores(cleaned);
-        cleaned = Utils.replaceUmlaute(cleaned);
-        cleaned = Utils.removeNonDescriptionWords(cleaned);
-        //remove all duplicate words and more than one space
-        cleaned = Utils.removeDuplicateWords(cleaned);
+        cleaned = Utils.preprocessModel(cleaned);
     }
 
     @Override
