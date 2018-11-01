@@ -37,9 +37,8 @@ public class IR_App {
         new CarXMLReader().loadFromXML(new File(classloader.getResource("data/car_emissions_target.xml").getFile()), "/target/car", carEmissions);
 
         HashedDataSet<Car, Attribute> offerInt = new HashedDataSet<>();
-        logger.info("Loading offer_target 1 and 2...");
-        new CarXMLReader().loadFromXML(new File(classloader.getResource("data/offer_target_1.xml").getFile()), "/target/car", offerInt);
-        new CarXMLReader().loadFromXML(new File(classloader.getResource("data/offer_target_2.xml").getFile()), "/target/car", offerInt);
+        logger.info("Loading offer_target - dupfree ...");
+        new CarXMLReader().loadFromXML(new File(classloader.getResource("data/offers_dupfree.xml").getFile()), "/target/car", offerInt);
 
         HashedDataSet<Car, Attribute> stations = new HashedDataSet<>();
         logger.info("Loading station_target...");
