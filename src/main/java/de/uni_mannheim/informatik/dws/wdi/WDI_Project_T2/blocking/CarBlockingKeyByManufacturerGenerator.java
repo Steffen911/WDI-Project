@@ -61,7 +61,7 @@ public class CarBlockingKeyByManufacturerGenerator extends RecordBlockingKeyGene
         int key = getIdForManufacturer(car.getManufacturer());
         if (key < 0) {
             // ignore manufacturers that are not whitelisted
-            return;
+            return; //Filtert die Daten
         }
         resultCollector.next(new Pair<>(Integer.toString(key), car));
     }

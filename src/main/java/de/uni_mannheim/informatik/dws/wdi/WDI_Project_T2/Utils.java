@@ -17,7 +17,7 @@ public class Utils {
             "november", "dezember",
             "tuev", "noch", "monate", "gebraucht", "tausch", "year",
             "andere", "whatsapp", "sucht",
-            "+",  "\"", "!", "/", "Â¾", "pre", "post", "model"
+            "+",  "\"", "!", "/", "Â¾", "pre", "post", "model", "onwards"
     };
     //TODO extend manually
 
