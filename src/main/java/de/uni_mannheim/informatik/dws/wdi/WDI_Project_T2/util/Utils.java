@@ -6,7 +6,7 @@ import java.util.stream.Collectors;
 public class Utils {
 
     private static String[][] UMLAUT_REPLACEMENTS = {
-            { "ä", "ae" }, { "ü", "ue" }, { "ö", "oe" }, { "ß", "ss" }
+            { "ä", "ae" }, { "ü", "ue" }, { "ö", "oe" }, { "ß", "ss" }, { "Ã©", "e" }
     };
 
     /**
@@ -18,7 +18,7 @@ public class Utils {
             "november", "dezember",
             "tuev", "noch", "monate", "gebraucht", "tausch",
             "andere", "whatsapp", "sucht",
-            "+",  "\"", "!", "/"
+            "+",  "\"", "!", "/",  "Â¾", "pre", "post", "model", "onwards"
     };
 
     private static String removeNonDescriptionWords(String text) {

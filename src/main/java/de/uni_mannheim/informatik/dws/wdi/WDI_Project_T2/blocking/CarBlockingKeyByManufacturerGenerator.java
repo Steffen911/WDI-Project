@@ -76,5 +76,4 @@ public class CarBlockingKeyByManufacturerGenerator extends RecordBlockingKeyGene
         }
         return -1;
     }
-
 }

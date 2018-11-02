@@ -2,7 +2,7 @@ package de.uni_mannheim.informatik.dws.wdi.WDI_Project_T2;
 
 import de.uni_mannheim.informatik.dws.wdi.WDI_Project_T2.blocking.CarBlockingKeyByManufacturerGenerator;
 import de.uni_mannheim.informatik.dws.wdi.WDI_Project_T2.comparator.CarFuelTypeComparatorLevenshtein;
-import de.uni_mannheim.informatik.dws.wdi.WDI_Project_T2.comparator.CarModelComparatorLevenshtein;
+import de.uni_mannheim.informatik.dws.wdi.WDI_Project_T2.comparator.CarModelComparatorMaximumTokenContainment;
 import de.uni_mannheim.informatik.dws.wdi.WDI_Project_T2.comparator.CarTransmissionComparatorLevenshtein;
 import de.uni_mannheim.informatik.dws.wdi.WDI_Project_T2.model.Car;
 import de.uni_mannheim.informatik.dws.wdi.WDI_Project_T2.model.CarXMLReader;
@@ -36,9 +36,8 @@ public class IR_App {
         new CarXMLReader().loadFromXML(new File(classloader.getResource("data/car_emissions_target.xml").getFile()), "/target/car", carEmissions);
 
         HashedDataSet<Car, Attribute> offerInt = new HashedDataSet<>();
-        logger.info("Loading offer_target 1 and 2...");
-        new CarXMLReader().loadFromXML(new File(classloader.getResource("data/offer_target_1.xml").getFile()), "/target/car", offerInt);
-        new CarXMLReader().loadFromXML(new File(classloader.getResource("data/offer_target_2.xml").getFile()), "/target/car", offerInt);
+        logger.info("Loading offer_target - dupfree ...");
+        new CarXMLReader().loadFromXML(new File(classloader.getResource("data/offers_dupfree.xml").getFile()), "/target/car", offerInt);
 
         HashedDataSet<Car, Attribute> stations = new HashedDataSet<>();
         logger.info("Loading station_target...");
@@ -56,7 +55,7 @@ public class IR_App {
         goldStandardTrain.loadFromCSVFile(new File(classloader.getResource("goldstandard/train.csv").getFile()));
 
         // Prepare reusable datasets and parameters
-        int blockSize = 500;
+        int blockSize = 900;
         int iterations = 3;
         logger.info("matching " + blockSize * iterations + " random offers with carEmissions");
         Car[] carOffers = offerInt.get().toArray(new Car[]{});
@@ -69,7 +68,7 @@ public class IR_App {
             logger.info("Add matchingrules");
             LinearCombinationMatchingRule<Car, Attribute> matchingRule = new LinearCombinationMatchingRule<>(0.65);
             matchingRule.activateDebugReport("data/output/debugResultsMatchingRule.csv", -1, goldStandardTrain);
-            matchingRule.addComparator(new CarModelComparatorLevenshtein(), 0.5);
+            matchingRule.addComparator(new CarModelComparatorMaximumTokenContainment(), 0.5);
             matchingRule.addComparator(new CarFuelTypeComparatorLevenshtein(), 0.3);
             matchingRule.addComparator(new CarTransmissionComparatorLevenshtein(), 0.2);
 
@@ -123,5 +122,6 @@ public class IR_App {
         int rnd = new Random().nextInt(array.length);
         return array[rnd];
     }
+
 
 }
