@@ -67,7 +67,7 @@ public class IR_App {
             // Add comparators
             logger.info("Add matchingrules");
             LinearCombinationMatchingRule<Car, Attribute> matchingRule = new LinearCombinationMatchingRule<>(0.65);
-            matchingRule.activateDebugReport("src/main/resources/output/debugResultsMatchingRule.csv", -1, goldStandardTrain);
+            matchingRule.activateDebugReport("data/output/debugResultsMatchingRule.csv", -1, goldStandardTrain);
             matchingRule.addComparator(new CarModelComparatorMaximumTokenContainment(), 0.5);
             matchingRule.addComparator(new CarFuelTypeComparatorLevenshtein(), 0.3);
             matchingRule.addComparator(new CarTransmissionComparatorLevenshtein(), 0.2);
@@ -102,7 +102,7 @@ public class IR_App {
 
         }
 
-        new CSVCorrespondenceFormatter().writeCSV(new File("src/main/resources/data/output/offers_car_emissions_correspondences.csv"), correspondences);
+        new CSVCorrespondenceFormatter().writeCSV(new File("data/output/offers_car_emissions_correspondences.csv"), correspondences);
         logger.info("Successfully wrote the correspondences to data/output/...");
 
         MatchingGoldStandard goldStandardTest = new MatchingGoldStandard();
