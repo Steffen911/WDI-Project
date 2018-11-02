@@ -2,9 +2,8 @@ package de.uni_mannheim.informatik.dws.wdi.WDI_Project_T2;
 
 import de.uni_mannheim.informatik.dws.wdi.WDI_Project_T2.blocking.CarBlockingKeyByManufacturerGenerator;
 import de.uni_mannheim.informatik.dws.wdi.WDI_Project_T2.comparator.CarFuelTypeComparatorLevenshtein;
-import de.uni_mannheim.informatik.dws.wdi.WDI_Project_T2.comparator.CarModelComparatorLevenshtein;
+import de.uni_mannheim.informatik.dws.wdi.WDI_Project_T2.comparator.CarModelComparatorMaximumTokenContainment;
 import de.uni_mannheim.informatik.dws.wdi.WDI_Project_T2.comparator.CarTransmissionComparatorLevenshtein;
-import de.uni_mannheim.informatik.dws.wdi.WDI_Project_T2.comparator.Car_Model_MaximumOfTokenContainment_Comparator;
 import de.uni_mannheim.informatik.dws.wdi.WDI_Project_T2.model.Car;
 import de.uni_mannheim.informatik.dws.wdi.WDI_Project_T2.model.CarXMLReader;
 import de.uni_mannheim.informatik.dws.winter.matching.MatchingEngine;
@@ -68,8 +67,8 @@ public class IR_App {
             // Add comparators
             logger.info("Add matchingrules");
             LinearCombinationMatchingRule<Car, Attribute> matchingRule = new LinearCombinationMatchingRule<>(0.65);
-            matchingRule.activateDebugReport("C:\\Users\\Wifo\\workspace_ItelliJ\\WDI-Project\\src\\main\\resources\\data\\output\\debugResultsMatchingRule.csv", -1, goldStandardTrain);
-            matchingRule.addComparator(new Car_Model_MaximumOfTokenContainment_Comparator(), 0.5);
+            matchingRule.activateDebugReport("src/main/resources/output/debugResultsMatchingRule.csv", -1, goldStandardTrain);
+            matchingRule.addComparator(new CarModelComparatorMaximumTokenContainment(), 0.5);
             matchingRule.addComparator(new CarFuelTypeComparatorLevenshtein(), 0.3);
             matchingRule.addComparator(new CarTransmissionComparatorLevenshtein(), 0.2);
 
@@ -103,7 +102,7 @@ public class IR_App {
 
         }
 
-        new CSVCorrespondenceFormatter().writeCSV(new File("C:\\Users\\Wifo\\workspace_ItelliJ\\WDI-Project\\src\\main\\resources\\data\\output\\offers_car_emissions_correspondences.csv"), correspondences);
+        new CSVCorrespondenceFormatter().writeCSV(new File("src/main/resources/data/output/offers_car_emissions_correspondences.csv"), correspondences);
         logger.info("Successfully wrote the correspondences to data/output/...");
 
         MatchingGoldStandard goldStandardTest = new MatchingGoldStandard();

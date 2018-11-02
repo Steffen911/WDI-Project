@@ -1,6 +1,7 @@
 package de.uni_mannheim.informatik.dws.wdi.WDI_Project_T2.comparator;
 
 import de.uni_mannheim.informatik.dws.wdi.WDI_Project_T2.model.Car;
+import de.uni_mannheim.informatik.dws.wdi.WDI_Project_T2.model.Region;
 import de.uni_mannheim.informatik.dws.winter.matching.rules.Comparator;
 import de.uni_mannheim.informatik.dws.winter.matching.rules.ComparatorLogger;
 import de.uni_mannheim.informatik.dws.winter.model.Correspondence;
@@ -18,13 +19,15 @@ public class LatLong_AbsoluteDifferenceSim_Comparator implements Comparator<Car,
         @Override
         public double compare(Car record1, Car record2, Correspondence<Attribute, Matchable> schemaCorrespondence) {
 
-            Double lat1 = record1.getRegion().getLatitude();
-            Double lat2 = record2.getRegion().getLatitude();
-            Double long1 = record1.getRegion().getLongitude();
-            Double long2 = record2.getRegion().getLongitude();
 
-            if( lat1 != null && lat2 != null && long1 != null && long2 != null) {
-                //get very harsh Similarity measure
+           if(record1.getRegion() != null && record2.getRegion() != null){
+               Double lat1 = record1.getRegion().getLatitude();
+               Double lat2 = record2.getRegion().getLatitude();
+               Double long1 = record1.getRegion().getLongitude();
+               Double long2 = record2.getRegion().getLongitude();
+
+
+               //get very harsh Similarity measure
                 double similarity = sim.calculate(lat1, lat2);
                 similarity = (similarity + sim.calculate(long1, long2)) / 2; // TODO how to deal with this
 

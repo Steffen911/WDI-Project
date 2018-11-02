@@ -20,10 +20,11 @@ public class ZIPCode_AbsoluteDifferenceSim_Comparator implements Comparator<Car,
                               Car record2,
                               Correspondence<Attribute, Matchable> schemaCorrespondence) {
 
-            if (record1.getRegion().getZipCode() != 0 && record2.getRegion().getZipCode() != 0){
+            if (record1.getRegion() != null && record2.getRegion() != null){
                 double similarity = sim.calculate(
                         (double) record1.getRegion().getZipCode(),
-                        (double) record2.getRegion().getZipCode());
+                        (double) record2.getRegion().getZipCode()
+                        );
 
                 if(this.comparisonLog != null){
                     this.comparisonLog.setComparatorName(getClass().getName());
