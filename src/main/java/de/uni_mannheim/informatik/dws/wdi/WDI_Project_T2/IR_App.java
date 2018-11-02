@@ -32,11 +32,11 @@ public class IR_App {
         logger.info("Loading datasets...");
         ClassLoader classloader = Thread.currentThread().getContextClassLoader();
         HashedDataSet<Car, Attribute> carEmissions = new HashedDataSet<>();
-        logger.info("Loading car_emissions_target...");
-        new CarXMLReader().loadFromXML(new File(classloader.getResource("data/car_emissions_target.xml").getFile()), "/target/car", carEmissions);
+        logger.info("Loading car_emissions_dupfree...");
+        new CarXMLReader().loadFromXML(new File(classloader.getResource("data/car_emissions_dupfree.xml").getFile()), "/target/car", carEmissions);
 
         HashedDataSet<Car, Attribute> offerInt = new HashedDataSet<>();
-        logger.info("Loading offer_target - dupfree ...");
+        logger.info("Loading offers_dupfree ...");
         new CarXMLReader().loadFromXML(new File(classloader.getResource("data/offers_dupfree.xml").getFile()), "/target/car", offerInt);
 
         HashedDataSet<Car, Attribute> stations = new HashedDataSet<>();
@@ -56,7 +56,7 @@ public class IR_App {
 
         // Prepare reusable datasets and parameters
         int blockSize = 900;
-        int iterations = 3;
+        int iterations = 1;
         logger.info("matching " + blockSize * iterations + " random offers with carEmissions");
         Car[] carOffers = offerInt.get().toArray(new Car[]{});
         Processable<Correspondence<Car, Attribute>> correspondences = null;
