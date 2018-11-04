@@ -44,8 +44,8 @@ public class IR_App {
         new CarXMLReader().loadFromXML(new File(classloader.getResource("data/station_target.xml").getFile()), "/target/car", stations);
 
         HashedDataSet<Car, Attribute> vehicles = new HashedDataSet<>();
-        logger.info("Loading vehicles_target...");
-        new CarXMLReader().loadFromXML(new File(classloader.getResource("data/vehicles_target.xml").getFile()), "/target/car", vehicles);
+        logger.info("Loading vehicles_dupfree...");
+        new CarXMLReader().loadFromXML(new File(classloader.getResource("data/vehicles_dupfree.xml").getFile()), "/target/car", vehicles);
 
         logger.info("Successfully loaded data sets");
 
