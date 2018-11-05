@@ -130,7 +130,7 @@ public class IR_App {
         MatchingEvaluator<Car, Attribute> evaluator = new MatchingEvaluator<>();
         Performance performance = evaluator.evaluateMatching(corr, gs);
 
-        logger.info("Results for name");
+        logger.info("Results for " + name);
         logger.info(String.format("Precision: %.4f", performance.getPrecision()));
         logger.info(String.format("Recall: %.4f", performance.getRecall()));
         logger.info(String.format("F1: %.4f", performance.getF1()));
