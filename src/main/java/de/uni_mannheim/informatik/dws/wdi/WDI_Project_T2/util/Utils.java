@@ -3,10 +3,7 @@ package de.uni_mannheim.informatik.dws.wdi.WDI_Project_T2.util;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.Set;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class Utils {
@@ -20,39 +17,31 @@ public class Utils {
      * TODO: Should be extended manually
      */
 
-    //blacklisting approach
-    private static String[] nonDescriptionWords = {
-    "januar", "februar", "maerz", "april", "mai", "juni", "juli", "august", "september", "oktober",
-    "november", "dezember",
-    "tuev", "noch", "monate", "gebraucht", "tausch",
-    "andere", "whatsapp", "sucht",
-    "+",  "\"", "!", "/"
-    };
-
-    private static String removeNonDescriptionWords(String text) {
-        for (int i = 0; i < nonDescriptionWords.length; i++) {
-            if(text.contains(nonDescriptionWords[i])){
-                text= text.replace(nonDescriptionWords[i], "");
-            }
-        }
-        return text;
-    }
-
     //whitelisting approach
     public static String keepDescriptionWords(String carDescriptionText) {
 
+        // Convert descriptive String into array. Splitting by blank space (regex)
         String[] carDescriptionTextArray = carDescriptionText.split("\\W+");
 
         WhiteListSingleton st = WhiteListSingleton.getInstance();
 
+        // Set because in the descriptions model or manufacturer names may occur multiple times. LinkedHashSet so that order of elements in set remains.
+        Set<String> lhs = new LinkedHashSet<>();
+
+        // For each word of the description (i.e. iterating over the LinkedHashSet), check if it is contained in the whitelist set.
+        // If word of description is contained in the white-list, keep it. If not, it is ignored (not added to LinkedHashSet).
+        for (String str : carDescriptionTextArray) {
+            if (st.getSet().contains(str)) {
+                lhs.add(str);
+            }
+        }
+
         String returnString = "";
 
-        for (String str : carDescriptionTextArray) {
-            if (!st.set.contains(str)) {
-                str = "";
-            }
-
-            returnString = returnString + " " + str;
+        // Iterate over LinkedHashSet, which contains the allowed terms of a description string in their origin order. Concat the return String by those elements,
+        // split by blank.
+        for (String stringElement : lhs) {
+            returnString += " " + stringElement;
         }
 
         return returnString;
@@ -78,7 +67,6 @@ public class Utils {
         String cleaned = Utils.removeUnderscores(modelDescription);
         cleaned = cleaned.toLowerCase();
         cleaned = Utils.replaceUmlaute(cleaned);
-        //cleaned = Utils.removeNonDescriptionWords(cleaned);
         cleaned = keepDescriptionWords(cleaned);
         cleaned = Utils.removeDuplicateWords(cleaned);
         return cleaned;
@@ -94,39 +82,3 @@ public class Utils {
     }
 }
 
-class WhiteListSingleton {
-    private static WhiteListSingleton single_instance = null;
-
-    public static WhiteListSingleton getInstance() {
-        if (single_instance == null)
-            single_instance = new WhiteListSingleton();
-        return single_instance;
-    }
-
-    public static Set set;
-
-    private WhiteListSingleton() {
-        ClassLoader classloader = Thread.currentThread().getContextClassLoader();
-        File file = new File(classloader.getResource("data/terms-whitelist/listfile_car_emissions.txt").getFile());
-        File file2 = new File(classloader.getResource("data/terms-whitelist/listfile_vehicles.txt").getFile());
-        try {
-            BufferedReader br = new BufferedReader(new FileReader(file));
-            BufferedReader br2 = new BufferedReader(new FileReader(file2));
-            String whiteListString = br.readLine();
-            String whiteListString2 = br2.readLine();
-            String[] whiteListArray = whiteListString.split("\\W+");
-            String[] whiteListArray2 = whiteListString2.split("\\W+");
-            this.set = new HashSet<String>();
-
-            for (String str : whiteListArray) {
-                this.set.add(str.toLowerCase());
-            }
-
-            for (String str : whiteListArray2) {
-                this.set.add(str.toLowerCase());
-            }
-        } catch (Exception e) {
-            // nothing
-        }
-    }
-}
