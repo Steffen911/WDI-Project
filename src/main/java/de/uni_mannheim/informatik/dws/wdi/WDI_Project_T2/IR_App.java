@@ -28,7 +28,6 @@ public class IR_App {
     public static final Logger logger = WinterLogManager.activateLogger("default");
 
     public static void main(String[] args) throws Exception {
-
         // Load the datasets
         logger.info("Loading datasets...");
         ClassLoader classloader = Thread.currentThread().getContextClassLoader();
@@ -49,7 +48,6 @@ public class IR_App {
         new CarXMLReader().loadFromXML(new File(classloader.getResource("data/vehicles_dupfree.xml").getFile()), "/target/car", vehicles);
 
         logger.info("Successfully loaded data sets");
-
 
         // Load the goldstandard training set
         MatchingGoldStandard goldStandardTrain = new MatchingGoldStandard();
@@ -124,4 +122,5 @@ public class IR_App {
         int rnd = new Random().nextInt(array.length);
         return array[rnd];
     }
+    
 }
