@@ -1,6 +1,6 @@
 package de.uni_mannheim.informatik.dws.wdi.WDI_Project_T2.util;
 
-import de.uni_mannheim.informatik.dws.winter.utils.WinterLogManager;
+import de.uni_mannheim.informatik.dws.wdi.WDI_Project_T2.IR_App;
 import org.apache.logging.log4j.Logger;
 
 import java.io.BufferedReader;
@@ -11,7 +11,7 @@ import java.util.Set;
 
 public class WhiteListSingleton {
 
-    public static final Logger logger = WinterLogManager.activateLogger("default");
+    public static final Logger logger = IR_App.logger;
 
     private static WhiteListSingleton single_instance = null;
 
