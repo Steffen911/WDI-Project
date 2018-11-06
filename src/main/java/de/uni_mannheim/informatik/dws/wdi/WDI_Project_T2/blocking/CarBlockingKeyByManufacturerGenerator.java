@@ -50,7 +50,6 @@ public class CarBlockingKeyByManufacturerGenerator extends RecordBlockingKeyGene
             "daewoo",
             "rover",
             "land_rover"
-
     };
 
     @Override
@@ -70,6 +69,9 @@ public class CarBlockingKeyByManufacturerGenerator extends RecordBlockingKeyGene
     private int getIdForManufacturer(String manufacturer) {
         manufacturer = manufacturer.toLowerCase();
         for (int i = 0; i < manufacturers.length; i++) {
+            if (manufacturers[i].equals("opel") && manufacturer.equals("vauxhall")) {
+                return i;
+            }
             double similarity = sim.calculate(manufacturers[i], manufacturer);
             if (similarity > 0.3) {
                 return i;
