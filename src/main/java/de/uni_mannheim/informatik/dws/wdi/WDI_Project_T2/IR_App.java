@@ -122,5 +122,5 @@ public class IR_App {
         int rnd = new Random().nextInt(array.length);
         return array[rnd];
     }
-    
+
 }
