@@ -8,7 +8,6 @@ import de.uni_mannheim.informatik.dws.winter.model.Pair;
 import de.uni_mannheim.informatik.dws.winter.model.defaultmodel.Attribute;
 import de.uni_mannheim.informatik.dws.winter.processing.DataIterator;
 import de.uni_mannheim.informatik.dws.winter.processing.Processable;
-
 import de.uni_mannheim.informatik.dws.winter.similarity.string.TokenizingJaccardSimilarity;
 
 public class CarBlockingKeyByManufacturerGenerator extends RecordBlockingKeyGenerator<Car, Attribute> {
