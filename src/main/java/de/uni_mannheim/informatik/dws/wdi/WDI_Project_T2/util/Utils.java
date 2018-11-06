@@ -1,33 +1,45 @@
 package de.uni_mannheim.informatik.dws.wdi.WDI_Project_T2.util;
 
-import java.util.Arrays;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class Utils {
 
     private static String[][] UMLAUT_REPLACEMENTS = {
-            { "ä", "ae" }, { "ü", "ue" }, { "ö", "oe" }, { "ß", "ss" }, { "Ã©", "e" }
+    { "ä", "ae" }, { "ü", "ue" }, { "ö", "oe" }, { "ß", "ss" }
     };
 
-    /**
-     * List of non-description words.
-     * TODO: Should be extended manually
-     */
-    private static String[] nonDescriptionWords = {
-            "januar", "februar", "maerz", "april", "mai", "juni", "juli", "august", "september", "oktober",
-            "november", "dezember",
-            "tuev", "noch", "monate", "gebraucht", "tausch",
-            "andere", "whatsapp", "sucht",
-            "+",  "\"", "!", "/",  "Â¾", "pre", "post", "model", "onwards"
-    };
+    //whitelisting approach
+    public static String keepDescriptionWords(String carDescriptionText) {
 
-    private static String removeNonDescriptionWords(String text) {
-        for (int i = 0; i < nonDescriptionWords.length; i++) {
-            if(text.contains(nonDescriptionWords[i])){
-                text= text.replace(nonDescriptionWords[i], "");
+        // Convert descriptive String into array. Splitting by blank space (regex)
+        String[] carDescriptionTextArray = carDescriptionText.split("\\W+");
+
+        WhiteListSingleton st = WhiteListSingleton.getInstance();
+
+        // Set because in the descriptions model or manufacturer names may occur multiple times. LinkedHashSet so that order of elements in set remains.
+        Set<String> lhs = new LinkedHashSet<>();
+
+        // For each word of the description (i.e. iterating over the LinkedHashSet), check if it is contained in the whitelist set.
+        // If word of description is contained in the white-list, keep it. If not, it is ignored (not added to LinkedHashSet).
+        for (String str : carDescriptionTextArray) {
+            if (st.getSet().contains(str)) {
+                lhs.add(str);
             }
         }
-        return text;
+
+        String returnString = "";
+
+        // Iterate over LinkedHashSet, which contains the allowed terms of a description string in their origin order. Concat the return String by those elements,
+        // split by blank.
+        for (String stringElement : lhs) {
+            returnString += " " + stringElement;
+        }
+
+        return returnString;
     }
 
     private static String removeUnderscores(String text){
@@ -48,8 +60,9 @@ public class Utils {
 
     public static String preprocessModel(String modelDescription) {
         String cleaned = Utils.removeUnderscores(modelDescription);
+        cleaned = cleaned.toLowerCase();
         cleaned = Utils.replaceUmlaute(cleaned);
-        cleaned = Utils.removeNonDescriptionWords(cleaned);
+        cleaned = keepDescriptionWords(cleaned);
         cleaned = Utils.removeDuplicateWords(cleaned);
         return cleaned;
     }
@@ -63,3 +76,4 @@ public class Utils {
         return transmission;
     }
 }
+
