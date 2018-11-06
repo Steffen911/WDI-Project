@@ -11,8 +11,6 @@ import java.util.Set;
 
 public class WhiteListSingleton {
 
-    public static final Logger logger = IR_App.logger;
-
     private static WhiteListSingleton single_instance = null;
 
     public static WhiteListSingleton getInstance() {
@@ -49,7 +47,7 @@ public class WhiteListSingleton {
             }
         } catch (Exception e) {
             this.set = new HashSet<String>();
-            logger.error("Failed loading white-list files. Class: WhiteListSingeleton.");
+            IR_App.logger.error("Failed loading white-list files. Class: WhiteListSingeleton.");
         }
     }
 }
