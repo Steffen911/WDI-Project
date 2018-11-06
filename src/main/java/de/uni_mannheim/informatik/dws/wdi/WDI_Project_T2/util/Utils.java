@@ -12,11 +12,6 @@ public class Utils {
     { "ä", "ae" }, { "ü", "ue" }, { "ö", "oe" }, { "ß", "ss" }
     };
 
-    /**
-     * List of non-description words.
-     * TODO: Should be extended manually
-     */
-
     //whitelisting approach
     public static String keepDescriptionWords(String carDescriptionText) {
 
