@@ -49,79 +49,147 @@ public class IR_App {
 
         logger.info("Successfully loaded data sets");
 
-        // Load the goldstandard training set
-        MatchingGoldStandard goldStandardTrain = new MatchingGoldStandard();
-        logger.info("Loading the goldstandard training set...");
-        goldStandardTrain.loadFromCSVFile(new File(classloader.getResource("goldstandard/train.csv").getFile()));
-
         // Prepare reusable datasets and parameters
-        int blockSize = 900;
+        int blockSize = 1000;
         int iterations = 1;
         logger.info("matching " + blockSize * iterations + " random offers with carEmissions");
         Car[] carOffers = offerInt.get().toArray(new Car[]{});
-        Processable<Correspondence<Car, Attribute>> correspondences = null;
+        Processable<Correspondence<Car, Attribute>> offersCarEmissionCorrespondences = null;
+        Processable<Correspondence<Car, Attribute>> offersVehiclesCorrespondences = null;
+        Processable<Correspondence<Car, Attribute>> vehiclesCarEmissionCorrespondences = null;
         for (int i = 0; i < iterations; i++) {
 
             System.gc();
 
-            // Add comparators
-            logger.info("Add matchingrules");
-            LinearCombinationMatchingRule<Car, Attribute> matchingRule = new LinearCombinationMatchingRule<>(0.65);
-            matchingRule.activateDebugReport("data/output/debugResultsMatchingRule.csv", -1, goldStandardTrain);
-            matchingRule.addComparator(new CarModelComparatorMaximumTokenContainment(), 0.5);
-            matchingRule.addComparator(new CarFuelTypeComparatorLevenshtein(), 0.3);
-            matchingRule.addComparator(new CarTransmissionComparatorLevenshtein(), 0.2);
-
-            // Add blocking strategy
-            logger.info("Initialize the blocker");
-            StandardRecordBlocker<Car, Attribute> blocker = new StandardRecordBlocker<>(new CarBlockingKeyByManufacturerGenerator());
-            blocker.setMeasureBlockSizes(true);
-            blocker.collectBlockSizeData("data/output/debugResultsBlocking.csv", 100);
-
-            // Add matching engine
-            MatchingEngine<Car, Attribute> engine = new MatchingEngine<>();
-
-            // prepare data set
-            // Take the first x samples from the offers dataset
+            // Prepare a sampled offers dataset
             HashedDataSet<Car, Attribute> offers = new HashedDataSet<>();
             for (int j = 0; j < blockSize; j++) {
                 offers.add(getRandom(carOffers));
             }
 
-            // Start the matching
             logger.info("Start the matching for iteration " + i + "/" + iterations);
-            Processable<Correspondence<Car, Attribute>> corr = engine.runIdentityResolution(offers, carEmissions, null, matchingRule, blocker);
-            if (correspondences == null) {
-                correspondences = corr;
+
+            Processable<Correspondence<Car, Attribute>> corr;
+
+            /*
+             * Offers - Car Emissions
+             */
+            corr = getOffersCarEmissionsCorrespondences(offers, carEmissions);
+            if (offersCarEmissionCorrespondences == null) {
+                offersCarEmissionCorrespondences = corr;
             } else {
                 for (Correspondence<Car, Attribute> correspondence : corr.get()) {
-                    correspondences.add(correspondence);
+                    offersCarEmissionCorrespondences.add(correspondence);
                 }
             }
-            logger.info("Successfully completed the matching for iteration " + i + "/" + iterations + " for a total of " + correspondences.size() + " correspondences");
+
+            /*
+             * Offers - Vehicles
+             */
+            corr = getOffersVehiclesCorrespondences(offers, vehicles);
+            if (offersVehiclesCorrespondences == null) {
+                offersVehiclesCorrespondences = corr;
+            } else {
+                for (Correspondence<Car, Attribute> correspondence : corr.get()) {
+                    offersVehiclesCorrespondences.add(correspondence);
+                }
+            }
+
+            /*
+             * Offers - Vehicles
+             */
+            corr = getVehiclesCarEmissionCorrespondences(vehicles, carEmissions);
+            if (vehiclesCarEmissionCorrespondences == null) {
+                vehiclesCarEmissionCorrespondences = corr;
+            } else {
+                for (Correspondence<Car, Attribute> correspondence : corr.get()) {
+                    vehiclesCarEmissionCorrespondences.add(correspondence);
+                }
+            }
+
+            logger.info("Successfully completed the matching for iteration " + (i + 1) + "/" + iterations);
 
         }
-
-        new CSVCorrespondenceFormatter().writeCSV(new File("data/output/offers_car_emissions_correspondences.csv"), correspondences);
-        logger.info("Successfully wrote the correspondences to data/output/...");
 
         MatchingGoldStandard goldStandardTest = new MatchingGoldStandard();
         goldStandardTest.loadFromCSVFile(new File(classloader.getResource("goldstandard/test.csv").getFile()));
 
+        evaluateDataset("offers-caremissions", offersCarEmissionCorrespondences, goldStandardTest);
+        evaluateDataset("offers-vehicles", offersVehiclesCorrespondences, goldStandardTest);
+        evaluateDataset("vehicles-caremissions", vehiclesCarEmissionCorrespondences, goldStandardTest);
+    }
+
+    /**
+     * Write the evaluation results to the given name and log precision, recall and f1.
+     */
+    private static void evaluateDataset(String name, Processable<Correspondence<Car, Attribute>> corr, MatchingGoldStandard gs) throws Exception {
+        new CSVCorrespondenceFormatter().writeCSV(new File("data/output/" + name + ".csv"), corr);
+        logger.info("Successfully wrote " + name + " to data/output/...");
+
         logger.info("Starting the result evaluation...");
         MatchingEvaluator<Car, Attribute> evaluator = new MatchingEvaluator<>();
-        Performance performance = evaluator.evaluateMatching(correspondences, goldStandardTest);
+        Performance performance = evaluator.evaluateMatching(corr, gs);
 
-        logger.info("Results for offers <-> car_emissions");
+        logger.info("Results for " + name);
         logger.info(String.format("Precision: %.4f", performance.getPrecision()));
         logger.info(String.format("Recall: %.4f", performance.getRecall()));
         logger.info(String.format("F1: %.4f", performance.getF1()));
     }
 
+    /**
+     * Get correspondences for car emissions and offers.
+     */
+    private static Processable<Correspondence<Car, Attribute>> getOffersCarEmissionsCorrespondences(
+        HashedDataSet<Car, Attribute> d1,
+        HashedDataSet<Car, Attribute> d2
+    ) throws Exception {
+        // Add comparators
+        logger.info("Add matchingrules");
+        LinearCombinationMatchingRule<Car, Attribute> matchingRule = new LinearCombinationMatchingRule<>(0.65);
+        matchingRule.addComparator(new CarModelComparatorMaximumTokenContainment(), 0.5);
+        matchingRule.addComparator(new CarFuelTypeComparatorLevenshtein(), 0.3);
+        matchingRule.addComparator(new CarTransmissionComparatorLevenshtein(), 0.2);
+
+        // Add blocking strategy
+        logger.info("Initialize the blocker");
+        StandardRecordBlocker<Car, Attribute> blocker = new StandardRecordBlocker<>(new CarBlockingKeyByManufacturerGenerator());
+        blocker.setMeasureBlockSizes(true);
+        blocker.collectBlockSizeData("data/output/debugResultsBlocking.csv", 100);
+
+        // Add matching engine
+        MatchingEngine<Car, Attribute> engine = new MatchingEngine<>();
+        return engine.runIdentityResolution(d1, d2, null, matchingRule, blocker);
+    }
+
+    /**
+     * Get correspondences for offers and vehicles.
+     * For the moment we reuse the parameterization in offers - car emissions, but if we want
+     * to have independent matching rules and comparators we may just copy the body of the other
+     * method and adjust those settings.
+     */
+    private static Processable<Correspondence<Car, Attribute>> getOffersVehiclesCorrespondences(
+        HashedDataSet<Car, Attribute> d1,
+        HashedDataSet<Car, Attribute> d2
+    ) throws Exception {
+        return getOffersCarEmissionsCorrespondences(d1, d2);
+    }
+
+    /**
+     * Get correspondences for car emissions and vehicles.
+     */
+    private static Processable<Correspondence<Car, Attribute>> getVehiclesCarEmissionCorrespondences(
+        HashedDataSet<Car, Attribute> d1,
+        HashedDataSet<Car, Attribute> d2
+    ) throws Exception {
+        return getOffersCarEmissionsCorrespondences(d1, d2);
+    }
+
+    /**
+     * Get a random element from the given array.
+     */
     private static Car getRandom(Car[] array) {
         int rnd = new Random().nextInt(array.length);
         return array[rnd];
     }
-
 
 }
