@@ -3,6 +3,7 @@ package de.uni_mannheim.informatik.dws.wdi.WDI_Project_T2;
 import de.uni_mannheim.informatik.dws.wdi.WDI_Project_T2.blocking.CarBlockingKeyByManufacturerGenerator;
 import de.uni_mannheim.informatik.dws.wdi.WDI_Project_T2.comparator.CarFuelTypeComparatorLevenshtein;
 import de.uni_mannheim.informatik.dws.wdi.WDI_Project_T2.comparator.CarModelComparatorMaximumTokenContainment;
+import de.uni_mannheim.informatik.dws.wdi.WDI_Project_T2.comparator.CarModelComparatorTokenizingJaccard;
 import de.uni_mannheim.informatik.dws.wdi.WDI_Project_T2.comparator.CarTransmissionComparatorLevenshtein;
 import de.uni_mannheim.informatik.dws.wdi.WDI_Project_T2.model.Car;
 import de.uni_mannheim.informatik.dws.wdi.WDI_Project_T2.model.CarXMLReader;
@@ -171,7 +172,22 @@ public class IR_App {
         HashedDataSet<Car, Attribute> d1,
         HashedDataSet<Car, Attribute> d2
     ) throws Exception {
-        return getOffersCarEmissionsCorrespondences(d1, d2);
+        // Add comparators
+        logger.info("Add matchingrules");
+        LinearCombinationMatchingRule<Car, Attribute> matchingRule = new LinearCombinationMatchingRule<>(0.5);
+        matchingRule.addComparator(new CarModelComparatorTokenizingJaccard(), 0.5);
+        matchingRule.addComparator(new CarFuelTypeComparatorLevenshtein(), 0.1);
+        matchingRule.addComparator(new CarTransmissionComparatorLevenshtein(), 0.4);
+
+        // Add blocking strategy
+        logger.info("Initialize the blocker");
+        StandardRecordBlocker<Car, Attribute> blocker = new StandardRecordBlocker<>(new CarBlockingKeyByManufacturerGenerator());
+        blocker.setMeasureBlockSizes(true);
+        blocker.collectBlockSizeData("data/output/debugResultsBlocking.csv", 100);
+
+        // Add matching engine
+        MatchingEngine<Car, Attribute> engine = new MatchingEngine<>();
+        return engine.runIdentityResolution(d1, d2, null, matchingRule, blocker);
     }
 
     /**
