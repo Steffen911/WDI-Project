@@ -355,7 +355,6 @@ offer_3330,car_emissions_296,TRUE
 offer_3332,car_emissions_197,FALSE
 offer_3396,car_emissions_2579,FALSE
 offer_3418,car_emissions_2936,FALSE
-offer_3418,car_emissions_2936,TRUE
 offer_3458,car_emissions_2995,TRUE
 offer_3458,car_emissions_3635,FALSE
 offer_3458,car_emissions_3636,FALSE
@@ -765,13 +764,9 @@ offer_13750,car_22684,TRUE
 offer_18450,car_12836,TRUE
 offer_6373,car_20878,TRUE
 offer_18450,car_4899,TRUE
-offer_18450,car_4899,TRUE
-offer_18450,car_4899,TRUE
-offer_6373,car_20878,TRUE
 offer_20231,car_26454,TRUE
 offer_20092,car_34494,TRUE
 offer_5427,car_14875,TRUE
 offer_21211,car_24315,TRUE
 offer_22610,car_26546,TRUE
 offer_19086,car_32808,TRUE
-
