@@ -51,13 +51,13 @@ public class IR_App {
         logger.info("Successfully loaded data sets");
 
         // Prepare reusable datasets and parameters
-        int blockSize = 700;
-        int iterations = 5;
+        int blockSize = 1000;
+        int iterations = 1;
         logger.info("matching " + blockSize * iterations + " random offers with carEmissions");
         Car[] carOffers = offerInt.get().toArray(new Car[]{});
         Processable<Correspondence<Car, Attribute>> offersCarEmissionCorrespondences = null;
-        //Processable<Correspondence<Car, Attribute>> offersVehiclesCorrespondences = null;
-        //Processable<Correspondence<Car, Attribute>> vehiclesCarEmissionCorrespondences = null;
+        Processable<Correspondence<Car, Attribute>> offersVehiclesCorrespondences = null;
+        Processable<Correspondence<Car, Attribute>> vehiclesCarEmissionCorrespondences = null;
         for (int i = 0; i < iterations; i++) {
 
             System.gc();
@@ -87,26 +87,26 @@ public class IR_App {
             /*
              * Offers - Vehicles
              */
-           /* corr = getOffersVehiclesCorrespondences(offers, vehicles);
+            corr = getOffersVehiclesCorrespondences(offers, vehicles);
             if (offersVehiclesCorrespondences == null) {
                 offersVehiclesCorrespondences = corr;
             } else {
                 for (Correspondence<Car, Attribute> correspondence : corr.get()) {
                     offersVehiclesCorrespondences.add(correspondence);
                 }
-            }*/
+            }
 
             /*
              * Offers - Vehicles
              */
-            /*corr = getVehiclesCarEmissionCorrespondences(vehicles, carEmissions);
+            corr = getVehiclesCarEmissionCorrespondences(vehicles, carEmissions);
             if (vehiclesCarEmissionCorrespondences == null) {
                 vehiclesCarEmissionCorrespondences = corr;
             } else {
                 for (Correspondence<Car, Attribute> correspondence : corr.get()) {
                     vehiclesCarEmissionCorrespondences.add(correspondence);
                 }
-            }*/
+            }
 
             logger.info("Successfully completed the matching for iteration " + (i + 1) + "/" + iterations);
 
@@ -116,8 +116,8 @@ public class IR_App {
         goldStandardTest.loadFromCSVFile(new File(classloader.getResource("goldstandard/test.csv").getFile()));
 
         evaluateDataset("offers-caremissions", offersCarEmissionCorrespondences, goldStandardTest);
-        /*evaluateDataset("offers-vehicles", offersVehiclesCorrespondences, goldStandardTest);
-        evaluateDataset("vehicles-caremissions", vehiclesCarEmissionCorrespondences, goldStandardTest);*/
+        evaluateDataset("offers-vehicles", offersVehiclesCorrespondences, goldStandardTest);
+        evaluateDataset("vehicles-caremissions", vehiclesCarEmissionCorrespondences, goldStandardTest);
     }
 
     /**
