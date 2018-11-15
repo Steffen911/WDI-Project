@@ -175,8 +175,8 @@ public class IR_App {
         // Add comparators
         logger.info("Add matchingrules");
         LinearCombinationMatchingRule<Car, Attribute> matchingRule = new LinearCombinationMatchingRule<>(0.5);
-        matchingRule.addComparator(new CarModelComparatorTokenizingJaccard(), 0.4);
-        matchingRule.addComparator(new CarFuelTypeComparatorLevenshtein(), 0.2);
+        matchingRule.addComparator(new CarModelComparatorTokenizingJaccard(), 0.5);
+        matchingRule.addComparator(new CarFuelTypeComparatorLevenshtein(), 0.1);
         matchingRule.addComparator(new CarTransmissionComparatorLevenshtein(), 0.4);
 
         // Add blocking strategy
