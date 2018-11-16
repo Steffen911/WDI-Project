@@ -11,10 +11,7 @@ import de.uni_mannheim.informatik.dws.winter.matching.MatchingEngine;
 import de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator;
 import de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardRecordBlocker;
 import de.uni_mannheim.informatik.dws.winter.matching.rules.LinearCombinationMatchingRule;
-import de.uni_mannheim.informatik.dws.winter.model.Correspondence;
-import de.uni_mannheim.informatik.dws.winter.model.HashedDataSet;
-import de.uni_mannheim.informatik.dws.winter.model.MatchingGoldStandard;
-import de.uni_mannheim.informatik.dws.winter.model.Performance;
+import de.uni_mannheim.informatik.dws.winter.model.*;
 import de.uni_mannheim.informatik.dws.winter.model.defaultmodel.Attribute;
 import de.uni_mannheim.informatik.dws.winter.model.io.CSVCorrespondenceFormatter;
 import de.uni_mannheim.informatik.dws.winter.processing.Processable;
@@ -22,6 +19,7 @@ import de.uni_mannheim.informatik.dws.winter.utils.WinterLogManager;
 import org.apache.logging.log4j.Logger;
 
 import java.io.File;
+import java.util.List;
 import java.util.Random;
 
 public class IR_App {
@@ -50,6 +48,10 @@ public class IR_App {
 
         logger.info("Successfully loaded data sets");
 
+        MatchingGoldStandard goldStandardTest = new MatchingGoldStandard();
+        goldStandardTest.loadFromCSVFile(new File(classloader.getResource("goldstandard/combined.csv").getFile()));
+        logger.info("Successfully loaded the goldstandard");
+
         // Prepare reusable datasets and parameters
         int blockSize = 1000;
         int iterations = 1;
@@ -66,6 +68,20 @@ public class IR_App {
             HashedDataSet<Car, Attribute> offers = new HashedDataSet<>();
             for (int j = 0; j < blockSize; j++) {
                 offers.add(getRandom(carOffers));
+            }
+
+            // Add all GS elements to the sample
+            List<Pair<String, String>> fullGS = goldStandardTest.getPositiveExamples();
+            fullGS.addAll(goldStandardTest.getNegativeExamples());
+            for(Pair<String, String> corr : fullGS) {
+                String first = corr.getFirst();
+                String second = corr.getSecond();
+                if (first.contains("offer") && offerInt.getRecord(first) != null) {
+                    offers.add(offerInt.getRecord(first));
+                }
+                if (second.contains("offer") && offerInt.getRecord(second) != null) {
+                    offers.add(offerInt.getRecord(second));
+                }
             }
 
             logger.info("Start the matching for iteration " + i + "/" + iterations);
@@ -112,12 +128,17 @@ public class IR_App {
 
         }
 
-        MatchingGoldStandard goldStandardTest = new MatchingGoldStandard();
-        goldStandardTest.loadFromCSVFile(new File(classloader.getResource("goldstandard/test.csv").getFile()));
+        MatchingGoldStandard oceGs = new MatchingGoldStandard();
+        oceGs.loadFromCSVFile(new File(classloader.getResource("goldstandard/oce.csv").getFile()));
+        MatchingGoldStandard ovecGs = new MatchingGoldStandard();
+        ovecGs.loadFromCSVFile(new File(classloader.getResource("goldstandard/ovec.csv").getFile()));
+        MatchingGoldStandard cevecGs = new MatchingGoldStandard();
+        cevecGs.loadFromCSVFile(new File(classloader.getResource("goldstandard/cevec.csv").getFile()));
+        logger.info("Successfully loaded the goldstandards");
 
-        evaluateDataset("offers-caremissions", offersCarEmissionCorrespondences, goldStandardTest);
-        evaluateDataset("offers-vehicles", offersVehiclesCorrespondences, goldStandardTest);
-        evaluateDataset("vehicles-caremissions", vehiclesCarEmissionCorrespondences, goldStandardTest);
+        evaluateDataset("offers-caremissions", offersCarEmissionCorrespondences, oceGs);
+        evaluateDataset("offers-vehicles", offersVehiclesCorrespondences, ovecGs);
+        evaluateDataset("vehicles-caremissions", vehiclesCarEmissionCorrespondences, cevecGs);
     }
 
     /**
