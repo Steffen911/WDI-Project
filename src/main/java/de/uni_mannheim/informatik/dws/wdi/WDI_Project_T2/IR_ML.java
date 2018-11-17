@@ -92,7 +92,9 @@ public class IR_ML {
         gsTraining.loadFromCSVFile(new File(classloader.getResource("goldstandard/train.csv").getFile()));
 
         //export comparator features for RapidMiner
-        // matchingRule.exportTrainingData(carEmissions, vehicles, gsTraining, new File("data/output/features.csv"));
+        matchingRule.exportTrainingData(carEmissions, vehicles, gsTraining, new File("data/output/carem_veh_features.csv"));
+        matchingRule.exportTrainingData(offerInt, vehicles, gsTraining, new File("data/output/offer_veh_features.csv"));
+        matchingRule.exportTrainingData(offerInt, carEmissions, gsTraining, new File("data/output/offer_carem_features.csv"));
 
         // train the matching rule's model
         RuleLearner<Car, Attribute> learner = new RuleLearner<>();
