@@ -1,10 +1,7 @@
 package de.uni_mannheim.informatik.dws.wdi.WDI_Project_T2;
 
 import de.uni_mannheim.informatik.dws.wdi.WDI_Project_T2.blocking.CarBlockingKeyByManufacturerGenerator;
-import de.uni_mannheim.informatik.dws.wdi.WDI_Project_T2.comparator.CarFuelTypeComparatorLevenshtein;
-import de.uni_mannheim.informatik.dws.wdi.WDI_Project_T2.comparator.CarModelComparatorMaximumTokenContainment;
-import de.uni_mannheim.informatik.dws.wdi.WDI_Project_T2.comparator.CarModelComparatorTokenizingJaccard;
-import de.uni_mannheim.informatik.dws.wdi.WDI_Project_T2.comparator.CarTransmissionComparatorLevenshtein;
+import de.uni_mannheim.informatik.dws.wdi.WDI_Project_T2.comparator.*;
 import de.uni_mannheim.informatik.dws.wdi.WDI_Project_T2.model.Car;
 import de.uni_mannheim.informatik.dws.wdi.WDI_Project_T2.model.CarXMLReader;
 import de.uni_mannheim.informatik.dws.winter.matching.MatchingEngine;
@@ -50,9 +47,12 @@ public class IR_App {
 
         logger.info("Successfully loaded data sets");
 
+
+
+
         // Prepare reusable datasets and parameters
         int blockSize = 1000;
-        int iterations = 1;
+        int iterations = 3;
         logger.info("matching " + blockSize * iterations + " random offers with carEmissions");
         Car[] carOffers = offerInt.get().toArray(new Car[]{});
         Processable<Correspondence<Car, Attribute>> offersCarEmissionCorrespondences = null;
@@ -84,10 +84,12 @@ public class IR_App {
                 }
             }
 
+
             /*
              * Offers - Vehicles
              */
-            corr = getOffersVehiclesCorrespondences(offers, vehicles);
+
+           // corr = getOffersVehiclesCorrespondences(offers, vehicles);
             if (offersVehiclesCorrespondences == null) {
                 offersVehiclesCorrespondences = corr;
             } else {
@@ -96,10 +98,12 @@ public class IR_App {
                 }
             }
 
+
             /*
              * Offers - Vehicles
              */
-            corr = getVehiclesCarEmissionCorrespondences(vehicles, carEmissions);
+
+           // corr = getVehiclesCarEmissionCorrespondences(vehicles, carEmissions);
             if (vehiclesCarEmissionCorrespondences == null) {
                 vehiclesCarEmissionCorrespondences = corr;
             } else {
@@ -108,6 +112,7 @@ public class IR_App {
                 }
             }
 
+
             logger.info("Successfully completed the matching for iteration " + (i + 1) + "/" + iterations);
 
         }
@@ -115,9 +120,11 @@ public class IR_App {
         MatchingGoldStandard goldStandardTest = new MatchingGoldStandard();
         goldStandardTest.loadFromCSVFile(new File(classloader.getResource("goldstandard/test.csv").getFile()));
 
+
+
         evaluateDataset("offers-caremissions", offersCarEmissionCorrespondences, goldStandardTest);
-        evaluateDataset("offers-vehicles", offersVehiclesCorrespondences, goldStandardTest);
-        evaluateDataset("vehicles-caremissions", vehiclesCarEmissionCorrespondences, goldStandardTest);
+        //evaluateDataset("offers-vehicles", offersVehiclesCorrespondences, goldStandardTest);
+        //evaluateDataset("vehicles-caremissions", vehiclesCarEmissionCorrespondences, goldStandardTest);
     }
 
     /**
@@ -146,10 +153,11 @@ public class IR_App {
     ) throws Exception {
         // Add comparators
         logger.info("Add matchingrules");
-        LinearCombinationMatchingRule<Car, Attribute> matchingRule = new LinearCombinationMatchingRule<>(0.65);
-        matchingRule.addComparator(new CarModelComparatorMaximumTokenContainment(), 0.5);
+        LinearCombinationMatchingRule<Car, Attribute> matchingRule = new LinearCombinationMatchingRule<>(0.75);
+
+        matchingRule.addComparator(new CarModelComparatorMaximumTokenContainment(), 0.4);
         matchingRule.addComparator(new CarFuelTypeComparatorLevenshtein(), 0.3);
-        matchingRule.addComparator(new CarTransmissionComparatorLevenshtein(), 0.2);
+        matchingRule.addComparator(new CarTransmissionComparatorLevenshtein(), 0.3);
 
         // Add blocking strategy
         logger.info("Initialize the blocker");

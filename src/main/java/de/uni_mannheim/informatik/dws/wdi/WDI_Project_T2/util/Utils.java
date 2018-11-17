@@ -4,6 +4,8 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.util.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
 public class Utils {
@@ -11,6 +13,11 @@ public class Utils {
     private static String[][] UMLAUT_REPLACEMENTS = {
     { "ä", "ae" }, { "ü", "ue" }, { "ö", "oe" }, { "ß", "ss" }
     };
+
+    private static String[] IGNORE_WORDS = {"door", "tuer", "edition", "start", "stop", "assistant", "august", "november", "february", "march", "april", "june", "july", "august", "september", "october", "november", "december"};
+
+
+    private static Pattern patternYears = Pattern.compile("(19[0-9]{2}$)|(2[0-9]{3}$)|(19[0-9]{2})|(2[0-9]{3})");
 
     //whitelisting approach
     public static String keepDescriptionWords(String carDescriptionText) {
@@ -45,9 +52,21 @@ public class Utils {
     private static String removeUnderscores(String text){
         return text.replace("_", " ");
     }
+    private static String ignoreWords(String text){
+        String result = text;
+        for (int i = 0; i < IGNORE_WORDS.length; i++) {
+            result = result.replace(IGNORE_WORDS[i], "");
+        }
+        return result;
+    }
 
     private static String removeDuplicateWords(String s) {
         return Arrays.stream(s.split(" ")).distinct().collect(Collectors.joining(" "));
+    }
+
+    private static String removeYears(String text){
+        Matcher matcher = patternYears.matcher(text);
+        return matcher.replaceAll("");
     }
 
     private static String replaceUmlaute(String orig) {
@@ -59,12 +78,16 @@ public class Utils {
     }
 
     public static String preprocessModel(String modelDescription) {
+        if (modelDescription.equals("")){
+            return modelDescription;
+        }
         String cleaned = Utils.removeUnderscores(modelDescription);
-        cleaned = cleaned.toLowerCase();
+        cleaned = Utils.removeYears(cleaned);
         cleaned = Utils.replaceUmlaute(cleaned);
         cleaned = keepDescriptionWords(cleaned);
+        cleaned = Utils.ignoreWords(cleaned);
         cleaned = Utils.removeDuplicateWords(cleaned);
-        return cleaned;
+        return cleaned.trim();
     }
 
     public static String preprocessTransmission(String transmission) {
