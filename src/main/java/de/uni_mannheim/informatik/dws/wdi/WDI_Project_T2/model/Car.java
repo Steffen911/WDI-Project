@@ -1,6 +1,8 @@
 package de.uni_mannheim.informatik.dws.wdi.WDI_Project_T2.model;
 
+import de.uni_mannheim.informatik.dws.winter.model.AbstractRecord;
 import de.uni_mannheim.informatik.dws.winter.model.Matchable;
+import de.uni_mannheim.informatik.dws.winter.model.defaultmodel.Attribute;
 
 /**
  * An AbstractRecord Representing a car.
@@ -28,7 +30,7 @@ import de.uni_mannheim.informatik.dws.winter.model.Matchable;
  * 		</pollution>
  * 	</car>
  */
-public class Car implements Matchable {
+public class Car extends AbstractRecord<Attribute> {
 
     // Mandatory properties of Matchable
     private String identifier;
@@ -136,4 +138,10 @@ public class Car implements Matchable {
     public void setPollution(Pollution pollution) {
         this.pollution = pollution;
     }
+
+	@Override
+	public boolean hasValue(Attribute attribute) {
+		// TODO Auto-generated method stub
+		return false;
+	}
 }

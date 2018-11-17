@@ -72,7 +72,7 @@ public class CarBlockingKeyByManufacturerGenerator extends RecordBlockingKeyGene
                 return i;
             }
             double similarity = sim.calculate(manufacturers[i], manufacturer);
-            if (similarity > 0.3) {
+            if (similarity > 0.6) {
                 return i;
             }
         }

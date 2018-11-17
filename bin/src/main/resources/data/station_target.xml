@@ -1,0 +1,6159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<target xsi:noNamespaceSchemaLocation="file:///Z:/OneDrive/UniMA/HWS18-19/Web%20Data%20Integration/Project/target.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<car id="station_1">
+		<region>
+			<stationId>STA.DE_DETH101</stationId>
+			<latitude>50.979762</latitude>
+			<longitude>11.341702000000002</longitude>
+			<zip-code>99425</zip-code>
+			<city>Weimar</city>
+		</region>
+	</car>
+	<car id="station_2">
+		<region>
+			<stationId>STA.DE_DEBW087</stationId>
+			<latitude>48.345778</latitude>
+			<longitude>9.207639</longitude>
+			<zip-code>72820</zip-code>
+			<city>Sonnenbühl</city>
+		</region>
+	</car>
+	<car id="station_3">
+		<region>
+			<stationId>STA.DE_DEBW004</stationId>
+			<latitude>49.07655</latitude>
+			<longitude>8.40666</longitude>
+			<zip-code>76344</zip-code>
+			<city>Eggenstein-Leopoldshafen</city>
+		</region>
+	</car>
+	<car id="station_4">
+		<region>
+			<stationId>STA.DE_DEBB021</stationId>
+			<latitude>52.401352</latitude>
+			<longitude>13.059945</longitude>
+			<zip-code>14467</zip-code>
+			<city>Potsdam</city>
+		</region>
+	</car>
+	<car id="station_5">
+		<region>
+			<stationId>STA.DE_DESH026</stationId>
+			<latitude>53.872916</latitude>
+			<longitude>10.691036</longitude>
+			<zip-code>23552</zip-code>
+			<city>Lübeck</city>
+		</region>
+	</car>
+	<car id="station_6">
+		<region>
+			<stationId>STA.DE_DEBW013</stationId>
+			<latitude>48.8088</latitude>
+			<longitude>9.229745</longitude>
+			<zip-code>70374</zip-code>
+			<city>Stuttgart</city>
+		</region>
+	</car>
+	<car id="station_7">
+		<region>
+			<stationId>STA.DE_DEBW155</stationId>
+			<latitude>48.80239999999999</latitude>
+			<longitude>9.79584</longitude>
+			<zip-code>73525</zip-code>
+			<city>Schwäbisch Gmünd</city>
+		</region>
+	</car>
+	<car id="station_8">
+		<region>
+			<stationId>STA.DE_DEBW213</stationId>
+			<latitude>48.25547999999999</latitude>
+			<longitude>8.83802</longitude>
+			<zip-code>72336</zip-code>
+			<city>Balingen</city>
+		</region>
+	</car>
+	<car id="station_9">
+		<region>
+			<stationId>STA.DE_DEBB077</stationId>
+			<latitude>53.14236699999999</latitude>
+			<longitude>13.032330000000002</longitude>
+			<zip-code>16775</zip-code>
+			<city>Stechlin</city>
+		</region>
+	</car>
+	<car id="station_10">
+		<region>
+			<stationId>STA.DE_DEBB082</stationId>
+			<latitude>52.29463299999999</latitude>
+			<longitude>13.619784</longitude>
+			<zip-code>15711</zip-code>
+			<city>Königs Wusterhausen</city>
+		</region>
+	</car>
+	<car id="station_11">
+		<region>
+			<stationId>STA.DE_DENW212</stationId>
+			<latitude>50.947367</latitude>
+			<longitude>6.957701</longitude>
+			<zip-code>50668</zip-code>
+			<city>Köln</city>
+		</region>
+	</car>
+	<car id="station_12">
+		<region>
+			<stationId>STA.DE_DEBB065</stationId>
+			<latitude>52.194225</latitude>
+			<longitude>12.561389</longitude>
+			<zip-code>14806</zip-code>
+			<city>Bad Belzig</city>
+		</region>
+	</car>
+	<car id="station_13">
+		<region>
+			<stationId>STA.DE_DEBW024</stationId>
+			<latitude>48.899233</latitude>
+			<longitude>9.172792</longitude>
+			<zip-code>71636</zip-code>
+			<city>Ludwigsburg</city>
+		</region>
+	</car>
+	<car id="station_14">
+		<region>
+			<stationId>STA.DE_DEBW098</stationId>
+			<latitude>49.49256</latitude>
+			<longitude>8.47204</longitude>
+			<zip-code>68161</zip-code>
+			<city>Mannheim</city>
+		</region>
+	</car>
+	<car id="station_15">
+		<region>
+			<stationId>STA.DE_DEBW212</stationId>
+			<latitude>48.87066999999999</latitude>
+			<longitude>9.27387</longitude>
+			<zip-code>71686</zip-code>
+			<city>Remseck am Neckar</city>
+		</region>
+	</car>
+	<car id="station_16">
+		<region>
+			<stationId>STA.DE_DEBB078</stationId>
+			<latitude>52.903756</latitude>
+			<longitude>12.807049</longitude>
+			<zip-code>16816</zip-code>
+			<city>Neuruppin</city>
+		</region>
+	</car>
+	<car id="station_17">
+		<region>
+			<stationId>STA.DE_DERP036</stationId>
+			<latitude>49.750128</latitude>
+			<longitude>6.636977000000001</longitude>
+			<zip-code>54290</zip-code>
+			<city>Trier</city>
+		</region>
+	</car>
+	<car id="station_18">
+		<region>
+			<stationId>STA.DE_DEBY037</stationId>
+			<latitude>48.137252</latitude>
+			<longitude>11.564924000000001</longitude>
+			<zip-code>80331</zip-code>
+			<city>München</city>
+		</region>
+	</car>
+	<car id="station_19">
+		<region>
+			<stationId>STA.DE_DEBY012</stationId>
+			<latitude>48.17717499999999</latitude>
+			<longitude>12.829314</longitude>
+			<zip-code>84489</zip-code>
+			<city>Burghausen</city>
+		</region>
+	</car>
+	<car id="station_20">
+		<region>
+			<stationId>STA.DE_DEBY187</stationId>
+			<latitude>48.95218</latitude>
+			<longitude>10.59772</longitude>
+			<zip-code>86732</zip-code>
+			<city>Oettingen in Bayern</city>
+		</region>
+	</car>
+	<car id="station_21">
+		<region>
+			<stationId>STA.DE_DERP003</stationId>
+			<latitude>49.455378</latitude>
+			<longitude>8.425833</longitude>
+			<zip-code>67065</zip-code>
+			<city>Ludwigshafen am Rhein</city>
+		</region>
+	</car>
+	<car id="station_22">
+		<region>
+			<stationId>STA.DE_DEST044</stationId>
+			<latitude>51.896982</latitude>
+			<longitude>11.057442</longitude>
+			<zip-code>38820</zip-code>
+			<city>Halberstadt</city>
+		</region>
+	</car>
+	<car id="station_23">
+		<region>
+			<stationId>STA.DE_DEBB055</stationId>
+			<latitude>52.420442</latitude>
+			<longitude>12.552303</longitude>
+			<zip-code>14770</zip-code>
+			<city>Brandenburg an der Havel</city>
+		</region>
+	</car>
+	<car id="station_24">
+		<region>
+			<stationId>STA.DE_DESL017</stationId>
+			<latitude>49.254344</latitude>
+			<longitude>6.867744</longitude>
+			<zip-code>66333</zip-code>
+			<city>Völklingen</city>
+		</region>
+	</car>
+	<car id="station_25">
+		<region>
+			<stationId>STA.DE_DETH009</stationId>
+			<latitude>50.87731699999999</latitude>
+			<longitude>12.074710000000001</longitude>
+			<zip-code>07545</zip-code>
+			<city>Gera</city>
+		</region>
+	</car>
+	<car id="station_26">
+		<region>
+			<stationId>STA.DE_DENI029</stationId>
+			<latitude>53.362350000000006</latitude>
+			<longitude>7.20726</longitude>
+			<zip-code>26725</zip-code>
+			<city>Emden</city>
+		</region>
+	</car>
+	<car id="station_27">
+		<region>
+			<stationId>STA.DE_DETH020</stationId>
+			<latitude>50.979455</latitude>
+			<longitude>11.037924</longitude>
+			<zip-code>99084</zip-code>
+			<city>Erfurt</city>
+		</region>
+	</car>
+	<car id="station_28">
+		<region>
+			<stationId>STA.DE_DEHB005</stationId>
+			<latitude>53.56245500000001</latitude>
+			<longitude>8.569405000000001</longitude>
+			<zip-code>27568</zip-code>
+			<city>Bremerhaven</city>
+		</region>
+	</car>
+	<car id="station_29">
+		<region>
+			<stationId>STA.DE_DEMV017</stationId>
+			<latitude>53.30235199999999</latitude>
+			<longitude>11.362965</longitude>
+			<zip-code>19288</zip-code>
+			<city>Göhlen</city>
+		</region>
+	</car>
+	<car id="station_30">
+		<region>
+			<stationId>STA.DE_DEHH026</stationId>
+			<latitude>53.56063199999999</latitude>
+			<longitude>9.957236</longitude>
+			<zip-code>22769</zip-code>
+			<city>Hamburg</city>
+		</region>
+	</car>
+	<car id="station_31">
+		<region>
+			<stationId>STA.DE_DENI028</stationId>
+			<latitude>51.50758</latitude>
+			<longitude>10.238539999999999</longitude>
+			<zip-code>37115</zip-code>
+			<city>Duderstadt</city>
+		</region>
+	</car>
+	<car id="station_32">
+		<region>
+			<stationId>STA.DE_DERP035</stationId>
+			<latitude>49.441721</latitude>
+			<longitude>7.761271</longitude>
+			<zip-code>67655</zip-code>
+			<city>Kaiserslautern</city>
+		</region>
+	</car>
+	<car id="station_33">
+		<region>
+			<stationId>STA.DE_DERP024</stationId>
+			<latitude>50.35439999999999</latitude>
+			<longitude>7.596583</longitude>
+			<zip-code>56068</zip-code>
+			<city>Koblenz</city>
+		</region>
+	</car>
+	<car id="station_34">
+		<region>
+			<stationId>STA.DE_DEHE018</stationId>
+			<latitude>50.010325</latitude>
+			<longitude>8.451527</longitude>
+			<zip-code>65479</zip-code>
+			<city>Raunheim</city>
+		</region>
+	</car>
+	<car id="station_35">
+		<region>
+			<stationId>STA.DE_DEST077</stationId>
+			<latitude>52.127899</latitude>
+			<longitude>11.611464</longitude>
+			<zip-code>39108</zip-code>
+			<city>Magdeburg</city>
+		</region>
+	</car>
+	<car id="station_36">
+		<region>
+			<stationId>STA.DE_DESL019</stationId>
+			<latitude>49.416884</latitude>
+			<longitude>6.552037000000001</longitude>
+			<zip-code>66780</zip-code>
+			<city>Rehlingen-Siersburg</city>
+		</region>
+	</car>
+	<car id="station_37">
+		<region>
+			<stationId>STA.DE_DETH093</stationId>
+			<latitude>50.98254399999999</latitude>
+			<longitude>11.3204</longitude>
+			<zip-code>99423</zip-code>
+			<city>Weimar</city>
+		</region>
+	</car>
+	<car id="station_38">
+		<region>
+			<stationId>STA.DE_DENI059</stationId>
+			<latitude>53.83017</latitude>
+			<longitude>8.80122</longitude>
+			<zip-code>27478</zip-code>
+			<city>Cuxhaven</city>
+		</region>
+	</car>
+	<car id="station_39">
+		<region>
+			<stationId>STA.DE_DEHH008</stationId>
+			<latitude>53.56414</latitude>
+			<longitude>9.967882</longitude>
+			<zip-code>20357</zip-code>
+			<city>Hamburg</city>
+		</region>
+	</car>
+	<car id="station_40">
+		<region>
+			<stationId>STA.DE_DESH023</stationId>
+			<latitude>53.835492</latitude>
+			<longitude>10.695936</longitude>
+			<zip-code>23562</zip-code>
+			<city>Lübeck</city>
+		</region>
+	</car>
+	<car id="station_41">
+		<region>
+			<stationId>STA.DE_DESH027</stationId>
+			<latitude>54.304676</latitude>
+			<longitude>10.135158</longitude>
+			<zip-code>24143</zip-code>
+			<city>Kiel</city>
+		</region>
+	</car>
+	<car id="station_42">
+		<region>
+			<stationId>STA.DE_DEBW023</stationId>
+			<latitude>47.588152</latitude>
+			<longitude>7.633271</longitude>
+			<zip-code>79576</zip-code>
+			<city>Weil am Rhein</city>
+		</region>
+	</car>
+	<car id="station_43">
+		<region>
+			<stationId>STA.DE_DENW064</stationId>
+			<latitude>50.65323599999999</latitude>
+			<longitude>6.281069</longitude>
+			<zip-code>52152</zip-code>
+			<city>Simmerath</city>
+		</region>
+	</car>
+	<car id="station_44">
+		<region>
+			<stationId>STA.DE_DENI068</stationId>
+			<latitude>51.5302</latitude>
+			<longitude>9.92833</longitude>
+			<zip-code>37073</zip-code>
+			<city>Göttingen</city>
+		</region>
+	</car>
+	<car id="station_45">
+		<region>
+			<stationId>STA.DE_DENI048</stationId>
+			<latitude>52.359478</latitude>
+			<longitude>9.715499999999999</longitude>
+			<zip-code>30449</zip-code>
+			<city>Hannover</city>
+		</region>
+	</car>
+	<car id="station_46">
+		<region>
+			<stationId>STA.DE_DENW034</stationId>
+			<latitude>51.524022</latitude>
+			<longitude>6.748402</longitude>
+			<zip-code>47179</zip-code>
+			<city>Duisburg</city>
+		</region>
+	</car>
+	<car id="station_47">
+		<region>
+			<stationId>STA.DE_DEST002</stationId>
+			<latitude>52.268354</latitude>
+			<longitude>11.864763</longitude>
+			<zip-code>39288</zip-code>
+			<city>Burg (bei Magdeburg)</city>
+		</region>
+	</car>
+	<car id="station_48">
+		<region>
+			<stationId>STA.DE_DEST104</stationId>
+			<latitude>51.83730599999999</latitude>
+			<longitude>11.891412</longitude>
+			<zip-code>06369</zip-code>
+			<city>Dornbock</city>
+		</region>
+	</car>
+	<car id="station_49">
+		<region>
+			<stationId>STA.DE_DERP019</stationId>
+			<latitude>49.44599999999999</latitude>
+			<longitude>7.767299999999999</longitude>
+			<zip-code>67657</zip-code>
+			<city>Kaiserslautern</city>
+		</region>
+	</car>
+	<car id="station_50">
+		<region>
+			<stationId>STA.DE_DEMV007</stationId>
+			<latitude>54.16155499999999</latitude>
+			<longitude>12.174105000000004</longitude>
+			<zip-code>18182</zip-code>
+			<city>Rövershagen</city>
+		</region>
+	</car>
+	<car id="station_51">
+		<region>
+			<stationId>STA.DE_DEBW010</stationId>
+			<latitude>49.300731</latitude>
+			<longitude>8.700103000000002</longitude>
+			<zip-code>69168</zip-code>
+			<city>Wiesloch</city>
+		</region>
+	</car>
+	<car id="station_52">
+		<region>
+			<stationId>STA.DE_DEHH021</stationId>
+			<latitude>53.487669</latitude>
+			<longitude>10.083646</longitude>
+			<zip-code>21037</zip-code>
+			<city>Hamburg</city>
+		</region>
+	</car>
+	<car id="station_53">
+		<region>
+			<stationId>STA.DE_DEBW009</stationId>
+			<latitude>49.419528</latitude>
+			<longitude>8.6767</longitude>
+			<zip-code>69120</zip-code>
+			<city>Heidelberg</city>
+		</region>
+	</car>
+	<car id="station_54">
+		<region>
+			<stationId>STA.DE_DEMV004</stationId>
+			<latitude>53.81777499999999</latitude>
+			<longitude>12.064708</longitude>
+			<zip-code>18276</zip-code>
+			<city>Gülzow-Prüzen</city>
+		</region>
+	</car>
+	<car id="station_55">
+		<region>
+			<stationId>STA.DE_DEBY118</stationId>
+			<latitude>48.573629</latitude>
+			<longitude>13.422039000000002</longitude>
+			<zip-code>94036</zip-code>
+			<city>Passau</city>
+		</region>
+	</car>
+	<car id="station_56">
+		<region>
+			<stationId>STA.DE_DENI060</stationId>
+			<latitude>52.95701999999999</latitude>
+			<longitude>11.16705</longitude>
+			<zip-code>29439</zip-code>
+			<city>Lüchow</city>
+		</region>
+	</car>
+	<car id="station_57">
+		<region>
+			<stationId>STA.DE_DESN052</stationId>
+			<latitude>50.731478</latitude>
+			<longitude>13.75145</longitude>
+			<zip-code>01773</zip-code>
+			<city>Altenberg</city>
+		</region>
+	</car>
+	<car id="station_58">
+		<region>
+			<stationId>STA.DE_DEHE043</stationId>
+			<latitude>49.825165</latitude>
+			<longitude>8.516797999999998</longitude>
+			<zip-code>64560</zip-code>
+			<city>Riedstadt</city>
+		</region>
+	</car>
+	<car id="station_59">
+		<region>
+			<stationId>STA.DE_DETH060</stationId>
+			<latitude>50.65324499999999</latitude>
+			<longitude>10.668641</longitude>
+			<zip-code>98544</zip-code>
+			<city>Zella-Mehlis</city>
+		</region>
+	</car>
+	<car id="station_60">
+		<region>
+			<stationId>STA.DE_DEHE063</stationId>
+			<latitude>49.64323799999999</latitude>
+			<longitude>8.641999999999998</longitude>
+			<zip-code>64646</zip-code>
+			<city>Heppenheim (Bergstraße)</city>
+		</region>
+	</car>
+	<car id="station_61">
+		<region>
+			<stationId>STA.DE_DEHE059</stationId>
+			<latitude>50.550028</latitude>
+			<longitude>9.684853999999998</longitude>
+			<zip-code>36037</zip-code>
+			<city>Fulda</city>
+		</region>
+	</car>
+	<car id="station_62">
+		<region>
+			<stationId>STA.DE_DEUB028</stationId>
+			<latitude>54.436985</latitude>
+			<longitude>12.721938</longitude>
+			<zip-code>18374</zip-code>
+			<city>Zingst</city>
+		</region>
+	</car>
+	<car id="station_63">
+		<region>
+			<stationId>STA.DE_DEBY039</stationId>
+			<latitude>48.15453400000001</latitude>
+			<longitude>11.554669</longitude>
+			<zip-code>80335</zip-code>
+			<city>München</city>
+		</region>
+	</car>
+	<car id="station_64">
+		<region>
+			<stationId>STA.DE_DEBB088</stationId>
+			<latitude>52.52401</latitude>
+			<longitude>12.370162</longitude>
+			<zip-code>14727</zip-code>
+			<city>Premnitz</city>
+		</region>
+	</car>
+	<car id="station_65">
+		<region>
+			<stationId>STA.DE_DENI070</stationId>
+			<latitude>52.15368999999999</latitude>
+			<longitude>10.45591</longitude>
+			<zip-code>38239</zip-code>
+			<city>Salzgitter</city>
+		</region>
+	</car>
+	<car id="station_66">
+		<region>
+			<stationId>STA.DE_DENW101</stationId>
+			<latitude>51.51963900000001</latitude>
+			<longitude>7.464347000000001</longitude>
+			<zip-code>44145</zip-code>
+			<city>Dortmund</city>
+		</region>
+	</car>
+	<car id="station_67">
+		<region>
+			<stationId>STA.DE_DENI076</stationId>
+			<latitude>53.15183999999999</latitude>
+			<longitude>8.217539999999998</longitude>
+			<zip-code>26123</zip-code>
+			<city>Oldenburg</city>
+		</region>
+	</car>
+	<car id="station_68">
+		<region>
+			<stationId>STA.DE_DEBW084</stationId>
+			<latitude>48.001511</latitude>
+			<longitude>7.832122</longitude>
+			<zip-code>79106</zip-code>
+			<city>Freiburg im Breisgau</city>
+		</region>
+	</car>
+	<car id="station_69">
+		<region>
+			<stationId>STA.DE_DEBW076</stationId>
+			<latitude>48.77307199999999</latitude>
+			<longitude>8.220214</longitude>
+			<zip-code>76530</zip-code>
+			<city>Baden-Baden</city>
+		</region>
+	</car>
+	<car id="station_70">
+		<region>
+			<stationId>STA.DE_DEMV024</stationId>
+			<latitude>53.396348</latitude>
+			<longitude>12.463929000000002</longitude>
+			<zip-code>17209</zip-code>
+			<city>Leizen</city>
+		</region>
+	</car>
+	<car id="station_71">
+		<region>
+			<stationId>STA.DE_DERP041</stationId>
+			<latitude>49.478498</latitude>
+			<longitude>8.443849999999998</longitude>
+			<zip-code>67059</zip-code>
+			<city>Ludwigshafen am Rhein</city>
+		</region>
+	</car>
+	<car id="station_72">
+		<region>
+			<stationId>STA.DE_DESH008</stationId>
+			<latitude>54.09322999999999</latitude>
+			<longitude>10.240596</longitude>
+			<zip-code>24601</zip-code>
+			<city>Belau</city>
+		</region>
+	</car>
+	<car id="station_73">
+		<region>
+			<stationId>STA.DE_DERP045</stationId>
+			<latitude>50.359605</latitude>
+			<longitude>7.592515</longitude>
+			<zip-code>56068</zip-code>
+			<city>Koblenz</city>
+		</region>
+	</car>
+	<car id="station_74">
+		<region>
+			<stationId>STA.DE_DERP014</stationId>
+			<latitude>49.741035</latitude>
+			<longitude>7.193486</longitude>
+			<zip-code>55767</zip-code>
+			<city>Siesbach</city>
+		</region>
+	</car>
+	<car id="station_75">
+		<region>
+			<stationId>STA.DE_DESN020</stationId>
+			<latitude>51.155801</latitude>
+			<longitude>14.973957999999998</longitude>
+			<zip-code>02828</zip-code>
+			<city>Görlitz</city>
+		</region>
+	</car>
+	<car id="station_76">
+		<region>
+			<stationId>STA.DE_DEHE020</stationId>
+			<latitude>50.567185</latitude>
+			<longitude>8.500619</longitude>
+			<zip-code>35576</zip-code>
+			<city>Wetzlar</city>
+		</region>
+	</car>
+	<car id="station_77">
+		<region>
+			<stationId>STA.DE_DEBY088</stationId>
+			<latitude>48.021657</latitude>
+			<longitude>12.538174</longitude>
+			<zip-code>83308</zip-code>
+			<city>Trostberg</city>
+		</region>
+	</car>
+	<car id="station_78">
+		<region>
+			<stationId>STA.DE_DEBW081</stationId>
+			<latitude>49.02859400000001</latitude>
+			<longitude>8.355627999999998</longitude>
+			<zip-code>76185</zip-code>
+			<city>Karlsruhe</city>
+		</region>
+	</car>
+	<car id="station_79">
+		<region>
+			<stationId>STA.DE_DERP015</stationId>
+			<latitude>50.26649999999999</latitude>
+			<longitude>6.3781</longitude>
+			<zip-code>54597</zip-code>
+			<city>Auw bei Prüm</city>
+		</region>
+	</car>
+	<car id="station_80">
+		<region>
+			<stationId>STA.DE_DENI051</stationId>
+			<latitude>51.75816</latitude>
+			<longitude>10.612479999999998</longitude>
+			<zip-code>38700</zip-code>
+			<city>Braunlage</city>
+		</region>
+	</car>
+	<car id="station_81">
+		<region>
+			<stationId>STA.DE_DESH035</stationId>
+			<latitude>53.896117</latitude>
+			<longitude>9.156908</longitude>
+			<zip-code>25541</zip-code>
+			<city>Brunsbüttel</city>
+		</region>
+	</car>
+	<car id="station_82">
+		<region>
+			<stationId>STA.DE_DEBY001</stationId>
+			<latitude>49.304889</latitude>
+			<longitude>10.572297</longitude>
+			<zip-code>91522</zip-code>
+			<city>Ansbach</city>
+		</region>
+	</car>
+	<car id="station_83">
+		<region>
+			<stationId>STA.DE_DEMV021</stationId>
+			<latitude>54.17133</latitude>
+			<longitude>12.080003</longitude>
+			<zip-code>18119</zip-code>
+			<city>Rostock</city>
+		</region>
+	</car>
+	<car id="station_84">
+		<region>
+			<stationId>STA.DE_DEBB032</stationId>
+			<latitude>52.146264</latitude>
+			<longitude>14.638165999999998</longitude>
+			<zip-code>15890</zip-code>
+			<city>Eisenhüttenstadt</city>
+		</region>
+	</car>
+	<car id="station_85">
+		<region>
+			<stationId>STA.DE_DEHH064</stationId>
+			<latitude>53.56439900000001</latitude>
+			<longitude>9.94458</longitude>
+			<zip-code>22769</zip-code>
+			<city>Hamburg</city>
+		</region>
+	</car>
+	<car id="station_86">
+		<region>
+			<stationId>STA.DE_DEHH070</stationId>
+			<latitude>53.55566799999999</latitude>
+			<longitude>9.943012</longitude>
+			<zip-code>22765</zip-code>
+			<city>Hamburg</city>
+		</region>
+	</car>
+	<car id="station_87">
+		<region>
+			<stationId>STA.DE_DENI042</stationId>
+			<latitude>51.55107000000001</latitude>
+			<longitude>9.94976</longitude>
+			<zip-code>37075</zip-code>
+			<city>Göttingen</city>
+		</region>
+	</car>
+	<car id="station_88">
+		<region>
+			<stationId>STA.DE_DENW078</stationId>
+			<latitude>51.30391899999999</latitude>
+			<longitude>6.819967</longitude>
+			<zip-code>40880</zip-code>
+			<city>Ratingen</city>
+		</region>
+	</car>
+	<car id="station_89">
+		<region>
+			<stationId>STA.DE_DESN019</stationId>
+			<latitude>50.826001</latitude>
+			<longitude>12.542056</longitude>
+			<zip-code>08371</zip-code>
+			<city>Glauchau</city>
+		</region>
+	</car>
+	<car id="station_90">
+		<region>
+			<stationId>STA.DE_DERP001</stationId>
+			<latitude>49.515052</latitude>
+			<longitude>8.402374</longitude>
+			<zip-code>67069</zip-code>
+			<city>Ludwigshafen am Rhein</city>
+		</region>
+	</car>
+	<car id="station_91">
+		<region>
+			<stationId>STA.DE_DEHE011</stationId>
+			<latitude>50.13577</latitude>
+			<longitude>8.92157</longitude>
+			<zip-code>63450</zip-code>
+			<city>Hanau</city>
+		</region>
+	</car>
+	<car id="station_92">
+		<region>
+			<stationId>STA.DE_DENI058</stationId>
+			<latitude>53.715300000000006</latitude>
+			<longitude>7.213980000000001</longitude>
+			<zip-code>26548</zip-code>
+			<city>Norderney</city>
+		</region>
+	</car>
+	<car id="station_93">
+		<region>
+			<stationId>STA.DE_DEBB087</stationId>
+			<latitude>51.75413</latitude>
+			<longitude>14.325549</longitude>
+			<zip-code>03046</zip-code>
+			<city>Cottbus</city>
+		</region>
+	</car>
+	<car id="station_94">
+		<region>
+			<stationId>STA.DE_DEST050</stationId>
+			<latitude>51.496185</latitude>
+			<longitude>11.979055999999998</longitude>
+			<zip-code>06114</zip-code>
+			<city>Halle (Saale)</city>
+		</region>
+	</car>
+	<car id="station_95">
+		<region>
+			<stationId>STA.DE_DEBY035</stationId>
+			<latitude>47.55747299999999</latitude>
+			<longitude>9.688869</longitude>
+			<zip-code>88131</zip-code>
+			<city>Lindau (Bodensee)</city>
+		</region>
+	</car>
+	<car id="station_96">
+		<region>
+			<stationId>STA.DE_DEBW107</stationId>
+			<latitude>48.50770299999999</latitude>
+			<longitude>9.051178</longitude>
+			<zip-code>72072</zip-code>
+			<city>Tübingen</city>
+		</region>
+	</car>
+	<car id="station_97">
+		<region>
+			<stationId>STA.DE_DEBY004</stationId>
+			<latitude>49.869422</latitude>
+			<longitude>9.171544</longitude>
+			<zip-code>63839</zip-code>
+			<city>Kleinwallstadt</city>
+		</region>
+	</car>
+	<car id="station_98">
+		<region>
+			<stationId>STA.DE_DEMV025</stationId>
+			<latitude>54.31923000000001</latitude>
+			<longitude>13.081009999999996</longitude>
+			<zip-code>18435</zip-code>
+			<city>Stralsund</city>
+		</region>
+	</car>
+	<car id="station_99">
+		<region>
+			<stationId>STA.DE_DEBB054</stationId>
+			<latitude>52.393932</latitude>
+			<longitude>13.037474000000001</longitude>
+			<zip-code>14471</zip-code>
+			<city>Potsdam</city>
+		</region>
+	</car>
+	<car id="station_100">
+		<region>
+			<stationId>STA.DE_DENI038</stationId>
+			<latitude>52.25533999999999</latitude>
+			<longitude>8.05286</longitude>
+			<zip-code>49082</zip-code>
+			<city>Osnabrück</city>
+		</region>
+	</car>
+	<car id="station_101">
+		<region>
+			<stationId>STA.DE_DESH028</stationId>
+			<latitude>53.698939</latitude>
+			<longitude>10.775796000000001</longitude>
+			<zip-code>23909</zip-code>
+			<city>Ratzeburg</city>
+		</region>
+	</car>
+	<car id="station_102">
+		<region>
+			<stationId>STA.DE_DEBB044</stationId>
+			<latitude>51.756476</latitude>
+			<longitude>14.327998</longitude>
+			<zip-code>03046</zip-code>
+			<city>Cottbus</city>
+		</region>
+	</car>
+	<car id="station_103">
+		<region>
+			<stationId>STA.DE_DESN092</stationId>
+			<latitude>51.036105000000006</latitude>
+			<longitude>13.730204999999998</longitude>
+			<zip-code>01069</zip-code>
+			<city>Dresden</city>
+		</region>
+	</car>
+	<car id="station_104">
+		<region>
+			<stationId>STA.DE_DEBY067</stationId>
+			<latitude>49.321955</latitude>
+			<longitude>12.128139</longitude>
+			<zip-code>92421</zip-code>
+			<city>Schwandorf</city>
+		</region>
+	</car>
+	<car id="station_105">
+		<region>
+			<stationId>STA.DE_DEST090</stationId>
+			<latitude>51.321364</latitude>
+			<longitude>12.032141</longitude>
+			<zip-code>06237</zip-code>
+			<city>Leuna</city>
+		</region>
+	</car>
+	<car id="station_106">
+		<region>
+			<stationId>STA.DE_DEBY120</stationId>
+			<latitude>49.440478</latitude>
+			<longitude>11.036096000000002</longitude>
+			<zip-code>90439</zip-code>
+			<city>Nürnberg</city>
+		</region>
+	</car>
+	<car id="station_107">
+		<region>
+			<stationId>STA.DE_DEUB005</stationId>
+			<latitude>52.80077299999999</latitude>
+			<longitude>10.756733</longitude>
+			<zip-code>29394</zip-code>
+			<city>Lüder</city>
+		</region>
+	</car>
+	<car id="station_108">
+		<region>
+			<stationId>STA.DE_DEHH050</stationId>
+			<latitude>53.480927</latitude>
+			<longitude>9.857223</longitude>
+			<zip-code>21147</zip-code>
+			<city>Hamburg</city>
+		</region>
+	</car>
+	<car id="station_109">
+		<region>
+			<stationId>STA.DE_DEBB042</stationId>
+			<latitude>52.339953</latitude>
+			<longitude>14.531918</longitude>
+			<zip-code>15234</zip-code>
+			<city>Frankfurt (Oder)</city>
+		</region>
+	</car>
+	<car id="station_110">
+		<region>
+			<stationId>STA.DE_DEBW019</stationId>
+			<latitude>48.396836</latitude>
+			<longitude>9.979031</longitude>
+			<zip-code>89077</zip-code>
+			<city>Ulm</city>
+		</region>
+	</car>
+	<car id="station_111">
+		<region>
+			<stationId>STA.DE_DEHE001</stationId>
+			<latitude>49.872303</latitude>
+			<longitude>8.664619</longitude>
+			<zip-code>64287</zip-code>
+			<city>Darmstadt</city>
+		</region>
+	</car>
+	<car id="station_112">
+		<region>
+			<stationId>STA.DE_DENI075</stationId>
+			<latitude>52.26673</latitude>
+			<longitude>10.54055</longitude>
+			<zip-code>38102</zip-code>
+			<city>Braunschweig</city>
+		</region>
+	</car>
+	<car id="station_113">
+		<region>
+			<stationId>STA.DE_DEHB012</stationId>
+			<latitude>53.12456099999999</latitude>
+			<longitude>8.735047</longitude>
+			<zip-code>28237</zip-code>
+			<city>Bremen</city>
+		</region>
+	</car>
+	<car id="station_114">
+		<region>
+			<stationId>STA.DE_DENW008</stationId>
+			<latitude>51.53691100000001</latitude>
+			<longitude>7.457463</longitude>
+			<zip-code>44145</zip-code>
+			<city>Dortmund</city>
+		</region>
+	</car>
+	<car id="station_115">
+		<region>
+			<stationId>STA.DE_DETH005</stationId>
+			<latitude>50.651182</latitude>
+			<longitude>11.368875</longitude>
+			<zip-code>07318</zip-code>
+			<city>Saalfeld/Saale</city>
+		</region>
+	</car>
+	<car id="station_116">
+		<region>
+			<stationId>STA.DE_DENI067</stationId>
+			<latitude>52.2703</latitude>
+			<longitude>8.04147</longitude>
+			<zip-code>49080</zip-code>
+			<city>Osnabrück</city>
+		</region>
+	</car>
+	<car id="station_117">
+		<region>
+			<stationId>STA.DE_DEBB049</stationId>
+			<latitude>52.40930899999999</latitude>
+			<longitude>12.548376</longitude>
+			<zip-code>14770</zip-code>
+			<city>Brandenburg an der Havel</city>
+		</region>
+	</car>
+	<car id="station_118">
+		<region>
+			<stationId>STA.DE_DENI143</stationId>
+			<latitude>53.142836</latitude>
+			<longitude>8.212084</longitude>
+			<zip-code>26122</zip-code>
+			<city>Oldenburg</city>
+		</region>
+	</car>
+	<car id="station_119">
+		<region>
+			<stationId>STA.DE_DEBB029</stationId>
+			<latitude>53.064262</latitude>
+			<longitude>14.285139</longitude>
+			<zip-code>16303</zip-code>
+			<city>Schwedt/Oder</city>
+		</region>
+	</car>
+	<car id="station_120">
+		<region>
+			<stationId>STA.DE_DEBE062</stationId>
+			<latitude>52.653269</latitude>
+			<longitude>13.296081</longitude>
+			<zip-code>13465</zip-code>
+			<city>Berlin</city>
+		</region>
+	</car>
+	<car id="station_121">
+		<region>
+			<stationId>STA.DE_DEBE027</stationId>
+			<latitude>52.398406</latitude>
+			<longitude>13.368103</longitude>
+			<zip-code>12307</zip-code>
+			<city>Berlin</city>
+		</region>
+	</car>
+	<car id="station_122">
+		<region>
+			<stationId>STA.DE_DERP002</stationId>
+			<latitude>49.48231599999998</latitude>
+			<longitude>8.438589</longitude>
+			<zip-code>67059</zip-code>
+			<city>Ludwigshafen am Rhein</city>
+		</region>
+	</car>
+	<car id="station_123">
+		<region>
+			<stationId>STA.DE_DEBY109</stationId>
+			<latitude>47.96875299999999</latitude>
+			<longitude>11.220172</longitude>
+			<zip-code>82346</zip-code>
+			<city>Andechs</city>
+		</region>
+	</car>
+	<car id="station_124">
+		<region>
+			<stationId>STA.DE_DEBY030</stationId>
+			<latitude>48.904228</latitude>
+			<longitude>11.948795</longitude>
+			<zip-code>93342</zip-code>
+			<city>Saal an der Donau</city>
+		</region>
+	</car>
+	<car id="station_125">
+		<region>
+			<stationId>STA.DE_DETH043</stationId>
+			<latitude>50.984874</latitude>
+			<longitude>11.019353</longitude>
+			<zip-code>99089</zip-code>
+			<city>Erfurt</city>
+		</region>
+	</car>
+	<car id="station_126">
+		<region>
+			<stationId>STA.DE_DEBY099</stationId>
+			<latitude>48.32601300000001</latitude>
+			<longitude>10.903051</longitude>
+			<zip-code>86179</zip-code>
+			<city>Augsburg</city>
+		</region>
+	</car>
+	<car id="station_127">
+		<region>
+			<stationId>STA.DE_DETH091</stationId>
+			<latitude>51.205466</latitude>
+			<longitude>10.448476</longitude>
+			<zip-code>99974</zip-code>
+			<city>Mühlhausen/Thüringen</city>
+		</region>
+	</car>
+	<car id="station_128">
+		<region>
+			<stationId>STA.DE_DEBB086</stationId>
+			<latitude>52.34970299999999</latitude>
+			<longitude>13.424304</longitude>
+			<zip-code>15831</zip-code>
+			<city>Blankenfelde-Mahlow</city>
+		</region>
+	</car>
+	<car id="station_129">
+		<region>
+			<stationId>STA.DE_DERP042</stationId>
+			<latitude>49.199942</latitude>
+			<longitude>7.603053000000002</longitude>
+			<zip-code>66953</zip-code>
+			<city>Pirmasens</city>
+		</region>
+	</car>
+	<car id="station_130">
+		<region>
+			<stationId>STA.DE_DEST039</stationId>
+			<latitude>51.798629</latitude>
+			<longitude>10.618275</longitude>
+			<zip-code>38879</zip-code>
+			<city>Wernigerode</city>
+		</region>
+	</car>
+	<car id="station_131">
+		<region>
+			<stationId>STA.DE_DEUB001</stationId>
+			<latitude>54.924967</latitude>
+			<longitude>8.308208</longitude>
+			<zip-code>25980</zip-code>
+			<city>Sylt</city>
+		</region>
+	</car>
+	<car id="station_132">
+		<region>
+			<stationId>STA.DE_DEBE034</stationId>
+			<latitude>52.489451</latitude>
+			<longitude>13.430844</longitude>
+			<zip-code>12047</zip-code>
+			<city>Berlin</city>
+		</region>
+	</car>
+	<car id="station_133">
+		<region>
+			<stationId>STA.DE_DEHE024</stationId>
+			<latitude>51.291757</latitude>
+			<longitude>9.774588</longitude>
+			<zip-code>34298</zip-code>
+			<city>Gutsbezirk Kaufunger Wald</city>
+		</region>
+	</car>
+	<car id="station_134">
+		<region>
+			<stationId>STA.DE_DEMV022</stationId>
+			<latitude>54.09261999999999</latitude>
+			<longitude>12.099553000000002</longitude>
+			<zip-code>18069</zip-code>
+			<city>Rostock</city>
+		</region>
+	</car>
+	<car id="station_135">
+		<region>
+			<stationId>STA.DE_DENI071</stationId>
+			<latitude>51.61364999999999</latitude>
+			<longitude>10.42275</longitude>
+			<zip-code>37431</zip-code>
+			<city>Bad Lauterberg im Harz</city>
+		</region>
+	</car>
+	<car id="station_136">
+		<region>
+			<stationId>STA.DE_DEBW136</stationId>
+			<latitude>48.52022999999999</latitude>
+			<longitude>9.05802</longitude>
+			<zip-code>72074</zip-code>
+			<city>Tübingen</city>
+		</region>
+	</car>
+	<car id="station_137">
+		<region>
+			<stationId>STA.DE_DEBY049</stationId>
+			<latitude>48.853211</latitude>
+			<longitude>11.777818</longitude>
+			<zip-code>93333</zip-code>
+			<city>Neustadt an der Donau</city>
+		</region>
+	</car>
+	<car id="station_138">
+		<region>
+			<stationId>STA.DE_DEHH015</stationId>
+			<latitude>53.52326200000001</latitude>
+			<longitude>10.021227</longitude>
+			<zip-code>20539</zip-code>
+			<city>Hamburg</city>
+		</region>
+	</car>
+	<car id="station_139">
+		<region>
+			<stationId>STA.DE_DEST076</stationId>
+			<latitude>52.13201699999999</latitude>
+			<longitude>11.623373</longitude>
+			<zip-code>39104</zip-code>
+			<city>Magdeburg</city>
+		</region>
+	</car>
+	<car id="station_140">
+		<region>
+			<stationId>STA.DE_DESL011</stationId>
+			<latitude>49.237227</latitude>
+			<longitude>7.036322</longitude>
+			<zip-code>66121</zip-code>
+			<city>Saarbrücken</city>
+		</region>
+	</car>
+	<car id="station_141">
+		<region>
+			<stationId>STA.DE_DENW189</stationId>
+			<latitude>51.26068099999999</latitude>
+			<longitude>7.147401</longitude>
+			<zip-code>42107</zip-code>
+			<city>Wuppertal</city>
+		</region>
+	</car>
+	<car id="station_142">
+		<region>
+			<stationId>STA.DE_DESH053</stationId>
+			<latitude>53.86223699999999</latitude>
+			<longitude>10.67332</longitude>
+			<zip-code>23558</zip-code>
+			<city>Lübeck</city>
+		</region>
+	</car>
+	<car id="station_143">
+		<region>
+			<stationId>STA.DE_DETH072</stationId>
+			<latitude>50.61153</latitude>
+			<longitude>10.693092</longitude>
+			<zip-code>98527</zip-code>
+			<city>Suhl</city>
+		</region>
+	</car>
+	<car id="station_144">
+		<region>
+			<stationId>STA.DE_DENW116</stationId>
+			<latitude>51.342561</latitude>
+			<longitude>6.670195</longitude>
+			<zip-code>47809</zip-code>
+			<city>Krefeld</city>
+		</region>
+	</car>
+	<car id="station_145">
+		<region>
+			<stationId>STA.DE_DESN006</stationId>
+			<latitude>51.125</latitude>
+			<longitude>12.493056</longitude>
+			<zip-code>04552</zip-code>
+			<city>Borna</city>
+		</region>
+	</car>
+	<car id="station_146">
+		<region>
+			<stationId>STA.DE_DESN025</stationId>
+			<latitude>51.34416399999999</latitude>
+			<longitude>12.377162999999998</longitude>
+			<zip-code>04109</zip-code>
+			<city>Leipzig</city>
+		</region>
+	</car>
+	<car id="station_147">
+		<region>
+			<stationId>STA.DE_DEBB066</stationId>
+			<latitude>51.897598</latitude>
+			<longitude>14.057064000000002</longitude>
+			<zip-code>15913</zip-code>
+			<city>Alt Zauche-Wußwerk</city>
+		</region>
+	</car>
+	<car id="station_148">
+		<region>
+			<stationId>STA.DE_DENW024</stationId>
+			<latitude>51.49652700000001</latitude>
+			<longitude>6.981045</longitude>
+			<zip-code>45356</zip-code>
+			<city>Essen</city>
+		</region>
+	</car>
+	<car id="station_149">
+		<region>
+			<stationId>STA.DE_DENW038</stationId>
+			<latitude>51.45346000000001</latitude>
+			<longitude>6.865107</longitude>
+			<zip-code>45476</zip-code>
+			<city>Mülheim an der Ruhr</city>
+		</region>
+	</car>
+	<car id="station_150">
+		<region>
+			<stationId>STA.DE_DEBW033</stationId>
+			<latitude>48.88903899999999</latitude>
+			<longitude>8.665535999999998</longitude>
+			<zip-code>75179</zip-code>
+			<city>Pforzheim</city>
+		</region>
+	</car>
+	<car id="station_151">
+		<region>
+			<stationId>STA.DE_DEBY113</stationId>
+			<latitude>49.605914</latitude>
+			<longitude>10.963528000000002</longitude>
+			<zip-code>91056</zip-code>
+			<city>Erlangen</city>
+		</region>
+	</car>
+	<car id="station_152">
+		<region>
+			<stationId>STA.DE_DEBW120</stationId>
+			<latitude>48.80102</latitude>
+			<longitude>9.016520000000002</longitude>
+			<zip-code>71229</zip-code>
+			<city>Leonberg</city>
+		</region>
+	</car>
+	<car id="station_153">
+		<region>
+			<stationId>STA.DE_DESH025</stationId>
+			<latitude>53.928028</latitude>
+			<longitude>9.511769</longitude>
+			<zip-code>25524</zip-code>
+			<city>Itzehoe</city>
+		</region>
+	</car>
+	<car id="station_154">
+		<region>
+			<stationId>STA.DE_DEBB063</stationId>
+			<latitude>52.99875</latitude>
+			<longitude>11.73846</longitude>
+			<zip-code>19322</zip-code>
+			<city>Wittenberge</city>
+		</region>
+	</car>
+	<car id="station_155">
+		<region>
+			<stationId>STA.DE_DEBY072</stationId>
+			<latitude>49.438464</latitude>
+			<longitude>12.548868999999998</longitude>
+			<zip-code>93464</zip-code>
+			<city>Tiefenbach</city>
+		</region>
+	</car>
+	<car id="station_156">
+		<region>
+			<stationId>STA.DE_DEHE054</stationId>
+			<latitude>50.13041199999999</latitude>
+			<longitude>8.926329</longitude>
+			<zip-code>63450</zip-code>
+			<city>Hanau</city>
+		</region>
+	</car>
+	<car id="station_157">
+		<region>
+			<stationId>STA.DE_DEHE013</stationId>
+			<latitude>51.314248000000006</latitude>
+			<longitude>9.483397</longitude>
+			<zip-code>34117</zip-code>
+			<city>Kassel</city>
+		</region>
+	</car>
+	<car id="station_158">
+		<region>
+			<stationId>STA.DE_DENW115</stationId>
+			<latitude>51.30761199999999</latitude>
+			<longitude>6.557419</longitude>
+			<zip-code>47807</zip-code>
+			<city>Krefeld</city>
+		</region>
+	</car>
+	<car id="station_159">
+		<region>
+			<stationId>STA.DE_DEHE036</stationId>
+			<latitude>50.12398100000001</latitude>
+			<longitude>8.70025</longitude>
+			<zip-code>60316</zip-code>
+			<city>Frankfurt am Main</city>
+		</region>
+	</car>
+	<car id="station_160">
+		<region>
+			<stationId>STA.DE_DEBW031</stationId>
+			<latitude>47.80989199999999</latitude>
+			<longitude>7.764528000000001</longitude>
+			<zip-code>79244</zip-code>
+			<city>Münstertal/Schwarzwald</city>
+		</region>
+	</car>
+	<car id="station_161">
+		<region>
+			<stationId>STA.DE_DEST099</stationId>
+			<latitude>52.13119799999999</latitude>
+			<longitude>11.631161</longitude>
+			<zip-code>39104</zip-code>
+			<city>Magdeburg</city>
+		</region>
+	</car>
+	<car id="station_162">
+		<region>
+			<stationId>STA.DE_DESH001</stationId>
+			<latitude>53.670553</latitude>
+			<longitude>9.585874</longitude>
+			<zip-code>25436</zip-code>
+			<city>Moorrege</city>
+		</region>
+	</car>
+	<car id="station_163">
+		<region>
+			<stationId>STA.DE_DEBB060</stationId>
+			<latitude>52.832467</latitude>
+			<longitude>13.822211</longitude>
+			<zip-code>16225</zip-code>
+			<city>Eberswalde</city>
+		</region>
+	</car>
+	<car id="station_164">
+		<region>
+			<stationId>STA.DE_DEMV026</stationId>
+			<latitude>54.32351400000001</latitude>
+			<longitude>13.342138000000002</longitude>
+			<zip-code>18574</zip-code>
+			<city>Garz/Rügen</city>
+		</region>
+	</car>
+	<car id="station_165">
+		<region>
+			<stationId>STA.DE_DENW182</stationId>
+			<latitude>50.92710699999999</latitude>
+			<longitude>6.582205</longitude>
+			<zip-code>50189</zip-code>
+			<city>Elsdorf</city>
+		</region>
+	</car>
+	<car id="station_166">
+		<region>
+			<stationId>STA.DE_DETH042</stationId>
+			<latitude>51.333333</latitude>
+			<longitude>10.867188</longitude>
+			<zip-code>99706</zip-code>
+			<city>Sondershausen</city>
+		</region>
+	</car>
+	<car id="station_167">
+		<region>
+			<stationId>STA.DE_DENW301</stationId>
+			<latitude>51.431472</latitude>
+			<longitude>6.847664</longitude>
+			<zip-code>45478</zip-code>
+			<city>Mülheim an der Ruhr</city>
+		</region>
+	</car>
+	<car id="station_168">
+		<region>
+			<stationId>STA.DE_DEHE009</stationId>
+			<latitude>50.08072599999999</latitude>
+			<longitude>8.515592</longitude>
+			<zip-code>65931</zip-code>
+			<city>Frankfurt am Main</city>
+		</region>
+	</car>
+	<car id="station_169">
+		<region>
+			<stationId>STA.DE_DEBW118</stationId>
+			<latitude>48.7881</latitude>
+			<longitude>9.19101</longitude>
+			<zip-code>70190</zip-code>
+			<city>Stuttgart</city>
+		</region>
+	</car>
+	<car id="station_170">
+		<region>
+			<stationId>STA.DE_DEBW005</stationId>
+			<latitude>49.544078</latitude>
+			<longitude>8.465281</longitude>
+			<zip-code>68307</zip-code>
+			<city>Mannheim</city>
+		</region>
+	</car>
+	<car id="station_171">
+		<region>
+			<stationId>STA.DE_DESN017</stationId>
+			<latitude>50.91630000000001</latitude>
+			<longitude>13.346826</longitude>
+			<zip-code>09599</zip-code>
+			<city>Freiberg</city>
+		</region>
+	</car>
+	<car id="station_172">
+		<region>
+			<stationId>STA.DE_DETH013</stationId>
+			<latitude>50.978292</latitude>
+			<longitude>10.317236</longitude>
+			<zip-code>99817</zip-code>
+			<city>Eisenach</city>
+		</region>
+	</car>
+	<car id="station_173">
+		<region>
+			<stationId>STA.DE_DENI016</stationId>
+			<latitude>51.90158</latitude>
+			<longitude>10.48132</longitude>
+			<zip-code>38642</zip-code>
+			<city>Goslar</city>
+		</region>
+	</car>
+	<car id="station_174">
+		<region>
+			<stationId>STA.DE_DENW131</stationId>
+			<latitude>51.506217</latitude>
+			<longitude>6.746857</longitude>
+			<zip-code>47169</zip-code>
+			<city>Duisburg</city>
+		</region>
+	</car>
+	<car id="station_175">
+		<region>
+			<stationId>STA.DE_DESN084</stationId>
+			<latitude>51.02629399999999</latitude>
+			<longitude>13.731608</longitude>
+			<zip-code>01069</zip-code>
+			<city>Dresden</city>
+		</region>
+	</car>
+	<car id="station_176">
+		<region>
+			<stationId>STA.DE_DENW021</stationId>
+			<latitude>51.52596299999999</latitude>
+			<longitude>6.976908</longitude>
+			<zip-code>46238</zip-code>
+			<city>Bottrop</city>
+		</region>
+	</car>
+	<car id="station_177">
+		<region>
+			<stationId>STA.DE_DENW071</stationId>
+			<latitude>51.249211</latitude>
+			<longitude>6.732383</longitude>
+			<zip-code>40547</zip-code>
+			<city>Düsseldorf</city>
+		</region>
+	</car>
+	<car id="station_178">
+		<region>
+			<stationId>STA.DE_DEBY021</stationId>
+			<latitude>48.769444</latitude>
+			<longitude>11.428766</longitude>
+			<zip-code>85049</zip-code>
+			<city>Ingolstadt</city>
+		</region>
+	</car>
+	<car id="station_179">
+		<region>
+			<stationId>STA.DE_DEBY053</stationId>
+			<latitude>49.44591</latitude>
+			<longitude>11.088444000000004</longitude>
+			<zip-code>90478</zip-code>
+			<city>Nürnberg</city>
+		</region>
+	</car>
+	<car id="station_180">
+		<region>
+			<stationId>STA.DE_DENW208</stationId>
+			<latitude>51.527883</latitude>
+			<longitude>7.084597</longitude>
+			<zip-code>45881</zip-code>
+			<city>Gelsenkirchen</city>
+		</region>
+	</car>
+	<car id="station_181">
+		<region>
+			<stationId>STA.DE_DENI069</stationId>
+			<latitude>53.509182</latitude>
+			<longitude>8.499933</longitude>
+			<zip-code>26954</zip-code>
+			<city>Nordenham</city>
+		</region>
+	</car>
+	<car id="station_182">
+		<region>
+			<stationId>STA.DE_DENW204</stationId>
+			<latitude>51.51101</latitude>
+			<longitude>7.210565</longitude>
+			<zip-code>44807</zip-code>
+			<city>Bochum</city>
+		</region>
+	</car>
+	<car id="station_183">
+		<region>
+			<stationId>STA.DE_DETH083</stationId>
+			<latitude>50.977462</latitude>
+			<longitude>11.326069999999998</longitude>
+			<zip-code>99423</zip-code>
+			<city>Weimar</city>
+		</region>
+	</car>
+	<car id="station_184">
+		<region>
+			<stationId>STA.DE_DEBY002</stationId>
+			<latitude>50.05819499999999</latitude>
+			<longitude>12.18865</longitude>
+			<zip-code>95659</zip-code>
+			<city>Arzberg</city>
+		</region>
+	</car>
+	<car id="station_185">
+		<region>
+			<stationId>STA.DE_DERP022</stationId>
+			<latitude>49.842136</latitude>
+			<longitude>7.8662079999999985</longitude>
+			<zip-code>55543</zip-code>
+			<city>Bad Kreuznach</city>
+		</region>
+	</car>
+	<car id="station_186">
+		<region>
+			<stationId>STA.DE_DESH022</stationId>
+			<latitude>54.78142999999999</latitude>
+			<longitude>9.43809</longitude>
+			<zip-code>24937</zip-code>
+			<city>Flensburg</city>
+		</region>
+	</car>
+	<car id="station_187">
+		<region>
+			<stationId>STA.DE_DEST102</stationId>
+			<latitude>51.494756</latitude>
+			<longitude>11.981314</longitude>
+			<zip-code>06114</zip-code>
+			<city>Halle (Saale)</city>
+		</region>
+	</car>
+	<car id="station_188">
+		<region>
+			<stationId>STA.DE_DEHH016</stationId>
+			<latitude>53.52902</latitude>
+			<longitude>10.081685</longitude>
+			<zip-code>22113</zip-code>
+			<city>Hamburg</city>
+		</region>
+	</car>
+	<car id="station_189">
+		<region>
+			<stationId>STA.DE_DENW065</stationId>
+			<latitude>50.930328</latitude>
+			<longitude>8.191931999999998</longitude>
+			<zip-code>57250</zip-code>
+			<city>Netphen</city>
+		</region>
+	</car>
+	<car id="station_190">
+		<region>
+			<stationId>STA.DE_DENI041</stationId>
+			<latitude>52.17017</latitude>
+			<longitude>9.062550000000002</longitude>
+			<zip-code>31737</zip-code>
+			<city>Rinteln</city>
+		</region>
+	</car>
+	<car id="station_191">
+		<region>
+			<stationId>STA.DE_DENW053</stationId>
+			<latitude>51.019345</latitude>
+			<longitude>6.884636</longitude>
+			<zip-code>50765</zip-code>
+			<city>Köln</city>
+		</region>
+	</car>
+	<car id="station_192">
+		<region>
+			<stationId>STA.DE_DEBB092</stationId>
+			<latitude>52.33468</latitude>
+			<longitude>14.52596</longitude>
+			<zip-code>15236</zip-code>
+			<city>Frankfurt (Oder)</city>
+		</region>
+	</car>
+	<car id="station_193">
+		<region>
+			<stationId>STA.DE_DESN091</stationId>
+			<latitude>50.720405</latitude>
+			<longitude>12.486621000000001</longitude>
+			<zip-code>08056</zip-code>
+			<city>Zwickau</city>
+		</region>
+	</car>
+	<car id="station_194">
+		<region>
+			<stationId>STA.DE_DEHH068</stationId>
+			<latitude>53.59230099999999</latitude>
+			<longitude>10.053859</longitude>
+			<zip-code>22305</zip-code>
+			<city>Hamburg</city>
+		</region>
+	</car>
+	<car id="station_195">
+		<region>
+			<stationId>STA.DE_DENW186</stationId>
+			<latitude>52.026236</latitude>
+			<longitude>8.521575999999998</longitude>
+			<zip-code>33615</zip-code>
+			<city>Bielefeld</city>
+		</region>
+	</car>
+	<car id="station_196">
+		<region>
+			<stationId>STA.DE_DEHE030</stationId>
+			<latitude>50.804258</latitude>
+			<longitude>8.769324</longitude>
+			<zip-code>35037</zip-code>
+			<city>Marburg</city>
+		</region>
+	</car>
+	<car id="station_197">
+		<region>
+			<stationId>STA.DE_DENI063</stationId>
+			<latitude>53.52418</latitude>
+			<longitude>9.68503</longitude>
+			<zip-code>21635</zip-code>
+			<city>Jork</city>
+		</region>
+	</car>
+	<car id="station_198">
+		<region>
+			<stationId>STA.DE_DEBY063</stationId>
+			<latitude>49.015245</latitude>
+			<longitude>12.101557000000001</longitude>
+			<zip-code>93047</zip-code>
+			<city>Regensburg</city>
+		</region>
+	</car>
+	<car id="station_199">
+		<region>
+			<stationId>STA.DE_DETH018</stationId>
+			<latitude>51.49719499999999</latitude>
+			<longitude>10.791404</longitude>
+			<zip-code>99734</zip-code>
+			<city>Nordhausen</city>
+		</region>
+	</car>
+	<car id="station_200">
+		<region>
+			<stationId>STA.DE_DERP025</stationId>
+			<latitude>49.052321</latitude>
+			<longitude>8.253546999999998</longitude>
+			<zip-code>76744</zip-code>
+			<city>Wörth am Rhein</city>
+		</region>
+	</car>
+	<car id="station_201">
+		<region>
+			<stationId>STA.DE_DEMV023</stationId>
+			<latitude>53.63180500000001</latitude>
+			<longitude>11.398332</longitude>
+			<zip-code>19053</zip-code>
+			<city>Schwerin</city>
+		</region>
+	</car>
+	<car id="station_202">
+		<region>
+			<stationId>STA.DE_DENW040</stationId>
+			<latitude>51.385255</latitude>
+			<longitude>6.763000999999999</longitude>
+			<zip-code>47249</zip-code>
+			<city>Duisburg</city>
+		</region>
+	</car>
+	<car id="station_203">
+		<region>
+			<stationId>STA.DE_DENI054</stationId>
+			<latitude>52.36292000000001</latitude>
+			<longitude>9.706120000000002</longitude>
+			<zip-code>30449</zip-code>
+			<city>Hannover</city>
+		</region>
+	</car>
+	<car id="station_204">
+		<region>
+			<stationId>STA.DE_DETH036</stationId>
+			<latitude>50.65586100000001</latitude>
+			<longitude>12.205199</longitude>
+			<zip-code>07973</zip-code>
+			<city>Greiz</city>
+		</region>
+	</car>
+	<car id="station_205">
+		<region>
+			<stationId>STA.DE_DESN059</stationId>
+			<latitude>51.31790500000001</latitude>
+			<longitude>12.297411</longitude>
+			<zip-code>04209</zip-code>
+			<city>Leipzig</city>
+		</region>
+	</car>
+	<car id="station_206">
+		<region>
+			<stationId>STA.DE_DEHE057</stationId>
+			<latitude>50.577931</latitude>
+			<longitude>8.495096999999998</longitude>
+			<zip-code>35586</zip-code>
+			<city>Wetzlar</city>
+		</region>
+	</car>
+	<car id="station_207">
+		<region>
+			<stationId>STA.DE_DERP023</stationId>
+			<latitude>49.62869999999999</latitude>
+			<longitude>8.3649</longitude>
+			<zip-code>67547</zip-code>
+			<city>Worms</city>
+		</region>
+	</car>
+	<car id="station_208">
+		<region>
+			<stationId>STA.DE_DETH011</stationId>
+			<latitude>50.98775799999999</latitude>
+			<longitude>12.437621</longitude>
+			<zip-code>04600</zip-code>
+			<city>Altenburg</city>
+		</region>
+	</car>
+	<car id="station_209">
+		<region>
+			<stationId>STA.DE_DEBW038</stationId>
+			<latitude>47.66005599999999</latitude>
+			<longitude>9.485675</longitude>
+			<zip-code>88046</zip-code>
+			<city>Friedrichshafen</city>
+		</region>
+	</car>
+	<car id="station_210">
+		<region>
+			<stationId>STA.DE_DEHE095</stationId>
+			<latitude>50.575364</latitude>
+			<longitude>8.492018</longitude>
+			<zip-code>35586</zip-code>
+			<city>Wetzlar</city>
+		</region>
+	</car>
+	<car id="station_211">
+		<region>
+			<stationId>STA.DE_DESN077</stationId>
+			<latitude>51.335872</latitude>
+			<longitude>12.334686</longitude>
+			<zip-code>04177</zip-code>
+			<city>Leipzig</city>
+		</region>
+	</car>
+	<car id="station_212">
+		<region>
+			<stationId>STA.DE_DEST092</stationId>
+			<latitude>51.867471</latitude>
+			<longitude>12.59827</longitude>
+			<zip-code>06886</zip-code>
+			<city>Lutterstadt Wittenberg</city>
+		</region>
+	</car>
+	<car id="station_213">
+		<region>
+			<stationId>STA.DE_DEHH049</stationId>
+			<latitude>53.568124</latitude>
+			<longitude>9.786234</longitude>
+			<zip-code>22587</zip-code>
+			<city>Hamburg</city>
+		</region>
+	</car>
+	<car id="station_214">
+		<region>
+			<stationId>STA.DE_DERP044</stationId>
+			<latitude>50.699438</latitude>
+			<longitude>7.375279</longitude>
+			<zip-code>53567</zip-code>
+			<city>Buchholz</city>
+		</region>
+	</car>
+	<car id="station_215">
+		<region>
+			<stationId>STA.DE_DESN001</stationId>
+			<latitude>50.570872</latitude>
+			<longitude>12.997278</longitude>
+			<zip-code>09456</zip-code>
+			<city>Annaberg-Buchholz</city>
+		</region>
+	</car>
+	<car id="station_216">
+		<region>
+			<stationId>STA.DE_DEHE053</stationId>
+			<latitude>50.09545299999999</latitude>
+			<longitude>8.603379</longitude>
+			<zip-code>65933</zip-code>
+			<city>Frankfurt am Main</city>
+		</region>
+	</car>
+	<car id="station_217">
+		<region>
+			<stationId>STA.DE_DENW112</stationId>
+			<latitude>51.437708</latitude>
+			<longitude>6.771800999999999</longitude>
+			<zip-code>47051</zip-code>
+			<city>Duisburg</city>
+		</region>
+	</car>
+	<car id="station_218">
+		<region>
+			<stationId>STA.DE_DEMV012</stationId>
+			<latitude>53.52045600000001</latitude>
+			<longitude>14.257407000000002</longitude>
+			<zip-code>17321</zip-code>
+			<city>Rothenklempenow</city>
+		</region>
+	</car>
+	<car id="station_219">
+		<region>
+			<stationId>STA.DE_DEMV020</stationId>
+			<latitude>54.09227799999999</latitude>
+			<longitude>12.141994</longitude>
+			<zip-code>18055</zip-code>
+			<city>Rostock</city>
+		</region>
+	</car>
+	<car id="station_220">
+		<region>
+			<stationId>STA.DE_DEBB064</stationId>
+			<latitude>51.74634399999999</latitude>
+			<longitude>14.33455</longitude>
+			<zip-code>03050</zip-code>
+			<city>Cottbus</city>
+		</region>
+	</car>
+	<car id="station_221">
+		<region>
+			<stationId>STA.DE_DEBY005</stationId>
+			<latitude>49.99151799999999</latitude>
+			<longitude>9.117973</longitude>
+			<zip-code>63741</zip-code>
+			<city>Aschaffenburg</city>
+		</region>
+	</car>
+	<car id="station_222">
+		<region>
+			<stationId>STA.DE_DEBW122</stationId>
+			<latitude>47.98819999999999</latitude>
+			<longitude>7.85992</longitude>
+			<zip-code>79102</zip-code>
+			<city>Freiburg im Breisgau</city>
+		</region>
+	</car>
+	<car id="station_223">
+		<region>
+			<stationId>STA.DE_DENW246</stationId>
+			<latitude>51.608416</latitude>
+			<longitude>7.522953</longitude>
+			<zip-code>44532</zip-code>
+			<city>Lünen</city>
+		</region>
+	</car>
+	<car id="station_224">
+		<region>
+			<stationId>STA.DE_DENW067</stationId>
+			<latitude>52.023169</latitude>
+			<longitude>8.548389</longitude>
+			<zip-code>33607</zip-code>
+			<city>Bielefeld</city>
+		</region>
+	</car>
+	<car id="station_225">
+		<region>
+			<stationId>STA.DE_DETH040</stationId>
+			<latitude>50.61918099999999</latitude>
+			<longitude>10.787135</longitude>
+			<zip-code>98711</zip-code>
+			<city>Schmiedefeld am Rennsteig</city>
+		</region>
+	</car>
+	<car id="station_226">
+		<region>
+			<stationId>STA.DE_DESL012</stationId>
+			<latitude>49.233464</latitude>
+			<longitude>6.987601</longitude>
+			<zip-code>66117</zip-code>
+			<city>Saarbrücken</city>
+		</region>
+	</car>
+	<car id="station_227">
+		<region>
+			<stationId>STA.DE_DESN076</stationId>
+			<latitude>51.303772</latitude>
+			<longitude>13.009405999999998</longitude>
+			<zip-code>04779</zip-code>
+			<city>Wermsdorf</city>
+		</region>
+	</car>
+	<car id="station_228">
+		<region>
+			<stationId>STA.DE_DEBE061</stationId>
+			<latitude>52.463611</latitude>
+			<longitude>13.31825</longitude>
+			<zip-code>12163</zip-code>
+			<city>Berlin</city>
+		</region>
+	</car>
+	<car id="station_229">
+		<region>
+			<stationId>STA.DE_DEBY110</stationId>
+			<latitude>48.37023700000001</latitude>
+			<longitude>10.896221</longitude>
+			<zip-code>86150</zip-code>
+			<city>Augsburg</city>
+		</region>
+	</car>
+	<car id="station_230">
+		<region>
+			<stationId>STA.DE_DEHB001</stationId>
+			<latitude>53.077151</latitude>
+			<longitude>8.81578</longitude>
+			<zip-code>28203</zip-code>
+			<city>Bremen</city>
+		</region>
+	</car>
+	<car id="station_231">
+		<region>
+			<stationId>STA.DE_DEHB006</stationId>
+			<latitude>53.07866299999999</latitude>
+			<longitude>8.825172999999998</longitude>
+			<zip-code>28203</zip-code>
+			<city>Bremen</city>
+		</region>
+	</car>
+	<car id="station_232">
+		<region>
+			<stationId>STA.DE_DERP016</stationId>
+			<latitude>50.766751000000006</latitude>
+			<longitude>7.973499999999999</longitude>
+			<zip-code>57562</zip-code>
+			<city>Herdorf</city>
+		</region>
+	</car>
+	<car id="station_233">
+		<region>
+			<stationId>STA.DE_DEBB045</stationId>
+			<latitude>52.337336</latitude>
+			<longitude>14.538595</longitude>
+			<zip-code>15232</zip-code>
+			<city>Frankfurt (Oder)</city>
+		</region>
+	</car>
+	<car id="station_234">
+		<region>
+			<stationId>STA.DE_DERP017</stationId>
+			<latitude>49.27026300000001</latitude>
+			<longitude>7.826520999999999</longitude>
+			<zip-code>66978</zip-code>
+			<city>Merzalben</city>
+		</region>
+	</car>
+	<car id="station_235">
+		<region>
+			<stationId>STA.DE_DENW207</stationId>
+			<latitude>50.77313099999999</latitude>
+			<longitude>6.095775</longitude>
+			<zip-code>52070</zip-code>
+			<city>Aachen</city>
+		</region>
+	</car>
+	<car id="station_236">
+		<region>
+			<stationId>STA.DE_DENW043</stationId>
+			<latitude>51.45117699999999</latitude>
+			<longitude>7.030603</longitude>
+			<zip-code>45138</zip-code>
+			<city>Essen</city>
+		</region>
+	</car>
+	<car id="station_237">
+		<region>
+			<stationId>STA.DE_DEHE022</stationId>
+			<latitude>50.05034299999999</latitude>
+			<longitude>8.244949</longitude>
+			<zip-code>65203</zip-code>
+			<city>Wiesbaden</city>
+		</region>
+	</car>
+	<car id="station_238">
+		<region>
+			<stationId>STA.DE_DENW022</stationId>
+			<latitude>51.533646</latitude>
+			<longitude>7.101785999999999</longitude>
+			<zip-code>45889</zip-code>
+			<city>Gelsenkirchen</city>
+		</region>
+	</car>
+	<car id="station_239">
+		<region>
+			<stationId>STA.DE_DESN083</stationId>
+			<latitude>50.84574</latitude>
+			<longitude>12.903367</longitude>
+			<zip-code>09113</zip-code>
+			<city>Chemnitz</city>
+		</region>
+	</car>
+	<car id="station_240">
+		<region>
+			<stationId>STA.DE_DENW094</stationId>
+			<latitude>50.754704</latitude>
+			<longitude>6.093923</longitude>
+			<zip-code>52066</zip-code>
+			<city>Aachen</city>
+		</region>
+	</car>
+	<car id="station_241">
+		<region>
+			<stationId>STA.DE_DEHE061</stationId>
+			<latitude>50.58410799999999</latitude>
+			<longitude>8.668578999999998</longitude>
+			<zip-code>35390</zip-code>
+			<city>Gießen</city>
+		</region>
+	</car>
+	<car id="station_242">
+		<region>
+			<stationId>STA.DE_DEBW133</stationId>
+			<latitude>49.05512999999999</latitude>
+			<longitude>9.24402</longitude>
+			<zip-code>74360</zip-code>
+			<city>Ilsfeld</city>
+		</region>
+	</car>
+	<car id="station_243">
+		<region>
+			<stationId>STA.DE_DENI052</stationId>
+			<latitude>52.82943</latitude>
+			<longitude>9.62295</longitude>
+			<zip-code>29664</zip-code>
+			<city>Walsrode</city>
+		</region>
+	</car>
+	<car id="station_244">
+		<region>
+			<stationId>STA.DE_DENW100</stationId>
+			<latitude>51.16996699999999</latitude>
+			<longitude>6.458842</longitude>
+			<zip-code>41238</zip-code>
+			<city>Mönchengladbach</city>
+		</region>
+	</car>
+	<car id="station_245">
+		<region>
+			<stationId>STA.DE_DEHE008</stationId>
+			<latitude>50.12533199999999</latitude>
+			<longitude>8.746342999999998</longitude>
+			<zip-code>60314</zip-code>
+			<city>Frankfurt am Main</city>
+		</region>
+	</car>
+	<car id="station_246">
+		<region>
+			<stationId>STA.DE_DENW245</stationId>
+			<latitude>50.764801</latitude>
+			<longitude>6.232622000000001</longitude>
+			<zip-code>52222</zip-code>
+			<city>Stolberg (Rheinland)</city>
+		</region>
+	</car>
+	<car id="station_247">
+		<region>
+			<stationId>STA.DE_DESN074</stationId>
+			<latitude>50.659097</latitude>
+			<longitude>13.465078</longitude>
+			<zip-code>09544</zip-code>
+			<city>Neuhausen/Erzgebirge</city>
+		</region>
+	</car>
+	<car id="station_248">
+		<region>
+			<stationId>STA.DE_DERP026</stationId>
+			<latitude>49.5333</latitude>
+			<longitude>8.355299999999998</longitude>
+			<zip-code>67227</zip-code>
+			<city>Frankenthal (Pfalz)</city>
+		</region>
+	</car>
+	<car id="station_249">
+		<region>
+			<stationId>STA.DE_DERP011</stationId>
+			<latitude>50.009954</latitude>
+			<longitude>8.265563</longitude>
+			<zip-code>55118</zip-code>
+			<city>Mainz</city>
+		</region>
+	</car>
+	<car id="station_250">
+		<region>
+			<stationId>STA.DE_DEHB002</stationId>
+			<latitude>53.060045</latitude>
+			<longitude>8.916966</longitude>
+			<zip-code>28309</zip-code>
+			<city>Bremen</city>
+		</region>
+	</car>
+	<car id="station_251">
+		<region>
+			<stationId>STA.DE_DEST098</stationId>
+			<latitude>51.662435</latitude>
+			<longitude>11.043386</longitude>
+			<zip-code>06507</zip-code>
+			<city>Harzgerode</city>
+		</region>
+	</car>
+	<car id="station_252">
+		<region>
+			<stationId>STA.DE_DESN061</stationId>
+			<latitude>51.06492999999999</latitude>
+			<longitude>13.741397</longitude>
+			<zip-code>01097</zip-code>
+			<city>Dresden</city>
+		</region>
+	</car>
+	<car id="station_253">
+		<region>
+			<stationId>STA.DE_DEHH059</stationId>
+			<latitude>53.50793</latitude>
+			<longitude>9.990569</longitude>
+			<zip-code>21107</zip-code>
+			<city>Hamburg</city>
+		</region>
+	</car>
+	<car id="station_254">
+		<region>
+			<stationId>STA.DE_DEHE040</stationId>
+			<latitude>49.86945699999999</latitude>
+			<longitude>8.653745</longitude>
+			<zip-code>64283</zip-code>
+			<city>Darmstadt</city>
+		</region>
+	</car>
+	<car id="station_255">
+		<region>
+			<stationId>STA.DE_DEBW152</stationId>
+			<latitude>49.14600000000001</latitude>
+			<longitude>9.22589</longitude>
+			<zip-code>74072</zip-code>
+			<city>Heilbronn</city>
+		</region>
+	</car>
+	<car id="station_256">
+		<region>
+			<stationId>STA.DE_DEHE056</stationId>
+			<latitude>50.110829</latitude>
+			<longitude>8.683638</longitude>
+			<zip-code>60311</zip-code>
+			<city>Frankfurt am Main</city>
+		</region>
+	</car>
+	<car id="station_257">
+		<region>
+			<stationId>STA.DE_DERP027</stationId>
+			<latitude>49.3556</latitude>
+			<longitude>8.1378</longitude>
+			<zip-code>67433</zip-code>
+			<city>Neustadt an der Weinstraße</city>
+		</region>
+	</car>
+	<car id="station_258">
+		<region>
+			<stationId>STA.DE_DEBE032</stationId>
+			<latitude>52.473192</latitude>
+			<longitude>13.225144000000002</longitude>
+			<zip-code>14193</zip-code>
+			<city>Berlin</city>
+		</region>
+	</car>
+	<car id="station_259">
+		<region>
+			<stationId>STA.DE_DEHE041</stationId>
+			<latitude>50.12458899999999</latitude>
+			<longitude>8.691911</longitude>
+			<zip-code>60316</zip-code>
+			<city>Frankfurt am Main</city>
+		</region>
+	</car>
+	<car id="station_260">
+		<region>
+			<stationId>STA.DE_DEHE005</stationId>
+			<latitude>50.10175</latitude>
+			<longitude>8.542517</longitude>
+			<zip-code>65929</zip-code>
+			<city>Frankfurt am Main</city>
+		</region>
+	</car>
+	<car id="station_261">
+		<region>
+			<stationId>STA.DE_DEHE052</stationId>
+			<latitude>50.221941</latitude>
+			<longitude>8.446079</longitude>
+			<zip-code></zip-code>
+			<city></city>
+		</region>
+	</car>
+	<car id="station_262">
+		<region>
+			<stationId>STA.DE_DEHH080</stationId>
+			<latitude>53.547355</latitude>
+			<longitude>9.98792</longitude>
+			<zip-code>20459</zip-code>
+			<city>Hamburg</city>
+		</region>
+	</car>
+	<car id="station_263">
+		<region>
+			<stationId>STA.DE_DEBY119</stationId>
+			<latitude>49.79052599999999</latitude>
+			<longitude>9.947654</longitude>
+			<zip-code>97074</zip-code>
+			<city>Würzburg</city>
+		</region>
+	</car>
+	<car id="station_264">
+		<region>
+			<stationId>STA.DE_DEST068</stationId>
+			<latitude>51.62938399999999</latitude>
+			<longitude>12.389075000000002</longitude>
+			<zip-code>06774</zip-code>
+			<city>Muldestausee</city>
+		</region>
+	</car>
+	<car id="station_265">
+		<region>
+			<stationId>STA.DE_DENW179</stationId>
+			<latitude>51.44876199999999</latitude>
+			<longitude>7.582295000000002</longitude>
+			<zip-code>58239</zip-code>
+			<city>Schwerte</city>
+		</region>
+	</car>
+	<car id="station_266">
+		<region>
+			<stationId>STA.DE_DENI053</stationId>
+			<latitude>52.99796</latitude>
+			<longitude>7.94257</longitude>
+			<zip-code>26219</zip-code>
+			<city>Bösel</city>
+		</region>
+	</car>
+	<car id="station_267">
+		<region>
+			<stationId>STA.DE_DEBE069</stationId>
+			<latitude>52.438115</latitude>
+			<longitude>13.387720000000002</longitude>
+			<zip-code>12107</zip-code>
+			<city>Berlin</city>
+		</region>
+	</car>
+	<car id="station_268">
+		<region>
+			<stationId>STA.DE_DEBY006</stationId>
+			<latitude>48.364589</latitude>
+			<longitude>10.895029</longitude>
+			<zip-code>86150</zip-code>
+			<city>Augsburg</city>
+		</region>
+	</car>
+	<car id="station_269">
+		<region>
+			<stationId>STA.DE_DERP013</stationId>
+			<latitude>49.42313699999999</latitude>
+			<longitude>7.2935219999999985</longitude>
+			<zip-code>66916</zip-code>
+			<city>Dunzweiler</city>
+		</region>
+	</car>
+	<car id="station_270">
+		<region>
+			<stationId>STA.DE_DEBY028</stationId>
+			<latitude>48.90951799999999</latitude>
+			<longitude>11.879245</longitude>
+			<zip-code>93309</zip-code>
+			<city>Kelheim</city>
+		</region>
+	</car>
+	<car id="station_271">
+		<region>
+			<stationId>STA.DE_DERP010</stationId>
+			<latitude>50.00097300000001</latitude>
+			<longitude>8.261277</longitude>
+			<zip-code>55116</zip-code>
+			<city>Mainz</city>
+		</region>
+	</car>
+	<car id="station_272">
+		<region>
+			<stationId>STA.DE_DERP009</stationId>
+			<latitude>49.99497499999999</latitude>
+			<longitude>8.273965</longitude>
+			<zip-code>55116</zip-code>
+			<city>Mainz</city>
+		</region>
+	</car>
+	<car id="station_273">
+		<region>
+			<stationId>STA.DE_DESH033</stationId>
+			<latitude>54.309674</latitude>
+			<longitude>10.116563</longitude>
+			<zip-code>24114</zip-code>
+			<city>Kiel</city>
+		</region>
+	</car>
+	<car id="station_274">
+		<region>
+			<stationId>STA.DE_DENI157</stationId>
+			<latitude>52.427886</latitude>
+			<longitude>10.793683</longitude>
+			<zip-code>38440</zip-code>
+			<city>Wolfsburg</city>
+		</region>
+	</car>
+	<car id="station_275">
+		<region>
+			<stationId>STA.DE_DEBY115</stationId>
+			<latitude>48.14960600000001</latitude>
+			<longitude>11.536512999999998</longitude>
+			<zip-code>80637</zip-code>
+			<city>München</city>
+		</region>
+	</car>
+	<car id="station_276">
+		<region>
+			<stationId>STA.DE_DEBB068</stationId>
+			<latitude>52.677651</latitude>
+			<longitude>13.582268999999998</longitude>
+			<zip-code>16321</zip-code>
+			<city>Bernau bei Berlin</city>
+		</region>
+	</car>
+	<car id="station_277">
+		<region>
+			<stationId>STA.DE_DEHE037</stationId>
+			<latitude>50.07719099999999</latitude>
+			<longitude>8.230316</longitude>
+			<zip-code>65185</zip-code>
+			<city>Wiesbaden</city>
+		</region>
+	</car>
+	<car id="station_278">
+		<region>
+			<stationId>STA.DE_DEST015</stationId>
+			<latitude>51.651166</latitude>
+			<longitude>12.302866</longitude>
+			<zip-code>06803</zip-code>
+			<city>Bitterfeld-Wolfen</city>
+		</region>
+	</car>
+	<car id="station_279">
+		<region>
+			<stationId>STA.DE_DENW306</stationId>
+			<latitude>51.61395</latitude>
+			<longitude>7.471006</longitude>
+			<zip-code>44536</zip-code>
+			<city>Lünen</city>
+		</region>
+	</car>
+	<car id="station_280">
+		<region>
+			<stationId>STA.DE_DENW081</stationId>
+			<latitude>51.862</latitude>
+			<longitude>6.874554</longitude>
+			<zip-code>46325</zip-code>
+			<city>Borken</city>
+		</region>
+	</car>
+	<car id="station_281">
+		<region>
+			<stationId>STA.DE_DENW259</stationId>
+			<latitude>51.169437</latitude>
+			<longitude>6.439975</longitude>
+			<zip-code>41236</zip-code>
+			<city>Mönchengladbach</city>
+		</region>
+	</car>
+	<car id="station_282">
+		<region>
+			<stationId>STA.DE_DESN082</stationId>
+			<latitude>51.375988</latitude>
+			<longitude>12.425748</longitude>
+			<zip-code>04349</zip-code>
+			<city>Leipzig</city>
+		</region>
+	</car>
+	<car id="station_283">
+		<region>
+			<stationId>STA.DE_DEST108</stationId>
+			<latitude>51.197249</latitude>
+			<longitude>11.960960000000002</longitude>
+			<zip-code>06667</zip-code>
+			<city>Weißenfels</city>
+		</region>
+	</car>
+	<car id="station_284">
+		<region>
+			<stationId>STA.DE_DERP007</stationId>
+			<latitude>50.017078</latitude>
+			<longitude>8.216497999999998</longitude>
+			<zip-code>55120</zip-code>
+			<city>Mainz</city>
+		</region>
+	</car>
+	<car id="station_285">
+		<region>
+			<stationId>STA.DE_DERP012</stationId>
+			<latitude>49.998837</latitude>
+			<longitude>8.268995999999998</longitude>
+			<zip-code>55116</zip-code>
+			<city>Mainz</city>
+		</region>
+	</car>
+	<car id="station_286">
+		<region>
+			<stationId>STA.DE_DEBW147</stationId>
+			<latitude>48.48933</latitude>
+			<longitude>9.21079</longitude>
+			<zip-code>72764</zip-code>
+			<city>Reutlingen</city>
+		</region>
+	</car>
+	<car id="station_287">
+		<region>
+			<stationId>STA.DE_DEBY033</stationId>
+			<latitude>48.539801</latitude>
+			<longitude>12.157051</longitude>
+			<zip-code>84028</zip-code>
+			<city>Landshut</city>
+		</region>
+	</car>
+	<car id="station_288">
+		<region>
+			<stationId>STA.DE_DEHE049</stationId>
+			<latitude>51.31207599999999</latitude>
+			<longitude>9.49112</longitude>
+			<zip-code>34117</zip-code>
+			<city>Kassel</city>
+		</region>
+	</car>
+	<car id="station_289">
+		<region>
+			<stationId>STA.DE_DEBW125</stationId>
+			<latitude>49.00371000000001</latitude>
+			<longitude>8.52628</longitude>
+			<zip-code>76327</zip-code>
+			<city>Pfinztal</city>
+		</region>
+	</car>
+	<car id="station_290">
+		<region>
+			<stationId>STA.DE_DETH027</stationId>
+			<latitude>50.49995499999999</latitude>
+			<longitude>11.134593</longitude>
+			<zip-code>98724</zip-code>
+			<city>Neuhaus am Rennweg</city>
+		</region>
+	</car>
+	<car id="station_291">
+		<region>
+			<stationId>STA.DE_DEHB013</stationId>
+			<latitude>53.1177</latitude>
+			<longitude>8.69506</longitude>
+			<zip-code>28197</zip-code>
+			<city>Bremen</city>
+		</region>
+	</car>
+	<car id="station_292">
+		<region>
+			<stationId>STA.DE_DENW329</stationId>
+			<latitude>51.033834</latitude>
+			<longitude>6.451483</longitude>
+			<zip-code>52445</zip-code>
+			<city>Titz</city>
+		</region>
+	</car>
+	<car id="station_293">
+		<region>
+			<stationId>STA.DE_DEHB011</stationId>
+			<latitude>53.585262</latitude>
+			<longitude>8.59876</longitude>
+			<zip-code>27578</zip-code>
+			<city>Bremerhaven</city>
+		</region>
+	</car>
+	<car id="station_294">
+		<region>
+			<stationId>STA.DE_DEUB029</stationId>
+			<latitude>50.65406600000001</latitude>
+			<longitude>10.769534</longitude>
+			<zip-code>98559</zip-code>
+			<city>Gehlberg</city>
+		</region>
+	</car>
+	<car id="station_295">
+		<region>
+			<stationId>STA.DE_DETH096</stationId>
+			<latitude>51.168082</latitude>
+			<longitude>11.120727</longitude>
+			<zip-code>99610</zip-code>
+			<city>Sömmerda</city>
+		</region>
+	</car>
+	<car id="station_296">
+		<region>
+			<stationId>STA.DE_DENW059</stationId>
+			<latitude>50.88981400000001</latitude>
+			<longitude>6.985164</longitude>
+			<zip-code>50996</zip-code>
+			<city>Köln</city>
+		</region>
+	</car>
+	<car id="station_297">
+		<region>
+			<stationId>STA.DE_DEST030</stationId>
+			<latitude>51.84340999999999</latitude>
+			<longitude>12.251367</longitude>
+			<zip-code>06844</zip-code>
+			<city>Dessau-Roßlau</city>
+		</region>
+	</car>
+	<car id="station_298">
+		<region>
+			<stationId>STA.DE_DENW080</stationId>
+			<latitude>51.183773</latitude>
+			<longitude>7.052634</longitude>
+			<zip-code>42719</zip-code>
+			<city>Solingen</city>
+		</region>
+	</car>
+	<car id="station_299">
+		<region>
+			<stationId>STA.DE_DEBY013</stationId>
+			<latitude>48.182835</latitude>
+			<longitude>12.781386999999999</longitude>
+			<zip-code>84561</zip-code>
+			<city>Mehring</city>
+		</region>
+	</car>
+	<car id="station_300">
+		<region>
+			<stationId>STA.DE_DEBY014</stationId>
+			<latitude>50.260578</latitude>
+			<longitude>10.959312</longitude>
+			<zip-code>96450</zip-code>
+			<city>Coburg</city>
+		</region>
+	</car>
+	<car id="station_301">
+		<region>
+			<stationId>STA.DE_DENW096</stationId>
+			<latitude>51.154614</latitude>
+			<longitude>6.42571</longitude>
+			<zip-code>41239</zip-code>
+			<city>Mönchengladbach</city>
+		</region>
+	</car>
+	<car id="station_302">
+		<region>
+			<stationId>STA.DE_DESN024</stationId>
+			<latitude>50.35478299999999</latitude>
+			<longitude>12.468739</longitude>
+			<zip-code>08248</zip-code>
+			<city>Klingenthal</city>
+		</region>
+	</car>
+	<car id="station_303">
+		<region>
+			<stationId>STA.DE_DESH052</stationId>
+			<latitude>54.304242</latitude>
+			<longitude>10.122364</longitude>
+			<zip-code>24113</zip-code>
+			<city>Kiel</city>
+		</region>
+	</car>
+	<car id="station_304">
+		<region>
+			<stationId>STA.DE_DENW254</stationId>
+			<latitude>51.46792599999999</latitude>
+			<longitude>6.752535000000001</longitude>
+			<zip-code>47137</zip-code>
+			<city>Duisburg</city>
+		</region>
+	</car>
+	<car id="station_305">
+		<region>
+			<stationId>STA.DE_DEBW080</stationId>
+			<latitude>49.00795999999998</latitude>
+			<longitude>8.38719</longitude>
+			<zip-code>76133</zip-code>
+			<city>Karlsruhe</city>
+		</region>
+	</car>
+	<car id="station_306">
+		<region>
+			<stationId>STA.DE_DENW133</stationId>
+			<latitude>51.362829</latitude>
+			<longitude>7.46353</longitude>
+			<zip-code>58095</zip-code>
+			<city>Hagen</city>
+		</region>
+	</car>
+	<car id="station_307">
+		<region>
+			<stationId>STA.DE_DEST105</stationId>
+			<latitude>52.60205599999999</latitude>
+			<longitude>11.850274</longitude>
+			<zip-code>39576</zip-code>
+			<city>Stendal</city>
+		</region>
+	</car>
+	<car id="station_308">
+		<region>
+			<stationId>STA.DE_DENW082</stationId>
+			<latitude>51.21311000000001</latitude>
+			<longitude>6.782564999999999</longitude>
+			<zip-code>40215</zip-code>
+			<city>Düsseldorf</city>
+		</region>
+	</car>
+	<car id="station_309">
+		<region>
+			<stationId>STA.DE_DENW102</stationId>
+			<latitude>51.48584699999999</latitude>
+			<longitude>6.735853999999999</longitude>
+			<zip-code>47166</zip-code>
+			<city>Duisburg</city>
+		</region>
+	</car>
+	<car id="station_310">
+		<region>
+			<stationId>STA.DE_DEHE050</stationId>
+			<latitude>51.360755</latitude>
+			<longitude>9.271233</longitude>
+			<zip-code>34289</zip-code>
+			<city>Zierenberg</city>
+		</region>
+	</car>
+	<car id="station_311">
+		<region>
+			<stationId>STA.DE_DEUB030</stationId>
+			<latitude>53.141303</latitude>
+			<longitude>13.031662</longitude>
+			<zip-code>16775</zip-code>
+			<city>Stechlin</city>
+		</region>
+	</car>
+	<car id="station_312">
+		<region>
+			<stationId>STA.DE_DEHH079</stationId>
+			<latitude>53.54526899999999</latitude>
+			<longitude>9.944815</longitude>
+			<zip-code>22767</zip-code>
+			<city>Hamburg</city>
+		</region>
+	</car>
+	<car id="station_313">
+		<region>
+			<stationId>STA.DE_DENW079</stationId>
+			<latitude>51.028879</latitude>
+			<longitude>7.005063</longitude>
+			<zip-code>51373</zip-code>
+			<city>Leverkusen</city>
+		</region>
+	</car>
+	<car id="station_314">
+		<region>
+			<stationId>STA.DE_DEST075</stationId>
+			<latitude>51.475164</latitude>
+			<longitude>11.983406</longitude>
+			<zip-code>06110</zip-code>
+			<city>Halle (Saale)</city>
+		</region>
+	</car>
+	<car id="station_315">
+		<region>
+			<stationId>STA.DE_DEBW022</stationId>
+			<latitude>48.57817799999999</latitude>
+			<longitude>7.802317000000001</longitude>
+			<zip-code>77694</zip-code>
+			<city>Kehl</city>
+		</region>
+	</car>
+	<car id="station_316">
+		<region>
+			<stationId>STA.DE_DEHH072</stationId>
+			<latitude>53.535958</latitude>
+			<longitude>9.844080000000002</longitude>
+			<zip-code>21129</zip-code>
+			<city>Hamburg</city>
+		</region>
+	</car>
+	<car id="station_317">
+		<region>
+			<stationId>STA.DE_DEHH047</stationId>
+			<latitude>53.63074</latitude>
+			<longitude>10.110595</longitude>
+			<zip-code>22175</zip-code>
+			<city>Hamburg</city>
+		</region>
+	</car>
+	<car id="station_318">
+		<region>
+			<stationId>STA.DE_DEHH074</stationId>
+			<latitude>53.538531</latitude>
+			<longitude>10.102823</longitude>
+			<zip-code>22111</zip-code>
+			<city>Hamburg</city>
+		</region>
+	</car>
+	<car id="station_319">
+		<region>
+			<stationId>STA.DE_DENW114</stationId>
+			<latitude>51.277647</latitude>
+			<longitude>7.231894999999998</longitude>
+			<zip-code>42389</zip-code>
+			<city>Wuppertal</city>
+		</region>
+	</car>
+	<car id="station_320">
+		<region>
+			<stationId>STA.DE_DEST106</stationId>
+			<latitude>51.456071</latitude>
+			<longitude>11.091078</longitude>
+			<zip-code>06536</zip-code>
+			<city>Südharz</city>
+		</region>
+	</car>
+	<car id="station_321">
+		<region>
+			<stationId>STA.DE_DEST011</stationId>
+			<latitude>51.83938199999999</latitude>
+			<longitude>10.790142999999999</longitude>
+			<zip-code>38855</zip-code>
+			<city>Wernigerode</city>
+		</region>
+	</car>
+	<car id="station_322">
+		<region>
+			<stationId>STA.DE_DESN045</stationId>
+			<latitude>50.892377</latitude>
+			<longitude>14.822845999999998</longitude>
+			<zip-code>02763</zip-code>
+			<city>Zittau</city>
+		</region>
+	</car>
+	<car id="station_323">
+		<region>
+			<stationId>STA.DE_DESN011</stationId>
+			<latitude>50.832461</latitude>
+			<longitude>12.917336000000002</longitude>
+			<zip-code>09111</zip-code>
+			<city>Chemnitz</city>
+		</region>
+	</car>
+	<car id="station_324">
+		<region>
+			<stationId>STA.DE_DEBY124</stationId>
+			<latitude>49.44405999999999</latitude>
+			<longitude>10.325</longitude>
+			<zip-code>91593</zip-code>
+			<city>Burgbernheim</city>
+		</region>
+	</car>
+	<car id="station_325">
+		<region>
+			<stationId>STA.DE_DEBW042</stationId>
+			<latitude>48.678069</latitude>
+			<longitude>9.227769</longitude>
+			<zip-code>70794</zip-code>
+			<city>Filderstadt</city>
+		</region>
+	</car>
+	<car id="station_326">
+		<region>
+			<stationId>STA.DE_DEBE056</stationId>
+			<latitude>52.44769699999999</latitude>
+			<longitude>13.64705</longitude>
+			<zip-code>12587</zip-code>
+			<city>Berlin</city>
+		</region>
+	</car>
+	<car id="station_327">
+		<region>
+			<stationId>STA.DE_DEBY089</stationId>
+			<latitude>48.173194</latitude>
+			<longitude>11.648036</longitude>
+			<zip-code>81929</zip-code>
+			<city>München</city>
+		</region>
+	</car>
+	<car id="station_328">
+		<region>
+			<stationId>STA.DE_DETH094</stationId>
+			<latitude>51.20853499999998</latitude>
+			<longitude>10.465835000000002</longitude>
+			<zip-code>99974</zip-code>
+			<city>Mühlhausen/Thüringen</city>
+		</region>
+	</car>
+	<car id="station_329">
+		<region>
+			<stationId>STA.DE_DEUB004</stationId>
+			<latitude>47.91325599999999</latitude>
+			<longitude>7.908035</longitude>
+			<zip-code>79254</zip-code>
+			<city>Oberried</city>
+		</region>
+	</car>
+	<car id="station_330">
+		<region>
+			<stationId>STA.DE_DENW074</stationId>
+			<latitude>50.88347499999999</latitude>
+			<longitude>6.469363</longitude>
+			<zip-code>52382</zip-code>
+			<city>Niederzier</city>
+		</region>
+	</car>
+	<car id="station_331">
+		<region>
+			<stationId>STA.DE_DENW203</stationId>
+			<latitude>51.543141</latitude>
+			<longitude>7.150186</longitude>
+			<zip-code>44653</zip-code>
+			<city>Herne</city>
+		</region>
+	</car>
+	<car id="station_332">
+		<region>
+			<stationId>STA.DE_DEBE051</stationId>
+			<latitude>52.64416899999999</latitude>
+			<longitude>13.483079</longitude>
+			<zip-code>13125</zip-code>
+			<city>Berlin</city>
+		</region>
+	</car>
+	<car id="station_333">
+		<region>
+			<stationId>STA.DE_DESN079</stationId>
+			<latitude>51.285356</latitude>
+			<longitude>14.749731</longitude>
+			<zip-code>02906</zip-code>
+			<city>Quitzdorf am See</city>
+		</region>
+	</car>
+	<car id="station_334">
+		<region>
+			<stationId>STA.DE_DEBE066</stationId>
+			<latitude>52.485296</latitude>
+			<longitude>13.529504</longitude>
+			<zip-code>10318</zip-code>
+			<city>Berlin</city>
+		</region>
+	</car>
+	<car id="station_335">
+		<region>
+			<stationId>STA.DE_DERP020</stationId>
+			<latitude>49.75419199999999</latitude>
+			<longitude>6.646762000000001</longitude>
+			<zip-code>54290</zip-code>
+			<city>Trier</city>
+		</region>
+	</car>
+	<car id="station_336">
+		<region>
+			<stationId>STA.DE_DENI020</stationId>
+			<latitude>52.44081</latitude>
+			<longitude>10.816380000000002</longitude>
+			<zip-code>38448</zip-code>
+			<city>Wolfsburg</city>
+		</region>
+	</car>
+	<car id="station_337">
+		<region>
+			<stationId>STA.DE_DESN051</stationId>
+			<latitude>51.119514</latitude>
+			<longitude>13.675005</longitude>
+			<zip-code>01468</zip-code>
+			<city>Radebeul</city>
+		</region>
+	</car>
+	<car id="station_338">
+		<region>
+			<stationId>STA.DE_DERP046</stationId>
+			<latitude>50.431398</latitude>
+			<longitude>7.460812</longitude>
+			<zip-code>56564</zip-code>
+			<city>Neuwied</city>
+		</region>
+	</car>
+	<car id="station_339">
+		<region>
+			<stationId>STA.DE_DENW010</stationId>
+			<latitude>51.547495</latitude>
+			<longitude>7.693835000000002</longitude>
+			<zip-code>59425</zip-code>
+			<city>Unna</city>
+		</region>
+	</car>
+	<car id="station_340">
+		<region>
+			<stationId>STA.DE_DENW181</stationId>
+			<latitude>51.443012</latitude>
+			<longitude>8.360714</longitude>
+			<zip-code>59581</zip-code>
+			<city>Warstein</city>
+		</region>
+	</car>
+	<car id="station_341">
+		<region>
+			<stationId>STA.DE_DEBW156</stationId>
+			<latitude>48.22915</latitude>
+			<longitude>8.39062</longitude>
+			<zip-code>78713</zip-code>
+			<city>Schramberg</city>
+		</region>
+	</car>
+	<car id="station_342">
+		<region>
+			<stationId>STA.DE_DESL018</stationId>
+			<latitude>49.299373</latitude>
+			<longitude>7.061679</longitude>
+			<zip-code>66280</zip-code>
+			<city>Sulzbach/Saar</city>
+		</region>
+	</car>
+	<car id="station_343">
+		<region>
+			<stationId>STA.DE_DESN004</stationId>
+			<latitude>51.175669</latitude>
+			<longitude>14.443770999999998</longitude>
+			<zip-code>02625</zip-code>
+			<city>Bautzen</city>
+		</region>
+	</car>
+	<car id="station_344">
+		<region>
+			<stationId>STA.DE_DEHE042</stationId>
+			<latitude>50.532965</latitude>
+			<longitude>8.684397</longitude>
+			<zip-code>35440</zip-code>
+			<city>Linden</city>
+		</region>
+	</car>
+	<car id="station_345">
+		<region>
+			<stationId>STA.DE_DEHH033</stationId>
+			<latitude>53.638291</latitude>
+			<longitude>9.998009</longitude>
+			<zip-code>22415</zip-code>
+			<city>Hamburg</city>
+		</region>
+	</car>
+	<car id="station_346">
+		<region>
+			<stationId>STA.DE_DENW068</stationId>
+			<latitude>51.57066200000001</latitude>
+			<longitude>8.148061</longitude>
+			<zip-code>59494</zip-code>
+			<city>Soest</city>
+		</region>
+	</car>
+	<car id="station_347">
+		<region>
+			<stationId>STA.DE_DERP053</stationId>
+			<latitude>49.35114299999999</latitude>
+			<longitude>8.423005</longitude>
+			<zip-code>67346</zip-code>
+			<city>Speyer</city>
+		</region>
+	</car>
+	<car id="station_348">
+		<region>
+			<stationId>STA.DE_DEHB004</stationId>
+			<latitude>53.180946</latitude>
+			<longitude>8.625456</longitude>
+			<zip-code>28757</zip-code>
+			<city>Bremen</city>
+		</region>
+	</car>
+	<car id="station_349">
+		<region>
+			<stationId>STA.DE_DEHE046</stationId>
+			<latitude>51.430897</latitude>
+			<longitude>8.928171</longitude>
+			<zip-code>34454</zip-code>
+			<city>Bad Arolsen</city>
+		</region>
+	</car>
+	<car id="station_350">
+		<region>
+			<stationId>STA.DE_DEBY052</stationId>
+			<latitude>48.39707899999999</latitude>
+			<longitude>10.008293000000002</longitude>
+			<zip-code>89231</zip-code>
+			<city>Neu-Ulm</city>
+		</region>
+	</car>
+	<car id="station_351">
+		<region>
+			<stationId>STA.DE_DEHE044</stationId>
+			<latitude>50.383217</latitude>
+			<longitude>8.060997999999998</longitude>
+			<zip-code>65549</zip-code>
+			<city>Limburg an der Lahn</city>
+		</region>
+	</car>
+	<car id="station_352">
+		<region>
+			<stationId>STA.DE_DENW211</stationId>
+			<latitude>50.962857</latitude>
+			<longitude>7.00459</longitude>
+			<zip-code>51063</zip-code>
+			<city>Köln</city>
+		</region>
+	</car>
+	<car id="station_353">
+		<region>
+			<stationId>STA.DE_DENW180</stationId>
+			<latitude>51.063766</latitude>
+			<longitude>6.559477</longitude>
+			<zip-code>41517</zip-code>
+			<city>Grevenbroich</city>
+		</region>
+	</car>
+	<car id="station_354">
+		<region>
+			<stationId>STA.DE_DEBY122</stationId>
+			<latitude>47.51801300000001</latitude>
+			<longitude>10.404232</longitude>
+			<zip-code>87541</zip-code>
+			<city>Bad Hindelang</city>
+		</region>
+	</car>
+	<car id="station_355">
+		<region>
+			<stationId>STA.DE_DEHE032</stationId>
+			<latitude>50.97002399999999</latitude>
+			<longitude>9.80026</longitude>
+			<zip-code>36179</zip-code>
+			<city>Bebra</city>
+		</region>
+	</car>
+	<car id="station_356">
+		<region>
+			<stationId>STA.DE_DENW260</stationId>
+			<latitude>51.95326699999998</latitude>
+			<longitude>7.619386999999999</longitude>
+			<zip-code>48143</zip-code>
+			<city>Münster</city>
+		</region>
+	</car>
+	<car id="station_357">
+		<region>
+			<stationId>STA.DE_DESN093</stationId>
+			<latitude>50.608136</latitude>
+			<longitude>12.211112</longitude>
+			<zip-code>08491</zip-code>
+			<city>Netzschkau</city>
+		</region>
+	</car>
+	<car id="station_358">
+		<region>
+			<stationId>STA.DE_DEBE065</stationId>
+			<latitude>52.51407199999999</latitude>
+			<longitude>13.469931</longitude>
+			<zip-code>10247</zip-code>
+			<city>Berlin</city>
+		</region>
+	</car>
+	<car id="station_359">
+		<region>
+			<stationId>STA.DE_DEBB075</stationId>
+			<latitude>52.484168</latitude>
+			<longitude>13.123698</longitude>
+			<zip-code>14476</zip-code>
+			<city>Potsdam</city>
+		</region>
+	</car>
+	<car id="station_360">
+		<region>
+			<stationId>STA.DE_DENI043</stationId>
+			<latitude>52.49855</latitude>
+			<longitude>7.31747</longitude>
+			<zip-code>49809</zip-code>
+			<city>Lingen (Ems)</city>
+		</region>
+	</car>
+	<car id="station_361">
+		<region>
+			<stationId>STA.DE_DEBY075</stationId>
+			<latitude>49.67895000000001</latitude>
+			<longitude>12.159361</longitude>
+			<zip-code>92637</zip-code>
+			<city>Weiden in der Oberpfalz</city>
+		</region>
+	</car>
+	<car id="station_362">
+		<region>
+			<stationId>STA.DE_DEBE018</stationId>
+			<latitude>52.48581399999999</latitude>
+			<longitude>13.348775000000002</longitude>
+			<zip-code>10823</zip-code>
+			<city>Berlin</city>
+		</region>
+	</car>
+	<car id="station_363">
+		<region>
+			<stationId>STA.DE_DEBY026</stationId>
+			<latitude>48.76711000000001</latitude>
+			<longitude>11.638330000000002</longitude>
+			<zip-code>85088</zip-code>
+			<city>Vohburg an der Donau</city>
+		</region>
+	</car>
+	<car id="station_364">
+		<region>
+			<stationId>STA.DE_DENW006</stationId>
+			<latitude>51.592206</latitude>
+			<longitude>7.569838</longitude>
+			<zip-code>44532</zip-code>
+			<city>Lünen</city>
+		</region>
+	</car>
+	<car id="station_365">
+		<region>
+			<stationId>STA.DE_DEBY056</stationId>
+			<latitude>49.47221</latitude>
+			<longitude>10.984705</longitude>
+			<zip-code>90762</zip-code>
+			<city>Fürth</city>
+		</region>
+	</car>
+	<car id="station_366">
+		<region>
+			<stationId>STA.DE_DESH013</stationId>
+			<latitude>54.412987</latitude>
+			<longitude>11.215994</longitude>
+			<zip-code>23769</zip-code>
+			<city>Fehmarn</city>
+		</region>
+	</car>
+	<car id="station_367">
+		<region>
+			<stationId>STA.DE_DESH034</stationId>
+			<latitude>53.659575</latitude>
+			<longitude>9.805229</longitude>
+			<zip-code>25421</zip-code>
+			<city>Pinneberg</city>
+		</region>
+	</car>
+	<car id="station_368">
+		<region>
+			<stationId>STA.DE_DENI031</stationId>
+			<latitude>53.59617</latitude>
+			<longitude>8.09059</longitude>
+			<zip-code>26388</zip-code>
+			<city>Wilhelmshaven</city>
+		</region>
+	</car>
+	<car id="station_369">
+		<region>
+			<stationId>STA.DE_DEBB048</stationId>
+			<latitude>52.93189</latitude>
+			<longitude>12.809481</longitude>
+			<zip-code>16816</zip-code>
+			<city>Neuruppin</city>
+		</region>
+	</car>
+	<car id="station_370">
+		<region>
+			<stationId>STA.DE_DENW062</stationId>
+			<latitude>50.75363999999999</latitude>
+			<longitude>7.082676</longitude>
+			<zip-code>53117</zip-code>
+			<city>Bonn</city>
+		</region>
+	</car>
+	<car id="station_371">
+		<region>
+			<stationId>STA.DE_DEBE064</stationId>
+			<latitude>52.481709</latitude>
+			<longitude>13.433967</longitude>
+			<zip-code>12043</zip-code>
+			<city>Berlin</city>
+		</region>
+	</car>
+	<car id="station_372">
+		<region>
+			<stationId>STA.DE_DEBY111</stationId>
+			<latitude>49.943637</latitude>
+			<longitude>11.570087999999998</longitude>
+			<zip-code>95444</zip-code>
+			<city>Bayreuth</city>
+		</region>
+	</car>
+	<car id="station_373">
+		<region>
+			<stationId>STA.DE_DESH006</stationId>
+			<latitude>54.5273</latitude>
+			<longitude>9.549379</longitude>
+			<zip-code>24837</zip-code>
+			<city>Schleswig</city>
+		</region>
+	</car>
+	<car id="station_374">
+		<region>
+			<stationId>STA.DE_DEBE010</stationId>
+			<latitude>52.54304099999999</latitude>
+			<longitude>13.349325999999998</longitude>
+			<zip-code>13353</zip-code>
+			<city>Berlin</city>
+		</region>
+	</car>
+	<car id="station_375">
+		<region>
+			<stationId>STA.DE_DESL003</stationId>
+			<latitude>49.357861</latitude>
+			<longitude>6.73354</longitude>
+			<zip-code>66763</zip-code>
+			<city>Dillingen/Saar</city>
+		</region>
+	</car>
+	<car id="station_376">
+		<region>
+			<stationId>STA.DE_DEBB083</stationId>
+			<latitude>51.56450000000001</latitude>
+			<longitude>14.3764</longitude>
+			<zip-code>03130</zip-code>
+			<city>Spremberg</city>
+		</region>
+	</car>
+	<car id="station_377">
+		<region>
+			<stationId>STA.DE_DEBW039</stationId>
+			<latitude>48.048656</latitude>
+			<longitude>8.463597</longitude>
+			<zip-code>78050</zip-code>
+			<city>Villingen-Schwenningen</city>
+		</region>
+	</car>
+	<car id="station_378">
+		<region>
+			<stationId>STA.DE_DEBY007</stationId>
+			<latitude>48.37657600000001</latitude>
+			<longitude>10.88837</longitude>
+			<zip-code>86153</zip-code>
+			<city>Augsburg</city>
+		</region>
+	</car>
+	<car id="station_379">
+		<region>
+			<stationId>STA.DE_DEHE026</stationId>
+			<latitude>50.16443</latitude>
+			<longitude>9.399441</longitude>
+			<zip-code>63637</zip-code>
+			<city>Jossgrund</city>
+		</region>
+	</car>
+	<car id="station_380">
+		<region>
+			<stationId>STA.DE_DEBW029</stationId>
+			<latitude>48.847917</latitude>
+			<longitude>10.096292</longitude>
+			<zip-code>73430</zip-code>
+			<city>Aalen</city>
+		</region>
+	</car>
+	<car id="station_381">
+		<region>
+			<stationId>STA.DE_DEBW059</stationId>
+			<latitude>49.63484100000001</latitude>
+			<longitude>9.657919</longitude>
+			<zip-code>97941</zip-code>
+			<city>Tauberbischofsheim</city>
+		</region>
+	</car>
+	<car id="station_382">
+		<region>
+			<stationId>STA.DE_DEBB067</stationId>
+			<latitude>52.608609</latitude>
+			<longitude>12.885193999999998</longitude>
+			<zip-code>14641</zip-code>
+			<city>Nauen</city>
+		</region>
+	</car>
+	<car id="station_383">
+		<region>
+			<stationId>STA.DE_DESN049</stationId>
+			<latitude>50.431322</latitude>
+			<longitude>12.611125</longitude>
+			<zip-code>08309</zip-code>
+			<city>Eibenstock</city>
+		</region>
+	</car>
+	<car id="station_384">
+		<region>
+			<stationId>STA.DE_DERP028</stationId>
+			<latitude>50.4243</latitude>
+			<longitude>7.7299</longitude>
+			<zip-code>56410</zip-code>
+			<city>Montabaur</city>
+		</region>
+	</car>
+	<car id="station_385">
+		<region>
+			<stationId>STA.DE_DEBW006</stationId>
+			<latitude>49.475758000000006</latitude>
+			<longitude>8.478016999999998</longitude>
+			<zip-code>68165</zip-code>
+			<city>Mannheim</city>
+		</region>
+	</car>
+	<car id="station_386">
+		<region>
+			<stationId>STA.DE_DENW029</stationId>
+			<latitude>51.40300499999999</latitude>
+			<longitude>7.208572000000002</longitude>
+			<zip-code>45527</zip-code>
+			<city>Hattingen</city>
+		</region>
+	</car>
+	<car id="station_387">
+		<region>
+			<stationId>STA.DE_DESH014</stationId>
+			<latitude>54.32781</latitude>
+			<longitude>8.603474</longitude>
+			<zip-code>25826</zip-code>
+			<city>St. Peter-Ording</city>
+		</region>
+	</car>
+	<car id="station_388">
+		<region>
+			<stationId>STA.DE_DESN075</stationId>
+			<latitude>50.486138</latitude>
+			<longitude>12.138053999999999</longitude>
+			<zip-code>08527</zip-code>
+			<city>Plauen</city>
+		</region>
+	</car>
+	<car id="station_389">
+		<region>
+			<stationId>STA.DE_DEBB007</stationId>
+			<latitude>51.462734</latitude>
+			<longitude>13.526796</longitude>
+			<zip-code>04910</zip-code>
+			<city>Elsterwerda</city>
+		</region>
+	</car>
+	<car id="station_390">
+		<region>
+			<stationId>STA.DE_DENW095</stationId>
+			<latitude>51.936547</latitude>
+			<longitude>7.611581</longitude>
+			<zip-code>48151</zip-code>
+			<city>Münster</city>
+		</region>
+	</car>
+	<car id="station_391">
+		<region>
+			<stationId>STA.DE_DERP043</stationId>
+			<latitude>50.275108</latitude>
+			<longitude>7.652115000000002</longitude>
+			<zip-code>56338</zip-code>
+			<city>Braubach</city>
+		</region>
+	</car>
+	<car id="station_392">
+		<region>
+			<stationId>STA.DE_DENI077</stationId>
+			<latitude>51.70884</latitude>
+			<longitude>9.55462</longitude>
+			<zip-code>37170</zip-code>
+			<city>Solling</city>
+		</region>
+	</car>
+	<car id="station_393">
+		<region>
+			<stationId>STA.DE_DEBE063</stationId>
+			<latitude>52.46753399999999</latitude>
+			<longitude>13.441654000000002</longitude>
+			<zip-code>12051</zip-code>
+			<city>Berlin</city>
+		</region>
+	</car>
+	<car id="station_394">
+		<region>
+			<stationId>STA.DE_DEBW144</stationId>
+			<latitude>49.02757</latitude>
+			<longitude>8.576969999999998</longitude>
+			<zip-code>75045</zip-code>
+			<city>Walzbachtal</city>
+		</region>
+	</car>
+	<car id="station_395">
+		<region>
+			<stationId>STA.DE_DEBB073</stationId>
+			<latitude>52.38886899999999</latitude>
+			<longitude>13.094618</longitude>
+			<zip-code>14482</zip-code>
+			<city>Potsdam</city>
+		</region>
+	</car>
+	<car id="station_396">
+		<region>
+			<stationId>STA.DE_DETH061</stationId>
+			<latitude>50.79161599999998</latitude>
+			<longitude>11.661233</longitude>
+			<zip-code>07646</zip-code>
+			<city>Oberbodnitz</city>
+		</region>
+	</car>
+	<car id="station_397">
+		<region>
+			<stationId>STA.DE_DEST097</stationId>
+			<latitude>51.625945</latitude>
+			<longitude>11.511946</longitude>
+			<zip-code>06333</zip-code>
+			<city>Hettstedt</city>
+		</region>
+	</car>
+	<car id="station_398">
+		<region>
+			<stationId>STA.DE_DEHE028</stationId>
+			<latitude>49.653465</latitude>
+			<longitude>8.817251</longitude>
+			<zip-code>64658</zip-code>
+			<city>Fürth</city>
+		</region>
+	</car>
+	<car id="station_399">
+		<region>
+			<stationId>STA.DE_DEST101</stationId>
+			<latitude>51.88954499999999</latitude>
+			<longitude>11.055946</longitude>
+			<zip-code>38820</zip-code>
+			<city>Halberstadt</city>
+		</region>
+	</car>
+	<car id="station_400">
+		<region>
+			<stationId>STA.DE_DEBW153</stationId>
+			<latitude>48.40411</latitude>
+			<longitude>9.98731</longitude>
+			<zip-code>89073</zip-code>
+			<city>Ulm</city>
+		</region>
+	</car>
+	<car id="station_401">
+		<region>
+			<stationId>STA.DE_DEBW073</stationId>
+			<latitude>47.81901899999998</latitude>
+			<longitude>7.567969</longitude>
+			<zip-code>79395</zip-code>
+			<city>Neuenburg am Rhein</city>
+		</region>
+	</car>
+	<car id="station_402">
+		<region>
+			<stationId>STA.DE_DEHE051</stationId>
+			<latitude>50.497711</latitude>
+			<longitude>9.935862</longitude>
+			<zip-code>36129</zip-code>
+			<city>Gersfeld (Rhön)</city>
+		</region>
+	</car>
+	<car id="station_403">
+		<region>
+			<stationId>STA.DE_DEMV003</stationId>
+			<latitude>53.559784</latitude>
+			<longitude>13.266439999999998</longitude>
+			<zip-code>17033</zip-code>
+			<city>Neubrandenburg</city>
+		</region>
+	</car>
+	<car id="station_404">
+		<region>
+			<stationId>STA.DE_DETH026</stationId>
+			<latitude>50.56175399999999</latitude>
+			<longitude>10.375299000000002</longitude>
+			<zip-code>98617</zip-code>
+			<city>Meiningen</city>
+		</region>
+	</car>
+	<car id="station_405">
+		<region>
+			<stationId>STA.DE_DESL020</stationId>
+			<latitude>49.23073999999999</latitude>
+			<longitude>7.003174</longitude>
+			<zip-code>66111</zip-code>
+			<city>Saarbrücken</city>
+		</region>
+	</car>
+	<car id="station_406">
+		<region>
+			<stationId>STA.DE_DEBW056</stationId>
+			<latitude>49.107878</latitude>
+			<longitude>9.733231</longitude>
+			<zip-code>74523</zip-code>
+			<city>Schwäbisch Hall</city>
+		</region>
+	</car>
+	<car id="station_407">
+		<region>
+			<stationId>STA.DE_DERP021</stationId>
+			<latitude>50.424674</latitude>
+			<longitude>7.481394</longitude>
+			<zip-code>56564</zip-code>
+			<city>Neuwied</city>
+		</region>
+	</car>
+	<car id="station_408">
+		<region>
+			<stationId>STA.DE_DEHE060</stationId>
+			<latitude>51.15484300000001</latitude>
+			<longitude>9.031754</longitude>
+			<zip-code>34549</zip-code>
+			<city>Edertal</city>
+		</region>
+	</car>
+	<car id="station_409">
+		<region>
+			<stationId>STA.DE_DEBW150</stationId>
+			<latitude>47.55362</latitude>
+			<longitude>8.021169999999998</longitude>
+			<zip-code>79730</zip-code>
+			<city>Murg</city>
+		</region>
+	</car>
+	<car id="station_410">
+		<region>
+			<stationId>STA.DE_DEBW148</stationId>
+			<latitude>48.96047</latitude>
+			<longitude>9.184030000000002</longitude>
+			<zip-code>74379</zip-code>
+			<city>Ingersheim</city>
+		</region>
+	</car>
+	<car id="station_411">
+		<region>
+			<stationId>STA.DE_DENW042</stationId>
+			<latitude>51.33766900000001</latitude>
+			<longitude>6.640242000000001</longitude>
+			<zip-code>47809</zip-code>
+			<city>Krefeld</city>
+		</region>
+	</car>
+	<car id="station_412">
+		<region>
+			<stationId>STA.DE_DEHE096</stationId>
+			<latitude>50.12556000000001</latitude>
+			<longitude>8.656658999999998</longitude>
+			<zip-code>Frankfurt</zip-code>
+			<city>am Main</city>
+		</region>
+	</car>
+	<car id="station_413">
+		<region>
+			<stationId>STA.DE_DEBY058</stationId>
+			<latitude>49.462229</latitude>
+			<longitude>11.0248</longitude>
+			<zip-code>90429</zip-code>
+			<city>Nürnberg</city>
+		</region>
+	</car>
+	<car id="station_414">
+		<region>
+			<stationId>STA.DE_DENW066</stationId>
+			<latitude>51.326943</latitude>
+			<longitude>6.195868</longitude>
+			<zip-code>41334</zip-code>
+			<city>Nettetal</city>
+		</region>
+	</car>
+	<car id="station_415">
+		<region>
+			<stationId>STA.DE_DENI011</stationId>
+			<latitude>52.22693999999999</latitude>
+			<longitude>10.473639999999998</longitude>
+			<zip-code>38122</zip-code>
+			<city>Braunschweig</city>
+		</region>
+	</car>
+	<car id="station_416">
+		<region>
+			<stationId>STA.DE_DESL006</stationId>
+			<latitude>49.18361</latitude>
+			<longitude>6.744856</longitude>
+			<zip-code>66333</zip-code>
+			<city>Völklingen</city>
+		</region>
+	</car>
+	<car id="station_417">
+		<region>
+			<stationId>STA.DE_DEBW112</stationId>
+			<latitude>48.645608</latitude>
+			<longitude>8.904441999999998</longitude>
+			<zip-code>71116</zip-code>
+			<city>Gärtringen</city>
+		</region>
+	</car>
+	<car id="station_418">
+		<region>
+			<stationId>STA.DE_DEBW046</stationId>
+			<latitude>48.08988599999999</latitude>
+			<longitude>9.800325</longitude>
+			<zip-code>88400</zip-code>
+			<city>Biberach an der Riß</city>
+		</region>
+	</car>
+	<car id="station_419">
+		<region>
+			<stationId>STA.DE_DESL013</stationId>
+			<latitude>49.32264600000001</latitude>
+			<longitude>6.753639</longitude>
+			<zip-code>66740</zip-code>
+			<city>Saarlouis</city>
+		</region>
+	</car>
+	<car id="station_420">
+		<region>
+			<stationId>STA.DE_DEHE062</stationId>
+			<latitude>50.80716699999999</latitude>
+			<longitude>8.770507999999998</longitude>
+			<zip-code>35037</zip-code>
+			<city>Marburg</city>
+		</region>
+	</car>
+	<car id="station_421">
+		<region>
+			<stationId>STA.DE_DEHE116</stationId>
+			<latitude>50.101494</latitude>
+			<longitude>8.784892</longitude>
+			<zip-code>63075</zip-code>
+			<city>Offenbach am Main</city>
+		</region>
+	</car>
+	<car id="station_422">
+		<region>
+			<stationId>STA.DE_DESH016</stationId>
+			<latitude>53.57058299999999</latitude>
+			<longitude>10.214871</longitude>
+			<zip-code>22885</zip-code>
+			<city>Barsbüttel</city>
+		</region>
+	</car>
+	<car id="station_423">
+		<region>
+			<stationId>STA.DE_DETH084</stationId>
+			<latitude>50.983285</latitude>
+			<longitude>11.325787000000002</longitude>
+			<zip-code>99423</zip-code>
+			<city>Weimar</city>
+		</region>
+	</car>
+	<car id="station_424">
+		<region>
+			<stationId>STA.DE_DEST074</stationId>
+			<latitude>51.43776299999999</latitude>
+			<longitude>11.972453</longitude>
+			<zip-code>06132</zip-code>
+			<city>Halle (Saale)</city>
+		</region>
+	</car>
+	<car id="station_425">
+		<region>
+			<stationId>STA.DE_DEBW197</stationId>
+			<latitude>48.33050999999999</latitude>
+			<longitude>7.924289999999998</longitude>
+			<zip-code>77933</zip-code>
+			<city>Lahr/Schwarzwald</city>
+		</region>
+	</car>
+	<car id="station_426">
+		<region>
+			<stationId>STA.DE_DEBW117</stationId>
+			<latitude>48.88920000000001</latitude>
+			<longitude>9.19003</longitude>
+			<zip-code>71638</zip-code>
+			<city>Ludwigsburg</city>
+		</region>
+	</car>
+	<car id="station_427">
+		<region>
+			<stationId>STA.DE_DENW117</stationId>
+			<latitude>51.482542</latitude>
+			<longitude>7.186094999999999</longitude>
+			<zip-code>44793</zip-code>
+			<city>Bochum</city>
+		</region>
+	</car>
+	<car id="station_428">
+		<region>
+			<stationId>STA.DE_DEBW142</stationId>
+			<latitude>48.90292</latitude>
+			<longitude>9.08135</longitude>
+			<zip-code>71706</zip-code>
+			<city>Markgröningen</city>
+		</region>
+	</car>
+	<car id="station_429">
+		<region>
+			<stationId>STA.DE_DEBW052</stationId>
+			<latitude>47.664361</latitude>
+			<longitude>9.169289</longitude>
+			<zip-code>78462</zip-code>
+			<city>Konstanz</city>
+		</region>
+	</car>
+	<car id="station_430">
+		<region>
+			<stationId>STA.DE_DEBW198</stationId>
+			<latitude>48.82276</latitude>
+			<longitude>9.96404</longitude>
+			<zip-code>73563</zip-code>
+			<city>Mögglingen</city>
+		</region>
+	</car>
+	<car id="station_431">
+		<region>
+			<stationId>STA.DE_DEHE058</stationId>
+			<latitude>50.549297</latitude>
+			<longitude>9.682162000000002</longitude>
+			<zip-code>36043</zip-code>
+			<city>Fulda</city>
+		</region>
+	</car>
+	<car id="station_432">
+		<region>
+			<stationId>STA.DE_DETH095</stationId>
+			<latitude>51.20794400000001</latitude>
+			<longitude>10.450997</longitude>
+			<zip-code>99974</zip-code>
+			<city>Mühlhausen/Thüringen</city>
+		</region>
+	</car>
+	<car id="station_433">
+		<region>
+			<stationId>STA.DE_DENW185</stationId>
+			<latitude>51.500589</latitude>
+			<longitude>7.480949</longitude>
+			<zip-code>44139</zip-code>
+			<city>Dortmund</city>
+		</region>
+	</car>
+	<car id="station_434">
+		<region>
+			<stationId>STA.DE_DENW307</stationId>
+			<latitude>51.481842</latitude>
+			<longitude>6.527344</longitude>
+			<zip-code>47475</zip-code>
+			<city>Kamp-Lintfort</city>
+		</region>
+	</car>
+	<car id="station_435">
+		<region>
+			<stationId>STA.DE_DEBE068</stationId>
+			<latitude>52.513606</latitude>
+			<longitude>13.418833</longitude>
+			<zip-code>10179</zip-code>
+			<city>Berlin</city>
+		</region>
+	</car>
+	<car id="station_436">
+		<region>
+			<stationId>STA.DE_DENW002</stationId>
+			<latitude>51.641383</latitude>
+			<longitude>7.331405000000002</longitude>
+			<zip-code>45711</zip-code>
+			<city>Datteln</city>
+		</region>
+	</car>
+	<car id="station_437">
+		<region>
+			<stationId>STA.DE_DEHE045</stationId>
+			<latitude>49.67250700000001</latitude>
+			<longitude>9.001981</longitude>
+			<zip-code>64720</zip-code>
+			<city>Michelstadt</city>
+		</region>
+	</car>
+	<car id="station_438">
+		<region>
+			<stationId>STA.DE_DEBY031</stationId>
+			<latitude>47.72514</latitude>
+			<longitude>10.306561</longitude>
+			<zip-code>87439</zip-code>
+			<city>Kempten (Allgäu)</city>
+		</region>
+	</car>
+	<car id="station_439">
+		<region>
+			<stationId>STA.DE_DEST089</stationId>
+			<latitude>52.593136</latitude>
+			<longitude>11.172327</longitude>
+			<zip-code>38486</zip-code>
+			<city>Klötze</city>
+		</region>
+	</car>
+	<car id="station_440">
+		<region>
+			<stationId>STA.DE_DEHH073</stationId>
+			<latitude>53.532075</latitude>
+			<longitude>9.832702</longitude>
+			<zip-code>21129</zip-code>
+			<city>Hamburg</city>
+		</region>
+	</car>
+	<car id="station_441">
+		<region>
+			<stationId>STA.DE_DENW247</stationId>
+			<latitude>51.40696799999999</latitude>
+			<longitude>6.965642999999999</longitude>
+			<zip-code>45133</zip-code>
+			<city>Essen</city>
+		</region>
+	</car>
+	<car id="station_442">
+		<region>
+			<stationId>STA.DE_DEST066</stationId>
+			<latitude>51.870852</latitude>
+			<longitude>12.663663</longitude>
+			<zip-code>06886</zip-code>
+			<city>Lutherstadt Wittenberg</city>
+		</region>
+	</car>
+	<car id="station_443">
+		<region>
+			<stationId>STA.DE_DETH041</stationId>
+			<latitude>50.93351299999999</latitude>
+			<longitude>11.597062</longitude>
+			<zip-code>07749</zip-code>
+			<city>Jena</city>
+		</region>
+	</car>
+	<car id="station_444">
+		<region>
+			<stationId>STA.DE_DEBY009</stationId>
+			<latitude>49.89833</latitude>
+			<longitude>10.887686</longitude>
+			<zip-code>96052</zip-code>
+			<city>Bamberg</city>
+		</region>
+	</car>
+	<car id="station_445">
+		<region>
+			<stationId>STA.DE_DEBW015</stationId>
+			<latitude>49.165508</latitude>
+			<longitude>9.224786000000002</longitude>
+			<zip-code>74076</zip-code>
+			<city>Heilbronn</city>
+		</region>
+	</car>
+	<car id="station_446">
+		<region>
+			<stationId>STA.DE_DESH030</stationId>
+			<latitude>53.68199299999999</latitude>
+			<longitude>9.997256</longitude>
+			<zip-code>22848</zip-code>
+			<city>Norderstedt</city>
+		</region>
+	</car>
+	<car id="station_447">
+		<region>
+			<stationId>STA.DE_DEBW116</stationId>
+			<latitude>48.76871</latitude>
+			<longitude>9.18449</longitude>
+			<zip-code>70184</zip-code>
+			<city>Stuttgart</city>
+		</region>
+	</car>
+	<car id="station_448">
+		<region>
+			<stationId>STA.DE_DERP047</stationId>
+			<latitude>49.783942</latitude>
+			<longitude>6.690488000000001</longitude>
+			<zip-code>54293</zip-code>
+			<city>Trier</city>
+		</region>
+	</car>
+	<car id="station_449">
+		<region>
+			<stationId>STA.DE_DENW351</stationId>
+			<latitude>51.524281</latitude>
+			<longitude>7.060337</longitude>
+			<zip-code>45883</zip-code>
+			<city>Gelsenkirchen</city>
+		</region>
+	</car>
+	<car id="station_450">
+		<region>
+			<stationId>STA.DE_DESN053</stationId>
+			<latitude>50.428488</latitude>
+			<longitude>12.953459</longitude>
+			<zip-code>09484</zip-code>
+			<city>Oberwiesenthal</city>
+		</region>
+	</car>
+	<car id="station_451">
+		<region>
+			<stationId>STA.DE_DEBY020</stationId>
+			<latitude>50.320611</latitude>
+			<longitude>11.897492</longitude>
+			<zip-code>95030</zip-code>
+			<city>Hof</city>
+		</region>
+	</car>
+	<car id="station_452">
+		<region>
+			<stationId>STA.DE_DESL010</stationId>
+			<latitude>49.244247</latitude>
+			<longitude>6.948776</longitude>
+			<zip-code>66115</zip-code>
+			<city>Saarbrücken</city>
+		</region>
+	</car>
+	<car id="station_453">
+		<region>
+			<stationId>STA.DE_DEBW121</stationId>
+			<latitude>48.95934</latitude>
+			<longitude>9.20515</longitude>
+			<zip-code>74385</zip-code>
+			<city>Pleidelsheim</city>
+		</region>
+	</car>
+	<car id="station_454">
+		<region>
+			<stationId>STA.DE_DEBW137</stationId>
+			<latitude>48.526390000000006</latitude>
+			<longitude>8.97944</longitude>
+			<zip-code>72070</zip-code>
+			<city>Tübingen</city>
+		</region>
+	</car>
+	<car id="station_455">
+		<region>
+			<stationId>STA.DE_DEST095</stationId>
+			<latitude>51.759516</latitude>
+			<longitude>11.449471</longitude>
+			<zip-code>06449</zip-code>
+			<city>Aschersleben</city>
+		</region>
+	</car>
+	<car id="station_456">
+		<region>
+			<stationId>STA.DE_DESL001</stationId>
+			<latitude>49.263905</latitude>
+			<longitude>6.687126000000001</longitude>
+			<zip-code>66802</zip-code>
+			<city>Überherrn</city>
+		</region>
+	</car>
+	<car id="station_457">
+		<region>
+			<stationId>STA.DE_DESL002</stationId>
+			<latitude>49.362049</latitude>
+			<longitude>7.263368999999998</longitude>
+			<zip-code>66450</zip-code>
+			<city>Bexbach</city>
+		</region>
+	</car>
+	<car id="station_458">
+		<region>
+			<stationId>STA.DE_DEST028</stationId>
+			<latitude>51.05455799999999</latitude>
+			<longitude>12.141322</longitude>
+			<zip-code>06712</zip-code>
+			<city>Zeitz</city>
+		</region>
+	</car>
+	<car id="station_459">
+		<region>
+			<stationId>STA.DE_DEBW128</stationId>
+			<latitude>48.94659999999999</latitude>
+			<longitude>8.845689999999998</longitude>
+			<zip-code>75417</zip-code>
+			<city>Mühlacker</city>
+		</region>
+	</car>
+	<car id="station_460">
+		<region>
+			<stationId>STA.DE_DESN081</stationId>
+			<latitude>50.48175100000001</latitude>
+			<longitude>12.130376</longitude>
+			<zip-code>08527</zip-code>
+			<city>Plauen</city>
+		</region>
+	</car>
+	<car id="station_461">
+		<region>
+			<stationId>STA.DE_DESH015</stationId>
+			<latitude>53.924712</latitude>
+			<longitude>9.532635</longitude>
+			<zip-code>25524</zip-code>
+			<city>Itzehoe</city>
+		</region>
+	</car>
+	<car id="station_462">
+		<region>
+			<stationId>STA.DE_DESN080</stationId>
+			<latitude>51.396095</latitude>
+			<longitude>12.234053999999999</longitude>
+			<zip-code>04435</zip-code>
+			<city>Schkeuditz</city>
+		</region>
+	</car>
+	<car id="station_463">
+		<region>
+			<stationId>STA.DE_DEBY068</stationId>
+			<latitude>50.048397</latitude>
+			<longitude>10.232076</longitude>
+			<zip-code>97421</zip-code>
+			<city>Schweinfurt</city>
+		</region>
+	</car>
+	<car id="station_464">
+		<region>
+			<stationId>STA.DE_DENW015</stationId>
+			<latitude>51.69895999999999</latitude>
+			<longitude>7.122713</longitude>
+			<zip-code>45772</zip-code>
+			<city>Marl</city>
+		</region>
+	</car>
+	<car id="station_465">
+		<region>
+			<stationId>STA.DE_DENW058</stationId>
+			<latitude>50.876121</latitude>
+			<longitude>6.873789</longitude>
+			<zip-code>50354</zip-code>
+			<city>Hürth</city>
+		</region>
+	</car>
+	<car id="station_466">
+		<region>
+			<stationId>STA.DE_DENW201</stationId>
+			<latitude>51.51926199999999</latitude>
+			<longitude>6.924267999999999</longitude>
+			<zip-code>46236</zip-code>
+			<city>Bottrop</city>
+		</region>
+	</car>
+	<car id="station_467">
+		<region>
+			<stationId>STA.DE_DENW030</stationId>
+			<latitude>51.672808999999994</latitude>
+			<longitude>6.629575999999999</longitude>
+			<zip-code>46485</zip-code>
+			<city>Wesel</city>
+		</region>
+	</car>
+	<car id="station_468">
+		<region>
+			<stationId>STA.DE_DENW292</stationId>
+			<latitude>51.44654</latitude>
+			<longitude>7.56363</longitude>
+			<zip-code>58239</zip-code>
+			<city>Schwerte</city>
+		</region>
+	</car>
+	<car id="station_469">
+		<region>
+			<stationId>STA.DE_DENW136</stationId>
+			<latitude>51.523567</latitude>
+			<longitude>7.483596999999999</longitude>
+			<zip-code>44145</zip-code>
+			<city>Dortmund</city>
+		</region>
+	</car>
+	<car id="station_470">
+		<region>
+			<stationId>STA.DE_DEBY077</stationId>
+			<latitude>49.80469499999999</latitude>
+			<longitude>9.95642</longitude>
+			<zip-code>97080</zip-code>
+			<city>Würzburg</city>
+		</region>
+	</car>
+	<car id="station_471">
+		<region>
+			<stationId>STA.DE_DEBB056</stationId>
+			<latitude>52.689952</latitude>
+			<longitude>12.734188</longitude>
+			<zip-code>14641</zip-code>
+			<city>Paulinenaue</city>
+		</region>
+	</car>
+	<car id="station_472">
+		<region>
+			<stationId>STA.DE_DENI074</stationId>
+			<latitude>52.104039</latitude>
+			<longitude>9.367038</longitude>
+			<zip-code>31785</zip-code>
+			<city>Hameln</city>
+		</region>
+	</car>
+	<car id="station_473">
+		<region>
+			<stationId>STA.DE_DENW121</stationId>
+			<latitude>51.522655</latitude>
+			<longitude>6.983379000000001</longitude>
+			<zip-code>46238</zip-code>
+			<city>Bottrop</city>
+		</region>
+	</car>
+	<car id="station_474">
+		<region>
+			<stationId>STA.DE_DEHE066</stationId>
+			<latitude>50.111977</latitude>
+			<longitude>8.676108</longitude>
+			<zip-code>60311</zip-code>
+			<city>Frankfurt am Main</city>
+		</region>
+	</car>
+	<car id="station_475">
+		<region>
+			<stationId>STA.DE_DENW147</stationId>
+			<latitude>50.84902799999998</latitude>
+			<longitude>6.975625999999999</longitude>
+			<zip-code>50997</zip-code>
+			<city>Köln</city>
+		</region>
+	</car>
+	<car id="station_476">
+		<region>
+			<stationId>STA.DE_DEHE072</stationId>
+			<latitude>50.103515</latitude>
+			<longitude>8.548621</longitude>
+			<zip-code>65929</zip-code>
+			<city>Frankfurt am Main</city>
+		</region>
+	</car>
+	<car id="station_477">
+		<region>
+			<stationId>STA.DE_DEHE075</stationId>
+			<latitude>50.12525399999999</latitude>
+			<longitude>8.931148999999998</longitude>
+			<zip-code>63450</zip-code>
+			<city>Hanau</city>
+		</region>
+	</car>
+	<car id="station_478">
+		<region>
+			<stationId>STA.DE_DENW267</stationId>
+			<latitude>50.879855</latitude>
+			<longitude>6.889934</longitude>
+			<zip-code>50354</zip-code>
+			<city>Hürth</city>
+		</region>
+	</car>
+	<car id="station_479">
+		<region>
+			<stationId>STA.DE_DEBW127</stationId>
+			<latitude>48.01342999999999</latitude>
+			<longitude>7.85502</longitude>
+			<zip-code>79108</zip-code>
+			<city>Freiburg im Breisgau</city>
+		</region>
+	</car>
+	<car id="station_480">
+		<region>
+			<stationId>STA.DE_DEST006</stationId>
+			<latitude>52.133597</latitude>
+			<longitude>11.646667</longitude>
+			<zip-code>39104</zip-code>
+			<city>Magdeburg</city>
+		</region>
+	</car>
+	<car id="station_481">
+		<region>
+			<stationId>STA.DE_DEHE077</stationId>
+			<latitude>50.11409</latitude>
+			<longitude>8.951634999999998</longitude>
+			<zip-code>63457</zip-code>
+			<city>Hanau</city>
+		</region>
+	</car>
+	<car id="station_482">
+		<region>
+			<stationId>STA.DE_DEBW134</stationId>
+			<latitude>48.80376999999999</latitude>
+			<longitude>9.22036</longitude>
+			<zip-code>70372</zip-code>
+			<city>Stuttgart</city>
+		</region>
+	</car>
+	<car id="station_483">
+		<region>
+			<stationId>STA.DE_DEBW145</stationId>
+			<latitude>48.67942</latitude>
+			<longitude>10.15065</longitude>
+			<zip-code>89518</zip-code>
+			<city>Heidenheim an der Brenz</city>
+		</region>
+	</car>
+	<car id="station_484">
+		<region>
+			<stationId>STA.DE_DEST091</stationId>
+			<latitude>51.84057599999999</latitude>
+			<longitude>12.244763999999998</longitude>
+			<zip-code>06844</zip-code>
+			<city>Dessau-Roßlau</city>
+		</region>
+	</car>
+	<car id="station_485">
+		<region>
+			<stationId>STA.DE_DEHE071</stationId>
+			<latitude>50.09538500000001</latitude>
+			<longitude>8.557377</longitude>
+			<zip-code>60529</zip-code>
+			<city>Frankfurt am Main</city>
+		</region>
+	</car>
+	<car id="station_486">
+		<region>
+			<stationId>STA.DE_DENW178</stationId>
+			<latitude>50.774694</latitude>
+			<longitude>6.097338000000001</longitude>
+			<zip-code>52070</zip-code>
+			<city>Aachen</city>
+		</region>
+	</car>
+	<car id="station_487">
+		<region>
+			<stationId>STA.DE_DEBB076</stationId>
+			<latitude>51.776119</latitude>
+			<longitude>14.316529999999998</longitude>
+			<zip-code>03044</zip-code>
+			<city>Cottbus</city>
+		</region>
+	</car>
+	<car id="station_488">
+		<region>
+			<stationId>STA.DE_DEHE065</stationId>
+			<latitude>50.10436099999999</latitude>
+			<longitude>8.675586</longitude>
+			<zip-code>60596</zip-code>
+			<city>Frankfurt am Main</city>
+		</region>
+	</car>
+	<car id="station_489">
+		<region>
+			<stationId>STA.DE_DEHE104</stationId>
+			<latitude>50.107078</latitude>
+			<longitude>8.772779</longitude>
+			<zip-code>63065</zip-code>
+			<city>Offenbach am Main</city>
+		</region>
+	</car>
+	<car id="station_490">
+		<region>
+			<stationId>STA.DE_DENI159</stationId>
+			<latitude>52.416442</latitude>
+			<longitude>10.787837</longitude>
+			<zip-code>38440</zip-code>
+			<city>Wolfsburg</city>
+		</region>
+	</car>
+	<car id="station_491">
+		<region>
+			<stationId>STA.DE_DEHE092</stationId>
+			<latitude>50.05794199999999</latitude>
+			<longitude>8.259258</longitude>
+			<zip-code>65205</zip-code>
+			<city>Wiesbaden</city>
+		</region>
+	</car>
+	<car id="station_492">
+		<region>
+			<stationId>STA.DE_DEHE094</stationId>
+			<latitude>49.82777499999999</latitude>
+			<longitude>8.832221</longitude>
+			<zip-code>64354</zip-code>
+			<city>Reinheim</city>
+		</region>
+	</car>
+	<car id="station_493">
+		<region>
+			<stationId>STA.DE_DEHE069</stationId>
+			<latitude>50.10421</latitude>
+			<longitude>8.535515</longitude>
+			<zip-code>65929</zip-code>
+			<city>Frankfurt am Main</city>
+		</region>
+	</car>
+	<car id="station_494">
+		<region>
+			<stationId>STA.DE_DENW165</stationId>
+			<latitude>51.18246300000001</latitude>
+			<longitude>6.409975</longitude>
+			<zip-code>41069</zip-code>
+			<city>Mönchengladbach</city>
+		</region>
+	</car>
+	<car id="station_495">
+		<region>
+			<stationId>STA.DE_DENW137</stationId>
+			<latitude>51.354904</latitude>
+			<longitude>7.453887</longitude>
+			<zip-code>58089</zip-code>
+			<city>Hagen</city>
+		</region>
+	</car>
+	<car id="station_496">
+		<region>
+			<stationId>STA.DE_DENW277</stationId>
+			<latitude>51.465642</latitude>
+			<longitude>7.080298000000001</longitude>
+			<zip-code>45307</zip-code>
+			<city>Essen</city>
+		</region>
+	</car>
+	<car id="station_497">
+		<region>
+			<stationId>STA.DE_DEHE070</stationId>
+			<latitude>50.094554</latitude>
+			<longitude>8.537803</longitude>
+			<zip-code>65929</zip-code>
+			<city>Frankfurt am Main</city>
+		</region>
+	</car>
+	<car id="station_498">
+		<region>
+			<stationId>STA.DE_DENW213</stationId>
+			<latitude>50.932806</latitude>
+			<longitude>7.285858</longitude>
+			<zip-code>51491</zip-code>
+			<city>Overath</city>
+		</region>
+	</car>
+	<car id="station_499">
+		<region>
+			<stationId>STA.DE_DEHE082</stationId>
+			<latitude>50.584154</latitude>
+			<longitude>8.525717</longitude>
+			<zip-code>35584</zip-code>
+			<city>Wetzlar</city>
+		</region>
+	</car>
+	<car id="station_500">
+		<region>
+			<stationId>STA.DE_DEHE088</stationId>
+			<latitude>51.314421</latitude>
+			<longitude>9.526508</longitude>
+			<zip-code>34123</zip-code>
+			<city>Kassel</city>
+		</region>
+	</car>
+	<car id="station_501">
+		<region>
+			<stationId>STA.DE_DENW332</stationId>
+			<latitude>50.883711</latitude>
+			<longitude>7.055722</longitude>
+			<zip-code>51143</zip-code>
+			<city>Köln</city>
+		</region>
+	</car>
+	<car id="station_502">
+		<region>
+			<stationId>STA.DE_DEHE080</stationId>
+			<latitude>50.122447999999984</latitude>
+			<longitude>8.970566</longitude>
+			<zip-code>63457</zip-code>
+			<city>Hanau</city>
+		</region>
+	</car>
+	<car id="station_503">
+		<region>
+			<stationId>STA.DE_DEHE091</stationId>
+			<latitude>50.048374</latitude>
+			<longitude>8.257548</longitude>
+			<zip-code>65205</zip-code>
+			<city>Wiesbaden</city>
+		</region>
+	</car>
+	<car id="station_504">
+		<region>
+			<stationId>STA.DE_DEHE089</stationId>
+			<latitude>50.04822500000001</latitude>
+			<longitude>8.241492</longitude>
+			<zip-code>65203</zip-code>
+			<city>Wiesbaden</city>
+		</region>
+	</car>
+	<car id="station_505">
+		<region>
+			<stationId>STA.DE_DETH100</stationId>
+			<latitude>51.210164</latitude>
+			<longitude>10.449634</longitude>
+			<zip-code>99974</zip-code>
+			<city>Mühlhausen/Thüringen</city>
+		</region>
+	</car>
+	<car id="station_506">
+		<region>
+			<stationId>STA.DE_DENW172</stationId>
+			<latitude>51.193975</latitude>
+			<longitude>6.692515</longitude>
+			<zip-code>41460</zip-code>
+			<city>Neuss</city>
+		</region>
+	</car>
+	<car id="station_507">
+		<region>
+			<stationId>STA.DE_DENW268</stationId>
+			<latitude>51.96832400000001</latitude>
+			<longitude>7.613536</longitude>
+			<zip-code>48149</zip-code>
+			<city>Münster</city>
+		</region>
+	</car>
+	<car id="station_508">
+		<region>
+			<stationId>STA.DE_DEHE100</stationId>
+			<latitude>50.38758599999999</latitude>
+			<longitude>8.059129999999998</longitude>
+			<zip-code>65549</zip-code>
+			<city>Limburg an der Lahn</city>
+		</region>
+	</car>
+	<car id="station_509">
+		<region>
+			<stationId>STA.DE_DENW176</stationId>
+			<latitude>50.736963</latitude>
+			<longitude>7.087619000000001</longitude>
+			<zip-code>53111</zip-code>
+			<city>Bonn</city>
+		</region>
+	</car>
+	<car id="station_510">
+		<region>
+			<stationId>STA.DE_DENW252</stationId>
+			<latitude>51.340374</latitude>
+			<longitude>6.553999</longitude>
+			<zip-code>47798</zip-code>
+			<city>Krefeld</city>
+		</region>
+	</car>
+	<car id="station_511">
+		<region>
+			<stationId>STA.DE_DENW134</stationId>
+			<latitude>51.477931</latitude>
+			<longitude>7.005278</longitude>
+			<zip-code>45326</zip-code>
+			<city>Essen</city>
+		</region>
+	</car>
+	<car id="station_512">
+		<region>
+			<stationId>STA.DE_DEHE079</stationId>
+			<latitude>50.115291</latitude>
+			<longitude>8.967284000000001</longitude>
+			<zip-code>63457</zip-code>
+			<city>Hanau</city>
+		</region>
+	</car>
+	<car id="station_513">
+		<region>
+			<stationId>STA.DE_DEHE081</stationId>
+			<latitude>50.57642499999999</latitude>
+			<longitude>8.481714</longitude>
+			<zip-code>35576</zip-code>
+			<city>Wetzlar</city>
+		</region>
+	</car>
+	<car id="station_514">
+		<region>
+			<stationId>STA.DE_DEST103</stationId>
+			<latitude>52.12076</latitude>
+			<longitude>11.632669</longitude>
+			<zip-code>39104</zip-code>
+			<city>Magdeburg</city>
+		</region>
+	</car>
+	<car id="station_515">
+		<region>
+			<stationId>STA.DE_DENW330</stationId>
+			<latitude>51.26950299999999</latitude>
+			<longitude>6.753747</longitude>
+			<zip-code>40468</zip-code>
+			<city>Düsseldorf</city>
+		</region>
+	</car>
+	<car id="station_516">
+		<region>
+			<stationId>STA.DE_DEBY079</stationId>
+			<latitude>47.73344000000001</latitude>
+			<longitude>12.891241</longitude>
+			<zip-code>83435</zip-code>
+			<city>Bad Reichenhall</city>
+		</region>
+	</car>
+	<car id="station_517">
+		<region>
+			<stationId>STA.DE_DEBY123</stationId>
+			<latitude>47.483194</latitude>
+			<longitude>11.062283000000004</longitude>
+			<zip-code>82467</zip-code>
+			<city>Garmisch-Partenkirchen</city>
+		</region>
+	</car>
+	<car id="station_518">
+		<region>
+			<stationId>STA.DE_DERP034</stationId>
+			<latitude>49.192314</latitude>
+			<longitude>7.614726</longitude>
+			<zip-code>66955</zip-code>
+			<city>Pirmasens</city>
+		</region>
+	</car>
+	<car id="station_519">
+		<region>
+			<stationId>STA.DE_DENW338</stationId>
+			<latitude>51.48549200000001</latitude>
+			<longitude>6.735430999999999</longitude>
+			<zip-code>47166</zip-code>
+			<city>Duisburg</city>
+		</region>
+	</car>
+	<car id="station_520">
+		<region>
+			<stationId>STA.DE_DEMV027</stationId>
+			<latitude>54.053175</latitude>
+			<longitude>13.779314</longitude>
+			<zip-code>17438</zip-code>
+			<city>Wolgast</city>
+		</region>
+	</car>
+	<car id="station_521">
+		<region>
+			<stationId>STA.DE_DEBY121</stationId>
+			<latitude>47.648459</latitude>
+			<longitude>12.188324</longitude>
+			<zip-code>83080</zip-code>
+			<city>Oberaudorf</city>
+		</region>
+	</car>
+	<car id="station_522">
+		<region>
+			<stationId>STA.DE_DERP060</stationId>
+			<latitude>49.191996</latitude>
+			<longitude>7.614573000000002</longitude>
+			<zip-code>66955</zip-code>
+			<city>Pirmasens</city>
+		</region>
+	</car>
+	<car id="station_523">
+		<region>
+			<stationId>STA.DE_DENW337</stationId>
+			<latitude>51.097638</latitude>
+			<longitude>6.469463</longitude>
+			<zip-code>41363</zip-code>
+			<city>Jüchen</city>
+		</region>
+	</car>
+	<car id="station_524">
+		<region>
+			<stationId>STA.DE_DENW296</stationId>
+			<latitude>51.57720799999999</latitude>
+			<longitude>7.213338999999999</longitude>
+			<zip-code>45663</zip-code>
+			<city>Recklinghausen</city>
+		</region>
+	</car>
+	<car id="station_525">
+		<region>
+			<stationId>STA.DE_DENW321</stationId>
+			<latitude>51.614828</latitude>
+			<longitude>7.017892000000001</longitude>
+			<zip-code>45896</zip-code>
+			<city>Gelsenkirchen</city>
+		</region>
+	</car>
+	<car id="station_526">
+		<region>
+			<stationId>STA.DE_DETH099</stationId>
+			<latitude>50.97095499999999</latitude>
+			<longitude>11.022236</longitude>
+			<zip-code>99084</zip-code>
+			<city>Erfurt</city>
+		</region>
+	</car>
+	<car id="station_527">
+		<region>
+			<stationId>STA.DE_DEHE097</stationId>
+			<latitude>50.542563</latitude>
+			<longitude>9.696033000000002</longitude>
+			<zip-code>36043</zip-code>
+			<city>Fulda</city>
+		</region>
+	</car>
+	<car id="station_528">
+		<region>
+			<stationId>STA.DE_DEHE083</stationId>
+			<latitude>50.56940399999999</latitude>
+			<longitude>8.506722</longitude>
+			<zip-code>35576</zip-code>
+			<city>Wetzlar</city>
+		</region>
+	</car>
+	<car id="station_529">
+		<region>
+			<stationId>STA.DE_DEHE074</stationId>
+			<latitude>50.12177500000001</latitude>
+			<longitude>8.958608000000002</longitude>
+			<zip-code>63457</zip-code>
+			<city>Hanau</city>
+		</region>
+	</car>
+	<car id="station_530">
+		<region>
+			<stationId>STA.DE_DEHE087</stationId>
+			<latitude>51.307334</latitude>
+			<longitude>9.529582</longitude>
+			<zip-code>34123</zip-code>
+			<city>Kassel</city>
+		</region>
+	</car>
+	<car id="station_531">
+		<region>
+			<stationId>STA.DE_DENI152</stationId>
+			<latitude>52.36996499999999</latitude>
+			<longitude>9.754405000000002</longitude>
+			<zip-code>30171</zip-code>
+			<city>Hannover</city>
+		</region>
+	</car>
+	<car id="station_532">
+		<region>
+			<stationId>STA.DE_DEHE076</stationId>
+			<latitude>50.130132</latitude>
+			<longitude>8.925155</longitude>
+			<zip-code>63450</zip-code>
+			<city>Hanau</city>
+		</region>
+	</car>
+	<car id="station_533">
+		<region>
+			<stationId>STA.DE_DEHE073</stationId>
+			<latitude>50.12279999999999</latitude>
+			<longitude>8.916733</longitude>
+			<zip-code>63450</zip-code>
+			<city>Hanau</city>
+		</region>
+	</car>
+	<car id="station_534">
+		<region>
+			<stationId>STA.DE_DEST029</stationId>
+			<latitude>51.803534</latitude>
+			<longitude>11.738962</longitude>
+			<zip-code>06406</zip-code>
+			<city>Bernburg (Saale)</city>
+		</region>
+	</car>
+	<car id="station_535">
+		<region>
+			<stationId>STA.DE_DEBY188</stationId>
+			<latitude>49.32273</latitude>
+			<longitude>11.02792</longitude>
+			<zip-code>91126</zip-code>
+			<city>Schwabach</city>
+		</region>
+	</car>
+	<car id="station_536">
+		<region>
+			<stationId>STA.DE_DEBY189</stationId>
+			<latitude>48.18169</latitude>
+			<longitude>11.46445</longitude>
+			<zip-code>80999</zip-code>
+			<city>München</city>
+		</region>
+	</car>
+	<car id="station_537">
+		<region>
+			<stationId>STA.DE_DENW188</stationId>
+			<latitude>51.474971</latitude>
+			<longitude>6.863657</longitude>
+			<zip-code>46045</zip-code>
+			<city>Oberhausen</city>
+		</region>
+	</car>
+	<car id="station_538">
+		<region>
+			<stationId>STA.DE_DEHE039</stationId>
+			<latitude>50.77038099999999</latitude>
+			<longitude>9.459402</longitude>
+			<zip-code>36287</zip-code>
+			<city>Breitenbach am Herzberg</city>
+		</region>
+	</car>
+	<car id="station_539">
+		<region>
+			<stationId>STA.DE_DEBW202</stationId>
+			<latitude>48.46913899999999</latitude>
+			<longitude>8.630252999999998</longitude>
+			<zip-code>72160</zip-code>
+			<city>Horb am Neckar</city>
+		</region>
+	</car>
+	<car id="station_540">
+		<region>
+			<stationId>STA.DE_DEBY062</stationId>
+			<latitude>48.9724</latitude>
+			<longitude>13.128932</longitude>
+			<zip-code>94209</zip-code>
+			<city>Regen</city>
+		</region>
+	</car>
+	<car id="station_541">
+		<region>
+			<stationId>STA.DE_DEBW196</stationId>
+			<latitude>48.804628</latitude>
+			<longitude>9.277553</longitude>
+			<zip-code>70734</zip-code>
+			<city>Fellbach</city>
+		</region>
+	</car>
+	<car id="station_542">
+		<region>
+			<stationId>STA.DE_DEBY093</stationId>
+			<latitude>49.48798299999999</latitude>
+			<longitude>11.786341</longitude>
+			<zip-code>92237</zip-code>
+			<city>Sulzbach-Rosenberg</city>
+		</region>
+	</car>
+	<car id="station_543">
+		<region>
+			<stationId>STA.DE_DEHE112</stationId>
+			<latitude>50.072119</latitude>
+			<longitude>8.228865</longitude>
+			<zip-code>65187</zip-code>
+			<city>Wiesbaden</city>
+		</region>
+	</car>
+	<car id="station_544">
+		<region>
+			<stationId>STA.DE_DEBB099</stationId>
+			<latitude>52.48188199999999</latitude>
+			<longitude>13.84825</longitude>
+			<zip-code>15378</zip-code>
+			<city>Rüdersdorf bei Berlin</city>
+		</region>
+	</car>
+	<car id="station_545">
+		<region>
+			<stationId>STA.DE_DENW356</stationId>
+			<latitude>51.227608999999994</latitude>
+			<longitude>7.643095</longitude>
+			<zip-code>58507</zip-code>
+			<city>Lüdenscheid</city>
+		</region>
+	</car>
+	<car id="station_546">
+		<region>
+			<stationId>STA.DE_DEBY047</stationId>
+			<latitude>50.32324499999999</latitude>
+			<longitude>11.721605</longitude>
+			<zip-code>95119</zip-code>
+			<city>Naila</city>
+		</region>
+	</car>
+	<car id="station_547">
+		<region>
+			<stationId>STA.DE_DEMV031</stationId>
+			<latitude>54.17729</latitude>
+			<longitude>12.09792</longitude>
+			<zip-code>18119</zip-code>
+			<city>Rostock</city>
+		</region>
+	</car>
+	<car id="station_548">
+		<region>
+			<stationId>STA.DE_DENW355</stationId>
+			<latitude>51.03147299999999</latitude>
+			<longitude>7.010934</longitude>
+			<zip-code>51377</zip-code>
+			<city>Leverkusen</city>
+		</region>
+	</car>
+	<car id="station_549">
+		<region>
+			<stationId>STA.DE_DEHH081</stationId>
+			<latitude>53.529158</latitude>
+			<longitude>9.981598999999997</longitude>
+			<zip-code>20457</zip-code>
+			<city>Hamburg</city>
+		</region>
+	</car>
+	<car id="station_550">
+		<region>
+			<stationId>STA.DE_DEHE131</stationId>
+			<latitude>50.386426</latitude>
+			<longitude>8.059908999999998</longitude>
+			<zip-code>65549</zip-code>
+			<city>Limburg an der Lahn</city>
+		</region>
+	</car>
+	<car id="station_551">
+		<region>
+			<stationId>STA.DE_DEBW154</stationId>
+			<latitude>48.93795</latitude>
+			<longitude>9.20434</longitude>
+			<zip-code>71691</zip-code>
+			<city>Freiberg am Neckar</city>
+		</region>
+	</car>
+	<car id="station_552">
+		<region>
+			<stationId>STA.DE_DENW157</stationId>
+			<latitude>51.714573</latitude>
+			<longitude>8.744098</longitude>
+			<zip-code>33102</zip-code>
+			<city>Paderborn</city>
+		</region>
+	</car>
+	<car id="station_553">
+		<region>
+			<stationId>STA.DE_DENW158</stationId>
+			<latitude>51.718696</latitude>
+			<longitude>8.747085</longitude>
+			<zip-code>33102</zip-code>
+			<city>Paderborn</city>
+		</region>
+	</car>
+	<car id="station_554">
+		<region>
+			<stationId>STA.DE_DENW120</stationId>
+			<latitude>51.523736</latitude>
+			<longitude>6.975548999999999</longitude>
+			<zip-code>46238</zip-code>
+			<city>Bottrop</city>
+		</region>
+	</car>
+	<car id="station_555">
+		<region>
+			<stationId>STA.DE_DENW162</stationId>
+			<latitude>51.38817999999999</latitude>
+			<longitude>7.00111</longitude>
+			<zip-code>45239</zip-code>
+			<city>Essen</city>
+		</region>
+	</car>
+	<car id="station_556">
+		<region>
+			<stationId>STA.DE_DENW118</stationId>
+			<latitude>51.519007</latitude>
+			<longitude>6.985347000000001</longitude>
+			<zip-code>46238</zip-code>
+			<city>Bottrop</city>
+		</region>
+	</car>
+	<car id="station_557">
+		<region>
+			<stationId>STA.DE_DENI153</stationId>
+			<latitude>52.39265799999999</latitude>
+			<longitude>9.734758</longitude>
+			<zip-code>30165</zip-code>
+			<city>Hannover</city>
+		</region>
+	</car>
+	<car id="station_558">
+		<region>
+			<stationId>STA.DE_DENW166</stationId>
+			<latitude>51.17803399999999</latitude>
+			<longitude>7.18192</longitude>
+			<zip-code>42853</zip-code>
+			<city>Remscheid</city>
+		</region>
+	</car>
+	<car id="station_559">
+		<region>
+			<stationId>STA.DE_DENW216</stationId>
+			<latitude>51.202464</latitude>
+			<longitude>6.776388000000001</longitude>
+			<zip-code>40225</zip-code>
+			<city>Düsseldorf</city>
+		</region>
+	</car>
+	<car id="station_560">
+		<region>
+			<stationId>STA.DE_DEBW130</stationId>
+			<latitude>48.88802999999999</latitude>
+			<longitude>8.695869999999998</longitude>
+			<zip-code>75173</zip-code>
+			<city>Pforzheim</city>
+		</region>
+	</car>
+	<car id="station_561">
+		<region>
+			<stationId>STA.DE_DENW279</stationId>
+			<latitude>51.613503</latitude>
+			<longitude>7.201525</longitude>
+			<zip-code>45657</zip-code>
+			<city>Recklinghausen</city>
+		</region>
+	</car>
+	<car id="station_562">
+		<region>
+			<stationId>STA.DE_DENW266</stationId>
+			<latitude>50.80413000000001</latitude>
+			<longitude>6.494618</longitude>
+			<zip-code>52351</zip-code>
+			<city>Düren</city>
+		</region>
+	</car>
+	<car id="station_563">
+		<region>
+			<stationId>STA.DE_DENW362</stationId>
+			<latitude>51.200306</latitude>
+			<longitude>6.761111</longitude>
+			<zip-code>40221</zip-code>
+			<city>Düsseldorf</city>
+		</region>
+	</car>
+	<car id="station_564">
+		<region>
+			<stationId>STA.DE_DENW269</stationId>
+			<latitude>51.963339</latitude>
+			<longitude>7.631363999999999</longitude>
+			<zip-code>48143</zip-code>
+			<city>Münster</city>
+		</region>
+	</car>
+	<car id="station_565">
+		<region>
+			<stationId>STA.DE_DENW297</stationId>
+			<latitude>50.85899700000001</latitude>
+			<longitude>6.924825</longitude>
+			<zip-code>50997</zip-code>
+			<city>Köln</city>
+		</region>
+	</car>
+	<car id="station_566">
+		<region>
+			<stationId>STA.DE_DENW171</stationId>
+			<latitude>51.457392</latitude>
+			<longitude>7.047133</longitude>
+			<zip-code>45139</zip-code>
+			<city>Essen</city>
+		</region>
+	</car>
+	<car id="station_567">
+		<region>
+			<stationId>STA.DE_DENW209</stationId>
+			<latitude>51.475005</latitude>
+			<longitude>6.86396</longitude>
+			<zip-code>46045</zip-code>
+			<city>Oberhausen</city>
+		</region>
+	</car>
+	<car id="station_568">
+		<region>
+			<stationId>STA.DE_DENW230</stationId>
+			<latitude>51.61073999999999</latitude>
+			<longitude>7.750194999999999</longitude>
+			<zip-code>59199</zip-code>
+			<city>Bönen</city>
+		</region>
+	</car>
+	<car id="station_569">
+		<region>
+			<stationId>STA.DE_DENW251</stationId>
+			<latitude>51.31784699999999</latitude>
+			<longitude>6.574775</longitude>
+			<zip-code>47805</zip-code>
+			<city>Krefeld</city>
+		</region>
+	</car>
+	<car id="station_570">
+		<region>
+			<stationId>STA.DE_DENW272</stationId>
+			<latitude>50.870851</latitude>
+			<longitude>8.026075</longitude>
+			<zip-code>57074</zip-code>
+			<city>Siegen</city>
+		</region>
+	</car>
+	<car id="station_571">
+		<region>
+			<stationId>STA.DE_DENW151</stationId>
+			<latitude>50.93554499999999</latitude>
+			<longitude>6.947953</longitude>
+			<zip-code>50667</zip-code>
+			<city>Köln</city>
+		</region>
+	</car>
+	<car id="station_572">
+		<region>
+			<stationId>STA.DE_DEST072</stationId>
+			<latitude>51.48528699999999</latitude>
+			<longitude>12.004464000000002</longitude>
+			<zip-code>06112</zip-code>
+			<city>Halle (Saale)</city>
+		</region>
+	</car>
+	<car id="station_573">
+		<region>
+			<stationId>STA.DE_DEHE084</stationId>
+			<latitude>50.576933</latitude>
+			<longitude>8.503368000000004</longitude>
+			<zip-code>35576</zip-code>
+			<city>Wetzlar</city>
+		</region>
+	</car>
+	<car id="station_574">
+		<region>
+			<stationId>STA.DE_DEHE090</stationId>
+			<latitude>50.054539</latitude>
+			<longitude>8.244576</longitude>
+			<zip-code>65187</zip-code>
+			<city>Wiesbaden</city>
+		</region>
+	</car>
+	<car id="station_575">
+		<region>
+			<stationId>STA.DE_DEHE085</stationId>
+			<latitude>51.307809</latitude>
+			<longitude>9.515729999999996</longitude>
+			<zip-code>34123</zip-code>
+			<city>Kassel</city>
+		</region>
+	</car>
+	<car id="station_576">
+		<region>
+			<stationId>STA.DE_DEST080</stationId>
+			<latitude>51.38734099999999</latitude>
+			<longitude>11.982957</longitude>
+			<zip-code>06258</zip-code>
+			<city>Schkopau</city>
+		</region>
+	</car>
+	<car id="station_577">
+		<region>
+			<stationId>STA.DE_DENW200</stationId>
+			<latitude>52.005624</latitude>
+			<longitude>8.552804</longitude>
+			<zip-code>33604</zip-code>
+			<city>Bielefeld</city>
+		</region>
+	</car>
+	<car id="station_578">
+		<region>
+			<stationId>STA.DE_DENW354</stationId>
+			<latitude>51.12031</latitude>
+			<longitude>6.456830000000001</longitude>
+			<zip-code>41199</zip-code>
+			<city>Mönchengladbach</city>
+		</region>
+	</car>
+	<car id="station_579">
+		<region>
+			<stationId>STA.DE_DEUB046</stationId>
+			<latitude>48.947611</latitude>
+			<longitude>13.420573</longitude>
+			<zip-code>94568</zip-code>
+			<city>St. Oswald</city>
+		</region>
+	</car>
+	<car id="station_580">
+		<region>
+			<stationId>STA.DE_DEBW157</stationId>
+			<latitude>48.67271</latitude>
+			<longitude>9.378665</longitude>
+			<zip-code>73240</zip-code>
+			<city>Wendlingen am Neckar</city>
+		</region>
+	</car>
+	<car id="station_581">
+		<region>
+			<stationId>STA.DE_DENW359</stationId>
+			<latitude>51.09696699999999</latitude>
+			<longitude>6.4158</longitude>
+			<zip-code>41189</zip-code>
+			<city>Mönchengladbach</city>
+		</region>
+	</car>
+	<car id="station_582">
+		<region>
+			<stationId>STA.DE_DEBY196</stationId>
+			<latitude>47.47706</latitude>
+			<longitude>11.05722</longitude>
+			<zip-code>82467</zip-code>
+			<city>Garmisch-Partenkirchen</city>
+		</region>
+	</car>
+	<car id="station_583">
+		<region>
+			<stationId>STA.DE_DENW367</stationId>
+			<latitude>51.56805500000001</latitude>
+			<longitude>6.990945000000001</longitude>
+			<zip-code>45964</zip-code>
+			<city>Gladbeck</city>
+		</region>
+	</car>
+	<car id="station_584">
+		<region>
+			<stationId>STA.DE_DEHE099</stationId>
+			<latitude>50.38621</latitude>
+			<longitude>8.059641</longitude>
+			<zip-code>65549</zip-code>
+			<city>Limburg an der Lahn</city>
+		</region>
+	</car>
+	<car id="station_585">
+		<region>
+			<stationId>STA.DE_DENW119</stationId>
+			<latitude>51.521084</latitude>
+			<longitude>6.970217999999999</longitude>
+			<zip-code>46238</zip-code>
+			<city>Bottrop</city>
+		</region>
+	</car>
+	<car id="station_586">
+		<region>
+			<stationId>STA.DE_DETH098</stationId>
+			<latitude>50.88386000000001</latitude>
+			<longitude>12.074947</longitude>
+			<zip-code>07545</zip-code>
+			<city>Gera</city>
+		</region>
+	</car>
+	<car id="station_587">
+		<region>
+			<stationId>STA.DE_DETH102</stationId>
+			<latitude>50.60622</latitude>
+			<longitude>10.685369</longitude>
+			<zip-code>98527</zip-code>
+			<city>Suhl</city>
+		</region>
+	</car>
+	<car id="station_588">
+		<region>
+			<stationId>STA.DE_DENW228</stationId>
+			<latitude>52.02596</latitude>
+			<longitude>8.522292999999998</longitude>
+			<zip-code>33615</zip-code>
+			<city>Bielefeld</city>
+		</region>
+	</car>
+	<car id="station_589">
+		<region>
+			<stationId>STA.DE_DENW127</stationId>
+			<latitude>51.575092</latitude>
+			<longitude>7.295359</longitude>
+			<zip-code>44579</zip-code>
+			<city>Castrop-Rauxel</city>
+		</region>
+	</car>
+	<car id="station_590">
+		<region>
+			<stationId>STA.DE_DEBW026</stationId>
+			<latitude>48.70865299999999</latitude>
+			<longitude>9.414453</longitude>
+			<zip-code>73207</zip-code>
+			<city>Plochingen</city>
+		</region>
+	</car>
+	<car id="station_591">
+		<region>
+			<stationId>STA.DE_DENW293</stationId>
+			<latitude>51.56464199999999</latitude>
+			<longitude>6.740467</longitude>
+			<zip-code>46535</zip-code>
+			<city>Dinslaken</city>
+		</region>
+	</car>
+	<car id="station_592">
+		<region>
+			<stationId>STA.DE_DENW303</stationId>
+			<latitude>50.978208</latitude>
+			<longitude>7.071003</longitude>
+			<zip-code>51069</zip-code>
+			<city>Köln</city>
+		</region>
+	</car>
+	<car id="station_593">
+		<region>
+			<stationId>STA.DE_DEHE114</stationId>
+			<latitude>49.60200999999999</latitude>
+			<longitude>8.46188</longitude>
+			<zip-code>68623</zip-code>
+			<city>Lampertheim</city>
+		</region>
+	</car>
+	<car id="station_594">
+		<region>
+			<stationId>STA.DE_DENW365</stationId>
+			<latitude>51.44671399999999</latitude>
+			<longitude>7.563578</longitude>
+			<zip-code>58239</zip-code>
+			<city>Schwerte</city>
+		</region>
+	</car>
+	<car id="station_595">
+		<region>
+			<stationId>STA.DE_DETH075</stationId>
+			<latitude>50.924811</latitude>
+			<longitude>11.579086</longitude>
+			<zip-code>07745</zip-code>
+			<city>Jena</city>
+		</region>
+	</car>
+	<car id="station_596">
+		<region>
+			<stationId>STA.DE_DEHE068</stationId>
+			<latitude>50.111263999999984</latitude>
+			<longitude>8.691577</longitude>
+			<zip-code>60311</zip-code>
+			<city>Frankfurt am Main</city>
+		</region>
+	</car>
+	<car id="station_597">
+		<region>
+			<stationId>STA.DE_DENW289</stationId>
+			<latitude>51.20224199999999</latitude>
+			<longitude>6.685209</longitude>
+			<zip-code>41460</zip-code>
+			<city>Neuss</city>
+		</region>
+	</car>
+	<car id="station_598">
+		<region>
+			<stationId>STA.DE_DENW290</stationId>
+			<latitude>51.201385</latitude>
+			<longitude>6.693266</longitude>
+			<zip-code>41460</zip-code>
+			<city>Neuss</city>
+		</region>
+	</car>
+	<car id="station_599">
+		<region>
+			<stationId>STA.DE_DEHE078</stationId>
+			<latitude>50.121106</latitude>
+			<longitude>8.960623</longitude>
+			<zip-code>63457</zip-code>
+			<city>Hanau</city>
+		</region>
+	</car>
+	<car id="station_600">
+		<region>
+			<stationId>STA.DE_DENW294</stationId>
+			<latitude>51.87239999999999</latitude>
+			<longitude>6.160479999999999</longitude>
+			<zip-code>46446</zip-code>
+			<city>Emmerich am Rhein</city>
+		</region>
+	</car>
+	<car id="station_601">
+		<region>
+			<stationId>STA.DE_DENW353</stationId>
+			<latitude>50.995219</latitude>
+			<longitude>6.899453</longitude>
+			<zip-code>50739</zip-code>
+			<city>Köln</city>
+		</region>
+	</car>
+	<car id="station_602">
+		<region>
+			<stationId>STA.DE_DESH055</stationId>
+			<latitude>53.87452999999999</latitude>
+			<longitude>10.664881</longitude>
+			<zip-code>23554</zip-code>
+			<city>Lübeck</city>
+		</region>
+	</car>
+	<car id="station_603">
+		<region>
+			<stationId>STA.DE_DENW175</stationId>
+			<latitude>50.72258099999999</latitude>
+			<longitude>7.097058</longitude>
+			<zip-code>53115</zip-code>
+			<city>Bonn</city>
+		</region>
+	</car>
+	<car id="station_604">
+		<region>
+			<stationId>STA.DE_DENW148</stationId>
+			<latitude>50.938542</latitude>
+			<longitude>6.978026000000001</longitude>
+			<zip-code>50679</zip-code>
+			<city>Köln</city>
+		</region>
+	</car>
+	<car id="station_605">
+		<region>
+			<stationId>STA.DE_DENW320</stationId>
+			<latitude>51.592472</latitude>
+			<longitude>7.0218</longitude>
+			<zip-code>45896</zip-code>
+			<city>Gelsenkirchen</city>
+		</region>
+	</car>
+	<car id="station_606">
+		<region>
+			<stationId>STA.DE_DEST112</stationId>
+			<latitude>52.13174200000001</latitude>
+			<longitude>11.631919</longitude>
+			<zip-code>39104</zip-code>
+			<city>Magdeburg</city>
+		</region>
+	</car>
+	<car id="station_607">
+		<region>
+			<stationId>STA.DE_DEBW220</stationId>
+			<latitude>48.741580000000006</latitude>
+			<longitude>9.31445</longitude>
+			<zip-code>73728</zip-code>
+			<city>Esslingen am Neckar</city>
+		</region>
+	</car>
+	<car id="station_608">
+		<region>
+			<stationId>STA.DE_DENW340</stationId>
+			<latitude>51.240755</latitude>
+			<longitude>6.83315</longitude>
+			<zip-code>40629</zip-code>
+			<city>Düsseldorf</city>
+		</region>
+	</car>
+	<car id="station_609">
+		<region>
+			<stationId>STA.DE_DEHE101</stationId>
+			<latitude>50.38312</latitude>
+			<longitude>8.070442</longitude>
+			<zip-code>65549</zip-code>
+			<city>Limburg an der Lahn</city>
+		</region>
+	</car>
+	<car id="station_610">
+		<region>
+			<stationId>STA.DE_DEHE067</stationId>
+			<latitude>50.104232</latitude>
+			<longitude>8.690894999999998</longitude>
+			<zip-code>60594</zip-code>
+			<city>Frankfurt am Main</city>
+		</region>
+	</car>
+	<car id="station_611">
+		<region>
+			<stationId>STA.DE_DEBW223</stationId>
+			<latitude>48.68996</latitude>
+			<longitude>9.16726</longitude>
+			<zip-code>70771</zip-code>
+			<city>Leinfelden-Echterdingen</city>
+		</region>
+	</car>
+	<car id="station_612">
+		<region>
+			<stationId>STA.DE_DENW371</stationId>
+			<latitude>50.79431699999999</latitude>
+			<longitude>6.123081</longitude>
+			<zip-code>52080</zip-code>
+			<city>Aachen</city>
+		</region>
+	</car>
+	<car id="station_613">
+		<region>
+			<stationId>STA.DE_DEHE133</stationId>
+			<latitude>49.6827</latitude>
+			<longitude>8.623062</longitude>
+			<zip-code>64625</zip-code>
+			<city>Bensheim</city>
+		</region>
+	</car>
+	<car id="station_614">
+		<region>
+			<stationId>STA.DE_DEBW211</stationId>
+			<latitude>48.88761</latitude>
+			<longitude>9.27793</longitude>
+			<zip-code>71686</zip-code>
+			<city>Remseck am Neckar</city>
+		</region>
+	</car>
+	<car id="station_615">
+		<region>
+			<stationId>STA.DE_DEBW214</stationId>
+			<latitude>48.95532</latitude>
+			<longitude>9.134830000000001</longitude>
+			<zip-code>74321</zip-code>
+			<city>Bietigheim-Bissingen</city>
+		</region>
+	</car>
+	<car id="station_616">
+		<region>
+			<stationId>STA.DE_DENW377</stationId>
+			<latitude>51.46667299999999</latitude>
+			<longitude>6.781303</longitude>
+			<zip-code>47137</zip-code>
+			<city>Duisburg</city>
+		</region>
+	</car>
+	<car id="station_617">
+		<region>
+			<stationId>STA.DE_DENW287</stationId>
+			<latitude>50.820557</latitude>
+			<longitude>6.264315</longitude>
+			<zip-code>52249</zip-code>
+			<city>Eschweiler</city>
+		</region>
+	</car>
+	<car id="station_618">
+		<region>
+			<stationId>STA.DE_DEHE098</stationId>
+			<latitude>50.384466</latitude>
+			<longitude>8.053848999999998</longitude>
+			<zip-code>65549</zip-code>
+			<city>Limburg an der Lahn</city>
+		</region>
+	</car>
+	<car id="station_619">
+		<region>
+			<stationId>STA.DE_DENW210</stationId>
+			<latitude>51.611676</latitude>
+			<longitude>8.334714</longitude>
+			<zip-code>59597</zip-code>
+			<city>Erwitte</city>
+		</region>
+	</car>
+	<car id="station_620">
+		<region>
+			<stationId>STA.DE_DENW319</stationId>
+			<latitude>51.60012199999999</latitude>
+			<longitude>7.041881</longitude>
+			<zip-code>45896</zip-code>
+			<city>Gelsenkirchen</city>
+		</region>
+	</car>
+	<car id="station_621">
+		<region>
+			<stationId>STA.DE_DENW361</stationId>
+			<latitude>52.023889</latitude>
+			<longitude>8.534306</longitude>
+			<zip-code>33602</zip-code>
+			<city>Bielefeld</city>
+		</region>
+	</car>
+	<car id="station_622">
+		<region>
+			<stationId>STA.DE_DENW195</stationId>
+			<latitude>51.68926599999999</latitude>
+			<longitude>7.809711</longitude>
+			<zip-code>59065</zip-code>
+			<city>Hamm</city>
+		</region>
+	</car>
+	<car id="station_623">
+		<region>
+			<stationId>STA.DE_DENW305</stationId>
+			<latitude>51.36808299999999</latitude>
+			<longitude>6.863392000000001</longitude>
+			<zip-code>45481</zip-code>
+			<city>Mülheim an der Ruhr</city>
+		</region>
+	</car>
+	<car id="station_624">
+		<region>
+			<stationId>STA.DE_DEBW219</stationId>
+			<latitude>48.94503000000001</latitude>
+			<longitude>9.43699</longitude>
+			<zip-code>71522</zip-code>
+			<city>Backnang</city>
+		</region>
+	</car>
+	<car id="station_625">
+		<region>
+			<stationId>STA.DE_DEBW222</stationId>
+			<latitude>48.63667</latitude>
+			<longitude>9.79804</longitude>
+			<zip-code>73329</zip-code>
+			<city>Kuchen</city>
+		</region>
+	</car>
+	<car id="station_626">
+		<region>
+			<stationId>STA.DE_DEBW221</stationId>
+			<latitude>47.66908</latitude>
+			<longitude>9.18133</longitude>
+			<zip-code>78467</zip-code>
+			<city>Konstanz</city>
+		</region>
+	</car>
+	<car id="station_627">
+		<region>
+			<stationId>STA.DE_DEUB044</stationId>
+			<latitude>47.414436</latitude>
+			<longitude>10.980657</longitude>
+			<zip-code>82475</zip-code>
+			<city>Garmisch-Partenkirchen</city>
+		</region>
+	</car>
+	<car id="station_628">
+		<region>
+			<stationId>STA.DE_DEHE135</stationId>
+			<latitude>50.075464</latitude>
+			<longitude>8.576304999999998</longitude>
+			<zip-code>60529</zip-code>
+			<city>Frankfurt am Main</city>
+		</region>
+	</car>
+	<car id="station_629">
+		<region>
+			<stationId>STA.DE_DESN104</stationId>
+			<latitude>50.85518999999999</latitude>
+			<longitude>12.959368</longitude>
+			<zip-code>09131</zip-code>
+			<city>Chemnitz</city>
+		</region>
+	</car>
+	<car id="station_630">
+		<region>
+			<stationId>STA.DE_DEMV028</stationId>
+			<latitude>53.900767</latitude>
+			<longitude>11.4769</longitude>
+			<zip-code>23970</zip-code>
+			<city>Wismar</city>
+		</region>
+	</car>
+	<car id="station_631">
+		<region>
+			<stationId>STA.DE_DENW374</stationId>
+			<latitude>51.560875</latitude>
+			<longitude>7.1864</longitude>
+			<zip-code>45661</zip-code>
+			<city>Recklinghausen</city>
+		</region>
+	</car>
+	<car id="station_632">
+		<region>
+			<stationId>STA.DE_DENW381</stationId>
+			<latitude>51.219577</latitude>
+			<longitude>6.704074000000001</longitude>
+			<zip-code>41460</zip-code>
+			<city>Neuss</city>
+		</region>
+	</car>
+	<car id="station_633">
+		<region>
+			<stationId>STA.DE_DETH117</stationId>
+			<latitude>50.993127</latitude>
+			<longitude>11.056578000000002</longitude>
+			<zip-code>99085</zip-code>
+			<city>Erfurt</city>
+		</region>
+	</car>
+	<car id="station_634">
+		<region>
+			<stationId>STA.DE_DESH056</stationId>
+			<latitude>54.616669</latitude>
+			<longitude>9.363674</longitude>
+			<zip-code>24852</zip-code>
+			<city>Eggebek</city>
+		</region>
+	</car>
+	<car id="station_635">
+		<region>
+			<stationId>STA.DE_DEBW226</stationId>
+			<latitude>47.65670000000001</latitude>
+			<longitude>9.46702</longitude>
+			<zip-code>88045</zip-code>
+			<city>Friedrichshafen</city>
+		</region>
+	</car>
+	<car id="station_636">
+		<region>
+			<stationId>STA.DE_DENW375</stationId>
+			<latitude>51.43314199999999</latitude>
+			<longitude>7.333622</longitude>
+			<zip-code>58452</zip-code>
+			<city>Witten</city>
+		</region>
+	</car>
+	<car id="station_637">
+		<region>
+			<stationId>STA.DE_DESH057</stationId>
+			<latitude>54.34761</latitude>
+			<longitude>10.105600000000004</longitude>
+			<zip-code>24106</zip-code>
+			<city>Kiel</city>
+		</region>
+	</car>
+	<car id="station_638">
+		<region>
+			<stationId>STA.DE_DENW382</stationId>
+			<latitude>51.46072099999999</latitude>
+			<longitude>6.727486</longitude>
+			<zip-code>47119</zip-code>
+			<city>Duisburg</city>
+		</region>
+	</car>
+	<car id="station_639">
+		<region>
+			<stationId>STA.DE_DEHE134</stationId>
+			<latitude>50.546384</latitude>
+			<longitude>9.680167</longitude>
+			<zip-code>36043</zip-code>
+			<city>Fulda</city>
+		</region>
+	</car>
+	<car id="station_640">
+		<region>
+			<stationId>STA.DE_DENW206</stationId>
+			<latitude>51.176151</latitude>
+			<longitude>7.084069</longitude>
+			<zip-code>42651</zip-code>
+			<city>Solingen</city>
+		</region>
+	</car>
+	<car id="station_641">
+		<region>
+			<stationId>STA.DE_DEBW151</stationId>
+			<latitude>49.40724999999999</latitude>
+			<longitude>8.676999999999998</longitude>
+			<zip-code>69115</zip-code>
+			<city>Heidelberg</city>
+		</region>
+	</car>
+	<car id="station_642">
+		<region>
+			<stationId>STA.DE_DEHE111</stationId>
+			<latitude>49.995556</latitude>
+			<longitude>8.42439</longitude>
+			<zip-code>65428</zip-code>
+			<city>Rüsselsheim am Main</city>
+		</region>
+	</car>
+	<car id="station_643">
+		<region>
+			<stationId>STA.DE_DENW222</stationId>
+			<latitude>52.061461</latitude>
+			<longitude>8.360941999999998</longitude>
+			<zip-code>33790</zip-code>
+			<city>Halle (Westfalen)</city>
+		</region>
+	</car>
+	<car id="station_644">
+		<region>
+			<stationId>STA.DE_DENW358</stationId>
+			<latitude>50.97038899999998</latitude>
+			<longitude>7.047528</longitude>
+			<zip-code>51067</zip-code>
+			<city>Köln</city>
+		</region>
+	</car>
+	<car id="station_645">
+		<region>
+			<stationId>STA.DE_DEHE132</stationId>
+			<latitude>49.869423</latitude>
+			<longitude>8.65323</longitude>
+			<zip-code>64283</zip-code>
+			<city>Darmstadt</city>
+		</region>
+	</car>
+	<car id="station_646">
+		<region>
+			<stationId>STA.DE_DENW161</stationId>
+			<latitude>51.440205</latitude>
+			<longitude>7.004406</longitude>
+			<zip-code>45130</zip-code>
+			<city>Essen</city>
+		</region>
+	</car>
+	<car id="station_647">
+		<region>
+			<stationId>STA.DE_DENW364</stationId>
+			<latitude>51.51916699999999</latitude>
+			<longitude>6.924361</longitude>
+			<zip-code>46236</zip-code>
+			<city>Bottrop</city>
+		</region>
+	</car>
+	<car id="station_648">
+		<region>
+			<stationId>STA.DE_DEBW195</stationId>
+			<latitude>48.8647</latitude>
+			<longitude>9.03141</longitude>
+			<zip-code>71282</zip-code>
+			<city>Hemmingen</city>
+		</region>
+	</car>
+	<car id="station_649">
+		<region>
+			<stationId>STA.DE_DENW275</stationId>
+			<latitude>51.563935</latitude>
+			<longitude>6.743403999999999</longitude>
+			<zip-code>46535</zip-code>
+			<city>Dinslaken</city>
+		</region>
+	</car>
+	<car id="station_650">
+		<region>
+			<stationId>STA.DE_DENW368</stationId>
+			<latitude>51.22742499999999</latitude>
+			<longitude>6.698572</longitude>
+			<zip-code>40549</zip-code>
+			<city>Düsseldorf</city>
+		</region>
+	</car>
+	<car id="station_651">
+		<region>
+			<stationId>STA.DE_DENW333</stationId>
+			<latitude>50.85885799999999</latitude>
+			<longitude>7.101197</longitude>
+			<zip-code>51147</zip-code>
+			<city>Köln</city>
+		</region>
+	</car>
+	<car id="station_652">
+		<region>
+			<stationId>STA.DE_DETH081</stationId>
+			<latitude>50.972331</latitude>
+			<longitude>11.010445999999998</longitude>
+			<zip-code>99092</zip-code>
+			<city>Erfurt</city>
+		</region>
+	</car>
+	<car id="station_653">
+		<region>
+			<stationId>STA.DE_DEBW138</stationId>
+			<latitude>48.39462999999999</latitude>
+			<longitude>9.98348</longitude>
+			<zip-code>89077</zip-code>
+			<city>Ulm</city>
+		</region>
+	</car>
+	<car id="station_654">
+		<region>
+			<stationId>STA.DE_DENW255</stationId>
+			<latitude>51.339466</latitude>
+			<longitude>7.395867000000002</longitude>
+			<zip-code>58135</zip-code>
+			<city>Hagen</city>
+		</region>
+	</car>
+	<car id="station_655">
+		<region>
+			<stationId>STA.DE_DENW253</stationId>
+			<latitude>51.411535</latitude>
+			<longitude>6.711915</longitude>
+			<zip-code>47226</zip-code>
+			<city>Duisburg</city>
+		</region>
+	</car>
+	<car id="station_656">
+		<region>
+			<stationId>STA.DE_DENW187</stationId>
+			<latitude>51.44116399999999</latitude>
+			<longitude>6.896149</longitude>
+			<zip-code>45473</zip-code>
+			<city>Mülheim an der Ruhr</city>
+		</region>
+	</car>
+	<car id="station_657">
+		<region>
+			<stationId>STA.DE_DENW215</stationId>
+			<latitude>51.44319700000001</latitude>
+			<longitude>6.975815</longitude>
+			<zip-code>45147</zip-code>
+			<city>Essen</city>
+		</region>
+	</car>
+	<car id="station_658">
+		<region>
+			<stationId>STA.DE_DENI158</stationId>
+			<latitude>52.42396600000001</latitude>
+			<longitude>10.785937</longitude>
+			<zip-code>38440</zip-code>
+			<city>Wolfsburg</city>
+		</region>
+	</car>
+	<car id="station_659">
+		<region>
+			<stationId>STA.DE_DENW335</stationId>
+			<latitude>51.26708300000001</latitude>
+			<longitude>6.641622</longitude>
+			<zip-code>40670</zip-code>
+			<city>Meerbusch</city>
+		</region>
+	</car>
+	<car id="station_660">
+		<region>
+			<stationId>STA.DE_DENW291</stationId>
+			<latitude>51.249969</latitude>
+			<longitude>6.978769</longitude>
+			<zip-code>40822</zip-code>
+			<city>Mettmann</city>
+		</region>
+	</car>
+	<car id="station_661">
+		<region>
+			<stationId>STA.DE_DEHE103</stationId>
+			<latitude>50.10239</latitude>
+			<longitude>8.775947</longitude>
+			<zip-code>63071</zip-code>
+			<city>Offenbach am Main</city>
+		</region>
+	</car>
+	<car id="station_662">
+		<region>
+			<stationId>STA.DE_DERP040</stationId>
+			<latitude>49.74869</latitude>
+			<longitude>6.674873999999999</longitude>
+			<zip-code>54296</zip-code>
+			<city>Trier</city>
+		</region>
+	</car>
+	<car id="station_663">
+		<region>
+			<stationId>STA.DE_DENW341</stationId>
+			<latitude>51.052883</latitude>
+			<longitude>6.403289</longitude>
+			<zip-code>41812</zip-code>
+			<city>Erkelenz</city>
+		</region>
+	</car>
+	<car id="station_664">
+		<region>
+			<stationId>STA.DE_DEHE115</stationId>
+			<latitude>49.83324</latitude>
+			<longitude>9.04218</longitude>
+			<zip-code>64747</zip-code>
+			<city>Breuberg</city>
+		</region>
+	</car>
+	<car id="station_665">
+		<region>
+			<stationId>STA.DE_DEBW135</stationId>
+			<latitude>48.59476</latitude>
+			<longitude>8.86912</longitude>
+			<zip-code>71083</zip-code>
+			<city>Herrenberg</city>
+		</region>
+	</car>
+	<car id="station_666">
+		<region>
+			<stationId>STA.DE_DENW334</stationId>
+			<latitude>51.588658</latitude>
+			<longitude>7.662739000000002</longitude>
+			<zip-code>59174</zip-code>
+			<city>Kamen</city>
+		</region>
+	</car>
+	<car id="station_667">
+		<region>
+			<stationId>STA.DE_DENW281</stationId>
+			<latitude>51.36037799999999</latitude>
+			<longitude>7.477382999999999</longitude>
+			<zip-code>58097</zip-code>
+			<city>Hagen</city>
+		</region>
+	</car>
+	<car id="station_668">
+		<region>
+			<stationId>STA.DE_DENW299</stationId>
+			<latitude>51.56988599999999</latitude>
+			<longitude>6.997653</longitude>
+			<zip-code>45964</zip-code>
+			<city>Gladbeck</city>
+		</region>
+	</car>
+	<car id="station_669">
+		<region>
+			<stationId>STA.DE_DENW342</stationId>
+			<latitude>50.875539</latitude>
+			<longitude>8.02382</longitude>
+			<zip-code>57072</zip-code>
+			<city>Siegen</city>
+		</region>
+	</car>
+	<car id="station_670">
+		<region>
+			<stationId>STA.DE_DENW280</stationId>
+			<latitude>51.320467</latitude>
+			<longitude>7.34408</longitude>
+			<zip-code>58285</zip-code>
+			<city>Gevelsberg</city>
+		</region>
+	</car>
+	<car id="station_671">
+		<region>
+			<stationId>STA.DE_DENW225</stationId>
+			<latitude>51.320635</latitude>
+			<longitude>7.344286</longitude>
+			<zip-code>58285</zip-code>
+			<city>Gevelsberg</city>
+		</region>
+	</car>
+	<car id="station_672">
+		<region>
+			<stationId>STA.DE_DENI149</stationId>
+			<latitude>52.360803</latitude>
+			<longitude>9.712341000000002</longitude>
+			<zip-code>30449</zip-code>
+			<city>Hannover</city>
+		</region>
+	</car>
+	<car id="station_673">
+		<region>
+			<stationId>STA.DE_DENI008</stationId>
+			<latitude>52.263331</latitude>
+			<longitude>10.524609</longitude>
+			<zip-code>38100</zip-code>
+			<city>Braunschweig</city>
+		</region>
+	</car>
+	<car id="station_674">
+		<region>
+			<stationId>STA.DE_DENI146</stationId>
+			<latitude>52.272232</latitude>
+			<longitude>8.046981</longitude>
+			<zip-code>49074</zip-code>
+			<city>Osnabrück</city>
+		</region>
+	</car>
+	<car id="station_675">
+		<region>
+			<stationId>STA.DE_DENW184</stationId>
+			<latitude>51.504083</latitude>
+			<longitude>7.503074</longitude>
+			<zip-code>44141</zip-code>
+			<city>Dortmund</city>
+		</region>
+	</car>
+	<car id="station_676">
+		<region>
+			<stationId>STA.DE_DEHE105</stationId>
+			<latitude>50.57507999999999</latitude>
+			<longitude>8.491714</longitude>
+			<zip-code>35586</zip-code>
+			<city>Wetzlar</city>
+		</region>
+	</car>
+	<car id="station_677">
+		<region>
+			<stationId>STA.DE_DENW262</stationId>
+			<latitude>51.562254</latitude>
+			<longitude>6.741890999999999</longitude>
+			<zip-code>46535</zip-code>
+			<city>Dinslaken</city>
+		</region>
+	</car>
+	<car id="station_678">
+		<region>
+			<stationId>STA.DE_DENW360</stationId>
+			<latitude>50.87559399999999</latitude>
+			<longitude>8.020832999999998</longitude>
+			<zip-code>57072</zip-code>
+			<city>Siegen</city>
+		</region>
+	</car>
+	<car id="station_679">
+		<region>
+			<stationId>STA.DE_DENW250</stationId>
+			<latitude>50.93095</latitude>
+			<longitude>6.85028</longitude>
+			<zip-code>50858</zip-code>
+			<city>Köln</city>
+		</region>
+	</car>
+	<car id="station_680">
+		<region>
+			<stationId>STA.DE_DENW317</stationId>
+			<latitude>51.61883100000001</latitude>
+			<longitude>7.0371690000000005</longitude>
+			<zip-code>45896</zip-code>
+			<city>Gelsenkirchen</city>
+		</region>
+	</car>
+	<car id="station_681">
+		<region>
+			<stationId>STA.DE_DENW232</stationId>
+			<latitude>51.120018</latitude>
+			<longitude>6.96917</longitude>
+			<zip-code>40764</zip-code>
+			<city>Langenfeld (Rheinland)</city>
+		</region>
+	</car>
+	<car id="station_682">
+		<region>
+			<stationId>STA.DE_DENI160</stationId>
+			<latitude>52.270462</latitude>
+			<longitude>10.499984</longitude>
+			<zip-code>38114</zip-code>
+			<city>Braunschweig</city>
+		</region>
+	</car>
+	<car id="station_683">
+		<region>
+			<stationId>STA.DE_DENI066</stationId>
+			<latitude>52.150775</latitude>
+			<longitude>9.950223</longitude>
+			<zip-code>31134</zip-code>
+			<city>Hildesheim</city>
+		</region>
+	</car>
+	<car id="station_684">
+		<region>
+			<stationId>STA.DE_DEBW228</stationId>
+			<latitude>47.78495</latitude>
+			<longitude>9.612949999999998</longitude>
+			<zip-code>88212</zip-code>
+			<city>Ravensburg</city>
+		</region>
+	</car>
+</target>

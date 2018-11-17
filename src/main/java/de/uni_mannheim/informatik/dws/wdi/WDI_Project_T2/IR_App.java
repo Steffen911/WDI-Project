@@ -4,6 +4,7 @@ import de.uni_mannheim.informatik.dws.wdi.WDI_Project_T2.blocking.CarBlockingKey
 import de.uni_mannheim.informatik.dws.wdi.WDI_Project_T2.comparator.CarFuelTypeComparatorLevenshtein;
 import de.uni_mannheim.informatik.dws.wdi.WDI_Project_T2.comparator.CarModelComparatorMaximumTokenContainment;
 import de.uni_mannheim.informatik.dws.wdi.WDI_Project_T2.comparator.CarModelComparatorTokenizingJaccard;
+import de.uni_mannheim.informatik.dws.wdi.WDI_Project_T2.comparator.CarModelComparatorLevenshtein;
 import de.uni_mannheim.informatik.dws.wdi.WDI_Project_T2.comparator.CarTransmissionComparatorLevenshtein;
 import de.uni_mannheim.informatik.dws.wdi.WDI_Project_T2.model.Car;
 import de.uni_mannheim.informatik.dws.wdi.WDI_Project_T2.model.CarXMLReader;
@@ -147,9 +148,9 @@ public class IR_App {
         // Add comparators
         logger.info("Add matchingrules");
         LinearCombinationMatchingRule<Car, Attribute> matchingRule = new LinearCombinationMatchingRule<>(0.65);
-        matchingRule.addComparator(new CarModelComparatorMaximumTokenContainment(), 0.5);
-        matchingRule.addComparator(new CarFuelTypeComparatorLevenshtein(), 0.3);
-        matchingRule.addComparator(new CarTransmissionComparatorLevenshtein(), 0.2);
+        matchingRule.addComparator(new CarModelComparatorLevenshtein(), 0.4);
+        matchingRule.addComparator(new CarFuelTypeComparatorLevenshtein(), 0.4);
+        matchingRule.addComparator(new CarTransmissionComparatorLevenshtein(),0.2);
 
         // Add blocking strategy
         logger.info("Initialize the blocker");
@@ -174,10 +175,10 @@ public class IR_App {
     ) throws Exception {
         // Add comparators
         logger.info("Add matchingrules");
-        LinearCombinationMatchingRule<Car, Attribute> matchingRule = new LinearCombinationMatchingRule<>(0.5);
+        LinearCombinationMatchingRule<Car, Attribute> matchingRule = new LinearCombinationMatchingRule<>(0.70);
         matchingRule.addComparator(new CarModelComparatorTokenizingJaccard(), 0.5);
-        matchingRule.addComparator(new CarFuelTypeComparatorLevenshtein(), 0.1);
-        matchingRule.addComparator(new CarTransmissionComparatorLevenshtein(), 0.4);
+        matchingRule.addComparator(new CarFuelTypeComparatorLevenshtein(), 0.3);
+        matchingRule.addComparator(new CarTransmissionComparatorLevenshtein(), 0.2);
 
         // Add blocking strategy
         logger.info("Initialize the blocker");
