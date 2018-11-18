@@ -1,5 +1,13 @@
 package de.uni_mannheim.informatik.dws.wdi.WDI_Project_T2.model;
 
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Map;
+
+import org.apache.commons.lang3.StringUtils;
+
 import de.uni_mannheim.informatik.dws.winter.model.AbstractRecord;
 import de.uni_mannheim.informatik.dws.winter.model.Matchable;
 import de.uni_mannheim.informatik.dws.winter.model.defaultmodel.Attribute;
@@ -31,10 +39,16 @@ import de.uni_mannheim.informatik.dws.winter.model.defaultmodel.Attribute;
  * 	</car>
  */
 public class Car extends AbstractRecord<Attribute> {
+	
+	
+    public Car(String identifier, String provenance) {
+        super(identifier, provenance);
+        cars = new LinkedList<>();
+    }
 
     // Mandatory properties of Matchable
-    private String identifier;
-    private String provenance;
+  
+   
 
     // Properties of a car
     private String manufacturer;
@@ -46,21 +60,11 @@ public class Car extends AbstractRecord<Attribute> {
     private double emission;
     private double mileage;
     private Pollution pollution;
+    private List<Car> cars;
+    
 
-    public Car(String identifier, String provenance) {
-        this.identifier = identifier;
-        this.provenance = provenance;
-    }
 
-    @Override
-    public String getIdentifier() {
-        return identifier;
-    }
 
-    @Override
-    public String getProvenance() {
-        return provenance;
-    }
 
     @Override
     public int hashCode() {
@@ -138,10 +142,57 @@ public class Car extends AbstractRecord<Attribute> {
     public void setPollution(Pollution pollution) {
         this.pollution = pollution;
     }
+    
+	private Map<Attribute, Collection<String>> provenance = new HashMap<>();
+	private Collection<String> recordProvenance;
+
+	public void setRecordProvenance(Collection<String> provenance) {
+		recordProvenance = provenance;
+	}
+
+	public Collection<String> getRecordProvenance() {
+		return recordProvenance;
+	}
+	
+	public void setAttributeProvenance(Attribute attribute,
+			Collection<String> provenance) {
+		this.provenance.put(attribute, provenance);
+		
+	}
+	
+	public Collection<String> getAttributeProvenance(String attribute) {
+		return provenance.get(attribute);
+	}
+	
+	public String getMergedAttributeProvenance(Attribute attribute) {
+		Collection<String> prov = provenance.get(attribute);
+		if (prov != null) {
+			return StringUtils.join(prov, "+");
+		} else {
+			return "";
+		}
+	}
+	
+	public static final Attribute MANUFACTURER = new Attribute("MANUFACTURER");
+	public static final Attribute MODEL = new Attribute("MODEL");
+	public static final Attribute FUELTYPE = new Attribute("FUELTYPE");
+	public static final Attribute TRANSMISSION = new Attribute("TRANSMISSION");
+	
 
 	@Override
 	public boolean hasValue(Attribute attribute) {
-		// TODO Auto-generated method stub
-		return false;
+		if(attribute==MANUFACTURER)
+			return getManufacturer() != null && !getManufacturer().isEmpty();
+		else if(attribute==MODEL)
+			return getModel() != null && !getModel().isEmpty();
+		else if(attribute==FUELTYPE)
+			return getFuelType() != null;
+		else if(attribute==TRANSMISSION)
+			return getTransmission() != null && !(getTransmission().isEmpty());
+		else
+			return false;
 	}
+	
+
+
 }
