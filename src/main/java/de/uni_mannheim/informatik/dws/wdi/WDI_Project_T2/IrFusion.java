@@ -15,10 +15,15 @@ import javax.xml.xpath.XPathExpressionException;
 
 import org.xml.sax.SAXException;
 
+import Fusion.Fusers;
 import Fusion.FusibleCarFactory;
+import datafusionevaluation.ModelEvaluationrule;
 
 import de.uni_mannheim.informatik.dws.wdi.WDI_Project_T2.model.Car;
+import de.uni_mannheim.informatik.dws.wdi.WDI_Project_T2.model.CarXMLFormatter;
 import de.uni_mannheim.informatik.dws.winter.datafusion.CorrespondenceSet;
+import de.uni_mannheim.informatik.dws.winter.datafusion.DataFusionEngine;
+import de.uni_mannheim.informatik.dws.winter.datafusion.DataFusionEvaluator;
 import de.uni_mannheim.informatik.dws.winter.datafusion.DataFusionStrategy;
 import de.uni_mannheim.informatik.dws.winter.model.DataSet;
 import de.uni_mannheim.informatik.dws.winter.model.FusibleDataSet;
@@ -26,6 +31,7 @@ import de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet;
 import de.uni_mannheim.informatik.dws.winter.model.HashedDataSet;
 import de.uni_mannheim.informatik.dws.winter.model.MatchingGoldStandard;
 import de.uni_mannheim.informatik.dws.winter.model.defaultmodel.Attribute;
+import de.uni_mannheim.informatik.dws.winter.model.io.CSVDataSetFormatter;
 
 public class IrFusion {
 
@@ -91,7 +97,24 @@ public class IrFusion {
 		strategy.activateDebugReport("data/output/debugResultsDatafusion.csv", -1, gs);
 		
 		// add attribute fusers -- We're adding the fusion strategy
+		strategy.addAttributeFuser(Car.MODEL, new Fusers(), new ModelEvaluationrule());
+		// create the fusion engine
+		DataFusionEngine<Car, Attribute> engine = new DataFusionEngine<>(strategy);
+		// print consistency report
+		engine.printClusterConsistencyReport(correspondences, null);
+		// print record groups sorted by consistency
+		engine.writeRecordGroupsByConsistency(new File("data/output/recordGroupConsistencies.csv"), correspondences, null);
+		// run the fusion
+		System.out.println("*\n*\tRunning data fusion\n*");
+		FusibleDataSet<Car, Attribute> fusedDataSet = engine.run(correspondences, null);
+		// write the result
+		new CarXMLFormatter().writeXML(new File("data/output/fused.xml"), fusedDataSet);
+		// evaluate
+		DataFusionEvaluator<Car, Attribute> evaluator = new DataFusionEvaluator<>(strategy);
+		
+		double accuracy = evaluator.evaluate(fusedDataSet, gs, null);
 	
+		System.out.println(String.format("Accuracy: %.2f", accuracy));
 
 		
 		
