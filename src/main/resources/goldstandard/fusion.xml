@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<target>
+    <car id="gold_1">
+        <manufacturer>volkswagen</manufacturer>
+        <model>Golf_3_1.6 golf</model>
+        <fuelType>benzin</fuelType>
+        <transmission>manuell</transmission>
+        <horse-power>0</horse-power>
+        <region>
+            <zip-code>70435</zip-code>
+        </region>
+        <mileage>150000</mileage>
+    </car>
+    <car id="gold_2">
+        <manufacturer>audi</manufacturer>
+        <fuelType>diesel</fuelType>
+        <transmission>manuell</transmission>
+        <horse-power>190</horse-power>
+        <region>
+            <zip-code>66954</zip-code>
+        </region>
+        <mileage>125000</mileage>
+    </car>
+</target>
