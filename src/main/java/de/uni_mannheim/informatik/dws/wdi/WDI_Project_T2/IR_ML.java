@@ -28,11 +28,12 @@ import java.io.File;
 public class IR_ML {
 
     public static final Logger logger = WinterLogManager.activateLogger("default");
+    private static ClassLoader classloader = Thread.currentThread().getContextClassLoader();
 
     public static void main(String[] args) throws Exception {
         // Load the datasets
         logger.info("Loading datasets...");
-        ClassLoader classloader = Thread.currentThread().getContextClassLoader();
+
         HashedDataSet<Car, Attribute> carEmissions = new HashedDataSet<>();
         logger.info("Loading car_emissions_dupfree...");
         new CarXMLReader().loadFromXML(new File(classloader.getResource("data/car_emissions_dupfree.xml").getFile()), "/target/car", carEmissions);
@@ -72,7 +73,7 @@ public class IR_ML {
         String options11[] = new String[]{""};
 
         // Set the classifier. For trying different classifiers, simply replace modeltype and options in the WekaMatchingRule.
-        WekaMatchingRule<Car, Attribute> matchingRule = new WekaMatchingRule<>(0.7, modelType11, options11);
+        WekaMatchingRule<Car, Attribute> matchingRule = new WekaMatchingRule<>(0.7, modelType1, options1);
         matchingRule.activateDebugReport("data/output/debugResultsMatchingRule.csv", 1000);
 
         // Forward / Backward Selection for incremental feature creation / pruning
@@ -91,12 +92,12 @@ public class IR_ML {
         MatchingGoldStandard gsTraining = new MatchingGoldStandard();
         gsTraining.loadFromCSVFile(new File(classloader.getResource("goldstandard/train.csv").getFile()));
 
-        //export comparator features for RapidMiner
-        // matchingRule.exportTrainingData(carEmissions, vehicles, gsTraining, new File("data/output/features.csv"));
+        // export RapidMiner features
+        exportRapidMinerFeatures(matchingRule, vehicles, offerInt, carEmissions);
 
         // train the matching rule's model
         RuleLearner<Car, Attribute> learner = new RuleLearner<>();
-        learner.learnMatchingRule(offerInt, vehicles, null, matchingRule, gsTraining);
+        learner.learnMatchingRule(offerInt, carEmissions, null, matchingRule, gsTraining);
         System.out.println(String.format("Matching rule is:\n%s", matchingRule.getModelDescription()));
 
         //Blocking
@@ -111,7 +112,7 @@ public class IR_ML {
         // Execute the matching
         System.out.println("*\n*\tRunning identity resolution\n*");
         Processable<Correspondence<Car, Attribute>> correspondences = engine.runIdentityResolution(
-        offerInt, vehicles, null, matchingRule,
+        offerInt, carEmissions, null, matchingRule,
         blocker);
 
         // Write the correspondences to the output file
@@ -137,4 +138,15 @@ public class IR_ML {
         "F1: %.4f", perfTest.getF1()));
     }
 
+    private static void exportRapidMinerFeatures(WekaMatchingRule<Car, Attribute> matchingRule, HashedDataSet<Car, Attribute> vehicles,
+                                                 HashedDataSet<Car, Attribute> offerInt, HashedDataSet<Car, Attribute> carEmissions) throws Exception {
+
+        MatchingGoldStandard gsTrainingRapidMiner = new MatchingGoldStandard();
+        gsTrainingRapidMiner.loadFromCSVFile(new File(classloader.getResource("goldstandard/train_rapidminer.csv").getFile()));
+
+        //export comparator features for RapidMiner
+        matchingRule.exportTrainingData(carEmissions, vehicles, gsTrainingRapidMiner, new File("data/output/carem_veh_features.csv"));
+        matchingRule.exportTrainingData(offerInt, vehicles, gsTrainingRapidMiner, new File("data/output/offer_veh_features.csv"));
+        matchingRule.exportTrainingData(offerInt, carEmissions, gsTrainingRapidMiner, new File("data/output/offer_carem_features.csv"));
+    }
 }
