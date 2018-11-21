@@ -6,15 +6,15 @@ import de.uni_mannheim.informatik.dws.winter.model.Correspondence;
 import de.uni_mannheim.informatik.dws.winter.model.Matchable;
 import de.uni_mannheim.informatik.dws.winter.model.defaultmodel.Attribute;
 import de.uni_mannheim.informatik.dws.winter.similarity.SimilarityMeasure;
-import de.uni_mannheim.informatik.dws.winter.similarity.numeric.AbsoluteDifferenceSimilarity;
+import de.uni_mannheim.informatik.dws.winter.similarity.string.TokenizingJaccardSimilarity;
 
-public class EmissionEvaluationRule extends EvaluationRule<Car, Attribute> {
+public class ModelEvaluationRule extends EvaluationRule<Car, Attribute> {
 
-    private SimilarityMeasure<Double> sim = new AbsoluteDifferenceSimilarity(20.0);
+    private SimilarityMeasure<String> sim = new TokenizingJaccardSimilarity();
 
     @Override
     public boolean isEqual(Car c1, Car c2, Attribute elem) {
-        return sim.calculate(c1.getEmission(), c2.getEmission()) > 0.7;
+        return sim.calculate(c1.getManufacturer(), c2.getManufacturer()) > 0.7;
     }
 
     @Override

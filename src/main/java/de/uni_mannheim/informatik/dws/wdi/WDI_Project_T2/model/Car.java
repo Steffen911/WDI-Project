@@ -158,6 +158,10 @@ public class Car extends AbstractRecord<Attribute> {
             return getTransmission() != null && !getTransmission().isEmpty();
         if (attribute == EMISSION)
             return getEmission() > 0;
+        if (attribute == HORSE_POWER)
+            return getHorsePower() > 0;
+        if (attribute == MILEAGE)
+            return getMileage() > 0;
         return false;
     }
 

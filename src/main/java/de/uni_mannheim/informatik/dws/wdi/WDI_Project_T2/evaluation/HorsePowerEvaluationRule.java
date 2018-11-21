@@ -8,7 +8,7 @@ import de.uni_mannheim.informatik.dws.winter.model.defaultmodel.Attribute;
 import de.uni_mannheim.informatik.dws.winter.similarity.SimilarityMeasure;
 import de.uni_mannheim.informatik.dws.winter.similarity.numeric.AbsoluteDifferenceSimilarity;
 
-public class EmissionEvaluationRule extends EvaluationRule<Car, Attribute> {
+public class HorsePowerEvaluationRule extends EvaluationRule<Car, Attribute> {
 
     private SimilarityMeasure<Double> sim = new AbsoluteDifferenceSimilarity(20.0);
 
