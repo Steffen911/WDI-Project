@@ -1,7 +1,11 @@
 package de.uni_mannheim.informatik.dws.wdi.WDI_Project_T2;
 
+import de.uni_mannheim.informatik.dws.wdi.WDI_Project_T2.evaluation.EmissionEvaluationRule;
 import de.uni_mannheim.informatik.dws.wdi.WDI_Project_T2.evaluation.ManufacturerEvaluationRule;
+import de.uni_mannheim.informatik.dws.wdi.WDI_Project_T2.evaluation.TransmissionEvaluationRule;
+import de.uni_mannheim.informatik.dws.wdi.WDI_Project_T2.fusers.EmissionFuserAvg;
 import de.uni_mannheim.informatik.dws.wdi.WDI_Project_T2.fusers.ManufacturerFuserLongestString;
+import de.uni_mannheim.informatik.dws.wdi.WDI_Project_T2.fusers.TransmissionFuserLongestString;
 import de.uni_mannheim.informatik.dws.wdi.WDI_Project_T2.model.Car;
 import de.uni_mannheim.informatik.dws.wdi.WDI_Project_T2.model.CarXMLReader;
 import de.uni_mannheim.informatik.dws.wdi.WDI_Project_T2.model.FusibleCarFactory;
@@ -70,6 +74,8 @@ public class DF_App {
 
         logger.info("Adding the attribute fusers...");
         strategy.addAttributeFuser(Car.MANUFACTURER, new ManufacturerFuserLongestString(), new ManufacturerEvaluationRule());
+        strategy.addAttributeFuser(Car.TRANSMISSION, new TransmissionFuserLongestString(), new TransmissionEvaluationRule());
+        strategy.addAttributeFuser(Car.EMISSION, new EmissionFuserAvg(), new EmissionEvaluationRule());
 
         logger.info("Starting the fusion...");
         DataFusionEngine<Car, Attribute> engine = new DataFusionEngine<>(strategy);
