@@ -156,6 +156,8 @@ public class Car extends AbstractRecord<Attribute> {
             return getFuelType() != null && !getFuelType().isEmpty();
         if (attribute == TRANSMISSION)
             return getTransmission() != null && !getTransmission().isEmpty();
+        if (attribute == EMISSION)
+            return getEmission() > 0;
         return false;
     }
 

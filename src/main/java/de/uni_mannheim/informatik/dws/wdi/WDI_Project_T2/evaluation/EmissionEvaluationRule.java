@@ -6,20 +6,19 @@ import de.uni_mannheim.informatik.dws.winter.model.Correspondence;
 import de.uni_mannheim.informatik.dws.winter.model.Matchable;
 import de.uni_mannheim.informatik.dws.winter.model.defaultmodel.Attribute;
 import de.uni_mannheim.informatik.dws.winter.similarity.SimilarityMeasure;
-import de.uni_mannheim.informatik.dws.winter.similarity.string.TokenizingJaccardSimilarity;
+import de.uni_mannheim.informatik.dws.winter.similarity.numeric.AbsoluteDifferenceSimilarity;
 
-public class ManufacturerEvaluationRule extends EvaluationRule<Car, Attribute> {
+public class EmissionEvaluationRule extends EvaluationRule<Car, Attribute> {
 
-    private SimilarityMeasure<String> sim = new TokenizingJaccardSimilarity();
+    private SimilarityMeasure<Double> sim = new AbsoluteDifferenceSimilarity(20.0);
 
     @Override
     public boolean isEqual(Car c1, Car c2, Attribute elem) {
-        return sim.calculate(c1.getManufacturer(), c2.getManufacturer()) > 0.7;
+        return sim.calculate(c1.getEmission(), c2.getEmission()) > 0.7;
     }
 
     @Override
     public boolean isEqual(Car c1, Car c2, Correspondence<Attribute, Matchable> correspondence) {
         return isEqual(c1, c2, (Attribute) null);
     }
-
 }

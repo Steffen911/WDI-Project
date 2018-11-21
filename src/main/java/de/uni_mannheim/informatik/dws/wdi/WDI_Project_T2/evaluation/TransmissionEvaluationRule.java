@@ -6,15 +6,15 @@ import de.uni_mannheim.informatik.dws.winter.model.Correspondence;
 import de.uni_mannheim.informatik.dws.winter.model.Matchable;
 import de.uni_mannheim.informatik.dws.winter.model.defaultmodel.Attribute;
 import de.uni_mannheim.informatik.dws.winter.similarity.SimilarityMeasure;
-import de.uni_mannheim.informatik.dws.winter.similarity.string.TokenizingJaccardSimilarity;
+import de.uni_mannheim.informatik.dws.winter.similarity.string.LevenshteinSimilarity;
 
-public class ManufacturerEvaluationRule extends EvaluationRule<Car, Attribute> {
+public class TransmissionEvaluationRule extends EvaluationRule<Car, Attribute> {
 
-    private SimilarityMeasure<String> sim = new TokenizingJaccardSimilarity();
+    private SimilarityMeasure<String> sim = new LevenshteinSimilarity();
 
     @Override
     public boolean isEqual(Car c1, Car c2, Attribute elem) {
-        return sim.calculate(c1.getManufacturer(), c2.getManufacturer()) > 0.7;
+        return sim.calculate(c1.getTransmission(), c2.getTransmission()) > 0.7;
     }
 
     @Override
