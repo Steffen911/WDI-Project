@@ -1,11 +1,7 @@
 package de.uni_mannheim.informatik.dws.wdi.WDI_Project_T2;
 
-import de.uni_mannheim.informatik.dws.wdi.WDI_Project_T2.evaluation.EmissionEvaluationRule;
-import de.uni_mannheim.informatik.dws.wdi.WDI_Project_T2.evaluation.ManufacturerEvaluationRule;
-import de.uni_mannheim.informatik.dws.wdi.WDI_Project_T2.evaluation.TransmissionEvaluationRule;
-import de.uni_mannheim.informatik.dws.wdi.WDI_Project_T2.fusers.EmissionFuserAvg;
-import de.uni_mannheim.informatik.dws.wdi.WDI_Project_T2.fusers.ManufacturerFuserLongestString;
-import de.uni_mannheim.informatik.dws.wdi.WDI_Project_T2.fusers.TransmissionFuserLongestString;
+import de.uni_mannheim.informatik.dws.wdi.WDI_Project_T2.evaluation.*;
+import de.uni_mannheim.informatik.dws.wdi.WDI_Project_T2.fusers.*;
 import de.uni_mannheim.informatik.dws.wdi.WDI_Project_T2.model.Car;
 import de.uni_mannheim.informatik.dws.wdi.WDI_Project_T2.model.CarXMLReader;
 import de.uni_mannheim.informatik.dws.wdi.WDI_Project_T2.model.FusibleCarFactory;
@@ -74,7 +70,10 @@ public class DF_App {
 
         logger.info("Adding the attribute fusers...");
         strategy.addAttributeFuser(Car.MANUFACTURER, new ManufacturerFuserLongestString(), new ManufacturerEvaluationRule());
+        strategy.addAttributeFuser(Car.MODEL, new ModelFuserShortestString(), new ModelEvaluationRule());
+        strategy.addAttributeFuser(Car.FUEL_TYPE, new FuelTypeFuserLongestString(), new FuelTypeEvaluationRule());
         strategy.addAttributeFuser(Car.TRANSMISSION, new TransmissionFuserLongestString(), new TransmissionEvaluationRule());
+        strategy.addAttributeFuser(Car.HORSE_POWER, new HorsePowerFuserAvg(), new HorsePowerEvaluationRule());
         strategy.addAttributeFuser(Car.EMISSION, new EmissionFuserAvg(), new EmissionEvaluationRule());
 
         logger.info("Starting the fusion...");
