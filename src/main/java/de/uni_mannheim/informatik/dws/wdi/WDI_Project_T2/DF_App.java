@@ -3,6 +3,7 @@ package de.uni_mannheim.informatik.dws.wdi.WDI_Project_T2;
 import de.uni_mannheim.informatik.dws.wdi.WDI_Project_T2.evaluation.*;
 import de.uni_mannheim.informatik.dws.wdi.WDI_Project_T2.fusers.*;
 import de.uni_mannheim.informatik.dws.wdi.WDI_Project_T2.model.Car;
+import de.uni_mannheim.informatik.dws.wdi.WDI_Project_T2.model.CarXMLFormatter;
 import de.uni_mannheim.informatik.dws.wdi.WDI_Project_T2.model.CarXMLReader;
 import de.uni_mannheim.informatik.dws.wdi.WDI_Project_T2.model.FusibleCarFactory;
 import de.uni_mannheim.informatik.dws.winter.datafusion.CorrespondenceSet;
@@ -84,7 +85,8 @@ public class DF_App {
         logger.info("Running the data fusion...");
         FusibleDataSet<Car, Attribute> fusedDataset = engine.run(correspondences, null);
 
-        // TODO: Write result to xml
+        new CarXMLFormatter().writeXML(new File("data/output/fused.xml"), fusedDataset);
+        logger.info("Successfully wrote fused.xml output");
 
         logger.info("Evaluating the fusion:");
         DataFusionEvaluator<Car, Attribute> evaluator = new DataFusionEvaluator<>(strategy);
