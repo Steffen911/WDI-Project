@@ -1,24 +1,108 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <target>
-    <car id="gold_1">
-        <manufacturer>volkswagen</manufacturer>
-        <model>Golf_3_1.6 golf</model>
-        <fuelType>benzin</fuelType>
-        <transmission>manuell</transmission>
-        <horse-power>0</horse-power>
+    <car id="gold_1" src="wikipedia">
+        <manufacturer>Volkswagen</manufacturer>
+        <model>Golf 3</model>
+        <fuelType>Petrol</fuelType>
+        <transmission>Manual</transmission>
+        <horse-power>75</horse-power>
         <region>
-            <zip-code>70435</zip-code>
+            <zip-code id="car">70435</zip-code>
+            <stationId>STA.DE_DEBW223</stationId>
+            <latitude>48.68996</latitude>
+            <longitude>9.16726</longitude>
+            <zip-code id="station">70771</zip-code>
+            <city>Leinfelden-Echterdingen</city>
         </region>
         <mileage>150000</mileage>
+        <pollution>
+            <pollutant>Nitrogen dioxide (air)</pollutant>
+            <air-quality>46.503863</air-quality>
+            <aq-unit>ug.m-3</aq-unit>
+        </pollution>
     </car>
-    <car id="gold_2">
-        <manufacturer>audi</manufacturer>
-        <fuelType>diesel</fuelType>
-        <transmission>manuell</transmission>
-        <horse-power>190</horse-power>
+    <car id="gold_2" src="wikipedia">
+        <manufacturer>Jeep</manufacturer>
+        <model>Grand Cherokee Overland</model>
+        <fuelType>Diesl</fuelType>
+        <transmission>Automatic</transmission>
+        <horse-power>163</horse-power>
         <region>
-            <zip-code>66954</zip-code>
+            <zip-code id="car">90480</zip-code>
+            <stationId>STA.DE_DEBY120</stationId>
+            <latitude>49.440478</latitude>
+            <longitude>11.036096000000002</longitude>
+            <zip-code id="station">90439</zip-code>
+            <city>Nürnberg</city>
         </region>
         <mileage>125000</mileage>
+        <pollution>
+            <pollutant>Nitrogen dioxide (air)</pollutant>
+            <air-quality>1.98370004</air-quality>
+            <aq-unit>ug.m-3</aq-unit>
+        </pollution>
+    </car>
+    <car id="gold_3" src="wikipedia">
+        <manufacturer>Mercedes Benz</manufacturer>
+        <model>B180</model>
+        <fuelType>Diesel</fuelType>
+        <transmission>Automatic</transmission>
+        <horse-power>109</horse-power>
+        <region>
+            <zip-code id="car">35576</zip-code>
+            <stationId>STA.DE_DEHE081</stationId>
+            <latitude>50.57642499999999</latitude>
+            <longitude>8.481714</longitude>
+            <zip-code id="station">35576</zip-code>
+            <city>Wetzlar</city>
+        </region>
+        <mileage>150000</mileage>
+        <pollution>
+            <pollutant>Nitrogen dioxide (air)</pollutant>
+            <air-quality/>
+            <aq-unit>ug.m-3</aq-unit>
+        </pollution>
+    </car>
+    <car id="gold_4" src="wikipedia">
+        <manufacturer>Audi</manufacturer>
+        <model>A8</model>
+        <fuelType>Diesel</fuelType>
+        <transmission>Automatic</transmission>
+        <horse-power>233</horse-power>
+        <region>
+            <zip-code id="car">71711</zip-code>
+            <stationId>STA.DE_DEBW142</stationId>
+            <latitude>48.90292</latitude>
+            <longitude>9.08135</longitude>
+            <zip-code id="station">71706</zip-code>
+            <city>Markgröningen</city>
+        </region>
+        <mileage>150000</mileage>
+        <pollution>
+            <pollutant>Nitrogen dioxide (air)</pollutant>
+            <air-quality>41.541885</air-quality>
+            <aq-unit>ug.m-3</aq-unit>
+        </pollution>
+    </car>
+    <car id="gold_5">
+        <manufacturer>BMW</manufacturer>
+        <model>325i</model>
+        <fuelType>Petrol</fuelType>
+        <transmission>Manual</transmission>
+        <horse-power>218</horse-power>
+        <region>
+            <zip-code>1129</zip-code>
+            <stationId />
+            <latitude />
+            <longitude />
+            <zip-code />
+            <city />
+        </region>
+        <mileage>50000</mileage>
+        <pollution>
+            <pollutant>Nitrogen dioxide (air)</pollutant>
+            <air-quality />
+            <aq-unit>ug.m-3</aq-unit>
+        </pollution>
     </car>
 </target>
