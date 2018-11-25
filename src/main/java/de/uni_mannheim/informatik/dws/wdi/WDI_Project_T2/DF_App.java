@@ -69,11 +69,15 @@ public class DF_App {
         strategy.addAttributeFuser(Car.TRANSMISSION, new TransmissionFuserLongestString(), new TransmissionEvaluationRule());
         strategy.addAttributeFuser(Car.HORSE_POWER, new HorsePowerFuserAvg(), new HorsePowerEvaluationRule());
         strategy.addAttributeFuser(Car.ZIP_CODE, new ZipCodeFuserMedian(), new ZipCodeEvaluationRule());
+        strategy.addAttributeFuser(Car.STATIOND_ID, new StationIdFuserLongestString(), new StationIdEvaluationRule());
+        strategy.addAttributeFuser(Car.LATITUDE, new LatitudeFuserMedian(), new LatitudeEvaluationRule());
+        strategy.addAttributeFuser(Car.LONGITUDE, new LongitudeFuserMedian(), new LongitudeEvaluationRule());
+        strategy.addAttributeFuser(Car.CITY, new CityFuserLongestString(), new CityEvaluationRule());
         strategy.addAttributeFuser(Car.EMISSION, new EmissionFuserAvg(), new EmissionEvaluationRule());
 
         logger.info("Starting the fusion...");
         DataFusionEngine<Car, Attribute> engine = new DataFusionEngine<>(strategy);
-        // TODO: Enable after checking that the fusion works
+        // TODO: Reenable for debugging - not necessary for the actual fusion
         // engine.printClusterConsistencyReport(correspondences, null);
         // engine.writeRecordGroupsByConsistency(new File("data/output/recordGroupConsistencies.csv"), correspondences, null);
 

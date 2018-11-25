@@ -52,12 +52,18 @@ public class Car extends AbstractRecord<Attribute> {
     public static final Attribute TRANSMISSION = new Attribute("Transmission");
     public static final Attribute HORSE_POWER = new Attribute("HorsePower");
     public static final Attribute ZIP_CODE = new Attribute("ZipCode");
+    public static final Attribute STATIOND_ID = new Attribute("StationId");
+    public static final Attribute LATITUDE = new Attribute("Latitude");
+    public static final Attribute LONGITUDE = new Attribute("Longitude");
+    public static final Attribute CITY = new Attribute("City");
     public static final Attribute EMISSION = new Attribute("Emission");
     public static final Attribute MILEAGE = new Attribute("Mileage");
 
     public Car(String identifier, String provenance) {
         this.identifier = identifier;
         this.provenance = provenance;
+        this.region = new Region(identifier, provenance);
+        this.pollution = new Pollution(identifier, provenance);
     }
 
     @Override
@@ -165,6 +171,14 @@ public class Car extends AbstractRecord<Attribute> {
             return getMileage() > 0;
         if (attribute == ZIP_CODE)
             return getRegion() != null && getRegion().getZipCode() > 0;
+        if (attribute == STATIOND_ID)
+            return getRegion() != null && getRegion().getStationId() != null;
+        if (attribute == LATITUDE)
+            return getRegion() != null && getRegion().getLatitude() > 0;
+        if (attribute == LONGITUDE)
+            return getRegion() != null && getRegion().getLongitude() > 0;
+        if (attribute == CITY)
+            return getRegion() != null && getRegion().getCity() != null;
         return false;
     }
 
