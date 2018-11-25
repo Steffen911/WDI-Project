@@ -21,7 +21,10 @@ public class CarBlockingKeyByStationIdGenerator extends RecordBlockingKeyGenerat
             return;
         }
         // TODO: Check if this is necessary
-        if (car.getPollution() != null && !car.getPollution().getPollutant().equals("Nitrogen dioxide (air)")) {
+        if (car.getPollution() != null &&
+            car.getPollution().getPollutant() != null &&
+            !car.getPollution().getPollutant().equals("Nitrogen dioxide (air)")
+        ) {
             return;
         }
         resultCollector.next(new Pair<>(car.getRegion().getStationId(), car));

@@ -58,6 +58,9 @@ public class Car extends AbstractRecord<Attribute> {
     public static final Attribute CITY = new Attribute("City");
     public static final Attribute EMISSION = new Attribute("Emission");
     public static final Attribute MILEAGE = new Attribute("Mileage");
+    public static final Attribute POLLUTANT = new Attribute("Pollutant");
+    public static final Attribute AIR_QUALITY = new Attribute("AirQuality");
+    public static final Attribute AQ_UNIT = new Attribute("AqUnit");
 
     public Car(String identifier, String provenance) {
         this.identifier = identifier;
@@ -179,6 +182,12 @@ public class Car extends AbstractRecord<Attribute> {
             return getRegion() != null && getRegion().getLongitude() > 0;
         if (attribute == CITY)
             return getRegion() != null && getRegion().getCity() != null;
+        if (attribute == POLLUTANT)
+            return getPollution() != null && getPollution().getPollutant() != null;
+        if (attribute == AIR_QUALITY)
+            return getPollution() != null && getPollution().getAirQuality() > 0;
+        if (attribute == AQ_UNIT)
+            return getPollution() != null && getPollution().getAqUnit() != null;
         return false;
     }
 

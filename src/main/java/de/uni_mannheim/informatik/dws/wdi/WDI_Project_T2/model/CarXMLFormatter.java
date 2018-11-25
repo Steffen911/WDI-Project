@@ -19,6 +19,11 @@ import org.w3c.dom.Element;
  *          <city>Leinfelden-Echterdingen</city>
  * 		</region>
  * 		<mileage>50000</mileage>
+ * 	    <pollution>
+ * 	        <pollutant>Nitrogen dioxide (air)</pollutant>
+ * 	        <air-quality>46.503863</air-quality>
+ *          <aq-unit>ug.m-3</aq-unit>
+ * 	    </pollution>
  * 	</car>
  */
 public class CarXMLFormatter extends XMLFormatter<Car> {
@@ -36,7 +41,6 @@ public class CarXMLFormatter extends XMLFormatter<Car> {
         car.appendChild(createTextElement("fuelType", c.getFuelType(), doc));
         car.appendChild(createTextElement("transmission", c.getTransmission(), doc));
         car.appendChild(createTextElement("horse-power", "" + c.getHorsePower(), doc));
-        car.appendChild(createTextElement("mileage", "" + c.getMileage(), doc));
 
         Element region = doc.createElement("region");
         region.appendChild(createTextElement("zip-code", "" + c.getRegion().getZipCode(), doc));
@@ -44,8 +48,15 @@ public class CarXMLFormatter extends XMLFormatter<Car> {
         region.appendChild(createTextElement("latitude", "" + c.getRegion().getLatitude(), doc));
         region.appendChild(createTextElement("longitude", "" + c.getRegion().getLongitude(), doc));
         region.appendChild(createTextElement("city", c.getRegion().getCity(), doc));
-
         car.appendChild(region);
+
+        car.appendChild(createTextElement("mileage", "" + c.getMileage(), doc));
+
+        Element pollution = doc.createElement("pollution");
+        pollution.appendChild(createTextElement("pollutant", c.getPollution().getPollutant(), doc));
+        pollution.appendChild(createTextElement("air-quality", "" + c.getPollution().getAirQuality(), doc));
+        pollution.appendChild(createTextElement("aq-unit", c.getPollution().getAqUnit(), doc));
+        car.appendChild(pollution);
 
         return car;
     }

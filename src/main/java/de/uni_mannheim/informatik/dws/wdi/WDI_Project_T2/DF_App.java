@@ -74,6 +74,9 @@ public class DF_App {
         strategy.addAttributeFuser(Car.LONGITUDE, new LongitudeFuserMedian(), new LongitudeEvaluationRule());
         strategy.addAttributeFuser(Car.CITY, new CityFuserLongestString(), new CityEvaluationRule());
         strategy.addAttributeFuser(Car.EMISSION, new EmissionFuserAvg(), new EmissionEvaluationRule());
+        strategy.addAttributeFuser(Car.POLLUTANT, new PollutantFuserLongestString(), new PollutantEvaluationRule());
+        strategy.addAttributeFuser(Car.AIR_QUALITY, new AirQualityFuserMedian(), new AirQualityEvaluationRule());
+        strategy.addAttributeFuser(Car.AQ_UNIT, new AqUnitFuserLongestString(), new AqUnitEvaluationRule());
 
         logger.info("Starting the fusion...");
         DataFusionEngine<Car, Attribute> engine = new DataFusionEngine<>(strategy);
