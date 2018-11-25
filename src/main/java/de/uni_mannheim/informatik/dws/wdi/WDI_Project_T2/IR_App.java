@@ -25,14 +25,6 @@ public class IR_App {
 
     public static final Logger logger = WinterLogManager.activateLogger("default");
 
-    private static HashedDataSet<Car, Attribute> loadData(String fileName) throws Exception {
-        ClassLoader classloader = Thread.currentThread().getContextClassLoader();
-        HashedDataSet<Car, Attribute> ds = new HashedDataSet<>();
-        logger.info("Loading " + fileName + "...");
-        new CarXMLReader().loadFromXML(new File(classloader.getResource("data/" + fileName + ".xml").getFile()), "/target/car", ds);
-        return ds;
-    }
-
     public static void main(String[] args) throws Exception {
         // Load the datasets
         logger.info("Loading datasets...");
@@ -259,7 +251,7 @@ public class IR_App {
     ) throws Exception {
         // Add comparators
         logger.info("Add matchingrules");
-        LinearCombinationMatchingRule<Car, Attribute> matchingRule = new LinearCombinationMatchingRule<>(0.6);
+        LinearCombinationMatchingRule<Car, Attribute> matchingRule = new LinearCombinationMatchingRule<>(0.9);
         matchingRule.addComparator(new CarZipComparatorAbsoluteDifference(), 1.0);
 
         // Add blocking strategy
@@ -282,7 +274,7 @@ public class IR_App {
     ) throws Exception {
         // Add comparators
         logger.info("Add matchingrules");
-        LinearCombinationMatchingRule<Car, Attribute> matchingRule = new LinearCombinationMatchingRule<>(0.8);
+        LinearCombinationMatchingRule<Car, Attribute> matchingRule = new LinearCombinationMatchingRule<>(0.9);
         matchingRule.addComparator(new CarStationComparatorLevenshtein(), 1.0);
 
         // Add blocking strategy
@@ -302,6 +294,17 @@ public class IR_App {
     private static Car getRandom(Car[] array) {
         int rnd = new Random().nextInt(array.length);
         return array[rnd];
+    }
+
+    /**
+     * Load a dataset with the given name into memory and return it.
+     */
+    private static HashedDataSet<Car, Attribute> loadData(String fileName) throws Exception {
+        ClassLoader classloader = Thread.currentThread().getContextClassLoader();
+        HashedDataSet<Car, Attribute> ds = new HashedDataSet<>();
+        logger.info("Loading " + fileName + "...");
+        new CarXMLReader().loadFromXML(new File(classloader.getResource("data/" + fileName + ".xml").getFile()), "/target/car", ds);
+        return ds;
     }
 
 }

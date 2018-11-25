@@ -51,6 +51,7 @@ public class Car extends AbstractRecord<Attribute> {
     public static final Attribute FUEL_TYPE = new Attribute("FuelType");
     public static final Attribute TRANSMISSION = new Attribute("Transmission");
     public static final Attribute HORSE_POWER = new Attribute("HorsePower");
+    public static final Attribute ZIP_CODE = new Attribute("ZipCode");
     public static final Attribute EMISSION = new Attribute("Emission");
     public static final Attribute MILEAGE = new Attribute("Mileage");
 
@@ -162,6 +163,8 @@ public class Car extends AbstractRecord<Attribute> {
             return getHorsePower() > 0;
         if (attribute == MILEAGE)
             return getMileage() > 0;
+        if (attribute == ZIP_CODE)
+            return getRegion() != null && getRegion().getZipCode() > 0;
         return false;
     }
 

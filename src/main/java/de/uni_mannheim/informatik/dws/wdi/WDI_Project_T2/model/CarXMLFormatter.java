@@ -33,6 +33,12 @@ public class CarXMLFormatter extends XMLFormatter<Car> {
         car.appendChild(createTextElement("transmission", c.getTransmission(), doc));
         car.appendChild(createTextElement("horse-power", "" + c.getHorsePower(), doc));
         car.appendChild(createTextElement("mileage", "" + c.getMileage(), doc));
+
+        Element region = doc.createElement("region");
+        region.appendChild(createTextElement("zip-code", "" + c.getRegion().getZipCode(), doc));
+
+        car.appendChild(region);
+
         return car;
     }
 

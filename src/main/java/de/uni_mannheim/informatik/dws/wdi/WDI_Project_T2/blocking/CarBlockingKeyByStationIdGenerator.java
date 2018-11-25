@@ -20,6 +20,10 @@ public class CarBlockingKeyByStationIdGenerator extends RecordBlockingKeyGenerat
         if (car.getRegion() == null || car.getRegion().getStationId() == null) {
             return;
         }
+        // TODO: Check if this is necessary
+        if (car.getPollution() != null && !car.getPollution().getPollutant().equals("Nitrogen dioxide (air)")) {
+            return;
+        }
         resultCollector.next(new Pair<>(car.getRegion().getStationId(), car));
     }
 
