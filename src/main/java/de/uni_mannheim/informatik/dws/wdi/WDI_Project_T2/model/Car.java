@@ -1,6 +1,7 @@
 package de.uni_mannheim.informatik.dws.wdi.WDI_Project_T2.model;
 
-import de.uni_mannheim.informatik.dws.winter.model.Matchable;
+import de.uni_mannheim.informatik.dws.winter.model.AbstractRecord;
+import de.uni_mannheim.informatik.dws.winter.model.defaultmodel.Attribute;
 
 /**
  * An AbstractRecord Representing a car.
@@ -28,7 +29,7 @@ import de.uni_mannheim.informatik.dws.winter.model.Matchable;
  * 		</pollution>
  * 	</car>
  */
-public class Car implements Matchable {
+public class Car extends AbstractRecord<Attribute> {
 
     // Mandatory properties of Matchable
     private String identifier;
@@ -44,6 +45,14 @@ public class Car implements Matchable {
     private double emission;
     private double mileage;
     private Pollution pollution;
+
+    public static final Attribute MANUFACTURER = new Attribute("Manufacturer");
+    public static final Attribute MODEL = new Attribute("Model");
+    public static final Attribute FUEL_TYPE = new Attribute("FuelType");
+    public static final Attribute TRANSMISSION = new Attribute("Transmission");
+    public static final Attribute HORSE_POWER = new Attribute("HorsePower");
+    public static final Attribute EMISSION = new Attribute("Emission");
+    public static final Attribute MILEAGE = new Attribute("Mileage");
 
     public Car(String identifier, String provenance) {
         this.identifier = identifier;
@@ -136,4 +145,24 @@ public class Car implements Matchable {
     public void setPollution(Pollution pollution) {
         this.pollution = pollution;
     }
+
+    @Override
+    public boolean hasValue(Attribute attribute) {
+        if (attribute == MANUFACTURER)
+            return getManufacturer() != null && !getManufacturer().isEmpty();
+        if (attribute == MODEL)
+            return getModel() != null && !getModel().isEmpty();
+        if (attribute == FUEL_TYPE)
+            return getFuelType() != null && !getFuelType().isEmpty();
+        if (attribute == TRANSMISSION)
+            return getTransmission() != null && !getTransmission().isEmpty();
+        if (attribute == EMISSION)
+            return getEmission() > 0;
+        if (attribute == HORSE_POWER)
+            return getHorsePower() > 0;
+        if (attribute == MILEAGE)
+            return getMileage() > 0;
+        return false;
+    }
+
 }
