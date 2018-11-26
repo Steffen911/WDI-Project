@@ -28,21 +28,11 @@ public class DF_App {
         // Load the datasets
         logger.info("Loading datasets...");
         ClassLoader classloader = Thread.currentThread().getContextClassLoader();
-        FusibleDataSet<Car, Attribute> carEmissions = new FusibleHashedDataSet<>();
-        logger.info("Loading car_emissions_dupfree...");
-        new CarXMLReader().loadFromXML(new File(classloader.getResource("data/car_emissions_dupfree.xml").getFile()), "/target/car", carEmissions);
-
-        FusibleDataSet<Car, Attribute> offerInt = new FusibleHashedDataSet<>();
-        logger.info("Loading offers_dupfree ...");
-        new CarXMLReader().loadFromXML(new File(classloader.getResource("data/offers_dupfree.xml").getFile()), "/target/car", offerInt);
-
-        FusibleDataSet<Car, Attribute> stations = new FusibleHashedDataSet<>();
-        logger.info("Loading station_target...");
-        new CarXMLReader().loadFromXML(new File(classloader.getResource("data/station_target.xml").getFile()), "/target/car", stations);
-
-        FusibleDataSet<Car, Attribute> vehicles = new FusibleHashedDataSet<>();
-        logger.info("Loading vehicles_dupfree...");
-        new CarXMLReader().loadFromXML(new File(classloader.getResource("data/vehicles_dupfree.xml").getFile()), "/target/car", vehicles);
+        FusibleHashedDataSet<Car, Attribute> carEmissions = DF_App.loadData("car_emissions_dupfree");
+        FusibleHashedDataSet<Car, Attribute> offerInt = DF_App.loadData("offers_dupfree");
+        FusibleHashedDataSet<Car, Attribute> stations = DF_App.loadData("station_target");
+        FusibleHashedDataSet<Car, Attribute> regionEmissions = DF_App.loadData("region_emissions_target");
+        FusibleHashedDataSet<Car, Attribute> vehicles = DF_App.loadData("vehicles_dupfree");
 
         logger.info("Successfully loaded data sets");
 
@@ -50,6 +40,7 @@ public class DF_App {
         carEmissions.setScore(3.0);
         offerInt.setScore(1.0);
         stations.setScore(3.0);
+        regionEmissions.setScore(3.0);
         vehicles.setScore(3.0);
 
         // Load correspondences
@@ -58,6 +49,8 @@ public class DF_App {
         correspondences.loadCorrespondences(new File("data/output/offers-caremissions.csv"), offerInt, carEmissions);
         correspondences.loadCorrespondences(new File("data/output/offers-vehicles.csv"), offerInt, vehicles);
         correspondences.loadCorrespondences(new File("data/output/vehicles-caremissions.csv"), vehicles, carEmissions);
+        correspondences.loadCorrespondences(new File("data/output/offers-stations.csv"), offerInt, stations);
+        correspondences.loadCorrespondences(new File("data/output/stations-regionEmissions.csv"), stations, regionEmissions);
 
         correspondences.printGroupSizeDistribution();
 
@@ -75,12 +68,21 @@ public class DF_App {
         strategy.addAttributeFuser(Car.FUEL_TYPE, new FuelTypeFuserLongestString(), new FuelTypeEvaluationRule());
         strategy.addAttributeFuser(Car.TRANSMISSION, new TransmissionFuserLongestString(), new TransmissionEvaluationRule());
         strategy.addAttributeFuser(Car.HORSE_POWER, new HorsePowerFuserAvg(), new HorsePowerEvaluationRule());
+        strategy.addAttributeFuser(Car.ZIP_CODE, new ZipCodeFuserMedian(), new ZipCodeEvaluationRule());
+        strategy.addAttributeFuser(Car.STATIOND_ID, new StationIdFuserLongestString(), new StationIdEvaluationRule());
+        strategy.addAttributeFuser(Car.LATITUDE, new LatitudeFuserMedian(), new LatitudeEvaluationRule());
+        strategy.addAttributeFuser(Car.LONGITUDE, new LongitudeFuserMedian(), new LongitudeEvaluationRule());
+        strategy.addAttributeFuser(Car.CITY, new CityFuserLongestString(), new CityEvaluationRule());
         strategy.addAttributeFuser(Car.EMISSION, new EmissionFuserAvg(), new EmissionEvaluationRule());
+        strategy.addAttributeFuser(Car.POLLUTANT, new PollutantFuserLongestString(), new PollutantEvaluationRule());
+        strategy.addAttributeFuser(Car.AIR_QUALITY, new AirQualityFuserMedian(), new AirQualityEvaluationRule());
+        strategy.addAttributeFuser(Car.AQ_UNIT, new AqUnitFuserLongestString(), new AqUnitEvaluationRule());
 
         logger.info("Starting the fusion...");
         DataFusionEngine<Car, Attribute> engine = new DataFusionEngine<>(strategy);
-        engine.printClusterConsistencyReport(correspondences, null);
-        engine.writeRecordGroupsByConsistency(new File("data/output/recordGroupConsistentcies.csv"), correspondences, null);
+        // TODO: Reenable for debugging - not necessary for the actual fusion
+        // engine.printClusterConsistencyReport(correspondences, null);
+        // engine.writeRecordGroupsByConsistency(new File("data/output/recordGroupConsistencies.csv"), correspondences, null);
 
         logger.info("Running the data fusion...");
         FusibleDataSet<Car, Attribute> fusedDataset = engine.run(correspondences, null);
@@ -94,4 +96,13 @@ public class DF_App {
         logger.info(String.format("Got an accuracy score of %.2f", accuracy));
 
     }
+
+    private static FusibleHashedDataSet<Car, Attribute> loadData(String fileName) throws Exception {
+        ClassLoader classloader = Thread.currentThread().getContextClassLoader();
+        FusibleHashedDataSet<Car, Attribute> ds = new FusibleHashedDataSet<>();
+        logger.info("Loading " + fileName + "...");
+        new CarXMLReader().loadFromXML(new File(classloader.getResource("data/" + fileName + ".xml").getFile()), "/target/car", ds);
+        return ds;
+    }
+
 }

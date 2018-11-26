@@ -51,12 +51,22 @@ public class Car extends AbstractRecord<Attribute> {
     public static final Attribute FUEL_TYPE = new Attribute("FuelType");
     public static final Attribute TRANSMISSION = new Attribute("Transmission");
     public static final Attribute HORSE_POWER = new Attribute("HorsePower");
+    public static final Attribute ZIP_CODE = new Attribute("ZipCode");
+    public static final Attribute STATIOND_ID = new Attribute("StationId");
+    public static final Attribute LATITUDE = new Attribute("Latitude");
+    public static final Attribute LONGITUDE = new Attribute("Longitude");
+    public static final Attribute CITY = new Attribute("City");
     public static final Attribute EMISSION = new Attribute("Emission");
     public static final Attribute MILEAGE = new Attribute("Mileage");
+    public static final Attribute POLLUTANT = new Attribute("Pollutant");
+    public static final Attribute AIR_QUALITY = new Attribute("AirQuality");
+    public static final Attribute AQ_UNIT = new Attribute("AqUnit");
 
     public Car(String identifier, String provenance) {
         this.identifier = identifier;
         this.provenance = provenance;
+        this.region = new Region(identifier, provenance);
+        this.pollution = new Pollution(identifier, provenance);
     }
 
     @Override
@@ -162,6 +172,22 @@ public class Car extends AbstractRecord<Attribute> {
             return getHorsePower() > 0;
         if (attribute == MILEAGE)
             return getMileage() > 0;
+        if (attribute == ZIP_CODE)
+            return getRegion() != null && getRegion().getZipCode() > 0;
+        if (attribute == STATIOND_ID)
+            return getRegion() != null && getRegion().getStationId() != null;
+        if (attribute == LATITUDE)
+            return getRegion() != null && getRegion().getLatitude() > 0;
+        if (attribute == LONGITUDE)
+            return getRegion() != null && getRegion().getLongitude() > 0;
+        if (attribute == CITY)
+            return getRegion() != null && getRegion().getCity() != null;
+        if (attribute == POLLUTANT)
+            return getPollution() != null && getPollution().getPollutant() != null;
+        if (attribute == AIR_QUALITY)
+            return getPollution() != null && getPollution().getAirQuality() > 0;
+        if (attribute == AQ_UNIT)
+            return getPollution() != null && getPollution().getAqUnit() != null;
         return false;
     }
 
