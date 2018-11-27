@@ -66,7 +66,7 @@ public class DF_App {
         strategy.addAttributeFuser(Car.MANUFACTURER, new ManufacturerFuserLongestString(), new ManufacturerEvaluationRule());
         strategy.addAttributeFuser(Car.MODEL, new ModelFuserCascading(), new ModelEvaluationRule());
         strategy.addAttributeFuser(Car.FUEL_TYPE, new FuelTypeFuserVotingString(), new FuelTypeEvaluationRule());
-        strategy.addAttributeFuser(Car.TRANSMISSION, new TransmissionFuserLongestString(), new TransmissionEvaluationRule());
+        strategy.addAttributeFuser(Car.TRANSMISSION, new TransmissionFuserVotingString(), new TransmissionEvaluationRule());
         strategy.addAttributeFuser(Car.HORSE_POWER, new HorsePowerFuserAvg(), new HorsePowerEvaluationRule());
         strategy.addAttributeFuser(Car.ZIP_CODE, new ZipCodeFuserMedian(), new ZipCodeEvaluationRule());
         strategy.addAttributeFuser(Car.STATIOND_ID, new StationIdFuserLongestString(), new StationIdEvaluationRule());
