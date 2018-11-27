@@ -98,5 +98,18 @@ public class Utils {
             return "automatic";
         return transmission;
     }
+
+    public static String cleanModelDescriptionDataFusion(String modelDescription){
+        if (modelDescription.equals("")){
+            return modelDescription;
+        }
+        String cleaned = Utils.removeUnderscores(modelDescription);
+        cleaned = Utils.replaceUmlaute(cleaned);
+        cleaned = keepDescriptionWords(cleaned);
+        cleaned = Utils.ignoreWords(cleaned);
+        cleaned = Utils.removeDuplicateWords(cleaned);
+        return cleaned.trim();
+
+    }
 }
 
