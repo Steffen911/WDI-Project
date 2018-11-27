@@ -1,6 +1,8 @@
 package de.uni_mannheim.informatik.dws.wdi.WDI_Project_T2;
 
 import de.uni_mannheim.informatik.dws.wdi.WDI_Project_T2.blocking.CarBlockingKeyByManufacturerGenerator;
+import de.uni_mannheim.informatik.dws.wdi.WDI_Project_T2.blocking.CarBlockingKeyByStationIdGenerator;
+import de.uni_mannheim.informatik.dws.wdi.WDI_Project_T2.blocking.CarBlockingKeyByZipGenerator;
 import de.uni_mannheim.informatik.dws.wdi.WDI_Project_T2.comparator.*;
 import de.uni_mannheim.informatik.dws.wdi.WDI_Project_T2.model.Car;
 import de.uni_mannheim.informatik.dws.wdi.WDI_Project_T2.model.CarXMLReader;
@@ -27,21 +29,11 @@ public class IR_App {
         // Load the datasets
         logger.info("Loading datasets...");
         ClassLoader classloader = Thread.currentThread().getContextClassLoader();
-        HashedDataSet<Car, Attribute> carEmissions = new HashedDataSet<>();
-        logger.info("Loading car_emissions_dupfree...");
-        new CarXMLReader().loadFromXML(new File(classloader.getResource("data/car_emissions_dupfree.xml").getFile()), "/target/car", carEmissions);
-
-        HashedDataSet<Car, Attribute> offerInt = new HashedDataSet<>();
-        logger.info("Loading offers_dupfree ...");
-        new CarXMLReader().loadFromXML(new File(classloader.getResource("data/offers_dupfree.xml").getFile()), "/target/car", offerInt);
-
-        HashedDataSet<Car, Attribute> stations = new HashedDataSet<>();
-        logger.info("Loading station_target...");
-        new CarXMLReader().loadFromXML(new File(classloader.getResource("data/station_target.xml").getFile()), "/target/car", stations);
-
-        HashedDataSet<Car, Attribute> vehicles = new HashedDataSet<>();
-        logger.info("Loading vehicles_dupfree...");
-        new CarXMLReader().loadFromXML(new File(classloader.getResource("data/vehicles_dupfree.xml").getFile()), "/target/car", vehicles);
+        HashedDataSet<Car, Attribute> carEmissions = IR_App.loadData("car_emissions_dupfree");
+        HashedDataSet<Car, Attribute> offerInt = IR_App.loadData("offers_dupfree");
+        HashedDataSet<Car, Attribute> stations = IR_App.loadData("station_target");
+        HashedDataSet<Car, Attribute> regionEmissions = IR_App.loadData("region_emissions_target");
+        HashedDataSet<Car, Attribute> vehicles = IR_App.loadData("vehicles_dupfree");
 
         logger.info("Successfully loaded data sets");
 
@@ -51,12 +43,14 @@ public class IR_App {
 
         // Prepare reusable datasets and parameters
         int blockSize = 1000;
-        int iterations = 3;
+        int iterations = 1;
         logger.info("matching " + blockSize * iterations + " random offers with carEmissions");
         Car[] carOffers = offerInt.get().toArray(new Car[]{});
         Processable<Correspondence<Car, Attribute>> offersCarEmissionCorrespondences = null;
         Processable<Correspondence<Car, Attribute>> offersVehiclesCorrespondences = null;
         Processable<Correspondence<Car, Attribute>> vehiclesCarEmissionCorrespondences = null;
+        Processable<Correspondence<Car, Attribute>> stationsRegionEmissionCorrespondences = null;
+        Processable<Correspondence<Car, Attribute>> offersStationsCorrespondences = null;
         for (int i = 0; i < iterations; i++) {
 
             System.gc();
@@ -97,12 +91,10 @@ public class IR_App {
                 }
             }
 
-
             /*
              * Offers - Vehicles
              */
-
-           // corr = getOffersVehiclesCorrespondences(offers, vehicles);
+            corr = getOffersVehiclesCorrespondences(offers, vehicles);
             if (offersVehiclesCorrespondences == null) {
                 offersVehiclesCorrespondences = corr;
             } else {
@@ -111,12 +103,10 @@ public class IR_App {
                 }
             }
 
-
             /*
              * Offers - Vehicles
              */
-
-           // corr = getVehiclesCarEmissionCorrespondences(vehicles, carEmissions);
+            corr = getVehiclesCarEmissionCorrespondences(vehicles, carEmissions);
             if (vehiclesCarEmissionCorrespondences == null) {
                 vehiclesCarEmissionCorrespondences = corr;
             } else {
@@ -125,6 +115,29 @@ public class IR_App {
                 }
             }
 
+            /*
+             * Stations - Region Emissions
+             */
+            corr = getStationsRegionEmissionCorrespondences(stations, regionEmissions);
+            if (stationsRegionEmissionCorrespondences == null) {
+                stationsRegionEmissionCorrespondences = corr;
+            } else {
+                for (Correspondence<Car, Attribute> correspondence : corr.get()) {
+                    stationsRegionEmissionCorrespondences.add(correspondence);
+                }
+            }
+
+            /*
+             * Offers - Stations
+             */
+            corr = getOffersStationsCorrespondences(offers, stations);
+            if (offersStationsCorrespondences == null) {
+                offersStationsCorrespondences = corr;
+            } else {
+                for (Correspondence<Car, Attribute> correspondence : corr.get()) {
+                    offersStationsCorrespondences.add(correspondence);
+                }
+            }
 
             logger.info("Successfully completed the matching for iteration " + (i + 1) + "/" + iterations);
 
@@ -136,11 +149,17 @@ public class IR_App {
         ovecGs.loadFromCSVFile(new File(classloader.getResource("goldstandard/ovec.csv").getFile()));
         MatchingGoldStandard cevecGs = new MatchingGoldStandard();
         cevecGs.loadFromCSVFile(new File(classloader.getResource("goldstandard/cevec.csv").getFile()));
+        MatchingGoldStandard sreGs = new MatchingGoldStandard();
+        sreGs.loadFromCSVFile(new File(classloader.getResource("goldstandard/sre.csv").getFile()));
+        MatchingGoldStandard osGs = new MatchingGoldStandard();
+        osGs.loadFromCSVFile(new File(classloader.getResource("goldstandard/os.csv").getFile()));
         logger.info("Successfully loaded the goldstandards");
 
-        evaluateDataset("offers-caremissions", offersCarEmissionCorrespondences, goldStandardTest);
-        //evaluateDataset("offers-vehicles", offersVehiclesCorrespondences, goldStandardTest);
-        //evaluateDataset("vehicles-caremissions", vehiclesCarEmissionCorrespondences, goldStandardTest);
+        evaluateDataset("offers-caremissions", offersCarEmissionCorrespondences, oceGs);
+        evaluateDataset("offers-vehicles", offersVehiclesCorrespondences, ovecGs);
+        evaluateDataset("vehicles-caremissions", vehiclesCarEmissionCorrespondences, cevecGs);
+        evaluateDataset("stations-regionEmissions", stationsRegionEmissionCorrespondences, sreGs);
+        evaluateDataset("offers-stations", offersStationsCorrespondences, osGs);
     }
 
     /**
@@ -169,11 +188,10 @@ public class IR_App {
     ) throws Exception {
         // Add comparators
         logger.info("Add matchingrules");
-        LinearCombinationMatchingRule<Car, Attribute> matchingRule = new LinearCombinationMatchingRule<>(0.75);
-
-        matchingRule.addComparator(new CarModelComparatorMaximumTokenContainment(), 0.4);
+        LinearCombinationMatchingRule<Car, Attribute> matchingRule = new LinearCombinationMatchingRule<>(0.65);
+        matchingRule.addComparator(new CarModelComparatorMaximumTokenContainment(), 0.5);
         matchingRule.addComparator(new CarFuelTypeComparatorLevenshtein(), 0.3);
-        matchingRule.addComparator(new CarTransmissionComparatorLevenshtein(), 0.3);
+        matchingRule.addComparator(new CarTransmissionComparatorLevenshtein(), 0.2);
 
         // Add blocking strategy
         logger.info("Initialize the blocker");
@@ -225,11 +243,68 @@ public class IR_App {
     }
 
     /**
+     * Get correspondences for stations and region emissions.
+     */
+    private static Processable<Correspondence<Car, Attribute>> getOffersStationsCorrespondences(
+        HashedDataSet<Car, Attribute> d1,
+        HashedDataSet<Car, Attribute> d2
+    ) throws Exception {
+        // Add comparators
+        logger.info("Add matchingrules");
+        LinearCombinationMatchingRule<Car, Attribute> matchingRule = new LinearCombinationMatchingRule<>(0.9);
+        matchingRule.addComparator(new CarZipComparatorAbsoluteDifference(), 1.0);
+
+        // Add blocking strategy
+        logger.info("Initialize the blocker");
+        StandardRecordBlocker<Car, Attribute> blocker = new StandardRecordBlocker<>(new CarBlockingKeyByZipGenerator());
+        blocker.setMeasureBlockSizes(true);
+        blocker.collectBlockSizeData("data/output/debugResultsBlocking.csv", 100);
+
+        // Add matching engine
+        MatchingEngine<Car, Attribute> engine = new MatchingEngine<>();
+        return engine.runIdentityResolution(d1, d2, null, matchingRule, blocker);
+    }
+
+    /**
+     * Get correspondences for offers and stations.
+     */
+    private static Processable<Correspondence<Car, Attribute>> getStationsRegionEmissionCorrespondences(
+        HashedDataSet<Car, Attribute> d1,
+        HashedDataSet<Car, Attribute> d2
+    ) throws Exception {
+        // Add comparators
+        logger.info("Add matchingrules");
+        LinearCombinationMatchingRule<Car, Attribute> matchingRule = new LinearCombinationMatchingRule<>(0.9);
+        matchingRule.addComparator(new CarStationComparatorLevenshtein(), 1.0);
+
+        // Add blocking strategy
+        logger.info("Initialize the blocker");
+        StandardRecordBlocker<Car, Attribute> blocker = new StandardRecordBlocker<>(new CarBlockingKeyByStationIdGenerator());
+        blocker.setMeasureBlockSizes(true);
+        blocker.collectBlockSizeData("data/output/debugResultsBlocking.csv", 100);
+
+        // Add matching engine
+        MatchingEngine<Car, Attribute> engine = new MatchingEngine<>();
+        return engine.runIdentityResolution(d1, d2, null, matchingRule, blocker);
+    }
+
+    /**
      * Get a random element from the given array.
      */
     private static Car getRandom(Car[] array) {
         int rnd = new Random().nextInt(array.length);
         return array[rnd];
+    }
+
+    /**
+     * Load a dataset with the given name into memory and return it.
+     */
+    private static HashedDataSet<Car, Attribute> loadData(String fileName) throws Exception {
+        ClassLoader classloader = Thread.currentThread().getContextClassLoader();
+        HashedDataSet<Car, Attribute> ds = new HashedDataSet<>();
+        logger.info("Loading " + fileName + "...");
+        new CarXMLReader().loadFromXML(new File(classloader.getResource("data/" + fileName + ".xml").getFile()), "/target/car", ds);
+        return ds;
     }
 
 }
