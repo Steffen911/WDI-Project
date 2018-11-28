@@ -1,5 +1,7 @@
 package de.uni_mannheim.informatik.dws.wdi.WDI_Project_T2.util;
 
+import org.apache.commons.lang.WordUtils;
+
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
@@ -14,7 +16,44 @@ public class Utils {
     { "ä", "ae" }, { "ü", "ue" }, { "ö", "oe" }, { "ß", "ss" }
     };
 
-    private static String[] IGNORE_WORDS = {"door", "tuer", "edition", "start", "stop", "assistant", "august", "november", "february", "march", "april", "june", "july", "august", "september", "october", "november", "december"};
+    private static String[] IGNORE_WORDS = {"door", "tuer", "edition", "start", "stop", "assistant", "august", "november", "february", "march", "april", "june", "july", "august", "september", "october", "november", "december", "Â", "•", "top", "Ã", "«"};
+
+    private static String[] MANUFACTUER  = { "audi",
+    "bmw",
+    "fiat",
+    "ford",
+    "honda",
+    "hyundai",
+    "jeep",
+    "mazda",
+    "mercedes_benz",
+    "mini",
+    "nissan",
+    "opel",
+    "peugeot",
+    "renault",
+    "seat",
+    "skoda",
+    "smart",
+    "volkswagen",
+    "citroen",
+    "alfa_romeo",
+    "volvo",
+    "mitsubishi",
+    "kia",
+    "suzuki",
+    "lancia",
+    "porsche",
+    "toyota",
+    "chevrolet",
+    "dacia",
+    "daihatsu",
+    "chrysler",
+    "jaguar",
+    "daewoo",
+    "rover",
+    "land_rover"};
+
 
 
     private static Pattern patternYears = Pattern.compile("(19[0-9]{2}$)|(2[0-9]{3}$)|(19[0-9]{2})|(2[0-9]{3})");
@@ -56,6 +95,13 @@ public class Utils {
         String result = text;
         for (int i = 0; i < IGNORE_WORDS.length; i++) {
             result = result.replace(IGNORE_WORDS[i], "");
+        }
+        return result;
+    }
+    private static String removeManufacturer(String text){
+        String result = text;
+        for (int i = 0; i < MANUFACTUER.length; i++) {
+            result = result.replace(MANUFACTUER[i], "");
         }
         return result;
     }
@@ -103,11 +149,13 @@ public class Utils {
         if (modelDescription.equals("")){
             return modelDescription;
         }
-        String cleaned = Utils.removeUnderscores(modelDescription);
+
+        String cleaned = Utils.removeUnderscores(modelDescription.toLowerCase());
+        cleaned = removeManufacturer(cleaned);
         cleaned = Utils.replaceUmlaute(cleaned);
-        cleaned = keepDescriptionWords(cleaned);
         cleaned = Utils.ignoreWords(cleaned);
         cleaned = Utils.removeDuplicateWords(cleaned);
+        cleaned = WordUtils.capitalize(cleaned);
         return cleaned.trim();
 
     }

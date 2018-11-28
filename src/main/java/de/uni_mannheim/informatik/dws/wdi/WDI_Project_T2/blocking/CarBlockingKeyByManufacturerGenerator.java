@@ -14,8 +14,41 @@ public class CarBlockingKeyByManufacturerGenerator extends RecordBlockingKeyGene
 
     private TokenizingJaccardSimilarity sim = new TokenizingJaccardSimilarity();
     private String[] manufacturers = {
-//mini
-        "land_rover"
+    "audi",
+    "bmw",
+    "fiat",
+    "ford",
+    "honda",
+    "hyundai",
+    "jeep",
+    "mazda",
+    "mercedes_benz",
+    "mini",
+    "nissan",
+    "opel",
+    "peugeot",
+    "renault",
+    "seat",
+    "skoda",
+    "smart",
+    "volkswagen",
+    "citroen",
+    "alfa_romeo",
+    "volvo",
+    "mitsubishi",
+    "kia",
+    "suzuki",
+    "lancia",
+    "porsche",
+    "toyota",
+    "chevrolet",
+    "dacia",
+    "daihatsu",
+    "chrysler",
+    "jaguar",
+    "daewoo",
+    "rover",
+    "land_rover"
     };
 
     @Override

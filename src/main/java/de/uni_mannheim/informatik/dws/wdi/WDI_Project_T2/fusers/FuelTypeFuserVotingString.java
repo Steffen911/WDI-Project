@@ -1,10 +1,8 @@
 package de.uni_mannheim.informatik.dws.wdi.WDI_Project_T2.fusers;
 
-import de.uni_mannheim.informatik.dws.wdi.WDI_Project_T2.conflictresolution.CascadingCRF;
 import de.uni_mannheim.informatik.dws.wdi.WDI_Project_T2.model.Car;
 import de.uni_mannheim.informatik.dws.winter.datafusion.AttributeValueFuser;
 import de.uni_mannheim.informatik.dws.winter.datafusion.conflictresolution.Voting;
-import de.uni_mannheim.informatik.dws.winter.datafusion.conflictresolution.list.Intersection;
 import de.uni_mannheim.informatik.dws.winter.model.Correspondence;
 import de.uni_mannheim.informatik.dws.winter.model.FusedValue;
 import de.uni_mannheim.informatik.dws.winter.model.Matchable;
