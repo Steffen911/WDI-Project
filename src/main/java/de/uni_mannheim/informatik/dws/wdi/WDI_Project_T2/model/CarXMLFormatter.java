@@ -36,29 +36,35 @@ public class CarXMLFormatter extends XMLFormatter<Car> {
     @Override
     public Element createElementFromRecord(Car c, Document doc) {
         Element car = doc.createElement("car");
-        car.appendChild(createTextElement("manufacturer", c.getManufacturer(), doc));
-        car.appendChild(createTextElement("model", c.getModel(), doc));
-        car.appendChild(createTextElement("fuelType", c.getFuelType(), doc));
-        car.appendChild(createTextElement("transmission", c.getTransmission(), doc));
-        car.appendChild(createTextElement("horse-power", "" + c.getHorsePower(), doc));
+        car.appendChild(createTextElementWithProvenance("manufacturer", c.getManufacturer(), c.getMergedAttributeProvenance(Car.MANUFACTURER), doc));
+        car.appendChild(createTextElementWithProvenance("model", c.getModel(), c.getMergedAttributeProvenance(Car.MODEL), doc));
+        car.appendChild(createTextElementWithProvenance("fuelType", c.getFuelType(), c.getMergedAttributeProvenance(Car.FUEL_TYPE), doc));
+        car.appendChild(createTextElementWithProvenance("transmission", c.getTransmission(), c.getMergedAttributeProvenance(Car.TRANSMISSION), doc));
+        car.appendChild(createTextElementWithProvenance("horse-power", "" + c.getHorsePower(), c.getMergedAttributeProvenance(Car.HORSE_POWER), doc));
 
         Element region = doc.createElement("region");
-        region.appendChild(createTextElement("zip-code", "" + c.getRegion().getZipCode(), doc));
-        region.appendChild(createTextElement("stationId", c.getRegion().getStationId(), doc));
-        region.appendChild(createTextElement("latitude", "" + c.getRegion().getLatitude(), doc));
-        region.appendChild(createTextElement("longitude", "" + c.getRegion().getLongitude(), doc));
-        region.appendChild(createTextElement("city", c.getRegion().getCity(), doc));
+        region.appendChild(createTextElementWithProvenance("zip-code", "" + c.getRegion().getZipCode(), c.getMergedAttributeProvenance(Car.ZIP_CODE), doc));
+        region.appendChild(createTextElementWithProvenance("stationId", c.getRegion().getStationId(), c.getMergedAttributeProvenance(Car.STATIOND_ID), doc));
+        region.appendChild(createTextElementWithProvenance("latitude", "" + c.getRegion().getLatitude(), c.getMergedAttributeProvenance(Car.LATITUDE), doc));
+        region.appendChild(createTextElementWithProvenance("longitude", "" + c.getRegion().getLongitude(), c.getMergedAttributeProvenance(Car.LONGITUDE), doc));
+        region.appendChild(createTextElementWithProvenance("city", c.getRegion().getCity(), c.getMergedAttributeProvenance(Car.CITY), doc));
         car.appendChild(region);
 
         car.appendChild(createTextElement("mileage", "" + c.getMileage(), doc));
 
         Element pollution = doc.createElement("pollution");
-        pollution.appendChild(createTextElement("pollutant", c.getPollution().getPollutant(), doc));
-        pollution.appendChild(createTextElement("air-quality", "" + c.getPollution().getAirQuality(), doc));
-        pollution.appendChild(createTextElement("aq-unit", c.getPollution().getAqUnit(), doc));
+        pollution.appendChild(createTextElementWithProvenance("pollutant", c.getPollution().getPollutant(), c.getMergedAttributeProvenance(Car.POLLUTANT), doc));
+        pollution.appendChild(createTextElementWithProvenance("air-quality", "" + c.getPollution().getAirQuality(), c.getMergedAttributeProvenance(Car.AIR_QUALITY), doc));
+        pollution.appendChild(createTextElementWithProvenance("aq-unit", c.getPollution().getAqUnit(), c.getMergedAttributeProvenance(Car.AQ_UNIT), doc));
         car.appendChild(pollution);
 
         return car;
+    }
+
+    private Element createTextElementWithProvenance(String name, String value, String provenance, Document doc) {
+        Element elem = createTextElement(name, value, doc);
+        elem.setAttribute("provenance", provenance);
+        return elem;
     }
 
 }

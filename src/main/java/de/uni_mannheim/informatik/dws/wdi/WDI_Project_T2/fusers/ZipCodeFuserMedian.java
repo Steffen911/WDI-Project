@@ -20,6 +20,7 @@ public class ZipCodeFuserMedian extends AttributeValueFuser<Double, Car, Attribu
     public void fuse(RecordGroup<Car, Attribute> group, Car fusedRecord, Processable<Correspondence<Attribute, Matchable>> correspondence, Attribute elem) {
         FusedValue<Double, Car, Attribute> fused = getFusedValue(group, correspondence, elem);
         int zip = (fused.getValue() != null) ? fused.getValue().intValue() : 0;
+        fusedRecord.setAttributeProvenance(Car.ZIP_CODE, fused.getOriginalIds());
         fusedRecord.getRegion().setZipCode(zip);
     }
 
@@ -30,7 +31,7 @@ public class ZipCodeFuserMedian extends AttributeValueFuser<Double, Car, Attribu
 
     @Override
     public boolean hasValue(Car c, Correspondence<Attribute, Matchable> correspondence) {
-        return c.hasValue(c.ZIP_CODE);
+        return c.hasValue(Car.ZIP_CODE);
     }
 
 }
