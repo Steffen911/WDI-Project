@@ -49,22 +49,22 @@ public class IR_ML {
         logger.info("Successfully loaded data sets");
 
         // create and trying different matching rules
-        //String modelType1 = "SimpleLogistic";
-        //String options1[] = new String[]{"-S"};
-        //String modelType2 = "NaiveBayes";
-        //String options2[] = new String[]{""};
-        //String modelType3 = "RandomForest";
-        //String options3[] = new String[]{""};
-        //String modelType6 = "ClassificationViaRegression";
-        //String options6[] = new String[]{""};
-        //String modelType7 = "DecisionTable";
-        //String options7[] = new String[]{""};
-        //String modelType8 = "HoeffdingTree";
-        //String options8[] = new String[]{""};
-        //String modelType10 = "SMO";
-        //String options10[] = new String[]{""};
-        //String modelType11 = "REPTree";
-        //String options11[] = new String[]{""};
+        // String modelType1 = "SimpleLogistic";
+        // String options1[] = new String[]{"-S"};
+        // String modelType2 = "NaiveBayes";
+        // String options2[] = new String[]{""};
+        // String modelType3 = "RandomForest";
+        // String options3[] = new String[]{""};
+        // String modelType6 = "ClassificationViaRegression";
+        // String options6[] = new String[]{""};
+        // String modelType7 = "DecisionTable";
+        // String options7[] = new String[]{""};
+        // String modelType8 = "HoeffdingTree";
+        // String options8[] = new String[]{""};
+        // String modelType10 = "SMO";
+        // String options10[] = new String[]{""};
+        // String modelType11 = "REPTree";
+        // String options11[] = new String[]{""};
 
         oceGs.loadFromCSVFile(new File(classloader.getResource("goldstandard/oce.csv").getFile()));
         ovecGs.loadFromCSVFile(new File(classloader.getResource("goldstandard/ovec.csv").getFile()));
@@ -283,6 +283,7 @@ public class IR_ML {
         int rnd = new Random().nextInt(array.length);
         return array[rnd];
     }
+
     private static void evaluateDataset(String name, Processable<Correspondence<Car, Attribute>> corr, MatchingGoldStandard gs) throws Exception {
         new CSVCorrespondenceFormatter().writeCSV(new File("data/output/" + name + ".csv"), corr);
         logger.info("Successfully wrote " + name + " to data/output/...");
