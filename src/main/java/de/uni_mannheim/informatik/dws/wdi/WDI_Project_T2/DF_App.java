@@ -43,6 +43,13 @@ public class DF_App {
         regionEmissions.setScore(3.0);
         vehicles.setScore(3.0);
 
+        // Print density report of each
+//        carEmissions.printDataSetDensityReport();
+//        offerInt.printDataSetDensityReport();
+//        stations.printDataSetDensityReport();
+//        regionEmissions.printDataSetDensityReport();
+//        vehicles.printDataSetDensityReport();
+
         // Load correspondences
         logger.info("Loading correspondences...");
         CorrespondenceSet<Car, Attribute> correspondences = new CorrespondenceSet<>();
@@ -75,13 +82,13 @@ public class DF_App {
         strategy.addAttributeFuser(Car.CITY, new CityFuserLongestString(), new CityEvaluationRule());
         strategy.addAttributeFuser(Car.EMISSION, new EmissionFuserAvg(), new EmissionEvaluationRule());
         strategy.addAttributeFuser(Car.POLLUTANT, new PollutantFuserLongestString(), new PollutantEvaluationRule());
-        strategy.addAttributeFuser(Car.AIR_QUALITY, new AirQualityFuserMedian(), new AirQualityEvaluationRule());
+        strategy.addAttributeFuser(Car.AIR_QUALITY, new AirQualityFuserAvg(), new AirQualityEvaluationRule());
         strategy.addAttributeFuser(Car.AQ_UNIT, new AqUnitFuserLongestString(), new AqUnitEvaluationRule());
 
         logger.info("Starting the fusion...");
         DataFusionEngine<Car, Attribute> engine = new DataFusionEngine<>(strategy);
         // TODO: Reenable for debugging - not necessary for the actual fusion
-        // engine.printClusterConsistencyReport(correspondences, null);
+         engine.printClusterConsistencyReport(correspondences, null);
         // engine.writeRecordGroupsByConsistency(new File("data/output/recordGroupConsistencies.csv"), correspondences, null);
 
         logger.info("Running the data fusion...");
