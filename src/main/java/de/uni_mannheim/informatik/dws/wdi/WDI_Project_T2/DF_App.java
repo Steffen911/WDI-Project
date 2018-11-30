@@ -80,14 +80,12 @@ public class DF_App {
 
         logger.info("Starting the fusion...");
         DataFusionEngine<Car, Attribute> engine = new DataFusionEngine<>(strategy);
-        // TODO: Reenable for final run
-        // engine.printClusterConsistencyReport(correspondences, null);
-        // engine.writeRecordGroupsByConsistency(new File("data/output/recordGroupConsistencies.csv"), correspondences, null);
+        engine.printClusterConsistencyReport(correspondences, null);
+        engine.writeRecordGroupsByConsistency(new File("data/output/recordGroupConsistencies.csv"), correspondences, null);
 
         logger.info("Running the data fusion...");
         FusibleDataSet<Car, Attribute> fusedDataset = engine.run(correspondences, null);
-        // TODO: Reenable for final run
-        // fusedDataset.printDataSetDensityReport();
+        fusedDataset.printDataSetDensityReport();
 
         new CarXMLFormatter().writeXML(new File("data/output/fused.xml"), fusedDataset);
         logger.info("Successfully wrote fused.xml output");

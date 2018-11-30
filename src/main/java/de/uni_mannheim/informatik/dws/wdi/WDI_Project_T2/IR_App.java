@@ -75,6 +75,23 @@ public class IR_App {
                 }
             }
 
+            offers.add(offerInt.getRecord("offer_1"));
+            offers.add(offerInt.getRecord("offer_3"));
+            offers.add(offerInt.getRecord("offer_50"));
+            offers.add(offerInt.getRecord("offer_63"));
+            offers.add(offerInt.getRecord("offer_5"));
+            offers.add(offerInt.getRecord("offer_935"));
+            offers.add(offerInt.getRecord("offer_936"));
+            offers.add(offerInt.getRecord("offer_3336"));
+            offers.add(offerInt.getRecord("offer_9800"));
+            offers.add(offerInt.getRecord("offer_9819"));
+            offers.add(offerInt.getRecord("offer_9820"));
+            offers.add(offerInt.getRecord("offer_9828"));
+            offers.add(offerInt.getRecord("offer_9814"));
+            offers.add(offerInt.getRecord("offer_9853"));
+            offers.add(offerInt.getRecord("offer_9873"));
+            offers.add(offerInt.getRecord("offer_9883"));
+
             logger.info("Start the matching for iteration " + i + "/" + iterations);
 
             Processable<Correspondence<Car, Attribute>> corr;
