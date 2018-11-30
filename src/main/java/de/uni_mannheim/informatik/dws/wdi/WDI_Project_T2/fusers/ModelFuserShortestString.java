@@ -24,12 +24,13 @@ public class ModelFuserShortestString extends AttributeValueFuser<String, Car, A
     @Override
     public void fuse(RecordGroup<Car, Attribute> group, Car fusedRecord, Processable<Correspondence<Attribute, Matchable>> correspondence, Attribute elem) {
         FusedValue<String, Car, Attribute> fused = getFusedValue(group, correspondence, elem);
-        fusedRecord.setModel(fused.getValue());
+        fusedRecord.setAttributeProvenance(Car.MODEL, fused.getOriginalIds());
+        fusedRecord.setModel(fused.getValue().toLowerCase());
     }
 
     @Override
     public boolean hasValue(Car c, Correspondence<Attribute, Matchable> correspondence) {
-        return c.hasValue(c.MODEL);
+        return c.hasValue(Car.MODEL);
     }
 
 }
