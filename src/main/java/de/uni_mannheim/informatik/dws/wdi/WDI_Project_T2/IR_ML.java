@@ -198,7 +198,6 @@ public class IR_ML {
         WekaMatchingRule<Car, Attribute> matchingRuleOffCarEm = new WekaMatchingRule<>(0.7, modelType9, options9);
         matchingRuleOffCarEm.setBackwardSelection(true);
         addComparatorsToMatchingRule(matchingRuleOffCarEm);
-        matchingRuleOffCarEm.activateDebugReport("data/output/debugResultsMatchingRuleOffVeh.csv", 1000);
 
         RuleLearner<Car, Attribute> learnerOffersCarEmissions = new RuleLearner<>();
         learnerOffersCarEmissions.learnMatchingRule(offerInt, carEmissions, null, matchingRuleOffCarEm, oceGs);
@@ -229,7 +228,6 @@ public class IR_ML {
         WekaMatchingRule<Car, Attribute> matchingRuleOffVeh = new WekaMatchingRule<>(0.7, modelType4, options4);
         matchingRuleOffVeh.setBackwardSelection(true);
         addComparatorsToMatchingRule(matchingRuleOffVeh);
-        matchingRuleOffVeh.activateDebugReport("data/output/debugResultsMatchingRuleOffVeh.csv", 1000);
 
         RuleLearner<Car, Attribute> learnerOffersVehicles = new RuleLearner<>();
         learnerOffersVehicles.learnMatchingRule(offerInt, vehicles, null, matchingRuleOffVeh, ovecGs);
@@ -260,7 +258,6 @@ public class IR_ML {
         matchingRuleCarEmVeh.setBackwardSelection(true);
 
         addComparatorsToMatchingRule(matchingRuleCarEmVeh);
-        matchingRuleCarEmVeh.activateDebugReport("data/output/debugResultsMatchingRuleCarEmVeh.csv", 1000);
 
         RuleLearner<Car, Attribute> learnerCarEmissionsVehicles = new RuleLearner<>();
         learnerCarEmissionsVehicles.learnMatchingRule(vehicles, carEmissions, null, matchingRuleCarEmVeh, cevecGs);
