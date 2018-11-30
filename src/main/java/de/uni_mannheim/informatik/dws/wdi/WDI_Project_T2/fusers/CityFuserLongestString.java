@@ -29,6 +29,7 @@ public class CityFuserLongestString extends AttributeValueFuser<String, Car, Att
     @Override
     public void fuse(RecordGroup<Car, Attribute> group, Car fusedRecord, Processable<Correspondence<Attribute, Matchable>> correspondence, Attribute elem) {
         FusedValue<String, Car, Attribute> fused = getFusedValue(group, correspondence, elem);
+        fusedRecord.setAttributeProvenance(Car.CITY, fused.getOriginalIds());
         fusedRecord.getRegion().setCity(fused.getValue());
     }
 

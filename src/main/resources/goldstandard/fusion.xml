@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <target>
-    <car id="gold_1" src="wikipedia">
+    <car id="offer_1" src="wikipedia">
         <manufacturer>Volkswagen</manufacturer>
         <model>Golf 3</model>
         <fuelType>Petrol</fuelType>
@@ -21,7 +21,7 @@
             <aq-unit>ug.m-3</aq-unit>
         </pollution>
     </car>
-    <car id="gold_2" src="wikipedia">
+    <car id="offer_3" src="wikipedia">
         <manufacturer>Jeep</manufacturer>
         <model>Grand Cherokee Overland</model>
         <fuelType>Diesl</fuelType>
@@ -42,7 +42,7 @@
             <aq-unit>ug.m-3</aq-unit>
         </pollution>
     </car>
-    <car id="gold_3" src="wikipedia">
+    <car id="offer_50" src="wikipedia">
         <manufacturer>Mercedes Benz</manufacturer>
         <model>B180</model>
         <fuelType>Diesel</fuelType>
@@ -63,7 +63,7 @@
             <aq-unit>ug.m-3</aq-unit>
         </pollution>
     </car>
-    <car id="gold_4" src="wikipedia">
+    <car id="offer_63" src="wikipedia">
         <manufacturer>Audi</manufacturer>
         <model>A8</model>
         <fuelType>Diesel</fuelType>
@@ -84,256 +84,255 @@
             <aq-unit>ug.m-3</aq-unit>
         </pollution>
     </car>
-    <car id="gold_5">
-        <manufacturer>BMW</manufacturer>
-        <model>325i</model>
-        <fuelType>Petrol</fuelType>
-        <transmission>Manual</transmission>
-        <horse-power>218</horse-power>
-        <region>
-            <zip-code>1129</zip-code>
-            <stationId/>
-            <latitude/>
-            <longitude/>
-            <zip-code/>
-            <city/>
-        </region>
-        <mileage>50000</mileage>
-        <pollution>
-            <pollutant>Nitrogen dioxide (air)</pollutant>
-            <air-quality/>
-            <aq-unit>ug.m-3</aq-unit>
-        </pollution>
-    </car>
-    <car id="gold_6" src="wikipedia">
-        <manufacturer>Peugeot</manufacturer>
-        <model>206</model>
-        <fuelType>Petrol</fuelType>
-        <transmission>Automatic</transmission>
-        <horse-power>75</horse-power>
-        <region>
-            <zip-code id="car">12487</zip-code>
-            <stationId>STA.DE_DEBE027</stationId>
-            <latitude>52.398406</latitude>
-            <longitude>13.368103</longitude>
-            <zip-code id="station">12307</zip-code>
-            <city>Berlin</city>
-        </region>
-        <mileage>70000</mileage>
-        <pollution>
-            <pollutant>Nitrogen dioxide (air)</pollutant>
-            <air-quality>82.5</air-quality>
-            <aq-unit>ug.m-3</aq-unit>
-        </pollution>
-    </car>
-    <car id="gold_7" src="wikipedia">
-        <manufacturer>Opel</manufacturer>
-        <model>Corsa</model>
-        <fuelType>Petrol</fuelType>
-        <transmission>Manual</transmission>
-        <horse-power>54</horse-power>
-        <region>
-            <zip-code id="car">22848</zip-code>
-            <stationId>53.68199299999999</stationId>
-            <latitude>53.68199299999999</latitude>
-            <longitude>9.997256</longitude>
-            <zip-code id="station">22848</zip-code>
-            <city>Norderstedt</city>
-        </region>
-        <mileage>125000</mileage>
-        <pollution>
-            <pollutant>Nitrogen dioxide (air)</pollutant>
-            <air-quality>39.238</air-quality>
-            <aq-unit>ug.m-3</aq-unit>
-        </pollution>
-    </car>
-    <car id="gold_7" src="wikipedia">
-        <manufacturer>BMW</manufacturer>
-        <model>Z3</model>
-        <fuelType>Petrol</fuelType>
-        <transmission>Manual</transmission>
-        <horse-power>140</horse-power>
-        <region>
-            <zip-code id="car">56070</zip-code>
-            <stationId>STA.DE_DERP045</stationId>
-            <latitude>50.359605</latitude>
-            <longitude>7.592515</longitude>
-            <zip-code id="station">56068</zip-code>
-            <city>Koblenz</city>
-        </region>
-        <mileage>60000</mileage>
-        <pollution>
-            <pollutant>Nitrogen dioxide (air)</pollutant>
-            <air-quality/>
-            <aq-unit>ug.m-3</aq-unit>
-        </pollution>
-    </car>
-    <car id="gold_8" src="https://www.autoplenum.de/auto/bmw/x3/suv-2003/3-0sd-286-ps">
-        <manufacturer>BMW</manufacturer>
-        <model>X3</model>
-        <fuelType>Diesel</fuelType>
-        <transmission>Automatic</transmission>
-        <horse-power>286</horse-power>
-        <region>
-            <zip-code id="car">91074</zip-code>
-            <stationId>STA.DE_DEBY113</stationId>
-            <latitude>49.605914</latitude>
-            <longitude>10.963528000000002</longitude>
-            <zip-code id="station">91056</zip-code>
-            <city>Erlangen</city>
-        </region>
-        <mileage>150000</mileage>
-        <pollution>
-            <pollutant>Nitrogen dioxide (air)</pollutant>
-            <air-quality>88.45677184</air-quality>
-            <aq-unit>ug.m-3</aq-unit>
-        </pollution>
-    </car>
-    <car id="gold_9" src="Wikipedia">
-        <manufacturer>Opel</manufacturer>
-        <model>Astra</model>
-        <fuelType>Diesel</fuelType>
-        <transmission>Automatic</transmission>
-        <horse-power>120</horse-power>
-        <region>
-            <zip-code id="car">73333</zip-code>
-            <stationId>STA.DE_DEBW222</stationId>
-            <latitude>48.63667</latitude>
-            <longitude>9.79804</longitude>
-            <zip-code>73329</zip-code>
-            <zip-code id="station">73329</zip-code>
-            <city>Kuchen</city>
-        </region>
-        <mileage>80000</mileage>
-        <pollution>
-            <pollutant>Nitrogen dioxide (air)</pollutant>
-            <air-quality>44.189733</air-quality>
-            <aq-unit>ug.m-3</aq-unit>
-        </pollution>
-    </car>
-    <car id="gold_10" src="wikipedia">
-        <manufacturer>Seat</manufacturer>
-        <model>Ibiza</model>
+    <car id="offer_5" src="wikipedia">
+        <manufacturer>Skoda</manufacturer>
+        <model>Fabia</model>
         <fuelType>Diesel</fuelType>
         <transmission>Manual</transmission>
         <horse-power>69</horse-power>
         <region>
-            <zip-code id="car">41236</zip-code>
-            <stationId>STA.DE_DENW100</stationId>
-            <latitude>51.16996699999999</latitude>
-            <longitude>6.458842</longitude>
-            <zip-code id="station">41238</zip-code>
-            <city>Mönchengladbach</city>
+            <zip-code id="car">60437</zip-code>
+            <stationId>STA.DE_DEHE066</stationId>
+            <latitude>50.111977</latitude>
+            <longitude>8.676108</longitude>
+            <zip-code id="station">60311</zip-code>
+            <city>Frankfurt am Main</city>
+        </region>
+        <mileage>90000</mileage>
+        <pollution>
+            <pollutant>Nitrogen dioxide (air)</pollutant>
+            <air-quality/>
+            <aq-unit>ug.m-3</aq-unit>
+        </pollution>
+    </car>
+    <car id="offer_935" src="wikipedia">
+        <manufacturer>Ford</manufacturer>
+        <model>Mondeo</model>
+        <fuelType>Diesel</fuelType>
+        <transmission>Manual</transmission>
+        <horse-power>130</horse-power>
+        <region>
+            <zip-code id="car">64347</zip-code>
+            <stationId>STA.DE_DEHE094</stationId>
+            <latitude>49.82777499999999</latitude>
+            <longitude>8.832221</longitude>
+            <zip-code id="station">64354</zip-code>
+            <city>Reinheim</city>
         </region>
         <mileage>150000</mileage>
         <pollution>
             <pollutant>Nitrogen dioxide (air)</pollutant>
-            <air-quality/>
+            <air-quality>92.17575073</air-quality>
             <aq-unit>ug.m-3</aq-unit>
         </pollution>
     </car>
-    <car id="gold_11" src="wikipedia">
-        <manufacturer>Smart</manufacturer>
-        <model>fortwo</model>
-        <fuelType>Petrol</fuelType>
-        <transmission>Automatic</transmission>
-        <horse-power>71</horse-power>
-        <region>
-            <zip-code id="car">900765</zip-code>
-            <stationId>STA.DE_DEBY020</stationId>
-            <latitude>50.320611</latitude>
-            <longitude>11.897492</longitude>
-            <zip-code id="station">95030</zip-code>
-            <city>Hof</city>
-        </region>
-        <mileage>30000</mileage>
-        <pollution>
-            <pollutant>Nitrogen dioxide (air)</pollutant>
-            <air-quality/>
-            <aq-unit>ug.m-3</aq-unit>
-        </pollution>
-    </car>
-    <car id="gold_12" src="wikipedia">
-        <manufacturer>Opel</manufacturer>
-        <model>Omega</model>
-        <fuelType>Petrol</fuelType>
-        <transmission>Manual</transmission>
-        <horse-power>136</horse-power>
-        <region>
-            <zip-code id="car">99817</zip-code>
-            <stationId>STA.DE_DETH013</stationId>
-            <latitude>50.978292</latitude>
-            <longitude>10.317236</longitude>
-            <zip-code id="station">99817</zip-code>
-            <city>Eisenach</city>
-        </region>
-        <mileage>125000</mileage>
-        <pollution>
-            <pollutant>Nitrogen dioxide (air)</pollutant>
-            <air-quality/>
-            <aq-unit>ug.m-3</aq-unit>
-        </pollution>
-    </car>
-    <car id="gold_13" src="wikipedia">
+    <car id="offer_936" src="wikipedia">
         <manufacturer>Volkswagen</manufacturer>
-        <model>Phaeton</model>
+        <model>Passat</model>
         <fuelType>Diesel</fuelType>
         <transmission>Automatic</transmission>
-        <horse-power>313</horse-power>
+        <horse-power>131</horse-power>
         <region>
-            <zip-code id="car">99189</zip-code>
-            <stationId>STA.DE_DETH117</stationId>
-            <latitude>50.993127</latitude>
-            <longitude>11.056578000000002</longitude>
-            <zip-code id="station">99085</zip-code>
-            <city>Erfurt</city>
+            <zip-code id="car">87766</zip-code>
+            <stationId>STA.DE_DEBY122</stationId>
+            <latitude>47.51801300000001</latitude>
+            <longitude>10.404232</longitude>
+            <zip-code id="station">87541</zip-code>
+            <city>Bad Hindelang</city>
+        </region>
+        <mileage>150000</mileage>
+        <pollution>
+            <pollutant>Nitrogen dioxide (air)</pollutant>
+            <air-quality>3.58</air-quality>
+            <aq-unit>ug.m-3</aq-unit>
+        </pollution>
+    </car>
+    <car id="offer_3336" src="wikipedia">
+        <manufacturer>Ford</manufacturer>
+        <model>Fiesta</model>
+        <fuelType>Petrol</fuelType>
+        <transmission>Manual</transmission>
+        <horse-power>82</horse-power>
+        <region>
+            <zip-code id="car">38723</zip-code>
+            <stationId>STA.DE_DENI051</stationId>
+            <latitude>51.75816</latitude>
+            <longitude>10.612479999999998</longitude>
+            <zip-code id="station">38700</zip-code>
+            <city>Braunlage</city>
         </region>
         <mileage>100000</mileage>
         <pollution>
             <pollutant>Nitrogen dioxide (air)</pollutant>
-            <air-quality/>
+            <air-quality>6.35034067</air-quality>
             <aq-unit>ug.m-3</aq-unit>
         </pollution>
     </car>
-    <car id="gold_14" src="wikipedia">
+    <car id="offer_9800" src="wikipedia">
+        <manufacturer>Peugeot</manufacturer>
+        <model>207</model>
+        <fuelType>Petrol</fuelType>
+        <transmission>Manual</transmission>
+        <horse-power>73</horse-power>
+        <region>
+            <zip-code id="car">49377</zip-code>
+            <stationId>STA.DE_DENI038</stationId>
+            <latitude>52.25533999999999</latitude>
+            <longitude>8.05286</longitude>
+            <zip-code id="station">49082</zip-code>
+            <city>Osnabrück</city>
+        </region>
+        <mileage>150000</mileage>
+        <pollution>
+            <pollutant>Nitrogen dioxide (air)</pollutant>
+            <air-quality>73.853004</air-quality>
+            <aq-unit>ug.m-3</aq-unit>
+        </pollution>
+    </car>
+    <car id="offer_9819" src="wikipedia">
+        <manufacturer>Volkswagen</manufacturer>
+        <model>Fox</model>
+        <fuelType>Petrol</fuelType>
+        <transmission>Manual</transmission>
+        <horse-power>54</horse-power>
+        <region>
+            <zip-code id="car">49492</zip-code>
+            <stationId>STA.DE_DENI043</stationId>
+            <latitude>52.49855</latitude>
+            <longitude>7.31747</longitude>
+            <zip-code id="station">49809</zip-code>
+            <city>Lingen</city>
+        </region>
+        <mileage>50000</mileage>
+        <pollution>
+            <pollutant>Nitrogen dioxide (air)</pollutant>
+            <air-quality>15.37784952</air-quality>
+            <aq-unit>ug.m-3</aq-unit>
+        </pollution>
+    </car>
+    <car id="offer_9820" src="wikipedia">
+        <manufacturer>Volkswagen</manufacturer>
+        <model>Golf 3</model>
+        <fuelType>Petrol</fuelType>
+        <transmission>Manual</transmission>
+        <horse-power>60</horse-power>
+        <region>
+            <zip-code id="car">29462</zip-code>
+            <stationId>STA.DE_DENI060</stationId>
+            <latitude>52.95701999999999</latitude>
+            <longitude>11.16705</longitude>
+            <zip-code id="station">29439</zip-code>
+            <city>Lüchow</city>
+        </region>
+        <mileage>50000</mileage>
+        <pollution>
+            <pollutant>Nitrogen dioxide (air)</pollutant>
+            <air-quality>1.21397</air-quality>
+            <aq-unit>ug.m-3</aq-unit>
+        </pollution>
+    </car>
+    <car id="offer_9828" src="wikipedia">
+        <manufacturer>Toyota</manufacturer>
+        <model>Aygo</model>
+        <fuelType>Petrol</fuelType>
+        <transmission>Manual</transmission>
+        <horse-power>68</horse-power>
+        <region>
+            <zip-code id="car">66450</zip-code>
+            <stationId>STA.DE_DERP042</stationId>
+            <latitude>49.199942</latitude>
+            <longitude>7.603053000000002</longitude>
+            <zip-code id="station">66953</zip-code>
+            <city>Lüchow</city>
+        </region>
+        <mileage>50000</mileage>
+        <pollution>
+            <pollutant>Nitrogen dioxide (air)</pollutant>
+            <air-quality>83.51644135</air-quality>
+            <aq-unit>ug.m-3</aq-unit>
+        </pollution>
+    </car>
+    <car id="offer_9814" src="wikipedia">
+        <manufacturer>Porsche</manufacturer>
+        <model>Boxster S</model>
+        <fuelType>Petrol</fuelType>
+        <transmission>Manual</transmission>
+        <horse-power>260</horse-power>
+        <region>
+            <zip-code id="car">90530</zip-code>
+            <stationId>STA.DE_DEBY053</stationId>
+            <latitude>49.44591</latitude>
+            <longitude>11.088444000000004</longitude>
+            <zip-code id="station">90478</zip-code>
+            <city>Nürnberg</city>
+        </region>
+        <mileage>80000</mileage>
+        <pollution>
+            <pollutant>Nitrogen dioxide (air)</pollutant>
+            <air-quality>33.07</air-quality>
+            <aq-unit>ug.m-3</aq-unit>
+        </pollution>
+    </car>
+    <car id="offer_9853" src="wikipedia">
         <manufacturer>Ford</manufacturer>
         <model>Focus</model>
-        <fuelType>Diesel</fuelType>
+        <fuelType>Petrol</fuelType>
         <transmission>Manual</transmission>
-        <horse-power>115</horse-power>
+        <horse-power>125</horse-power>
         <region>
-            <zip-code id="car">59368</zip-code>
-            <stationId>STA.DE_DENW010</stationId>
-            <latitude>51.547495</latitude>
-            <longitude>7.693835000000002</longitude>
-            <zip-code id="station">59425</zip-code>
-            <city>Unna</city>
+            <zip-code id="car">78247</zip-code>
+            <stationId>STA.DE_DEBW156</stationId>
+            <latitude>48.22915</latitude>
+            <longitude>8.39062</longitude>
+            <zip-code id="station">78713</zip-code>
+            <city>Nürnberg</city>
         </region>
-        <mileage>100000</mileage>
+        <mileage>20000</mileage>
         <pollution>
             <pollutant>Nitrogen dioxide (air)</pollutant>
-            <air-quality>-1.868</air-quality>
+            <air-quality>26</air-quality>
             <aq-unit>ug.m-3</aq-unit>
         </pollution>
     </car>
-    <car id="gold_15" src="wikipedia">
-        <manufacturer>Citroen</manufacturer>
-        <model>C3</model>
+    <car id="offer_9873" src="wikipedia">
+        <manufacturer>Nissan</manufacturer>
+        <model>Micra</model>
         <fuelType>Petrol</fuelType>
         <transmission>Manual</transmission>
-        <horse-power>95</horse-power>
+        <horse-power>65</horse-power>
         <region>
-            <zip-code id="car">40223</zip-code>
-            <stationId>STA.DE_DENW216</stationId>
-            <latitude>51.202464</latitude>
-            <longitude>6.776388000000001</longitude>
-            <zip-code id="station">40025</zip-code>
-            <city>Düsseldorf</city>
+            <zip-code id="car">48167</zip-code>
+            <stationId>STA.DE_DENW260</stationId>
+            <latitude>51.95326699999998</latitude>
+            <longitude>7.619386999999999</longitude>
+            <zip-code id="station">48143</zip-code>
+            <city>Münster</city>
         </region>
-        <mileage>60000</mileage>
+        <mileage>80000</mileage>
         <pollution>
             <pollutant>Nitrogen dioxide (air)</pollutant>
-            <air-quality>57.01038</air-quality>
+            <air-quality>43.350437</air-quality>
+            <aq-unit>ug.m-3</aq-unit>
+        </pollution>
+    </car>
+    <car id="offer_9883" src="wikipedia">
+        <manufacturer>Mini</manufacturer>
+        <model>One</model>
+        <fuelType>Petrol</fuelType>
+        <transmission>Manual</transmission>
+        <horse-power>90</horse-power>
+        <region>
+            <zip-code id="car">45739</zip-code>
+            <stationId>STA.DE_DENW029</stationId>
+            <latitude>51.40300499999999</latitude>
+            <longitude>7.208572000000002</longitude>
+            <zip-code id="station">45527</zip-code>
+            <city>Hattingen</city>
+        </region>
+        <mileage>150000</mileage>
+        <pollution>
+            <pollutant>Nitrogen dioxide (air)</pollutant>
+            <air-quality>66.378</air-quality>
             <aq-unit>ug.m-3</aq-unit>
         </pollution>
     </car>

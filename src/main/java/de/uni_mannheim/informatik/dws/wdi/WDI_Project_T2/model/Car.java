@@ -3,6 +3,12 @@ package de.uni_mannheim.informatik.dws.wdi.WDI_Project_T2.model;
 import de.uni_mannheim.informatik.dws.winter.model.AbstractRecord;
 import de.uni_mannheim.informatik.dws.winter.model.defaultmodel.Attribute;
 
+import org.apache.commons.lang3.StringUtils;
+
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * An AbstractRecord Representing a car.
  *
@@ -34,6 +40,7 @@ public class Car extends AbstractRecord<Attribute> {
     // Mandatory properties of Matchable
     private String identifier;
     private String provenance;
+    private Map<Attribute, Collection<String>> attributeProvenance = new HashMap<>();
 
     // Properties of a car
     private String manufacturer;
@@ -154,6 +161,15 @@ public class Car extends AbstractRecord<Attribute> {
 
     public void setPollution(Pollution pollution) {
         this.pollution = pollution;
+    }
+
+    public void setAttributeProvenance(Attribute attribute, Collection<String> provenance) {
+        this.attributeProvenance.put(attribute, provenance);
+    }
+
+    public String getMergedAttributeProvenance(Attribute attribute) {
+        Collection<String> prov = this.attributeProvenance.get(attribute);
+        return (prov != null) ? StringUtils.join(prov, "+") : "";
     }
 
     @Override

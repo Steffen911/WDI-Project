@@ -19,6 +19,7 @@ public class LatitudeFuserMedian extends AttributeValueFuser<Double, Car, Attrib
     @Override
     public void fuse(RecordGroup<Car, Attribute> group, Car fusedRecord, Processable<Correspondence<Attribute, Matchable>> correspondence, Attribute elem) {
         FusedValue<Double, Car, Attribute> fused = getFusedValue(group, correspondence, elem);
+        fusedRecord.setAttributeProvenance(Car.LATITUDE, fused.getOriginalIds());
         fusedRecord.getRegion().setLatitude((fused.getValue() == null) ? 0 : fused.getValue());
     }
 
@@ -29,7 +30,7 @@ public class LatitudeFuserMedian extends AttributeValueFuser<Double, Car, Attrib
 
     @Override
     public boolean hasValue(Car c, Correspondence<Attribute, Matchable> correspondence) {
-        return c.hasValue(c.LATITUDE);
+        return c.hasValue(Car.LATITUDE);
     }
 
 }

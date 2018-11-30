@@ -54,7 +54,6 @@ public class DF_App {
 
         correspondences.printGroupSizeDistribution();
 
-        // TODO: Goldstandard
         DataSet<Car, Attribute> gs = new FusibleHashedDataSet<>();
         new CarXMLReader().loadFromXML(new File(classloader.getResource("goldstandard/fusion.xml").getFile()), "/target/car", gs);
 
@@ -77,15 +76,16 @@ public class DF_App {
         strategy.addAttributeFuser(Car.POLLUTANT, new PollutantFuserLongestString(), new PollutantEvaluationRule());
         strategy.addAttributeFuser(Car.AIR_QUALITY, new AirQualityFuserMedian(), new AirQualityEvaluationRule());
         strategy.addAttributeFuser(Car.AQ_UNIT, new AqUnitFuserLongestString(), new AqUnitEvaluationRule());
+        strategy.addAttributeFuser(Car.MILEAGE, new MileageFuserMedian(), new MileageEvaluationRule());
 
         logger.info("Starting the fusion...");
         DataFusionEngine<Car, Attribute> engine = new DataFusionEngine<>(strategy);
-        // TODO: Reenable for debugging - not necessary for the actual fusion
-        // engine.printClusterConsistencyReport(correspondences, null);
-        // engine.writeRecordGroupsByConsistency(new File("data/output/recordGroupConsistencies.csv"), correspondences, null);
+        engine.printClusterConsistencyReport(correspondences, null);
+        engine.writeRecordGroupsByConsistency(new File("data/output/recordGroupConsistencies.csv"), correspondences, null);
 
         logger.info("Running the data fusion...");
         FusibleDataSet<Car, Attribute> fusedDataset = engine.run(correspondences, null);
+        fusedDataset.printDataSetDensityReport();
 
         new CarXMLFormatter().writeXML(new File("data/output/fused.xml"), fusedDataset);
         logger.info("Successfully wrote fused.xml output");

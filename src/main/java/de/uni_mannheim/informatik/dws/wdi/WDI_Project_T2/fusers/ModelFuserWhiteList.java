@@ -19,6 +19,7 @@ public class ModelFuserWhiteList extends AttributeValueFuser<String, Car, Attrib
     @Override
     public void fuse(RecordGroup<Car, Attribute> group, Car fusedRecord, Processable<Correspondence<Attribute, Matchable>> correspondence, Attribute elem) {
         FusedValue<String, Car, Attribute> fused = getFusedValue(group, correspondence, elem);
+        fusedRecord.setAttributeProvenance(Car.MODEL, fused.getOriginalIds());
         fusedRecord.setModel(fused.getValue());
     }
 

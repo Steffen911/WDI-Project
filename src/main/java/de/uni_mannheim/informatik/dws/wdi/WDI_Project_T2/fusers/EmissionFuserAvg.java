@@ -30,6 +30,7 @@ public class EmissionFuserAvg extends AttributeValueFuser<Double, Car, Attribute
     public void fuse(RecordGroup<Car, Attribute> group, Car fusedRecord, Processable<Correspondence<Attribute, Matchable>> correspondence, Attribute elem) {
         FusedValue<Double, Car, Attribute> fused = getFusedValue(group, correspondence, elem);
         double emission = (fused.getValue() != null) ? fused.getValue() : 0.0;
+        fusedRecord.setAttributeProvenance(Car.EMISSION, fused.getOriginalIds());
         fusedRecord.setEmission(emission);
     }
 }

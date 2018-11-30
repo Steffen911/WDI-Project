@@ -19,6 +19,7 @@ public class AirQualityFuserMedian extends AttributeValueFuser<Double, Car, Attr
     @Override
     public void fuse(RecordGroup<Car, Attribute> group, Car fusedRecord, Processable<Correspondence<Attribute, Matchable>> correspondence, Attribute elem) {
         FusedValue<Double, Car, Attribute> fused = getFusedValue(group, correspondence, elem);
+        fusedRecord.setAttributeProvenance(Car.AIR_QUALITY, fused.getOriginalIds());
         fusedRecord.getPollution().setAirQuality((fused.getValue() == null) ? 0 : fused.getValue());
     }
 
@@ -29,7 +30,7 @@ public class AirQualityFuserMedian extends AttributeValueFuser<Double, Car, Attr
 
     @Override
     public boolean hasValue(Car c, Correspondence<Attribute, Matchable> correspondence) {
-        return c.hasValue(c.AIR_QUALITY);
+        return c.hasValue(Car.AIR_QUALITY);
     }
 
 }

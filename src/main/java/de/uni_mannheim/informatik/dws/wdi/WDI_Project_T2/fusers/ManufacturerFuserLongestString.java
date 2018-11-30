@@ -29,6 +29,7 @@ public class ManufacturerFuserLongestString extends AttributeValueFuser<String, 
     @Override
     public void fuse(RecordGroup<Car, Attribute> group, Car fusedRecord, Processable<Correspondence<Attribute, Matchable>> correspondence, Attribute elem) {
         FusedValue<String, Car, Attribute> fused = getFusedValue(group, correspondence, elem);
+        fusedRecord.setAttributeProvenance(Car.MANUFACTURER, fused.getOriginalIds());
         fusedRecord.setManufacturer(fused.getValue());
     }
 
