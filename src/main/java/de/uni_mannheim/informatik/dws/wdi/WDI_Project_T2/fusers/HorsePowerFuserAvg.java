@@ -25,6 +25,7 @@ public class HorsePowerFuserAvg extends AttributeValueFuser<Double, Car, Attribu
     public void fuse(RecordGroup<Car, Attribute> group, Car fusedRecord, Processable<Correspondence<Attribute, Matchable>> correspondence, Attribute elem) {
         FusedValue<Double, Car, Attribute> fused = getFusedValue(group, correspondence, elem);
         int horsePower = (fused.getValue() != null) ? fused.getValue().intValue() : 0;
+        fusedRecord.setAttributeProvenance(Car.HORSE_POWER, fused.getOriginalIds());
         fusedRecord.setHorsePower(horsePower);
     }
 
